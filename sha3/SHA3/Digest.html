@@ -76,6 +76,8 @@
   <div class="nav-section">
     <h3>Class Methods</h3>
     <ul class="link-list" role="directory">
+      <li ><a href="#method-c-digest">digest</a></li>
+      <li ><a href="#method-c-hexdigest">hexdigest</a></li>
       <li ><a href="#method-c-new">new</a></li>
     </ul>
   </div>
@@ -131,6 +133,172 @@
        <header>
          <h3>Public Class Methods</h3>
        </header>
+
+      <div id="method-c-digest" class="method-detail anchor-link ">
+        <div class="method-header">
+              <div class="method-heading">
+                <a href="#method-c-digest" title="Link to this method">
+                  <span class="method-callseq">
+                    SHA3::Digest.digest(name, data) &rarr; string
+                  </span>
+                </a>
+              </div>
+        </div>
+
+          <div class="method-controls">
+            <details class="method-source-toggle">
+              <summary>Source</summary>
+            </details>
+          </div>
+
+        <div class="method-description">
+          <div class="method-source-code" id="digest-source">
+            <pre>static VALUE rb_digest_self_digest(VALUE klass, VALUE name, VALUE data) {
+    VALUE args[2];
+    algorithm_type algorithm;
+
+    /* For SHAKE algorithms, we need to handle them differently */
+    if (TYPE(name) == T_SYMBOL) {
+        ID symid = SYM2ID(name);
+        if (symid == shake_128_id || symid == shake_256_id) {
+            /* Create a new digest instance with the specified algorithm */
+            VALUE digest = rb_class_new_instance(1, &amp;name, klass);
+
+            /* Update it with the data */
+            rb_digest_update(digest, data);
+
+            /* For SHAKE algorithms, use a default output length based on the security strength */
+            int output_length = (symid == shake_128_id) ? 16 : 32; /* 128/8 or 256/8 */
+
+            /* Return the squeezed output */
+            return rb_digest_squeeze(digest, INT2NUM(output_length));
+        }
+    }
+
+    /* Call the superclass method with arguments in reverse order */
+    args[0] = data;
+    args[1] = name;
+
+    return rb_call_super(2, args);
+}</pre>
+          </div>
+          <p>Returns the binary digest of the given <code>data</code> using the algorithm specified by <code>name</code>.</p>
+<dl class="rdoc-list note-list"><dt><code>name</code></dt>
+<dd>
+<p>The hash algorithm to use (as a Symbol). Valid algorithms are:</p>
+<ul><li>
+<p>:sha3_224</p>
+</li><li>
+<p>:sha3_256</p>
+</li><li>
+<p>:sha3_384</p>
+</li><li>
+<p>:sha3_512</p>
+</li><li>
+<p>:shake_128</p>
+</li><li>
+<p>:shake_256</p>
+</li></ul>
+</dd><dt><code>data</code></dt>
+<dd>
+<p>The data to hash.</p>
+</dd></dl>
+
+<h1 id="method-c-digest-label-example">example<span><a href="#method-c-digest-label-example">&para;</a> <a href="#top">&uarr;</a></span></h1>
+
+<pre class="ruby"><span class="ruby-constant">SHA3</span><span class="ruby-operator">::</span><span class="ruby-constant">Digest</span>.<span class="ruby-identifier">digest</span>(<span class="ruby-value">:sha3_256</span>, <span class="ruby-string">&quot;data to hash&quot;</span>)
+</pre>
+
+<h1 id="method-c-digest-label-note">note<span><a href="#method-c-digest-label-note">&para;</a> <a href="#top">&uarr;</a></span></h1>
+
+<p>This method defaults to squeezing 16 bytes for SHAKE128 and 32 bytes for SHAKE256. To squeeze a different length, use <a href="Digest.html#method-i-squeeze"><code>squeeze</code></a> instance method.</p>
+        </div>
+
+
+      </div>
+
+      <div id="method-c-hexdigest" class="method-detail anchor-link ">
+        <div class="method-header">
+              <div class="method-heading">
+                <a href="#method-c-hexdigest" title="Link to this method">
+                  <span class="method-callseq">
+                    SHA3::Digest.hexdigest(name, data) &rarr; string
+                  </span>
+                </a>
+              </div>
+        </div>
+
+          <div class="method-controls">
+            <details class="method-source-toggle">
+              <summary>Source</summary>
+            </details>
+          </div>
+
+        <div class="method-description">
+          <div class="method-source-code" id="hexdigest-source">
+            <pre>static VALUE rb_digest_self_hexdigest(VALUE klass, VALUE name, VALUE data) {
+    VALUE args[2];
+    algorithm_type algorithm;
+
+    /* For SHAKE algorithms, we need to handle them differently */
+    if (TYPE(name) == T_SYMBOL) {
+        ID symid = SYM2ID(name);
+        if (symid == shake_128_id || symid == shake_256_id) {
+            /* Create a new digest instance with the specified algorithm */
+            VALUE digest = rb_class_new_instance(1, &amp;name, klass);
+
+            /* Update it with the data */
+            rb_digest_update(digest, data);
+
+            /* For SHAKE algorithms, use a default output length based on the security strength */
+            int output_length = (symid == shake_128_id) ? 16 : 32; /* 128/8 or 256/8 */
+
+            /* Return the hexadecimal representation of the squeezed output */
+            return rb_digest_hex_squeeze(digest, INT2NUM(output_length));
+        }
+    }
+
+    /* Call the superclass method with arguments in reverse order */
+    args[0] = data;
+    args[1] = name;
+
+    return rb_call_super(2, args);
+}</pre>
+          </div>
+          <p>Returns the hexadecimal representation of the given <code>data</code> using the algorithm specified by <code>name</code>.</p>
+<dl class="rdoc-list note-list"><dt><code>name</code></dt>
+<dd>
+<p>The hash algorithm to use (as a Symbol). Valid algorithms are:</p>
+<ul><li>
+<p>:sha3_224</p>
+</li><li>
+<p>:sha3_256</p>
+</li><li>
+<p>:sha3_384</p>
+</li><li>
+<p>:sha3_512</p>
+</li><li>
+<p>:shake_128</p>
+</li><li>
+<p>:shake_256</p>
+</li></ul>
+</dd><dt><code>data</code></dt>
+<dd>
+<p>The data to hash.</p>
+</dd></dl>
+
+<h1 id="method-c-hexdigest-label-example">example<span><a href="#method-c-hexdigest-label-example">&para;</a> <a href="#top">&uarr;</a></span></h1>
+
+<pre class="ruby"><span class="ruby-constant">SHA3</span><span class="ruby-operator">::</span><span class="ruby-constant">Digest</span>.<span class="ruby-identifier">hexdigest</span>(<span class="ruby-value">:sha3_256</span>, <span class="ruby-string">&quot;data to hash&quot;</span>)
+</pre>
+
+<h1 id="method-c-hexdigest-label-note">note<span><a href="#method-c-hexdigest-label-note">&para;</a> <a href="#top">&uarr;</a></span></h1>
+
+<p>This method defaults to squeezing 16 bytes for SHAKE128 and 32 bytes for SHAKE256. To squeeze a different length, use <a href="Digest.html#method-i-hex_squeeze"><code>hex_squeeze</code></a> instance method.</p>
+        </div>
+
+
+      </div>
 
       <div id="method-c-new" class="method-detail anchor-link ">
         <div class="method-header">
@@ -299,6 +467,13 @@
                   </span>
                 </a>
               </div>
+              <div class="method-heading">
+                <a href="#method-i-digest" title="Link to this method">
+                  <span class="method-callseq">
+                    digest(length, data) &rarr; string
+                  </span>
+                </a>
+              </div>
         </div>
 
           <div class="method-controls">
@@ -311,27 +486,32 @@
           <div class="method-source-code" id="digest-source">
             <pre>static VALUE rb_digest_digest(int argc, VALUE* argv, VALUE self) {
     MDX* mdx;
-    VALUE length;
-
-    rb_scan_args(argc, argv, &quot;01&quot;, &amp;length);
     get_mdx(self, &amp;mdx);
 
-    // For SHAKE algorithms
-    if (mdx-&gt;algorithm == SHAKE_128 || mdx-&gt;algorithm == SHAKE_256) {
-        if (NIL_P(length)) {
-            rb_raise(digest_error_class, &quot;output length must be specified for SHAKE algorithms&quot;);
-        }
-        return rb_digest_squeeze(self, length);
+    if (mdx-&gt;algorithm != SHAKE_128 &amp;&amp; mdx-&gt;algorithm != SHAKE_256) {
+        return rb_call_super(argc, argv);
     }
 
-    // For SHA3 algorithms, call the parent implementation
-    return rb_call_super(argc, argv);
+    VALUE length, data;
+    rb_scan_args(argc, argv, &quot;02&quot;, &amp;length, &amp;data);
+
+    // For SHAKE algorithms
+    if (NIL_P(length)) {
+        rb_raise(digest_error_class, &quot;output length must be specified for SHAKE algorithms&quot;);
+    }
+
+    // If data is provided, update the state before squeezing
+    if (!NIL_P(data)) {
+        rb_digest_update(self, data);
+    }
+
+    return rb_digest_squeeze(self, length);
 }</pre>
           </div>
           <p>Returns the binary representation of the digest.</p>
 <dl class="rdoc-list note-list"><dt><code>length</code></dt>
 <dd>
-<p><em>optional</em> The length of the output to squeeze when using SHAKE algorithms. This parameter is required for SHAKE algorithms.</p>
+<p>The length of the output to squeeze when using SHAKE algorithms. This parameter is required for SHAKE algorithms.</p>
 </dd><dt><code>data</code></dt>
 <dd>
 <p><em>optional</em> Update state with additional data before returning digest.</p>
@@ -342,6 +522,7 @@
 <pre class="ruby"><span class="ruby-identifier">digest</span>.<span class="ruby-identifier">digest</span>()
 <span class="ruby-identifier">digest</span>.<span class="ruby-identifier">digest</span>(<span class="ruby-string">&#39;compute me&#39;</span>)
 <span class="ruby-identifier">digest</span>.<span class="ruby-identifier">digest</span>(<span class="ruby-value">12</span>)  <span class="ruby-comment"># For SHAKE algorithms</span>
+<span class="ruby-identifier">digest</span>.<span class="ruby-identifier">digest</span>(<span class="ruby-value">12</span>, <span class="ruby-string">&#39;compute me&#39;</span>)  <span class="ruby-comment"># For SHAKE algorithms</span>
 </pre>
         </div>
 
@@ -455,6 +636,13 @@
                   </span>
                 </a>
               </div>
+              <div class="method-heading">
+                <a href="#method-i-hexdigest" title="Link to this method">
+                  <span class="method-callseq">
+                    hexdigest(length, data) &rarr; string
+                  </span>
+                </a>
+              </div>
         </div>
 
           <div class="method-controls">
@@ -467,37 +655,42 @@
           <div class="method-source-code" id="hexdigest-source">
             <pre>static VALUE rb_digest_hexdigest(int argc, VALUE* argv, VALUE self) {
     MDX* mdx;
-    VALUE length;
-
-    rb_scan_args(argc, argv, &quot;01&quot;, &amp;length);
     get_mdx(self, &amp;mdx);
 
-    // For SHAKE algorithms
-    if (mdx-&gt;algorithm == SHAKE_128 || mdx-&gt;algorithm == SHAKE_256) {
-        if (NIL_P(length)) {
-            rb_raise(digest_error_class, &quot;output length must be specified for SHAKE algorithms&quot;);
-        }
-        return rb_digest_hex_squeeze(self, length);
+    if (mdx-&gt;algorithm != SHAKE_128 &amp;&amp; mdx-&gt;algorithm != SHAKE_256) {
+        return rb_call_super(argc, argv);
     }
 
-    // For SHA3 algorithms, call the parent implementation
-    return rb_call_super(argc, argv);
+    VALUE length, data;
+    rb_scan_args(argc, argv, &quot;02&quot;, &amp;length, &amp;data);
+
+    if (NIL_P(length)) {
+        rb_raise(digest_error_class, &quot;output length must be specified for SHAKE algorithms&quot;);
+    }
+
+    // If data is provided, update the state before squeezing
+    if (!NIL_P(data)) {
+        rb_digest_update(self, data);
+    }
+
+    return rb_digest_hex_squeeze(self, length);
 }</pre>
           </div>
           <p>Returns the hexadecimal representation of the digest.</p>
 <dl class="rdoc-list note-list"><dt><code>length</code></dt>
 <dd>
-<p><em>optional</em> The length of the output to squeeze when using SHAKE algorithms. This parameter is required for SHAKE algorithms.</p>
+<p>The length of the output to squeeze when using SHAKE algorithms. This parameter is required for SHAKE algorithms.</p>
 </dd><dt><code>data</code></dt>
 <dd>
-<p><em>optional</em> Update state with additional data before returing digest.</p>
+<p><em>optional</em> Update state with additional data before returning digest.</p>
 </dd></dl>
 
 <h1 id="method-i-hexdigest-label-example">example<span><a href="#method-i-hexdigest-label-example">&para;</a> <a href="#top">&uarr;</a></span></h1>
 
 <pre class="ruby"><span class="ruby-identifier">digest</span>.<span class="ruby-identifier">hexdigest</span>()
 <span class="ruby-identifier">digest</span>.<span class="ruby-identifier">hexdigest</span>(<span class="ruby-string">&#39;compute me&#39;</span>)
-<span class="ruby-identifier">digest</span>.<span class="ruby-identifier">hexdigest</span>(<span class="ruby-value">12</span>)
+<span class="ruby-identifier">digest</span>.<span class="ruby-identifier">hexdigest</span>(<span class="ruby-value">12</span>)  <span class="ruby-comment"># For SHAKE algorithms</span>
+<span class="ruby-identifier">digest</span>.<span class="ruby-identifier">hexdigest</span>(<span class="ruby-value">12</span>, <span class="ruby-string">&#39;compute me&#39;</span>)  <span class="ruby-comment"># For SHAKE algorithms</span>
 </pre>
         </div>
 
