@@ -10,7 +10,7 @@
   <meta name="keywords" content="ruby,documentation,SHA3">
 
 
-    <meta name="description" content="SHA3: XKCP). SHAKE256 extendable-output functions (XOFs) and KMAC (Keccak Message Authentication Code) as specified in NIST SP 800-185.">
+    <meta name="description" content="SHA3: XKCP). SHAKE256, and KMAC (Keccak Message Authentication Code) as specified in NIST SP 800-185.">
 
 <script type="text/javascript">
   var rdoc_rel_prefix = "./";
@@ -86,10 +86,11 @@
 </summary>
               <ul class="link-list" role="directory">
                           <li>      <a href="#label-SHA-3+Fixed+Hash+Functions">SHA-3 Fixed Hash Functions</a>
-          <li>      <a href="#label-SHAKE128-2F256+Functions">SHAKE128/256 Functions</a>
-          <li>      <a href="#label-KMAC+Functions">KMAC Functions</a>
           <li>      <a href="#label-Alternate+Class+Syntax">Alternate Class Syntax</a>
           <li>      <a href="#label-Hashing+a+File">Hashing a File</a>
+          <li>      <a href="#label-SHAKE128-2F256+Functions">SHAKE128/256 Functions</a>
+          <li>      <a href="#label-cSHAKE128-2F256+Functions">cSHAKE128/256 Functions</a>
+          <li>      <a href="#label-KMAC+Functions">KMAC Functions</a>
 
               </ul>
             </details>
@@ -134,9 +135,13 @@
   <ul class="link-list">
   <li><details open><summary><code><a href="./SHA3.html">SHA3</a></code></summary>
   <ul class="link-list">
+  <li><details><summary><code><a href="./SHA3/CSHAKE.html">CSHAKE</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./SHA3/CSHAKE/Error.html">Error</a></code>
+  </ul></details>
   <li><details><summary><code><a href="./SHA3/Digest.html">Digest</a></code></summary>
   <ul class="link-list">
-  <li><code><a href="./SHA3/Digest/DigestError.html">DigestError</a></code>
+  <li><code><a href="./SHA3/Digest/Error.html">Error</a></code>
   <li><code><a href="./SHA3/Digest/SHA3_224.html">SHA3_224</a></code>
   <li><code><a href="./SHA3/Digest/SHA3_256.html">SHA3_256</a></code>
   <li><code><a href="./SHA3/Digest/SHA3_384.html">SHA3_384</a></code>
@@ -146,7 +151,7 @@
   </ul></details>
   <li><details><summary><code><a href="./SHA3/KMAC.html">KMAC</a></code></summary>
   <ul class="link-list">
-  <li><code><a href="./SHA3/KMAC/KMACError.html">KMACError</a></code>
+  <li><code><a href="./SHA3/KMAC/Error.html">Error</a></code>
   </ul></details>
   </ul></details>
 </div>
@@ -169,7 +174,7 @@
 
 <p>A high-performance native binding to the <a href="SHA3.html"><code>SHA3</code></a> (FIPS 202) cryptographic hashing algorithms, based on the <a href="https://github.com/XKCP/XKCP">XKCP - eXtended Keccak Code Package</a>.</p>
 
-<p>This gem provides support for the standard SHA-3 fixed-length functions (224, 256, 384, and 512 bits), as well as the SHAKE128/SHAKE256 extendable-output functions (XOFs) and KMAC (Keccak Message Authentication Code) as specified in NIST SP 800-185.</p>
+<p>This gem provides support for the standard SHA-3 fixed-length functions (224, 256, 384, and 512 bits), as well as the SHAKE128/SHAKE256 extendable-output functions (XOFs), cSHAKE128/cSHAKE256, and KMAC (Keccak Message Authentication Code) as specified in NIST SP 800-185.</p>
 
 <blockquote>
 <p>[!CAUTION] <strong>Security Notice</strong>: Do not use SHA-3 for hashing passwords. Instead, use a slow hashing function such as PBKDF2, Argon2, bcrypt, or scrypt.</p>
@@ -189,13 +194,15 @@
 </li><li>
 <p><a href="#sha-3-fixed-hash-functions">SHA-3 Fixed Hash Functions</a></p>
 </li><li>
-<p><a href="#shake128256-functions">SHAKE128/256 Functions</a></p>
-</li><li>
-<p><a href="#kmac-functions">KMAC Functions</a></p>
-</li><li>
 <p><a href="#alternate-class-syntax">Alternate Class Syntax</a></p>
 </li><li>
 <p><a href="#hashing-a-file">Hashing a File</a></p>
+</li><li>
+<p><a href="#shake128256-functions">SHAKE128/256 Functions</a></p>
+</li><li>
+<p><a href="#cshake128256-functions">cSHAKE128/256 Functions</a></p>
+</li><li>
+<p><a href="#kmac-functions">KMAC Functions</a></p>
 </li><li>
 <p><a href="#development">Development</a></p>
 </li><li>
@@ -229,6 +236,8 @@
 </li><li>
 <p>Support for SHAKE128 and SHAKE256 extendable-output functions (XOFs)</p>
 </li><li>
+<p>Support for cSHAKE128 and cSHAKE256 extendable-output functions (XOFs) with domain separation and personalization</p>
+</li><li>
 <p>Support for KMAC (Keccak Message Authentication Code)</p>
 </li><li>
 <p>Native C implementation for high performance</p>
@@ -244,7 +253,7 @@
 
 <p>Add this line to your application’s Gemfile:</p>
 
-<pre class="ruby"><span class="ruby-identifier">gem</span> <span class="ruby-string">&#39;sha3&#39;</span>, <span class="ruby-string">&#39;~&gt; 2.0&#39;</span>
+<pre class="ruby"><span class="ruby-identifier">gem</span> <span class="ruby-string">&#39;sha3&#39;</span>, <span class="ruby-string">&#39;~&gt; 2.2&#39;</span>
 </pre>
 
 <p>And then execute:</p>
@@ -293,55 +302,6 @@
 <p><code>:shake_256</code> - SHAKE256 extendable-output function</p>
 </li></ul>
 
-<h3 id="label-SHAKE128-2F256+Functions">SHAKE128/256 Functions<span><a href="#label-SHAKE128-2F256+Functions">&para;</a> <a href="#top">&uarr;</a></span></h3>
-
-<p>SHAKE128 and SHAKE256 are extendable-output functions (XOFs) that allow you to “squeeze” an arbitrary number of bytes from the hash state:</p>
-
-<pre class="ruby"><span class="ruby-comment"># Create a new SHAKE128 instance</span>
-<span class="ruby-identifier">shake</span> = <span class="ruby-constant">SHA3</span><span class="ruby-operator">::</span><span class="ruby-constant">Digest</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">:shake_128</span>)
-
-<span class="ruby-comment"># Add data to be hashed</span>
-<span class="ruby-identifier">shake</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&#39;Squeeze this data...&#39;</span>
-
-<span class="ruby-comment"># Squeeze 120 bytes (240 hex characters) from the hash state</span>
-<span class="ruby-identifier">result</span> = <span class="ruby-identifier">shake</span>.<span class="ruby-identifier">hex_squeeze</span>(<span class="ruby-value">120</span>)
-
-<span class="ruby-comment"># Or get binary output</span>
-<span class="ruby-identifier">binary_result</span> = <span class="ruby-identifier">shake</span>.<span class="ruby-identifier">squeeze</span>(<span class="ruby-value">1024</span>)
-
-<span class="ruby-comment"># You can call squeeze functions multiple times with arbitrary output lengths</span>
-<span class="ruby-identifier">first_part</span> = <span class="ruby-identifier">shake</span>.<span class="ruby-identifier">squeeze</span>(<span class="ruby-value">32</span>)       <span class="ruby-comment"># Get 32 bytes</span>
-<span class="ruby-identifier">second_part</span> = <span class="ruby-identifier">shake</span>.<span class="ruby-identifier">squeeze</span>(<span class="ruby-value">64</span>)      <span class="ruby-comment"># Get 64 bytes</span>
-<span class="ruby-identifier">third_part</span> = <span class="ruby-identifier">shake</span>.<span class="ruby-identifier">hex_squeeze</span>(<span class="ruby-value">128</span>)  <span class="ruby-comment"># Get 128 bytes as hex</span>
-</pre>
-
-<h3 id="label-KMAC+Functions">KMAC Functions<span><a href="#label-KMAC+Functions">&para;</a> <a href="#top">&uarr;</a></span></h3>
-
-<p>KMAC (Keccak Message Authentication Code) is a message authentication code algorithm based on the SHAKE extendable-output functions:</p>
-
-<pre class="ruby"><span class="ruby-identifier">require</span> <span class="ruby-string">&#39;sha3&#39;</span>
-
-<span class="ruby-comment"># Create a new KMAC instance</span>
-<span class="ruby-comment"># Parameters: algorithm, output_length (in bytes), key, [customization] optional</span>
-<span class="ruby-identifier">kmac</span> = <span class="ruby-constant">SHA3</span><span class="ruby-operator">::</span><span class="ruby-constant">KMAC</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">:kmac_128</span>, <span class="ruby-value">32</span>, <span class="ruby-string">&quot;my secret key&quot;</span>, <span class="ruby-string">&quot;app-specific customization&quot;</span>)
-
-<span class="ruby-comment"># Add data to be authenticated (update can be called multiple times)</span>
-<span class="ruby-identifier">kmac</span>.<span class="ruby-identifier">update</span>(<span class="ruby-string">&quot;Authenticate this message&quot;</span>)
-<span class="ruby-comment"># or use the &lt;&lt; operator</span>
-<span class="ruby-identifier">kmac</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&quot;And this too&quot;</span>
-
-<span class="ruby-comment"># Get the result as a hex string</span>
-<span class="ruby-identifier">result</span> = <span class="ruby-identifier">kmac</span>.<span class="ruby-identifier">hexdigest</span>
-<span class="ruby-comment"># =&gt; &quot;a8982c...&quot;</span>
-
-<span class="ruby-comment"># Or as binary</span>
-<span class="ruby-identifier">binary_result</span> = <span class="ruby-identifier">kmac</span>.<span class="ruby-identifier">digest</span>
-
-<span class="ruby-comment"># One-shot operation (customization is optional)</span>
-<span class="ruby-comment"># Parameters: algorithm, data, output_length (in bytes), data, key, [customization] optional</span>
-<span class="ruby-identifier">result</span> = <span class="ruby-constant">SHA3</span><span class="ruby-operator">::</span><span class="ruby-constant">KMAC</span>.<span class="ruby-identifier">hexdigest</span>(<span class="ruby-value">:kmac_256</span>, <span class="ruby-string">&quot;message&quot;</span>, <span class="ruby-value">64</span>, <span class="ruby-string">&quot;key&quot;</span>, <span class="ruby-string">&quot;customization&quot;</span>)
-</pre>
-
 <h3 id="label-Alternate+Class+Syntax">Alternate Class Syntax<span><a href="#label-Alternate+Class+Syntax">&para;</a> <a href="#top">&uarr;</a></span></h3>
 
 <p>For convenience, you can also use dedicated classes for each algorithm:</p>
@@ -370,12 +330,104 @@
 <pre class="ruby"><span class="ruby-comment"># Compute the hash value for a given file, and return the result as hex</span>
 <span class="ruby-identifier">hash</span> = <span class="ruby-constant">SHA3</span><span class="ruby-operator">::</span><span class="ruby-constant">Digest</span><span class="ruby-operator">::</span><span class="ruby-constant">SHA3_256</span>.<span class="ruby-identifier">file</span>(<span class="ruby-string">&quot;my_file.bin&quot;</span>).<span class="ruby-identifier">hexdigest</span>
 
-<span class="ruby-comment"># Using SHAKE function to squeeze an arbitrary number of bytes</span>
+<span class="ruby-comment"># Using SHAKE function to generate an arbitrary-length hash output</span>
 <span class="ruby-identifier">shake</span> = <span class="ruby-constant">SHA3</span><span class="ruby-operator">::</span><span class="ruby-constant">Digest</span><span class="ruby-operator">::</span><span class="ruby-constant">SHAKE_128</span>.<span class="ruby-identifier">file</span>(<span class="ruby-string">&quot;my_file.bin&quot;</span>).<span class="ruby-identifier">hexdigest</span>(<span class="ruby-value">320</span>)
 
 <span class="ruby-comment"># Calling SHA3::Digest.file(...) defaults to SHA3_256</span>
 <span class="ruby-identifier">hash</span> = <span class="ruby-constant">SHA3</span><span class="ruby-operator">::</span><span class="ruby-constant">Digest</span>.<span class="ruby-identifier">file</span>(<span class="ruby-string">&quot;my_file.bin&quot;</span>).<span class="ruby-identifier">hexdigest</span>
 <span class="ruby-comment"># =&gt; &quot;a9801db49389339...&quot;</span>
+</pre>
+
+<h3 id="label-SHAKE128-2F256+Functions">SHAKE128/256 Functions<span><a href="#label-SHAKE128-2F256+Functions">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<p>SHAKE128 and SHAKE256 are extendable-output functions (XOFs) that allow you to “squeeze” an arbitrary number of bytes from the hash state:</p>
+
+<pre class="ruby"><span class="ruby-comment"># Create a new SHAKE128 instance</span>
+<span class="ruby-identifier">shake</span> = <span class="ruby-constant">SHA3</span><span class="ruby-operator">::</span><span class="ruby-constant">Digest</span><span class="ruby-operator">::</span><span class="ruby-constant">SHAKE_128</span>.<span class="ruby-identifier">new</span>
+
+<span class="ruby-comment"># Add data to hash</span>
+<span class="ruby-identifier">shake</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&#39;Squeeze this data...&#39;</span>
+
+<span class="ruby-comment"># Squeeze 120 bytes (240 hex characters) from the hash state</span>
+<span class="ruby-identifier">result</span> = <span class="ruby-identifier">shake</span>.<span class="ruby-identifier">hex_squeeze</span>(<span class="ruby-value">120</span>)
+
+<span class="ruby-comment"># Or get binary output</span>
+<span class="ruby-identifier">binary_result</span> = <span class="ruby-identifier">shake</span>.<span class="ruby-identifier">squeeze</span>(<span class="ruby-value">1024</span>)
+
+<span class="ruby-comment"># You can call squeeze functions multiple times with arbitrary output lengths</span>
+<span class="ruby-identifier">first_part</span> = <span class="ruby-identifier">shake</span>.<span class="ruby-identifier">squeeze</span>(<span class="ruby-value">32</span>)       <span class="ruby-comment"># Get 32 bytes</span>
+<span class="ruby-identifier">second_part</span> = <span class="ruby-identifier">shake</span>.<span class="ruby-identifier">squeeze</span>(<span class="ruby-value">64</span>)      <span class="ruby-comment"># Get 64 bytes</span>
+<span class="ruby-identifier">third_part</span> = <span class="ruby-identifier">shake</span>.<span class="ruby-identifier">hex_squeeze</span>(<span class="ruby-value">128</span>)  <span class="ruby-comment"># Get 128 bytes as hex</span>
+</pre>
+
+<h3 id="label-cSHAKE128-2F256+Functions">cSHAKE128/256 Functions<span><a href="#label-cSHAKE128-2F256+Functions">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<p>cSHAKE128 and cSHAKE256 are customizable versions of SHAKE128 and SHAKE256, allowing for domain separation and personalization through a customization string.</p>
+
+<pre class="ruby"><span class="ruby-comment"># Create a new cSHAKE instance with a fixed output length</span>
+<span class="ruby-identifier">cshake</span> = <span class="ruby-constant">SHA3</span><span class="ruby-operator">::</span><span class="ruby-constant">CSHAKE</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">:cshake_128</span>, <span class="ruby-value">32</span>, <span class="ruby-value">name:</span> <span class="ruby-string">&#39;my-app&#39;</span>, <span class="ruby-value">customization:</span> <span class="ruby-string">&#39;Email Signature&#39;</span>)
+
+<span class="ruby-comment"># Add data to hash</span>
+<span class="ruby-identifier">cshake</span>.<span class="ruby-identifier">update</span>(<span class="ruby-string">&#39;Hello&#39;</span>)
+<span class="ruby-comment"># Or use the &lt;&lt; operator</span>
+<span class="ruby-identifier">cshake</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&#39;Compute me...&#39;</span>
+
+<span class="ruby-comment"># Get the final hash value as a hex string</span>
+<span class="ruby-identifier">cshake</span>.<span class="ruby-identifier">hexdigest</span>
+<span class="ruby-comment"># =&gt; &quot;d6d38021d60857...&quot;</span>
+
+<span class="ruby-comment"># Or as a binary string</span>
+<span class="ruby-identifier">cshake</span>.<span class="ruby-identifier">digest</span>
+
+<span class="ruby-comment"># Create a new cSHAKE instance for an arbitrarily-long (XOF) operation</span>
+<span class="ruby-identifier">cshake</span> = <span class="ruby-constant">SHA3</span><span class="ruby-operator">::</span><span class="ruby-constant">CSHAKE</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">:cshake_256</span>, <span class="ruby-value">0</span>, <span class="ruby-value">customization:</span> <span class="ruby-string">&#39;Signature&#39;</span>)
+
+<span class="ruby-comment"># Add data to hash</span>
+<span class="ruby-identifier">cshake</span>.<span class="ruby-identifier">update</span>(<span class="ruby-string">&#39;Beep Beep&#39;</span>)
+
+<span class="ruby-comment"># Squeeze 64-bytes of data from state</span>
+<span class="ruby-identifier">cshake</span>.<span class="ruby-identifier">squeeze</span>(<span class="ruby-value">64</span>)
+</pre>
+
+<h3 id="label-KMAC+Functions">KMAC Functions<span><a href="#label-KMAC+Functions">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<p>KMAC (Keccak Message Authentication Code) is a message authentication code algorithm based on the SHAKE extendable-output functions:</p>
+
+<pre class="ruby"><span class="ruby-identifier">require</span> <span class="ruby-string">&#39;sha3&#39;</span>
+
+<span class="ruby-comment"># Create a new KMAC instance with a fixed output length</span>
+<span class="ruby-comment"># Parameters: algorithm, output_length (in bytes), key, [customization] optional</span>
+<span class="ruby-identifier">kmac</span> = <span class="ruby-constant">SHA3</span><span class="ruby-operator">::</span><span class="ruby-constant">KMAC</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">:kmac_128</span>, <span class="ruby-value">32</span>, <span class="ruby-string">&quot;my secret key&quot;</span>, <span class="ruby-string">&quot;app-specific customization&quot;</span>)
+
+<span class="ruby-comment"># Add data to be authenticated (update can be called multiple times)</span>
+<span class="ruby-identifier">kmac</span>.<span class="ruby-identifier">update</span>(<span class="ruby-string">&quot;Authenticate this message&quot;</span>)
+<span class="ruby-comment"># or use the &lt;&lt; operator</span>
+<span class="ruby-identifier">kmac</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&quot;And this too&quot;</span>
+
+<span class="ruby-comment"># Get the result as a hex string</span>
+<span class="ruby-identifier">result</span> = <span class="ruby-identifier">kmac</span>.<span class="ruby-identifier">hexdigest</span>
+<span class="ruby-comment"># =&gt; &quot;a8982c...&quot;</span>
+
+<span class="ruby-comment"># Or as binary</span>
+<span class="ruby-identifier">binary_result</span> = <span class="ruby-identifier">kmac</span>.<span class="ruby-identifier">digest</span>
+
+<span class="ruby-comment"># Create a new KMAC instance with an arbitrary-length (XOF) operation</span>
+<span class="ruby-identifier">kmac</span> = <span class="ruby-constant">SHA3</span><span class="ruby-operator">::</span><span class="ruby-constant">KMAC</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">:kmac_256</span>, <span class="ruby-value">0</span>, <span class="ruby-string">&quot;my secret key&quot;</span>, <span class="ruby-string">&quot;app-specific customization&quot;</span>)
+
+<span class="ruby-comment"># Add data to be authenticated (update can be called multiple times)</span>
+<span class="ruby-identifier">kmac</span>.<span class="ruby-identifier">update</span>(<span class="ruby-string">&quot;Authenticate this message&quot;</span>)
+<span class="ruby-comment"># or use the &lt;&lt; operator</span>
+<span class="ruby-identifier">kmac</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&quot;And this too&quot;</span>
+
+<span class="ruby-comment"># Get the result as a hex string</span>
+<span class="ruby-identifier">result</span> = <span class="ruby-identifier">kmac</span>.<span class="ruby-identifier">hex_squeeze</span>(<span class="ruby-value">128</span>)
+
+<span class="ruby-comment"># Or as binary</span>
+<span class="ruby-identifier">binary_result</span> = <span class="ruby-identifier">kmac</span>.<span class="ruby-identifier">squeeze</span>(<span class="ruby-value">128</span>)
+
+<span class="ruby-comment"># One-shot operation (customization is optional)</span>
+<span class="ruby-comment"># Parameters: algorithm, data, data, output_length (in bytes),key, [customization] optional</span>
+<span class="ruby-identifier">result</span> = <span class="ruby-constant">SHA3</span><span class="ruby-operator">::</span><span class="ruby-constant">KMAC</span>.<span class="ruby-identifier">hexdigest</span>(<span class="ruby-value">:kmac_256</span>, <span class="ruby-string">&quot;message&quot;</span>, <span class="ruby-value">64</span>, <span class="ruby-string">&quot;key&quot;</span>, <span class="ruby-string">&quot;customization&quot;</span>)
 </pre>
 
 <h2 id="label-Development">Development<span><a href="#label-Development">&para;</a> <a href="#top">&uarr;</a></span></h2>
@@ -402,18 +454,20 @@
 
 <h3 id="label-Supported+Ruby+Versions">Supported Ruby Versions<span><a href="#label-Supported+Ruby+Versions">&para;</a> <a href="#top">&uarr;</a></span></h3>
 <ul><li>
-<p>MRI Ruby 2.7 - 3.1</p>
+<p>MRI Ruby 2.7 - 3.4</p>
 </li></ul>
 
 <h2 id="label-Roadmap">Roadmap<span><a href="#label-Roadmap">&para;</a> <a href="#top">&uarr;</a></span></h2>
+
+<p>As of version 2.2.0 (2025), this gem is feature complete with a stable API—future updates will focus exclusively on performance improvements, security enhancements, and bug fixes.</p>
 <ul><li>
-<p>[X] Add support for SHA-3 variants (224, 256, 384, and 512 bit)</p>
+<p>[X] 0.1.0: Add support for SHA-3 variants (224, 256, 384, and 512 bit)</p>
 </li><li>
-<p>[X] Add support for SHAKE128 and SHAKE256 extendable-output functions (XOFs)</p>
+<p>[X] 2.0.0: Add support for SHAKE128 and SHAKE256 extendable-output functions (XOFs)</p>
 </li><li>
-<p>[X] Add support for KMAC</p>
+<p>[X] 2.1.0: Add support for KMAC</p>
 </li><li>
-<p>[ ] Add support for cSHAKE</p>
+<p>[X] 2.2.0: Add support for cSHAKE</p>
 </li></ul>
 
 <h2 id="label-Contributing">Contributing<span><a href="#label-Contributing">&para;</a> <a href="#top">&uarr;</a></span></h2>

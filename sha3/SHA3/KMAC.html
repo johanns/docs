@@ -90,9 +90,11 @@
       <li ><a href="#method-i-3C-3C">&lt;&lt;</a></li>
       <li ><a href="#method-i-digest">digest</a></li>
       <li ><a href="#method-i-finish">finish</a></li>
+      <li ><a href="#method-i-hex_squeeze">hex_squeeze</a></li>
       <li ><a href="#method-i-hexdigest">hexdigest</a></li>
       <li ><a href="#method-i-initialize_copy">initialize_copy</a></li>
       <li ><a href="#method-i-name">name</a></li>
+      <li ><a href="#method-i-squeeze">squeeze</a></li>
       <li ><a href="#method-i-update">update</a></li>
     </ul>
   </div>
@@ -148,12 +150,18 @@
 
         <div class="method-description">
           <div class="method-source-code" id="digest-source">
-            <pre>static VALUE rb_sha3_kmac_self_digest(int argc, VALUE* argv, VALUE klass) {
+            <pre>static VALUE rb_sha3_kmac_self_digest(int argc, VALUE *argv, VALUE klass) {
     VALUE algorithm, data, output_length, key, customization;
 
     rb_scan_args(argc, argv, &quot;41&quot;, &amp;algorithm, &amp;data, &amp;output_length, &amp;key, &amp;customization);
 
+    Check_Type(output_length, T_FIXNUM);
+    if (!NIL_P(output_length) &amp;&amp; output_length &lt;= INT2FIX(0)) {
+        rb_raise(rb_eArgError, &quot;class method digest does not support XOF mode&quot;);
+    }
+
     VALUE kmac = rb_funcall(klass, rb_intern(&quot;new&quot;), 4, algorithm, output_length, key, customization);
+
     return rb_funcall(kmac, rb_intern(&quot;digest&quot;), 1, data);
 }</pre>
           </div>
@@ -204,12 +212,18 @@
 
         <div class="method-description">
           <div class="method-source-code" id="hexdigest-source">
-            <pre>static VALUE rb_sha3_kmac_self_hexdigest(int argc, VALUE* argv, VALUE klass) {
+            <pre>static VALUE rb_sha3_kmac_self_hexdigest(int argc, VALUE *argv, VALUE klass) {
     VALUE algorithm, data, output_length, key, customization;
 
     rb_scan_args(argc, argv, &quot;41&quot;, &amp;algorithm, &amp;data, &amp;output_length, &amp;key, &amp;customization);
 
+    Check_Type(output_length, T_FIXNUM);
+    if (!NIL_P(output_length) &amp;&amp; output_length &lt;= INT2FIX(0)) {
+        rb_raise(rb_eArgError, &quot;class method hexdigest does not support XOF mode&quot;);
+    }
+
     VALUE kmac = rb_funcall(klass, rb_intern(&quot;new&quot;), 4, algorithm, output_length, key, customization);
+
     return rb_funcall(kmac, rb_intern(&quot;hexdigest&quot;), 1, data);
 }</pre>
           </div>
@@ -260,46 +274,60 @@
 
         <div class="method-description">
           <div class="method-source-code" id="new-source">
-            <pre>static VALUE rb_sha3_kmac_init(int argc, VALUE* argv, VALUE self) {
-    sha3_kmac_context_t* context;
+            <pre>static VALUE rb_sha3_kmac_init(int argc, VALUE *argv, VALUE self) {
     VALUE algorithm, output_length, key, customization;
 
     rb_scan_args(argc, argv, &quot;31&quot;, &amp;algorithm, &amp;output_length, &amp;key, &amp;customization);
 
-    get_sha3_kmac_context(self, &amp;context);
+    // Check and convert arguments
+    if (NIL_P(algorithm)) {
+        rb_raise(rb_eArgError, &quot;missing keyword: algorithm&quot;);
+    }
+    Check_Type(algorithm, T_SYMBOL);
 
-    ID sym = SYM2ID(algorithm);
-    if (rb_equal(sym, _kmac_128_id)) {
-        context-&gt;algorithm = KMAC_128;
-    } else if (rb_equal(sym, _kmac_256_id)) {
-        context-&gt;algorithm = KMAC_256;
+    if (NIL_P(output_length)) {
+        rb_raise(rb_eArgError, &quot;missing keyword: output_length&quot;);
+    }
+    Check_Type(output_length, T_FIXNUM);
+
+    if (NIL_P(key)) {
+        rb_raise(rb_eArgError, &quot;missing keyword: key&quot;);
+    }
+    StringValue(key);
+
+    if (!NIL_P(customization)) {
+        StringValue(customization);
     } else {
-        rb_raise(_sha3_kmac_error_class, &quot;invalid algorithm&quot;);
+        customization = rb_str_new2(&quot;&quot;);
     }
 
-    if (!NIL_P(output_length)) {
-        Check_Type(output_length, T_FIXNUM);
-        context-&gt;output_length = NUM2ULONG(output_length) * 8;
+    sha3_kmac_context_t *context;
+    TypedData_Get_Struct(self, sha3_kmac_context_t, &amp;sha3_kmac_data_type_t, context);
+
+    // Store the output length in bits
+    context-&gt;base.output_length = NUM2ULONG(output_length) * 8;
+    context-&gt;base.error_class = _sha3_kmac_error_class;
+
+    // Find the appropriate function table based on the algorithm
+    ID sym_id = SYM2ID(algorithm);
+    if (sym_id == _kmac_128_id) {
+        context-&gt;base.functions = &amp;sp800_185_functions[SP800_185_KMAC_128];
+    } else if (sym_id == _kmac_256_id) {
+        context-&gt;base.functions = &amp;sp800_185_functions[SP800_185_KMAC_256];
+    } else {
+        rb_raise(rb_eArgError, &quot;invalid algorithm: %s&quot;, rb_id2name(sym_id));
     }
 
-    if (!NIL_P(key)) {
-        Check_Type(key, T_STRING);
-        size_t key_len = RSTRING_LEN(key) * 8;
-        const unsigned char* key_ptr = (const unsigned char*)RSTRING_PTR(key);
+    // Initialize the KMAC instance
+    size_t key_len = RSTRING_LEN(key) * 8;
+    size_t customization_len = RSTRING_LEN(customization) * 8;
 
-        if (context-&gt;algorithm == KMAC_128) {
-            if (KMAC128_Initialize(context-&gt;state, key_ptr, key_len, context-&gt;output_length,
-                                   NIL_P(customization) ? NULL : (const unsigned char*)RSTRING_PTR(customization),
-                                   NIL_P(customization) ? 0 : RSTRING_LEN(customization) * 8) != 0) {
-                rb_raise(_sha3_kmac_error_class, &quot;failed to initialize KMAC128&quot;);
-            }
-        } else {
-            if (KMAC256_Initialize(context-&gt;state, key_ptr, key_len, context-&gt;output_length,
-                                   NIL_P(customization) ? NULL : (const unsigned char*)RSTRING_PTR(customization),
-                                   NIL_P(customization) ? 0 : RSTRING_LEN(customization) * 8) != 0) {
-                rb_raise(_sha3_kmac_error_class, &quot;failed to initialize KMAC256&quot;);
-            }
-        }
+    int result = context-&gt;base.functions-&gt;kmac.init(context-&gt;base.state, (const BitSequence *)RSTRING_PTR(key), key_len,
+                                                    context-&gt;base.output_length,
+                                                    (const BitSequence *)RSTRING_PTR(customization), customization_len);
+
+    if (result != 0) {
+        rb_raise(_sha3_kmac_error_class, &quot;failed to initialize %s&quot;, context-&gt;base.functions-&gt;name);
     }
 
     return self;
@@ -316,7 +344,7 @@
 </li></ul>
 </dd><dt><code>output_length</code></dt>
 <dd>
-<p>The length of the output in bytes.</p>
+<p>The length of the output in bytes. Set to 0 for an arbitrarily-long output using “squeeze” (XOF) methods.</p>
 </dd><dt><code>key</code></dt>
 <dd>
 <p>The key to use for the <a href="KMAC.html"><code>KMAC</code></a>.</p>
@@ -329,6 +357,7 @@
 
 <pre class="ruby"><span class="ruby-constant">SHA3</span><span class="ruby-operator">::</span><span class="ruby-constant">KMAC</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">:kmac_128</span>, <span class="ruby-value">32</span>, <span class="ruby-string">&quot;key&quot;</span>)
 <span class="ruby-constant">SHA3</span><span class="ruby-operator">::</span><span class="ruby-constant">KMAC</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">:kmac_256</span>, <span class="ruby-value">64</span>, <span class="ruby-string">&quot;key&quot;</span>, <span class="ruby-string">&quot;customization&quot;</span>)
+<span class="ruby-constant">SHA3</span><span class="ruby-operator">::</span><span class="ruby-constant">KMAC</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">:kmac_128</span>, <span class="ruby-value">0</span>, <span class="ruby-string">&quot;key&quot;</span>, <span class="ruby-string">&quot;customization&quot;</span>)
 </pre>
         </div>
 
@@ -385,21 +414,13 @@
 
         <div class="method-description">
           <div class="method-source-code" id="digest-source">
-            <pre>static VALUE rb_sha3_kmac_digest(int argc, VALUE* argv, VALUE self) {
-    VALUE copy, data;
+            <pre>static VALUE rb_sha3_kmac_digest(int argc, VALUE *argv, VALUE self) {
+    sp800_185_context_t *context;
+    get_kmac_context(self, &amp;context);
 
-    rb_scan_args(argc, argv, &quot;01&quot;, &amp;data);
+    VALUE data = argc &gt; 0 ? argv[0] : Qnil;
 
-    // Create a copy of the instance to avoid modifying the original
-    copy = rb_obj_clone(self);
-
-    // If data is provided, update the copy&#39;s state
-    if (!NIL_P(data)) {
-        rb_sha3_kmac_update(copy, data);
-    }
-
-    // Call finish on the copy
-    return rb_sha3_kmac_finish(0, NULL, copy);
+    return sp800_185_digest(context, data);
 }</pre>
           </div>
           <p>Returns the binary representation of the <a href="KMAC.html"><code>KMAC</code></a>. This method creates a copy of the current instance so that the original state is preserved for future updates.</p>
@@ -412,6 +433,47 @@
 
 <pre class="ruby"><span class="ruby-identifier">kmac</span>.<span class="ruby-identifier">digest</span>
 <span class="ruby-identifier">kmac</span>.<span class="ruby-identifier">digest</span>(<span class="ruby-string">&#39;final chunk&#39;</span>)
+</pre>
+        </div>
+
+
+      </div>
+
+      <div id="method-i-hex_squeeze" class="method-detail anchor-link ">
+        <div class="method-header">
+              <div class="method-heading">
+                <a href="#method-i-hex_squeeze" title="Link to this method">
+                  <span class="method-callseq">
+                    hex_squeeze(length) &rarr; string
+                  </span>
+                </a>
+              </div>
+        </div>
+
+          <div class="method-controls">
+            <details class="method-source-toggle">
+              <summary>Source</summary>
+            </details>
+          </div>
+
+        <div class="method-description">
+          <div class="method-source-code" id="hex_squeeze-source">
+            <pre>static VALUE rb_sha3_kmac_hex_squeeze(VALUE self, VALUE length) {
+    sp800_185_context_t *context;
+    get_kmac_context(self, &amp;context);
+
+    return sp800_185_hex_squeeze(context, length);
+}</pre>
+          </div>
+          <p>Returns the squeezed output as a hexadecimal string. This method creates a copy of the current instance so that the original state is preserved for future updates.</p>
+
+<h1 id="method-i-hex_squeeze-label-note">note<span><a href="#method-i-hex_squeeze-label-note">&para;</a> <a href="#top">&uarr;</a></span></h1>
+
+<p>The <a href="KMAC.html"><code>KMAC</code></a> instance must be initialized with 0 output length before calling this method.</p>
+
+<h1 id="method-i-hex_squeeze-label-example">example<span><a href="#method-i-hex_squeeze-label-example">&para;</a> <a href="#top">&uarr;</a></span></h1>
+
+<pre class="ruby"><span class="ruby-identifier">kmac</span>.<span class="ruby-identifier">hex_squeeze</span>(<span class="ruby-value">128</span>)
 </pre>
         </div>
 
@@ -444,9 +506,13 @@
 
         <div class="method-description">
           <div class="method-source-code" id="hexdigest-source">
-            <pre>static VALUE rb_sha3_kmac_hexdigest(int argc, VALUE* argv, VALUE self) {
-    VALUE bin_str = rb_sha3_kmac_digest(argc, argv, self);
-    return rb_funcall(bin_str, rb_intern(&quot;unpack1&quot;), 1, rb_str_new2(&quot;H*&quot;));
+            <pre>static VALUE rb_sha3_kmac_hexdigest(int argc, VALUE *argv, VALUE self) {
+    sp800_185_context_t *context;
+    get_kmac_context(self, &amp;context);
+
+    VALUE data = argc &gt; 0 ? argv[0] : Qnil;
+
+    return sp800_185_hexdigest(context, data);
 }</pre>
           </div>
           <p>Returns the hexadecimal representation of the <a href="KMAC.html"><code>KMAC</code></a>. This method creates a copy of the current instance so that the original state is preserved for future updates.</p>
@@ -470,7 +536,7 @@
               <div class="method-heading">
                 <a href="#method-i-initialize_copy" title="Link to this method">
                   <span class="method-callseq">
-                    initialize_copy(other) &rarr; kmac
+                    ::copy(other) &rarr; kmac
                   </span>
                 </a>
               </div>
@@ -485,8 +551,7 @@
         <div class="method-description">
           <div class="method-source-code" id="initialize_copy-source">
             <pre>static VALUE rb_sha3_kmac_copy(VALUE self, VALUE other) {
-    sha3_kmac_context_t* context;
-    sha3_kmac_context_t* other_context;
+    sha3_kmac_context_t *context, *other_context;
 
     rb_check_frozen(self);
     if (self == other) {
@@ -498,21 +563,20 @@
                  rb_class2name(_sha3_kmac_class));
     }
 
-    safe_get_sha3_kmac_context(other, &amp;other_context);
-    get_sha3_kmac_context(self, &amp;context);
+    TypedData_Get_Struct(other, sha3_kmac_context_t, &amp;sha3_kmac_data_type_t, other_context);
+    TypedData_Get_Struct(self, sha3_kmac_context_t, &amp;sha3_kmac_data_type_t, context);
 
-    context-&gt;algorithm = other_context-&gt;algorithm;
-    context-&gt;output_length = other_context-&gt;output_length;
-    memcpy(context-&gt;state, other_context-&gt;state, sizeof(KMAC_Instance));
+    // Copy the base context attributes
+    context-&gt;base.functions = other_context-&gt;base.functions;
+    context-&gt;base.output_length = other_context-&gt;base.output_length;
 
-    if (!compare_contexts(context, other_context)) {
-        rb_raise(_sha3_kmac_error_class, &quot;failed to copy state&quot;);
-    }
+    // Copy the algorithm-specific state
+    memcpy(context-&gt;base.state, other_context-&gt;base.state, context-&gt;base.functions-&gt;state_size);
 
     return self;
 }</pre>
           </div>
-          <p>Initializes the <a href="KMAC.html"><code>KMAC</code></a> with the state of another <a href="KMAC.html"><code>KMAC</code></a>.</p>
+          <p>Creates a copy of the <a href="KMAC.html"><code>KMAC</code></a> instance.</p>
 <dl class="rdoc-list note-list"><dt><code>other</code></dt>
 <dd>
 <p>The <a href="KMAC.html"><code>KMAC</code></a> to copy the state from.</p>
@@ -547,18 +611,10 @@
         <div class="method-description">
           <div class="method-source-code" id="name-source">
             <pre>static VALUE rb_sha3_kmac_name(VALUE self) {
-    sha3_kmac_context_t* context;
+    sp800_185_context_t *context;
+    get_kmac_context(self, &amp;context);
 
-    get_sha3_kmac_context(self, &amp;context);
-
-    switch (context-&gt;algorithm) {
-        case KMAC_128:
-            return rb_str_new2(&quot;KMAC128&quot;);
-        case KMAC_256:
-            return rb_str_new2(&quot;KMAC256&quot;);
-        default:
-            rb_raise(_sha3_kmac_error_class, &quot;unknown algorithm&quot;);
-    }
+    return rb_str_new2(sp800_185_name(context));
 }</pre>
           </div>
           <p>Returns the name of the algorithm.</p>
@@ -566,6 +622,47 @@
 <h1 id="method-i-name-label-example">example<span><a href="#method-i-name-label-example">&para;</a> <a href="#top">&uarr;</a></span></h1>
 
 <pre class="ruby"><span class="ruby-identifier">kmac</span>.<span class="ruby-identifier">name</span>  <span class="ruby-comment">#=&gt; &quot;KMAC128&quot; or &quot;KMAC256&quot;</span>
+</pre>
+        </div>
+
+
+      </div>
+
+      <div id="method-i-squeeze" class="method-detail anchor-link ">
+        <div class="method-header">
+              <div class="method-heading">
+                <a href="#method-i-squeeze" title="Link to this method">
+                  <span class="method-callseq">
+                    squeeze(length) &rarr; string
+                  </span>
+                </a>
+              </div>
+        </div>
+
+          <div class="method-controls">
+            <details class="method-source-toggle">
+              <summary>Source</summary>
+            </details>
+          </div>
+
+        <div class="method-description">
+          <div class="method-source-code" id="squeeze-source">
+            <pre>static VALUE rb_sha3_kmac_squeeze(VALUE self, VALUE length) {
+    sp800_185_context_t *context;
+    get_kmac_context(self, &amp;context);
+
+    return sp800_185_squeeze(context, length);
+}</pre>
+          </div>
+          <p>Returns the squeezed output as a binary string. This method creates a copy of the current instance so that the original state is preserved for future updates.</p>
+
+<h1 id="method-i-squeeze-label-note">note<span><a href="#method-i-squeeze-label-note">&para;</a> <a href="#top">&uarr;</a></span></h1>
+
+<p>The <a href="KMAC.html"><code>KMAC</code></a> instance must be initialized with 0 output length before calling this method.</p>
+
+<h1 id="method-i-squeeze-label-example">example<span><a href="#method-i-squeeze-label-example">&para;</a> <a href="#top">&uarr;</a></span></h1>
+
+<pre class="ruby"><span class="ruby-identifier">kmac</span>.<span class="ruby-identifier">squeeze</span>(<span class="ruby-value">128</span>)
 </pre>
         </div>
 
@@ -592,23 +689,9 @@
         <div class="method-description">
           <div class="method-source-code" id="update-source">
             <pre>static VALUE rb_sha3_kmac_update(VALUE self, VALUE data) {
-    sha3_kmac_context_t* context;
-    size_t data_len;
-
-    Check_Type(data, T_STRING);
-    data_len = RSTRING_LEN(data) * 8;
-
-    get_sha3_kmac_context(self, &amp;context);
-
-    if (context-&gt;algorithm == KMAC_128) {
-        if (KMAC128_Update(context-&gt;state, (const BitSequence*)RSTRING_PTR(data), data_len) != 0) {
-            rb_raise(_sha3_kmac_error_class, &quot;failed to update KMAC128&quot;);
-        }
-    } else {
-        if (KMAC256_Update(context-&gt;state, (const BitSequence*)RSTRING_PTR(data), data_len) != 0) {
-            rb_raise(_sha3_kmac_error_class, &quot;failed to update KMAC256&quot;);
-        }
-    }
+    sp800_185_context_t *context;
+    get_kmac_context(self, &amp;context);
+    sp800_185_update(context, data);
 
     return self;
 }</pre>
@@ -658,32 +741,13 @@
 
         <div class="method-description">
           <div class="method-source-code" id="finish-source">
-            <pre>static VALUE rb_sha3_kmac_finish(int argc, VALUE* argv, VALUE self) {
-    sha3_kmac_context_t* context;
-    VALUE output;
+            <pre>static VALUE rb_sha3_kmac_finish(int argc, VALUE *argv, VALUE self) {
+    sp800_185_context_t *context;
+    get_kmac_context(self, &amp;context);
 
-    rb_scan_args(argc, argv, &quot;01&quot;, &amp;output);
+    VALUE output = argc &gt; 0 ? argv[0] : Qnil;
 
-    get_sha3_kmac_context(self, &amp;context);
-
-    if (NIL_P(output)) {
-        output = rb_str_new(0, context-&gt;output_length / 8);
-    } else {
-        StringValue(output);
-        rb_str_resize(output, context-&gt;output_length / 8);
-    }
-
-    if (context-&gt;algorithm == KMAC_128) {
-        if (KMAC128_Final(context-&gt;state, (BitSequence*)RSTRING_PTR(output)) != 0) {
-            rb_raise(_sha3_kmac_error_class, &quot;failed to finalize KMAC128&quot;);
-        }
-    } else {
-        if (KMAC256_Final(context-&gt;state, (BitSequence*)RSTRING_PTR(output)) != 0) {
-            rb_raise(_sha3_kmac_error_class, &quot;failed to finalize KMAC256&quot;);
-        }
-    }
-
-    return output;
+    return sp800_185_finish(context, output);
 }</pre>
           </div>
           <p>Returns the final <a href="KMAC.html"><code>KMAC</code></a> as a binary string.</p>

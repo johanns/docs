@@ -10,7 +10,7 @@
   <meta name="keywords" content="ruby,documentation,Table of Contents - SHA3">
 
 
-    <meta name="description" content="Table of Contents - SHA3: XKCP). SHAKE256 extendable-output functions (XOFs) and KMAC (Keccak Message Authentication Code) as specified in NIST SP 800-185.">
+    <meta name="description" content="Table of Contents - SHA3: XKCP). SHAKE256, and KMAC (Keccak Message Authentication Code) as specified in NIST SP 800-185.">
 
 <script type="text/javascript">
   var rdoc_rel_prefix = "./";
@@ -91,10 +91,11 @@
       <li><a href="README_md.html#label-Installation">Installation</a>
       <li><a href="README_md.html#label-Usage">Usage</a>
       <li><a href="README_md.html#label-SHA-3+Fixed+Hash+Functions">SHA-3 Fixed Hash Functions</a>
-      <li><a href="README_md.html#label-SHAKE128-2F256+Functions">SHAKE128/256 Functions</a>
-      <li><a href="README_md.html#label-KMAC+Functions">KMAC Functions</a>
       <li><a href="README_md.html#label-Alternate+Class+Syntax">Alternate Class Syntax</a>
       <li><a href="README_md.html#label-Hashing+a+File">Hashing a File</a>
+      <li><a href="README_md.html#label-SHAKE128-2F256+Functions">SHAKE128/256 Functions</a>
+      <li><a href="README_md.html#label-cSHAKE128-2F256+Functions">cSHAKE128/256 Functions</a>
+      <li><a href="README_md.html#label-KMAC+Functions">KMAC Functions</a>
       <li><a href="README_md.html#label-Development">Development</a>
       <li><a href="README_md.html#label-Dependencies">Dependencies</a>
       <li><a href="README_md.html#label-Testing">Testing</a>
@@ -117,10 +118,16 @@
     </ul>
   </li>
   <li class="class">
+    <a href="SHA3/CSHAKE.html">SHA3::CSHAKE</a>
+  </li>
+  <li class="class">
+    <a href="SHA3/CSHAKE/Error.html">SHA3::CSHAKE::Error</a>
+  </li>
+  <li class="class">
     <a href="SHA3/Digest.html">SHA3::Digest</a>
   </li>
   <li class="class">
-    <a href="SHA3/Digest/DigestError.html">SHA3::Digest::DigestError</a>
+    <a href="SHA3/Digest/Error.html">SHA3::Digest::Error</a>
   </li>
   <li class="class">
     <a href="SHA3/Digest/SHA3_224.html">SHA3::Digest::SHA3_224</a>
@@ -144,7 +151,7 @@
     <a href="SHA3/KMAC.html">SHA3::KMAC</a>
   </li>
   <li class="class">
-    <a href="SHA3/KMAC/KMACError.html">SHA3::KMAC::KMACError</a>
+    <a href="SHA3/KMAC/Error.html">SHA3::KMAC::Error</a>
   </li>
 </ul>
 
@@ -152,14 +159,14 @@
 <ul>
 
   <li class="method">
-    <a href="SHA3/Digest.html#method-c-digest">::digest</a>
-    &mdash;
-    <span class="container">SHA3::Digest</span>
-
-  <li class="method">
     <a href="SHA3/KMAC.html#method-c-digest">::digest</a>
     &mdash;
     <span class="container">SHA3::KMAC</span>
+
+  <li class="method">
+    <a href="SHA3/Digest.html#method-c-digest">::digest</a>
+    &mdash;
+    <span class="container">SHA3::Digest</span>
 
   <li class="method">
     <a href="SHA3/KMAC.html#method-c-hexdigest">::hexdigest</a>
@@ -177,19 +184,29 @@
     <span class="container">SHA3::Digest</span>
 
   <li class="method">
+    <a href="SHA3/CSHAKE.html#method-c-new">::new</a>
+    &mdash;
+    <span class="container">SHA3::CSHAKE</span>
+
+  <li class="method">
     <a href="SHA3/KMAC.html#method-c-new">::new</a>
     &mdash;
     <span class="container">SHA3::KMAC</span>
 
   <li class="method">
-    <a href="SHA3/Digest.html#method-i-3C-3C">#&lt;&lt;</a>
-    &mdash;
-    <span class="container">SHA3::Digest</span>
-
-  <li class="method">
     <a href="SHA3/KMAC.html#method-i-3C-3C">#&lt;&lt;</a>
     &mdash;
     <span class="container">SHA3::KMAC</span>
+
+  <li class="method">
+    <a href="SHA3/CSHAKE.html#method-i-3C-3C">#&lt;&lt;</a>
+    &mdash;
+    <span class="container">SHA3::CSHAKE</span>
+
+  <li class="method">
+    <a href="SHA3/Digest.html#method-i-3C-3C">#&lt;&lt;</a>
+    &mdash;
+    <span class="container">SHA3::Digest</span>
 
   <li class="method">
     <a href="SHA3/Digest.html#method-i-block_length">#block_length</a>
@@ -207,9 +224,19 @@
     <span class="container">SHA3::Digest</span>
 
   <li class="method">
+    <a href="SHA3/CSHAKE.html#method-i-digest">#digest</a>
+    &mdash;
+    <span class="container">SHA3::CSHAKE</span>
+
+  <li class="method">
     <a href="SHA3/Digest.html#method-i-digest_length">#digest_length</a>
     &mdash;
     <span class="container">SHA3::Digest</span>
+
+  <li class="method">
+    <a href="SHA3/CSHAKE.html#method-i-finish">#finish</a>
+    &mdash;
+    <span class="container">SHA3::CSHAKE</span>
 
   <li class="method">
     <a href="SHA3/KMAC.html#method-i-finish">#finish</a>
@@ -227,9 +254,19 @@
     <span class="container">SHA3::Digest</span>
 
   <li class="method">
-    <a href="SHA3/KMAC.html#method-i-hexdigest">#hexdigest</a>
+    <a href="SHA3/CSHAKE.html#method-i-hex_squeeze">#hex_squeeze</a>
+    &mdash;
+    <span class="container">SHA3::CSHAKE</span>
+
+  <li class="method">
+    <a href="SHA3/KMAC.html#method-i-hex_squeeze">#hex_squeeze</a>
     &mdash;
     <span class="container">SHA3::KMAC</span>
+
+  <li class="method">
+    <a href="SHA3/CSHAKE.html#method-i-hexdigest">#hexdigest</a>
+    &mdash;
+    <span class="container">SHA3::CSHAKE</span>
 
   <li class="method">
     <a href="SHA3/Digest.html#method-i-hexdigest">#hexdigest</a>
@@ -237,12 +274,27 @@
     <span class="container">SHA3::Digest</span>
 
   <li class="method">
+    <a href="SHA3/KMAC.html#method-i-hexdigest">#hexdigest</a>
+    &mdash;
+    <span class="container">SHA3::KMAC</span>
+
+  <li class="method">
+    <a href="SHA3/KMAC.html#method-i-initialize_copy">#initialize_copy</a>
+    &mdash;
+    <span class="container">SHA3::KMAC</span>
+
+  <li class="method">
     <a href="SHA3/Digest.html#method-i-initialize_copy">#initialize_copy</a>
     &mdash;
     <span class="container">SHA3::Digest</span>
 
   <li class="method">
-    <a href="SHA3/KMAC.html#method-i-initialize_copy">#initialize_copy</a>
+    <a href="SHA3/CSHAKE.html#method-i-initialize_copy">#initialize_copy</a>
+    &mdash;
+    <span class="container">SHA3::CSHAKE</span>
+
+  <li class="method">
+    <a href="SHA3/KMAC.html#method-i-name">#name</a>
     &mdash;
     <span class="container">SHA3::KMAC</span>
 
@@ -252,9 +304,9 @@
     <span class="container">SHA3::Digest</span>
 
   <li class="method">
-    <a href="SHA3/KMAC.html#method-i-name">#name</a>
+    <a href="SHA3/CSHAKE.html#method-i-name">#name</a>
     &mdash;
-    <span class="container">SHA3::KMAC</span>
+    <span class="container">SHA3::CSHAKE</span>
 
   <li class="method">
     <a href="SHA3/Digest.html#method-i-reset">#reset</a>
@@ -262,7 +314,27 @@
     <span class="container">SHA3::Digest</span>
 
   <li class="method">
+    <a href="SHA3/CSHAKE.html#method-i-squeeze">#squeeze</a>
+    &mdash;
+    <span class="container">SHA3::CSHAKE</span>
+
+  <li class="method">
     <a href="SHA3/Digest.html#method-i-squeeze">#squeeze</a>
+    &mdash;
+    <span class="container">SHA3::Digest</span>
+
+  <li class="method">
+    <a href="SHA3/KMAC.html#method-i-squeeze">#squeeze</a>
+    &mdash;
+    <span class="container">SHA3::KMAC</span>
+
+  <li class="method">
+    <a href="SHA3/CSHAKE.html#method-i-update">#update</a>
+    &mdash;
+    <span class="container">SHA3::CSHAKE</span>
+
+  <li class="method">
+    <a href="SHA3/Digest.html#method-i-update">#update</a>
     &mdash;
     <span class="container">SHA3::Digest</span>
 
@@ -270,11 +342,6 @@
     <a href="SHA3/KMAC.html#method-i-update">#update</a>
     &mdash;
     <span class="container">SHA3::KMAC</span>
-
-  <li class="method">
-    <a href="SHA3/Digest.html#method-i-update">#update</a>
-    &mdash;
-    <span class="container">SHA3::Digest</span>
 </ul>
 </main>
 

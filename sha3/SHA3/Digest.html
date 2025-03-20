@@ -121,17 +121,17 @@
     
 <p>It is a subclass of the Digest::Class class, which provides a framework for creating and manipulating hash digest. Supported Algorithms are:</p>
 <ul><li>
-<p>SHA3-224</p>
+<p>SHA3-224 (:sha3_224)</p>
 </li><li>
-<p>SHA3-256</p>
+<p>SHA3-256 (:sha3_256)</p>
 </li><li>
-<p>SHA3-384</p>
+<p>SHA3-384 (:sha3_384)</p>
 </li><li>
-<p>SHA3-512</p>
+<p>SHA3-512 (:sha3_512)</p>
 </li><li>
-<p>SHAKE128</p>
+<p>SHAKE128 (:shake_128)</p>
 </li><li>
-<p>SHAKE256</p>
+<p>SHAKE256 (:shake_256)</p>
 </li></ul>
 
   </section>
@@ -167,6 +167,17 @@
         <div class="method-description">
           <div class="method-source-code" id="digest-source">
             <pre>static VALUE rb_sha3_digest_self_digest(VALUE klass, VALUE name, VALUE data) {
+    // Add null checks
+    if (NIL_P(name) || NIL_P(data)) {
+        rb_raise(_sha3_digest_error_class, &quot;algorithm name and data cannot be nil&quot;);
+    }
+
+    // Add type validation for name
+    if (TYPE(name) != T_SYMBOL) {
+        rb_raise(_sha3_digest_error_class, &quot;algorithm name must be a symbol&quot;);
+    }
+
+    // Existing code...
     VALUE args[2];
 
     // Need to add type checking for the data parameter
@@ -343,8 +354,8 @@
 
         <div class="method-description">
           <div class="method-source-code" id="new-source">
-            <pre>static VALUE rb_sha3_digest_init(int argc, VALUE* argv, VALUE self) {
-    sha3_digest_context_t* context;
+            <pre>static VALUE rb_sha3_digest_init(int argc, VALUE *argv, VALUE self) {
+    sha3_digest_context_t *context;
     VALUE hlen, data;
 
     rb_scan_args(argc, argv, &quot;02&quot;, &amp;hlen, &amp;data);
@@ -444,7 +455,7 @@
         <div class="method-description">
           <div class="method-source-code" id="block_length-source">
             <pre>static VALUE rb_sha3_digest_block_length(VALUE self) {
-    sha3_digest_context_t* context;
+    sha3_digest_context_t *context;
     get_sha3_digest_context(self, &amp;context);
 
     return ULL2NUM(200 - (2 * (context-&gt;hashbitlen / 8)));
@@ -501,31 +512,15 @@
 
         <div class="method-description">
           <div class="method-source-code" id="digest-source">
-            <pre>static VALUE rb_sha3_digest_digest(int argc, VALUE* argv, VALUE self) {
-    sha3_digest_context_t* context;
+            <pre>static VALUE rb_sha3_digest_digest(int argc, VALUE *argv, VALUE self) {
+    sha3_digest_context_t *context;
     get_sha3_digest_context(self, &amp;context);
 
     if (context-&gt;algorithm != SHAKE_128 &amp;&amp; context-&gt;algorithm != SHAKE_256) {
         return rb_call_super(argc, argv);
     }
 
-    VALUE length, data;
-    rb_scan_args(argc, argv, &quot;02&quot;, &amp;length, &amp;data);
-
-    // For SHAKE algorithms
-    if (NIL_P(length)) {
-        rb_raise(_sha3_digest_error_class, &quot;output length must be specified for SHAKE algorithms&quot;);
-    }
-
-    // Add type checking for length
-    Check_Type(length, T_FIXNUM);
-
-    // If data is provided, update the state before squeezing
-    if (!NIL_P(data)) {
-        rb_sha3_digest_update(self, data);
-    }
-
-    return rb_sha3_digest_squeeze(self, length);
+    return prepare_shake_output(self, argc, argv, 0);
 }</pre>
           </div>
           <p>Returns the binary representation of the digest.</p>
@@ -569,7 +564,7 @@
         <div class="method-description">
           <div class="method-source-code" id="digest_length-source">
             <pre>static VALUE rb_sha3_digest_length(VALUE self) {
-    sha3_digest_context_t* context;
+    sha3_digest_context_t *context;
     get_sha3_digest_context(self, &amp;context);
 
     return ULL2NUM(context-&gt;hashbitlen / 8);
@@ -667,30 +662,15 @@
 
         <div class="method-description">
           <div class="method-source-code" id="hexdigest-source">
-            <pre>static VALUE rb_sha3_digest_hexdigest(int argc, VALUE* argv, VALUE self) {
-    sha3_digest_context_t* context;
+            <pre>static VALUE rb_sha3_digest_hexdigest(int argc, VALUE *argv, VALUE self) {
+    sha3_digest_context_t *context;
     get_sha3_digest_context(self, &amp;context);
 
     if (context-&gt;algorithm != SHAKE_128 &amp;&amp; context-&gt;algorithm != SHAKE_256) {
         return rb_call_super(argc, argv);
     }
 
-    VALUE length, data;
-    rb_scan_args(argc, argv, &quot;02&quot;, &amp;length, &amp;data);
-
-    if (NIL_P(length)) {
-        rb_raise(_sha3_digest_error_class, &quot;output length must be specified for SHAKE algorithms&quot;);
-    }
-
-    // Add type checking for length
-    Check_Type(length, T_FIXNUM);
-
-    // If data is provided, update the state before squeezing
-    if (!NIL_P(data)) {
-        rb_sha3_digest_update(self, data);
-    }
-
-    return rb_sha3_digest_hex_squeeze(self, length);
+    return prepare_shake_output(self, argc, argv, 1);
 }</pre>
           </div>
           <p>Returns the hexadecimal representation of the digest.</p>
@@ -734,8 +714,8 @@
         <div class="method-description">
           <div class="method-source-code" id="initialize_copy-source">
             <pre>static VALUE rb_sha3_digest_copy(VALUE self, VALUE other) {
-    sha3_digest_context_t* context;
-    sha3_digest_context_t* other_context;
+    sha3_digest_context_t *context;
+    sha3_digest_context_t *other_context;
 
     rb_check_frozen(self);
     if (self == other) {
@@ -796,7 +776,7 @@
         <div class="method-description">
           <div class="method-source-code" id="name-source">
             <pre>static VALUE rb_sha3_digest_name(VALUE self) {
-    sha3_digest_context_t* context;
+    sha3_digest_context_t *context;
     get_sha3_digest_context(self, &amp;context);
 
     switch (context-&gt;algorithm) {
@@ -848,7 +828,7 @@
         <div class="method-description">
           <div class="method-source-code" id="reset-source">
             <pre>static VALUE rb_sha3_digest_reset(VALUE self) {
-    sha3_digest_context_t* context;
+    sha3_digest_context_t *context;
     get_sha3_digest_context(self, &amp;context);
 
     memset(context-&gt;state, 0, sizeof(Keccak_HashInstance));
@@ -891,7 +871,7 @@
         <div class="method-description">
           <div class="method-source-code" id="squeeze-source">
             <pre>static VALUE rb_sha3_digest_squeeze(VALUE self, VALUE length) {
-    sha3_digest_context_t* context;
+    sha3_digest_context_t *context;
     VALUE str, copy;
     int output_bytes;
 
@@ -905,7 +885,7 @@
     get_sha3_digest_context(self, &amp;context);
 
     // Only SHAKE algorithms support arbitrary-length output
-    if (context-&gt;algorithm != SHAKE_128 &amp;&amp; context-&gt;algorithm != SHAKE_256) {
+    if (!is_shake_algorithm(context-&gt;algorithm)) {
         rb_raise(_sha3_digest_error_class, &quot;squeeze is only supported for SHAKE algorithms&quot;);
     }
 
@@ -913,7 +893,7 @@
     copy = rb_obj_clone(self);
 
     // Get the sha3_digest_context_t struct from the copy
-    sha3_digest_context_t* context_copy;
+    sha3_digest_context_t *context_copy;
     get_sha3_digest_context(copy, &amp;context_copy);
 
     str = rb_str_new(0, output_bytes);
@@ -924,7 +904,7 @@
     }
 
     // Then squeeze out the desired number of bytes
-    if (Keccak_HashSqueeze(context_copy-&gt;state, (BitSequence*)RSTRING_PTR(str), output_bytes * 8) != KECCAK_SUCCESS) {
+    if (Keccak_HashSqueeze(context_copy-&gt;state, (BitSequence *)RSTRING_PTR(str), output_bytes * 8) != KECCAK_SUCCESS) {
         rb_raise(_sha3_digest_error_class, &quot;failed to squeeze output&quot;);
     }
 
@@ -966,7 +946,7 @@
         <div class="method-description">
           <div class="method-source-code" id="update-source">
             <pre>static VALUE rb_sha3_digest_update(VALUE self, VALUE data) {
-    sha3_digest_context_t* context;
+    sha3_digest_context_t *context;
     BitLength dlen;
 
     StringValue(data);
@@ -984,7 +964,7 @@
 
     dlen = (RSTRING_LEN(data) * 8);
 
-    if (Keccak_HashUpdate(context-&gt;state, (BitSequence*)RSTRING_PTR(data), dlen) != KECCAK_SUCCESS) {
+    if (Keccak_HashUpdate(context-&gt;state, (BitSequence *)RSTRING_PTR(data), dlen) != KECCAK_SUCCESS) {
         rb_raise(_sha3_digest_error_class, &quot;failed to update hash data&quot;);
     }
 
@@ -1036,8 +1016,8 @@
 
         <div class="method-description">
           <div class="method-source-code" id="finish-source">
-            <pre>static VALUE rb_sha3_digest_finish(int argc, VALUE* argv, VALUE self) {
-    sha3_digest_context_t* context;
+            <pre>static VALUE rb_sha3_digest_finish(int argc, VALUE *argv, VALUE self) {
+    sha3_digest_context_t *context;
     VALUE str;
     int digest_bytes;
 
@@ -1055,7 +1035,7 @@
         rb_str_resize(str, digest_bytes);
     }
 
-    if (Keccak_HashFinal(context-&gt;state, (BitSequence*)RSTRING_PTR(str)) != KECCAK_SUCCESS) {
+    if (Keccak_HashFinal(context-&gt;state, (BitSequence *)RSTRING_PTR(str)) != KECCAK_SUCCESS) {
         rb_raise(_sha3_digest_error_class, &quot;failed to finalize digest&quot;);
     }
 
