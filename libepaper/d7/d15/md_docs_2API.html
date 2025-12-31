@@ -532,11 +532,25 @@ Bitmaps</h2>
 <li>PSD (composited view)</li>
 <li>HDR</li>
 </ul>
-<p><b>Image Conversion:</b> Images are automatically converted to the display's color mode:</p><ul>
-<li><b>BlackWhite mode</b>: Brightness threshold at 50%</li>
-<li><b>Grayscale4 mode</b>: 4-level quantization</li>
+<p><b>Automatic Color Conversion:</b></p>
+<p>The library automatically converts color images to your display's mode:</p>
+<ol type="1">
+<li><b>RGB to Grayscale</b>: Uses standard perceptual formula (0.299×R + 0.587×G + 0.114×B)</li>
+<li><b>Quantization</b>:<ul>
+<li><b>BlackWhite mode</b>: 50% brightness threshold (gray ≥ 128 → White)</li>
+<li><b>Grayscale4 mode</b>: 4-level mapping (0-63→Black, 64-127→Gray2, 128-191→Gray1, 192-255→White)</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md42"></a>
+</li>
+</ol>
+<p>This means you can load <b>any color image</b> (photos, graphics, screenshots) and the library intelligently converts it to work with your e-paper display:</p>
+<div class="fragment"><div class="line"><span class="comment">// Load a full-color photograph - automatically converted!</span></div>
+<div class="line">display-&gt;draw_bitmap_from_file(10, 10, <span class="stringliteral">&quot;vacation_photo.jpg&quot;</span>);</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Load a colorful logo - automatically converted!</span></div>
+<div class="line">display-&gt;draw_bitmap_from_file(100, 50, <span class="stringliteral">&quot;company_logo.png&quot;</span>);</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// No manual color processing needed!</span></div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md42"></a>
 Color &amp; Grayscale</h1>
 <h2><a class="anchor" id="autotoc_md43"></a>
 Color Enum</h2>

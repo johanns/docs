@@ -2,5 +2,5 @@ var searchData=
 [
   ['5_20handle_20errors_20gracefully_0',['5. Handle Errors Gracefully',['../d7/d15/md_docs_2API.html#autotoc_md64',1,'']]],
   ['5_20run_20example_1',['5. Run Example',['../index.html#autotoc_md9',1,'']]],
-  ['5_3a_20power_20management_2',['Step 5: Power Management',['../db/d9c/md_docs_2DRIVER.html#autotoc_md133',1,'']]]
+  ['5_3a_20power_20management_2',['Step 5: Power Management',['../db/d9c/md_docs_2DRIVER.html#autotoc_md134',1,'']]]
 ];

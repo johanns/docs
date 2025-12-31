@@ -13,9 +13,9 @@ var searchData=
   ['gray2_10',['Gray2',['../db/da4/namespaceepaper.html#abbcfe3e537fe42c69ae050cbfb36fcc3ae55b52954cb2508c5700030856846734',1,'epaper']]],
   ['gray2_5fmask_11',['GRAY2_MASK',['../d8/d10/namespaceepaper_1_1Grayscale.html#a1fd7459a80cf8d1e7097e44a7f1e7aaa',1,'epaper::Grayscale']]],
   ['grayscale_12',['grayscale',['../d7/d15/md_docs_2API.html#autotoc_md42',1,'Color &amp; Grayscale'],['../d7/d15/md_docs_2API.html#autotoc_md45',1,'Working with Grayscale']]],
-  ['grayscale_20not_20working_13',['Grayscale Not Working',['../db/d9c/md_docs_2DRIVER.html#autotoc_md172',1,'']]],
+  ['grayscale_20not_20working_13',['Grayscale Not Working',['../db/d9c/md_docs_2DRIVER.html#autotoc_md173',1,'']]],
   ['grayscale4_14',['Grayscale4',['../db/da4/namespaceepaper.html#a1060a31a9dea7f913afe8099b17ea6f5a9a6267236e87bcda31db58c72d48b91e',1,'epaper']]],
-  ['grayscale4_20mode_15',['Implementing Grayscale4 Mode',['../db/d9c/md_docs_2DRIVER.html#autotoc_md144',1,'']]],
+  ['grayscale4_20mode_15',['Implementing Grayscale4 Mode',['../db/d9c/md_docs_2DRIVER.html#autotoc_md145',1,'']]],
   ['grayscale4_20mode_202_20bits_20per_20pixel_16',['Grayscale4 Mode (2 bits per pixel)',['../d7/d15/md_docs_2API.html#autotoc_md32',1,'']]],
   ['green_17',['Green',['../d4/d02/namespaceepaper_1_1colors.html#ad7723cbc7a54213c7f2221c47caa4f24',1,'epaper::colors']]],
   ['guide_18',['guide',['../d4/d34/md_docs_2ARCHITECTURE.html',1,'Architecture Guide'],['../db/d9c/md_docs_2DRIVER.html',1,'Driver Development Guide']]]

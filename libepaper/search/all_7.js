@@ -18,7 +18,7 @@ var searchData=
   ['bits4_15',['Bits4',['../db/da4/namespaceepaper.html#a06948fd836fc2c417f8346d5085be470a63da93a51eecb9c3a254623389b6ea7e',1,'epaper']]],
   ['bits8_16',['Bits8',['../db/da4/namespaceepaper.html#a06948fd836fc2c417f8346d5085be470a5df0a649796713941bae6d932535c288',1,'epaper']]],
   ['black_17',['black',['../d4/d02/namespaceepaper_1_1colors.html#a8a3a75af8448e9025d76f488997fb973',1,'epaper::colors::Black'],['../db/da4/namespaceepaper.html#abbcfe3e537fe42c69ae050cbfb36fcc3ae90dfb84e30edf611e326eeb04d680de',1,'epaper::Black']]],
-  ['black_20white_20mode_18',['Implementing Black/White Mode',['../db/d9c/md_docs_2DRIVER.html#autotoc_md143',1,'']]],
+  ['black_20white_20mode_18',['Implementing Black/White Mode',['../db/d9c/md_docs_2DRIVER.html#autotoc_md144',1,'']]],
   ['black_5fmask_19',['BLACK_MASK',['../d8/d10/namespaceepaper_1_1Grayscale.html#a561e2e852fe7f7544ed3c65b5ce50de2',1,'epaper::Grayscale']]],
   ['blackwhite_20',['BlackWhite',['../db/da4/namespaceepaper.html#a1060a31a9dea7f913afe8099b17ea6f5a99797c685db8de83a742906e13ba653e',1,'epaper']]],
   ['blackwhite_20mode_201_20bit_20per_20pixel_21',['BlackWhite Mode (1 bit per pixel)',['../d7/d15/md_docs_2API.html#autotoc_md31',1,'']]],
@@ -28,12 +28,12 @@ var searchData=
   ['booster_5fsoft_5fstart_25',['BOOSTER_SOFT_START',['../db/da4/namespaceepaper.html#a6c5225e48086e0ca88fc79574a4000fea91f16c5a36abb149a378b1e0edba003f',1,'epaper']]],
   ['boosterconfig_26',['BoosterConfig',['../d4/db5/structepaper_1_1BoosterConfig.html',1,'epaper']]],
   ['buffer_27',['buffer',['../d3/dc8/classepaper_1_1Framebuffer.html#a30c8c06233cb1cf5e55c9baf82a57359',1,'epaper::Framebuffer::buffer()'],['../d2/da8/classepaper_1_1Display.html#acc57a46f41409457e259722c09a6afe1',1,'epaper::Display::buffer()']]],
-  ['buffer_20transfer_28',['Step 4: Display Buffer Transfer',['../db/d9c/md_docs_2DRIVER.html#autotoc_md132',1,'']]],
+  ['buffer_20transfer_28',['Step 4: Display Buffer Transfer',['../db/d9c/md_docs_2DRIVER.html#autotoc_md133',1,'']]],
   ['buffer_5fsize_29',['buffer_size',['../d9/d12/classepaper_1_1EPD27.html#a1f6e21f0b3447ca14fb5bb24cc6a6b4d',1,'epaper::EPD27::buffer_size()'],['../d6/d4c/classepaper_1_1Driver.html#ab64073d820172cad2d20be137b361d29',1,'epaper::Driver::buffer_size()']]],
   ['build_30',['4. Build',['../index.html#autotoc_md8',1,'']]],
   ['busy_5fstatus_5fmask_31',['BUSY_STATUS_MASK',['../d8/d2c/namespaceepaper_1_1DisplayOps.html#a5a9f965e8d2ce05439e7bc23092efef8',1,'epaper::DisplayOps']]],
   ['busy_5fwait_5fdelay_5fms_32',['BUSY_WAIT_DELAY_MS',['../d3/df1/namespaceepaper_1_1Timing.html#a6b9532e5049a9739d0457eaf6a899f01',1,'epaper::Timing']]],
   ['by_20display_20mode_33',['Color Mapping by Display Mode',['../d7/d15/md_docs_2API.html#autotoc_md44',1,'']]],
-  ['by_20step_3a_20writing_20a_20driver_34',['Step-by-Step: Writing a Driver',['../db/d9c/md_docs_2DRIVER.html#autotoc_md128',1,'']]],
+  ['by_20step_3a_20writing_20a_20driver_34',['Step-by-Step: Writing a Driver',['../db/d9c/md_docs_2DRIVER.html#autotoc_md129',1,'']]],
   ['bytes_5fper_5fchar_35',['bytes_per_char',['../d7/d6c/classepaper_1_1Font.html#ab8a228a6211e714fdcf0235f690f57c7',1,'epaper::Font']]]
 ];
