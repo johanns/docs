@@ -1,0 +1,6 @@
+<map id="epaper::ColorManager::convert_to_rgb32" name="epaper::ColorManager::convert_to_rgb32">
+<area shape="rect" id="Node000001" title="Convert RGB color to 32&#45;bit true color." alt="" coords="5,22,172,62"/>
+<area shape="rect" id="Node000002" href="$db/da4/namespaceepaper.html#ae87c16acc02a64356214d15caff24201" title=" " alt="" coords="220,29,391,55"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="172,39,207,39,207,45,172,45"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="270,31,262,21,266,11,281,5,305,3,335,6,347,15,344,20,333,11,305,8,282,10,270,15,268,20,274,28"/>
+</map>

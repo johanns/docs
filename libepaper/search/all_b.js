@@ -1,0 +1,28 @@
+var searchData=
+[
+  ['features_0',['🎯 Features',['../index.html#autotoc_md2',1,'']]],
+  ['file_1',['Step 2: Header File',['../db/d9c/md_docs_2DRIVER.html#autotoc_md130',1,'']]],
+  ['filenotfound_2',['FileNotFound',['../db/da4/namespaceepaper.html#a32f09eb88e223406e450214ecb4cd6caa2767828026039e8ba7b38973cbb701f2',1,'epaper']]],
+  ['first_20program_3',['Your First Program',['../d7/d15/md_docs_2API.html#autotoc_md27',1,'']]],
+  ['flow_4',['flow',['../d4/d34/md_docs_2ARCHITECTURE.html#autotoc_md89',1,'Data Flow'],['../d4/d34/md_docs_2ARCHITECTURE.html#autotoc_md90',1,'Display Refresh Flow'],['../d4/d34/md_docs_2ARCHITECTURE.html#autotoc_md91',1,'Drawing Operation Flow'],['../d4/d34/md_docs_2ARCHITECTURE.html#autotoc_md92',1,'Initialization Flow']]],
+  ['font_5',['font',['../d7/d6c/classepaper_1_1Font.html',1,'epaper::Font'],['../d7/d6c/classepaper_1_1Font.html#af77776d42b182715781a7f9c831bb8a8',1,'epaper::Font::Font()']]],
+  ['font_2ecpp_6',['font.cpp',['../dd/d53/font_8cpp.html',1,'']]],
+  ['font_2ehpp_7',['font.hpp',['../df/d50/font_8hpp.html',1,'']]],
+  ['font12_8',['font12',['../d7/d6c/classepaper_1_1Font.html#a5bbd2b3faff209fb6f52bbcf3f31de7d',1,'epaper::Font::font12()'],['../dd/d53/font_8cpp.html#ac369d1d5a8cf0cc76067d72d80c45b3f',1,'Font12:&#160;font.cpp']]],
+  ['font16_9',['font16',['../d7/d6c/classepaper_1_1Font.html#aaa42a2902f8005f40271620884bfccae',1,'epaper::Font::font16()'],['../dd/d53/font_8cpp.html#a6e3acebbb756126bbf38728c3a3f4951',1,'Font16:&#160;font.cpp']]],
+  ['font20_10',['font20',['../d7/d6c/classepaper_1_1Font.html#ae544a8240cab9643ca1c15039fe438e8',1,'epaper::Font::font20()'],['../dd/d53/font_8cpp.html#ab95a07aadc819b5b483828cbdd33e315',1,'Font20:&#160;font.cpp']]],
+  ['font24_11',['font24',['../d7/d6c/classepaper_1_1Font.html#a42ae48d632afe6fbce183b2e1f1655c1',1,'epaper::Font::font24()'],['../dd/d53/font_8cpp.html#a1eb5eae2e7cf12cfff1d32a14913d4cc',1,'Font24:&#160;font.cpp']]],
+  ['font8_12',['font8',['../d7/d6c/classepaper_1_1Font.html#a3e271fbf4a32cf75343166605ae16ee5',1,'epaper::Font::font8()'],['../dd/d53/font_8cpp.html#a76f217521df3c667d701ce0341d85b44',1,'Font8:&#160;font.cpp']]],
+  ['fontmetrics_13',['FontMetrics',['../db/d57/structepaper_1_1FontMetrics.html',1,'epaper']]],
+  ['fonts_14',['fonts',['../d7/d15/md_docs_2API.html#autotoc_md63',1,'4. Use Appropriate Fonts'],['../d7/d15/md_docs_2API.html#autotoc_md39',1,'Text &amp; Fonts']]],
+  ['for_20debugging_15',['BMP Export for Debugging',['../d7/d15/md_docs_2API.html#autotoc_md70',1,'']]],
+  ['format_16',['Commit Format',['../index.html#autotoc_md12',1,'']]],
+  ['framebuffer_17',['framebuffer',['../d3/dc8/classepaper_1_1Framebuffer.html#a4a44ce86799eccb55c66476854537551',1,'epaper::Framebuffer::Framebuffer()'],['../d3/dc8/classepaper_1_1Framebuffer.html',1,'epaper::Framebuffer&lt; depth &gt;']]],
+  ['framebuffer_20direct_20access_18',['Framebuffer Direct Access',['../d7/d15/md_docs_2API.html#autotoc_md56',1,'']]],
+  ['framebuffer_20size_19',['Framebuffer Size',['../d4/d34/md_docs_2ARCHITECTURE.html#autotoc_md105',1,'']]],
+  ['framebuffer_2ehpp_20',['framebuffer.hpp',['../d7/d1a/framebuffer_8hpp.html',1,'']]],
+  ['from_20epd27_21',['Key Patterns from EPD27',['../db/d9c/md_docs_2DRIVER.html#autotoc_md136',1,'']]],
+  ['full_22',['Full',['../db/da4/namespaceepaper.html#a147a76dbb81599ca8053f8dd9271bc16abbd47109890259c0127154db1af26c75',1,'epaper']]],
+  ['functions_23',['Custom Drawing Functions',['../d7/d15/md_docs_2API.html#autotoc_md57',1,'']]],
+  ['future_20extensions_24',['Future Extensions',['../d4/d34/md_docs_2ARCHITECTURE.html#autotoc_md114',1,'']]]
+];

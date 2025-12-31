@@ -1,0 +1,19 @@
+var searchData=
+[
+  ['delay_5fms_0',['delay_ms',['../d2/d80/classepaper_1_1Device.html#a1a61a7f894638eec3f6d9e0c2129bfed',1,'epaper::Device']]],
+  ['delay_5fus_1',['delay_us',['../d2/d80/classepaper_1_1Device.html#a5e85ea885c617284b71bed10371fdd41',1,'epaper::Device']]],
+  ['device_2',['device',['../d2/d80/classepaper_1_1Device.html#a0490974d012e5684e544b0d9b9e211db',1,'epaper::Device::Device()=default'],['../d2/d80/classepaper_1_1Device.html#a6696fbe83e3e1d2ef072937856e9a760',1,'epaper::Device::Device(const Device &amp;)=delete'],['../d2/d80/classepaper_1_1Device.html#ae3e8e6e8fc9342b891a932c80638702e',1,'epaper::Device::Device(Device &amp;&amp;other) noexcept']]],
+  ['devicecolor_3',['devicecolor',['../d2/d33/structepaper_1_1DeviceColor.html#a5a5852f4dac82d07e207da30bd2fd23b',1,'epaper::DeviceColor::DeviceColor()'],['../d5/df5/structepaper_1_1DeviceColor_3_01ColorDepth_1_1Bits1_01_4.html#ad42111ae28233417fb106866546bbfe7',1,'epaper::DeviceColor&lt; ColorDepth::Bits1 &gt;::DeviceColor()'],['../d6/d67/structepaper_1_1DeviceColor_3_01ColorDepth_1_1Bits2_01_4.html#aa8c23154459f35ebc043e531c9f8e99e',1,'epaper::DeviceColor&lt; ColorDepth::Bits2 &gt;::DeviceColor()'],['../d2/d12/structepaper_1_1DeviceColor_3_01ColorDepth_1_1Bits32_01_4.html#a30554d54c6497fc47e4160b11526875b',1,'epaper::DeviceColor&lt; ColorDepth::Bits32 &gt;::DeviceColor()']]],
+  ['display_4',['display',['../d2/da8/classepaper_1_1Display.html#aafb962383a201fa0f448c0bdc0b778f4',1,'epaper::Display::Display(Display &amp;&amp;) noexcept=default'],['../d2/da8/classepaper_1_1Display.html#a9c8ac49ea62cdc42f21bb60786ca2f9c',1,'epaper::Display::Display(const Display &amp;)=delete'],['../d2/da8/classepaper_1_1Display.html#a1df7058bf51af68ce4a36ca5d1b5b41e',1,'epaper::Display::Display(std::unique_ptr&lt; Driver &gt; driver, Orientation orientation=Orientation::Portrait0, bool auto_sleep=true)'],['../d9/d12/classepaper_1_1EPD27.html#a7240b1721064fb13be5397830ba5a59b',1,'epaper::EPD27::display()'],['../d6/d4c/classepaper_1_1Driver.html#a471f691d68870c78b4fef4d5fcba079c',1,'epaper::Driver::display()']]],
+  ['draw_5fbitmap_5',['draw_bitmap',['../d2/da8/classepaper_1_1Display.html#a20b83ecc679c754e36b17ffe8f4c099a',1,'epaper::Display']]],
+  ['draw_5fbitmap_5ffrom_5ffile_6',['draw_bitmap_from_file',['../d2/da8/classepaper_1_1Display.html#a54b27944906bfd49813afc7be3135817',1,'epaper::Display']]],
+  ['draw_5fchar_7',['draw_char',['../d2/da8/classepaper_1_1Display.html#a89c3e751d6c2d4c4cd30c8ea7efa974a',1,'epaper::Display']]],
+  ['draw_5fcircle_8',['draw_circle',['../d2/da8/classepaper_1_1Display.html#aa1d090d0bf15c818f5451086860cd0d0',1,'epaper::Display']]],
+  ['draw_5fdecimal_9',['draw_decimal',['../d2/da8/classepaper_1_1Display.html#ac0c7446f83bde58ff3ac1f1ceaee35c5',1,'epaper::Display']]],
+  ['draw_5fline_10',['draw_line',['../d2/da8/classepaper_1_1Display.html#a591cf641178f0709277538ae0bf0a072',1,'epaper::Display']]],
+  ['draw_5fnumber_11',['draw_number',['../d2/da8/classepaper_1_1Display.html#a5c7617226a4fc43b8ec253025ad6efb8',1,'epaper::Display']]],
+  ['draw_5fpoint_12',['draw_point',['../d2/da8/classepaper_1_1Display.html#ad2f48ab212ca846f782453d1eb1dbd42',1,'epaper::Display']]],
+  ['draw_5frectangle_13',['draw_rectangle',['../d2/da8/classepaper_1_1Display.html#a6e1ffde615e4ec0b8088fe762111d945',1,'epaper::Display']]],
+  ['draw_5fstring_14',['draw_string',['../d2/da8/classepaper_1_1Display.html#ace222f7b3f8c846a3cf1ad160681c808',1,'epaper::Display']]],
+  ['driver_15',['driver',['../d6/d4c/classepaper_1_1Driver.html#abfcb410776b22a615f4b618bcb4046ce',1,'epaper::Driver::Driver()=default'],['../d6/d4c/classepaper_1_1Driver.html#a22343a6b62216a5a64c2a59ac65649a4',1,'epaper::Driver::Driver(const Driver &amp;)=delete'],['../d6/d4c/classepaper_1_1Driver.html#a942c9f09016996c22bd93e3f9a4f4aa0',1,'epaper::Driver::Driver(Driver &amp;&amp;) noexcept=default']]]
+];

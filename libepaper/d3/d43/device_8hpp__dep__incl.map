@@ -1,0 +1,13 @@
+<map id="include/epaper/device.hpp" name="include/epaper/device.hpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="211,5,405,31"/>
+<area shape="rect" id="Node000002" href="$d2/da4/display_8hpp.html" title=" " alt="" coords="5,86,200,111"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="266,38,134,88,132,83,265,33"/>
+<area shape="rect" id="Node000004" href="$d1/d76/epd27_8hpp.html" title=" " alt="" coords="225,79,391,119"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="311,44,311,79,305,79,305,44"/>
+<area shape="rect" id="Node000006" href="$d3/dd4/device_8cpp.html" title=" " alt="" coords="416,86,531,111"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="346,34,450,84,448,88,343,39"/>
+<area shape="rect" id="Node000003" href="$db/d86/display_8cpp.html" title=" " alt="" coords="44,167,161,192"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="105,125,105,166,100,166,100,125"/>
+<area shape="rect" id="Node000005" href="$d8/d1c/epd27_8cpp.html" title=" " alt="" coords="227,167,389,192"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="311,132,311,166,305,166,305,132"/>
+</map>

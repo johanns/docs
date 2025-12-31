@@ -1,0 +1,5 @@
+<map id="epaper::to_string" name="epaper::to_string">
+<area shape="rect" id="Node000001" title="Convert error code to string representation." alt="" coords="200,5,332,31"/>
+<area shape="rect" id="Node000002" href="$df/d40/structepaper_1_1Error.html#a5a7dc983be378fd97dffc35f73330ead" title="Get string representation of the error." alt="" coords="5,5,152,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="186,21,152,21,152,15,186,15"/>
+</map>

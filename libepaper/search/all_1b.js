@@ -1,0 +1,25 @@
+var searchData=
+[
+  ['wake_0',['wake',['../db/d9c/md_docs_2DRIVER.html#autotoc_md163',1,'Transparent Sleep/Wake'],['../d6/d4c/classepaper_1_1Driver.html#a1cd40e60d18bc1903ba5e90fa2be4443',1,'epaper::Driver::wake()'],['../d9/d12/classepaper_1_1EPD27.html#a5c198a66f801e02209408ad2b6041a10',1,'epaper::EPD27::wake()'],['../d2/da8/classepaper_1_1Display.html#a266e1c28bc10bb2beec7e8add6833895',1,'epaper::Display::wake()']]],
+  ['wake_20management_1',['Why Transparent Sleep/Wake Management?',['../d4/d34/md_docs_2ARCHITECTURE.html#autotoc_md95',1,'']]],
+  ['what_2',['what',['../df/d40/structepaper_1_1Error.html#a5a7dc983be378fd97dffc35f73330ead',1,'epaper::Error']]],
+  ['what_20is_20a_20driver_3',['What is a Driver?',['../db/d9c/md_docs_2DRIVER.html#autotoc_md122',1,'']]],
+  ['when_20to_20return_20errors_4',['When to Return Errors',['../db/d9c/md_docs_2DRIVER.html#autotoc_md150',1,'']]],
+  ['when_20to_20write_20a_20new_20driver_5',['When to Write a New Driver',['../db/d9c/md_docs_2DRIVER.html#autotoc_md123',1,'']]],
+  ['white_6',['white',['../d4/d02/namespaceepaper_1_1colors.html#a945ec939ea7e3bc9fcfeb0ca3f80a50e',1,'epaper::colors::White'],['../db/da4/namespaceepaper.html#abbcfe3e537fe42c69ae050cbfb36fcc3a25a81701fbfa4a1efdf660a950c1d006',1,'epaper::White']]],
+  ['white_20mode_7',['Implementing Black/White Mode',['../db/d9c/md_docs_2DRIVER.html#autotoc_md143',1,'']]],
+  ['white_5fmask_8',['WHITE_MASK',['../d8/d10/namespaceepaper_1_1Grayscale.html#a09f643d4dffdd95be6f96f15b0aabb5e',1,'epaper::Grayscale']]],
+  ['why_20abstract_20driver_20interface_9',['Why Abstract Driver Interface?',['../d4/d34/md_docs_2ARCHITECTURE.html#autotoc_md97',1,'']]],
+  ['why_20composition_20over_20inheritance_10',['Why Composition Over Inheritance?',['../d4/d34/md_docs_2ARCHITECTURE.html#autotoc_md96',1,'']]],
+  ['why_20transparent_20sleep_20wake_20management_11',['Why Transparent Sleep/Wake Management?',['../d4/d34/md_docs_2ARCHITECTURE.html#autotoc_md95',1,'']]],
+  ['why_20tt_20std_3a_3aexpected_20tt_20over_20exceptions_12',['Why &lt;tt&gt;std::expected&lt;/tt&gt; Over Exceptions?',['../d4/d34/md_docs_2ARCHITECTURE.html#autotoc_md94',1,'']]],
+  ['width_13',['width',['../d9/d12/classepaper_1_1EPD27.html#aef3f6fdfb031fdf779f45e40981381f5',1,'epaper::EPD27::WIDTH'],['../db/d57/structepaper_1_1FontMetrics.html#acc02c23e791c38418a93d3ff55e4c853',1,'epaper::FontMetrics::width'],['../d2/da8/classepaper_1_1Display.html#a6173c4e10982fb97fb0db821bdb6f95a',1,'epaper::Display::width()'],['../d6/d4c/classepaper_1_1Driver.html#acb47947f0bc93af52cc5fdb2590afcff',1,'epaper::Driver::width()'],['../d9/d12/classepaper_1_1EPD27.html#a30c6077075c26623278c22b40c65540a',1,'epaper::EPD27::width()'],['../d7/d6c/classepaper_1_1Font.html#a3b4ab761cdbea45577f1b4c4870ca87f',1,'epaper::Font::width()'],['../d3/dc8/classepaper_1_1Framebuffer.html#a907facc3bd43a152c53905bcae68853f',1,'epaper::Framebuffer::width()']]],
+  ['width_5fhigh_14',['WIDTH_HIGH',['../d3/d99/namespaceepaper_1_1Resolution.html#a2cc579eacd5f6af016bdd11a1100702e',1,'epaper::Resolution']]],
+  ['width_5flow_15',['WIDTH_LOW',['../d3/d99/namespaceepaper_1_1Resolution.html#adc764090b540eedc8aa86a855d877be3',1,'epaper::Resolution']]],
+  ['with_20grayscale_16',['Working with Grayscale',['../d7/d15/md_docs_2API.html#autotoc_md45',1,'']]],
+  ['working_17',['working',['../db/d9c/md_docs_2DRIVER.html#autotoc_md172',1,'Grayscale Not Working'],['../db/d9c/md_docs_2DRIVER.html#autotoc_md171',1,'Sleep Not Working']]],
+  ['working_20with_20grayscale_18',['Working with Grayscale',['../d7/d15/md_docs_2API.html#autotoc_md45',1,'']]],
+  ['write_20a_20new_20driver_19',['When to Write a New Driver',['../db/d9c/md_docs_2DRIVER.html#autotoc_md123',1,'']]],
+  ['write_5fpin_20',['write_pin',['../d2/d80/classepaper_1_1Device.html#a836e649e672c80b435d8f91eb1a4b24b',1,'epaper::Device']]],
+  ['writing_20a_20driver_21',['Step-by-Step: Writing a Driver',['../db/d9c/md_docs_2DRIVER.html#autotoc_md128',1,'']]]
+];

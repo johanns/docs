@@ -1,0 +1,6 @@
+<map id="epaper::Display::refresh" name="epaper::Display::refresh">
+<area shape="rect" id="Node000001" title="Send framebuffer to display and refresh." alt="" coords="5,29,183,55"/>
+<area shape="rect" id="Node000002" href="$db/da4/namespaceepaper.html#ae87c16acc02a64356214d15caff24201" title=" " alt="" coords="231,29,401,55"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="183,39,217,39,217,45,183,45"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="280,31,272,21,276,11,291,5,316,3,347,6,359,15,356,20,345,11,316,8,292,10,280,15,277,20,284,28"/>
+</map>

@@ -1,0 +1,9 @@
+<map id="epaper::EPD27::display" name="epaper::EPD27::display">
+<area shape="rect" id="Node000001" title="Send buffer data to display and refresh." alt="" coords="5,29,177,55"/>
+<area shape="rect" id="Node000002" href="$db/da4/namespaceepaper.html#ae87c16acc02a64356214d15caff24201" title=" " alt="" coords="464,29,635,55"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="178,39,450,39,450,45,178,45"/>
+<area shape="rect" id="Node000003" href="$d2/d80/classepaper_1_1Device.html#a1a61a7f894638eec3f6d9e0c2129bfed" title=" " alt="" coords="225,55,416,80"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="178,49,212,53,211,58,177,54"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="512,31,504,21,509,11,524,5,549,3,581,7,593,16,590,20,579,11,549,8,525,10,512,15,510,20,516,27"/>
+<area shape="poly" id="edge4_Node000003_Node000002" title=" " alt="" coords="416,54,450,50,451,56,417,59"/>
+</map>

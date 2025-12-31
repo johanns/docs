@@ -1,0 +1,9 @@
+<map id="epaper::ColorManager::convert_to_bw" name="epaper::ColorManager::convert_to_bw">
+<area shape="rect" id="Node000001" title="Convert RGB color to 1&#45;bit black/white." alt="" coords="220,69,387,109"/>
+<area shape="rect" id="Node000002" href="$d9/d29/classepaper_1_1ColorManager.html#a4eafda0fb8b27fdbd0f0dec633aec38f" title="Generic conversion based on color depth template parameter." alt="" coords="5,5,172,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="221,68,155,48,157,43,223,63"/>
+<area shape="rect" id="Node000003" href="$d9/d29/classepaper_1_1ColorManager.html#ad8fef6152c630b6c71c3ff1bb12810c4" title="Generic conversion based on color depth template parameter with alpha." alt="" coords="5,69,172,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="206,92,172,92,172,87,206,87"/>
+<area shape="rect" id="Node000004" href="$d9/d29/classepaper_1_1ColorManager.html#a79204428b486ca4ad7d8a6e7cfa2be38" title="Convert RGBA color to 1&#45;bit black/white with alpha blending." alt="" coords="5,133,172,173"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="223,116,157,136,155,131,221,111"/>
+</map>

@@ -1,0 +1,6 @@
+<map id="epaper::Device::write_pin" name="epaper::Device::write_pin">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,29,193,55"/>
+<area shape="rect" id="Node000002" href="$db/da4/namespaceepaper.html#ae87c16acc02a64356214d15caff24201" title=" " alt="" coords="241,29,412,55"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="193,39,227,39,227,45,193,45"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="290,31,282,21,286,11,301,5,327,3,359,7,371,16,367,20,357,11,327,8,302,10,290,15,287,20,294,27"/>
+</map>
