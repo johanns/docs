@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['solid_0',['Solid',['../db/da4/namespaceepaper.html#ac752f4cba5e0c46f48e5dbfeaf1a3130ae41480b6bbfbf7407974a88d3d34f4fa',1,'epaper']]],
-  ['spiinitfailed_1',['SPIInitFailed',['../db/da4/namespaceepaper.html#a32f09eb88e223406e450214ecb4cd6caa1be35eda599d28eba0648dadb838ab8e',1,'epaper']]]
+  ['refreshfailed_0',['RefreshFailed',['../db/da4/namespaceepaper.html#a32f09eb88e223406e450214ecb4cd6caae95ef019c18513cfed813845fbc1bec1',1,'epaper']]],
+  ['resolution_5fsetting_1',['RESOLUTION_SETTING',['../db/da4/namespaceepaper.html#a6c5225e48086e0ca88fc79574a4000feaf53880502995050b7c019cd545d823bb',1,'epaper']]]
 ];

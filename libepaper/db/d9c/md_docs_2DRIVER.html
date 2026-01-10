@@ -73,8 +73,8 @@ $(function() {
   <div class="headertitle"><div class="title">Driver Development Guide</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p><a class="anchor" id="autotoc_md120"></a> A comprehensive guide to writing custom display drivers for libepaper.</p>
-<h1><a class="anchor" id="autotoc_md121"></a>
+<div class="textblock"><p><a class="anchor" id="autotoc_md112"></a> A comprehensive guide to writing custom display drivers for libepaper.</p>
+<h1><a class="anchor" id="autotoc_md113"></a>
 Table of Contents</h1>
 <ul>
 <li>Overview</li>
@@ -91,9 +91,9 @@ Table of Contents</h1>
 <li>Common Issues &amp; Solutions</li>
 <li>Contributing Your Driver</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md122"></a>
+<h1><a class="anchor" id="autotoc_md114"></a>
 Overview</h1>
-<h2><a class="anchor" id="autotoc_md123"></a>
+<h2><a class="anchor" id="autotoc_md115"></a>
 What is a Driver?</h2>
 <p>A driver is a concrete implementation of the abstract <code>Driver</code> interface that:</p><ul>
 <li>Communicates with specific e-paper display hardware</li>
@@ -101,14 +101,14 @@ What is a Driver?</h2>
 <li>Manages display initialization, sleep/wake cycles, and power control</li>
 <li>Handles timing, busy waiting, and hardware state</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md124"></a>
+<h2><a class="anchor" id="autotoc_md116"></a>
 When to Write a New Driver</h2>
 <p>Write a new driver when you want to support:</p><ul>
 <li>A different e-paper display size (1.54", 4.2", 7.5", etc.)
 - A different manufacturer's displays
 - Displays with different capabilities (partial refresh, color, faster refresh)
 
-@subsection autotoc_md125 Architecture
+@subsection autotoc_md117 Architecture
 
 @icode 
 Application Code
@@ -121,12 +121,12 @@ Your Driver (your_epd.cpp) ← Implement this!
        ↓
 Hardware Device (device.hpp)
        ↓
-BCM2835/SPI/GPIO
+libgpiod/SPIdev
 @endicode 
 
-@section autotoc_md126 Driver Interface
+@section autotoc_md118 Driver Interface
 
-@subsection autotoc_md127 Required Methods
+@subsection autotoc_md119 Required Methods
 
 All drivers must implement the pure virtual methods of the &lt;tt&gt;Driver&lt;/tt&gt; interface:
 
@@ -157,7 +157,7 @@ public:
 };
 @endicode 
 
-@subsection autotoc_md128 Method Responsibilities
+@subsection autotoc_md120 Method Responsibilities
 
 **&lt;tt&gt;init(DisplayMode mode)&lt;/tt&gt;**
 - Initialize display hardware
@@ -199,9 +199,9 @@ public:
 - &lt;tt&gt;supports_partial_refresh()&lt;/tt&gt;: Can do partial screen updates?
 - &lt;tt&gt;supports_power_control()&lt;/tt&gt;: Has power control pins?
 
-@section autotoc_md129 Step-by-Step: Writing a Driver
+@section autotoc_md121 Step-by-Step: Writing a Driver
 
-@subsection autotoc_md130 Step 1: Hardware Analysis
+@subsection autotoc_md122 Step 1: Hardware Analysis
 
 Before writing code, study the display datasheet:
 
@@ -221,7 +221,7 @@ Before writing code, study the display datasheet:
 - LUT: 30-byte table for grayscale mode
 - Busy pin: HIGH = busy, LOW = ready
 
-@subsection autotoc_md131 Step 2: Header File
+@subsection autotoc_md123 Step 2: Header File
 
 Create a header in &lt;tt&gt;include/epaper/drivers/&lt;/tt&gt;:
 
@@ -240,7 +240,7 @@ Create a header in &lt;tt&gt;include/epaper/drivers/&lt;/tt&gt;:
                        std::uint16_t x_end, std::uint16_t y_end) -&gt; void; auto set_memory_pointer(std::uint16_t x, std::uint16_t y) -&gt; void;</p>
 <p>// State Device&amp; device_; DisplayMode current_mode_; bool initialized_ = false; bool is_asleep_ = false; // Track sleep state for transparent wake };</p>
 <p>} // namespace epaper </p>
-<h2><a class="anchor" id="autotoc_md132"></a>
+<h2><a class="anchor" id="autotoc_md124"></a>
 Step 3: Initialization Sequence</h2>
 <p>Implement the <code>init()</code> method with the hardware initialization sequence:</p>
 <div class="fragment"><div class="line"><span class="comment">// src/drivers/epd42.cpp</span></div>
@@ -312,8 +312,8 @@ Step 3: Initialization Sequence</h2>
 <div class="line"> </div>
 <div class="line">}  <span class="comment">// namespace epaper</span></div>
 <div class="ttc" id="anamespaceepaper_html"><div class="ttname"><a href="../../db/da4/namespaceepaper.html">epaper</a></div><div class="ttdef"><b>Definition</b> color.hpp:5</div></div>
-<div class="ttc" id="anamespaceepaper_html_ae87c16acc02a64356214d15caff24201"><div class="ttname"><a href="../../db/da4/namespaceepaper.html#ae87c16acc02a64356214d15caff24201">epaper::create_display</a></div><div class="ttdeci">auto create_display(Device &amp;device, DisplayMode mode, Orientation orientation=Orientation::Portrait0, bool auto_sleep=true) -&gt; std::expected&lt; Display, Error &gt;</div><div class="ttdef"><b>Definition</b> display.hpp:597</div></div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md133"></a>
+<div class="ttc" id="anamespaceepaper_html_ae87c16acc02a64356214d15caff24201"><div class="ttname"><a href="../../db/da4/namespaceepaper.html#ae87c16acc02a64356214d15caff24201">epaper::create_display</a></div><div class="ttdeci">auto create_display(Device &amp;device, DisplayMode mode, Orientation orientation=Orientation::Portrait0, bool auto_sleep=true) -&gt; std::expected&lt; Display, Error &gt;</div><div class="ttdef"><b>Definition</b> display.hpp:733</div></div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md125"></a>
 Step 4: Display Buffer Transfer</h2>
 <p>Implement the <code>display()</code> method with <b>transparent wake support</b>:</p>
 <div class="fragment"><div class="line"><span class="keyword">auto</span> EPD42::display(std::span&lt;const std::byte&gt; buffer) -&gt; std::expected&lt;void, Error&gt; {</div>
@@ -362,7 +362,7 @@ Step 4: Display Buffer Transfer</h2>
 <div class="line"> </div>
 <div class="line">  <span class="keywordflow">return</span> {};</div>
 <div class="line">}</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md134"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md126"></a>
 Step 5: Power Management</h2>
 <p>Implement sleep/wake with proper state tracking:</p>
 <div class="fragment"><div class="line"><span class="keyword">auto</span> EPD42::sleep() -&gt; std::expected&lt;void, Error&gt; {</div>
@@ -406,13 +406,13 @@ Step 5: Power Management</h2>
 <div class="line">  <span class="keywordflow">return</span> std::unexpected(Error{ErrorCode::UnsupportedOperation,</div>
 <div class="line">                               <span class="stringliteral">&quot;EPD42 does not support power_on&quot;</span>});</div>
 <div class="line">}</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md135"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md127"></a>
 Step 6: Testing</h2>
 <p>Write tests to validate your driver (see Testing Your Driver).</p>
-<h1><a class="anchor" id="autotoc_md136"></a>
+<h1><a class="anchor" id="autotoc_md128"></a>
 EPD27 as Reference</h1>
 <p>The <code>EPD27</code> driver is the canonical reference implementation. Study it for patterns:</p>
-<h2><a class="anchor" id="autotoc_md137"></a>
+<h2><a class="anchor" id="autotoc_md129"></a>
 Key Patterns from EPD27</h2>
 <p><b>1. Hardware Reset:</b> </p><div class="fragment"><div class="line"><span class="keyword">auto</span> EPD27::reset() -&gt; <span class="keywordtype">void</span> {</div>
 <div class="line">  device_.write_pin(pins::RST, <span class="keyword">true</span>);</div>
@@ -450,7 +450,7 @@ Key Patterns from EPD27</h2>
 <div class="line">    send_data(<span class="keywordtype">byte</span>);</div>
 <div class="line">  }</div>
 <div class="line">}</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md138"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md130"></a>
 EPD27 State Management</h2>
 <p>Study how EPD27 implements transparent wake:</p>
 <div class="fragment"><div class="line"><span class="comment">// In display() method:</span></div>
@@ -461,9 +461,9 @@ EPD27 State Management</h2>
 <div class="line">  }</div>
 <div class="line">}</div>
 <div class="line"><span class="comment">// ... proceed with display update ...</span></div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md139"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md131"></a>
 Hardware Integration</h1>
-<h2><a class="anchor" id="autotoc_md140"></a>
+<h2><a class="anchor" id="autotoc_md132"></a>
 SPI Communication</h2>
 <p>Use the <code>Device</code> class for all hardware access:</p>
 <div class="fragment"><div class="line"><span class="comment">// GPIO pin control</span></div>
@@ -477,7 +477,7 @@ SPI Communication</h2>
 <div class="line"> </div>
 <div class="line"><span class="comment">// Delays</span></div>
 <div class="line">device_.delay_ms(100);  <span class="comment">// Wait 100ms</span></div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md141"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md133"></a>
 Pin Usage</h2>
 <p>Standard e-paper pins:</p>
 <table class="markdownTable">
@@ -496,7 +496,7 @@ Pin Usage</h2>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone">SCLK   </td><td class="markdownTableBodyNone">Output   </td><td class="markdownTableBodyNone">SPI clock (handled by SPI library)   </td></tr>
 </table>
-<h2><a class="anchor" id="autotoc_md142"></a>
+<h2><a class="anchor" id="autotoc_md134"></a>
 Command/Data Protocol</h2>
 <div class="fragment"><div class="line"><span class="comment">// Send command</span></div>
 <div class="line"><span class="keywordtype">void</span> send_command(uint8_t cmd) {</div>
@@ -515,9 +515,9 @@ Command/Data Protocol</h2>
 <div class="line">send_data(param1);</div>
 <div class="line">send_data(param2);</div>
 <div class="line">wait_busy();</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md143"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md135"></a>
 Display Modes</h1>
-<h2><a class="anchor" id="autotoc_md144"></a>
+<h2><a class="anchor" id="autotoc_md136"></a>
 Implementing Black/White Mode</h2>
 <p><b>Buffer Format:</b> 1 bit per pixel, 8 pixels per byte</p>
 <div class="fragment"><div class="line"><span class="keyword">auto</span> EPD42::buffer_size() const noexcept -&gt; std::<span class="keywordtype">size_t</span> {</div>
@@ -536,7 +536,7 @@ Implementing Black/White Mode</h2>
 <p><b>Byte Packing (MSB first):</b> </p><div class="fragment"><div class="line">Byte: [P7 P6 P5 P4 P3 P2 P1 P0]</div>
 <div class="line">P0 = leftmost pixel</div>
 <div class="line">P7 = rightmost pixel</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md145"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md137"></a>
 Implementing Grayscale4 Mode</h2>
 <p><b>Buffer Format:</b> 2 bits per pixel, 4 pixels per byte</p>
 <p><b>Pixel Encoding:</b></p><ul>
@@ -558,9 +558,9 @@ Implementing Grayscale4 Mode</h2>
 <div class="line">    send_data(<span class="keywordtype">byte</span>);</div>
 <div class="line">  }</div>
 <div class="line">}</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md146"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md138"></a>
 State Management</h1>
-<h2><a class="anchor" id="autotoc_md147"></a>
+<h2><a class="anchor" id="autotoc_md139"></a>
 Required State Variables</h2>
 <div class="fragment"><div class="line"><span class="keyword">class </span>YourDriver : <span class="keyword">public</span> Driver {</div>
 <div class="line"><span class="keyword">private</span>:</div>
@@ -569,7 +569,7 @@ Required State Variables</h2>
 <div class="line">  <span class="keywordtype">bool</span> initialized_ = <span class="keyword">false</span>; <span class="comment">// Initialization state</span></div>
 <div class="line">  <span class="keywordtype">bool</span> is_asleep_ = <span class="keyword">false</span>;   <span class="comment">// Sleep state (for transparent wake)</span></div>
 <div class="line">};</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md148"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md140"></a>
 State Transitions</h2>
 <div class="fragment"><div class="line"><span class="comment">// Initialization</span></div>
 <div class="line">init(mode) → initialized_ = <span class="keyword">true</span>, is_asleep_ = <span class="keyword">false</span></div>
@@ -582,7 +582,7 @@ State Transitions</h2>
 <div class="line"> </div>
 <div class="line"><span class="comment">// Display (with transparent wake)</span></div>
 <div class="line">display(buffer) → check is_asleep_, call wake() if needed, then transfer</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md149"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md141"></a>
 Idempotent Operations</h2>
 <p>Make sleep/wake idempotent (safe to call multiple times):</p>
 <div class="fragment"><div class="line"><span class="keyword">auto</span> YourDriver::sleep() -&gt; std::expected&lt;void, Error&gt; {</div>
@@ -610,9 +610,9 @@ Idempotent Operations</h2>
 <div class="line">  is_asleep_ = <span class="keyword">false</span>;</div>
 <div class="line">  <span class="keywordflow">return</span> {};</div>
 <div class="line">}</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md150"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md142"></a>
 Error Handling in Drivers</h1>
-<h2><a class="anchor" id="autotoc_md151"></a>
+<h2><a class="anchor" id="autotoc_md143"></a>
 When to Return Errors</h2>
 <p>Return <code>std::unexpected(Error{...})</code> for:</p><ul>
 <li>Hardware communication failures</li>
@@ -620,7 +620,7 @@ When to Return Errors</h2>
 <li>Invalid state (e.g., <code>display()</code> called before <code>init()</code>)</li>
 <li>Unsupported operations</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md152"></a>
+<h2><a class="anchor" id="autotoc_md144"></a>
 Error Codes to Use</h2>
 <div class="fragment"><div class="line"><span class="comment">// Initialization errors</span></div>
 <div class="line"><span class="keywordflow">return</span> std::unexpected(Error{ErrorCode::DriverInitFailed,</div>
@@ -639,7 +639,7 @@ Error Codes to Use</h2>
 <div class="line"><span class="comment">// Unsupported features</span></div>
 <div class="line"><span class="keywordflow">return</span> std::unexpected(Error{ErrorCode::UnsupportedOperation,</div>
 <div class="line">                             <span class="stringliteral">&quot;Partial refresh not supported&quot;</span>});</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md153"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md145"></a>
 Error Propagation</h2>
 <p>Use <code>std::expected</code> chaining:</p>
 <div class="fragment"><div class="line"><span class="keyword">auto</span> YourDriver::some_operation() -&gt; std::expected&lt;void, Error&gt; {</div>
@@ -651,9 +651,9 @@ Error Propagation</h2>
 <div class="line">  <span class="comment">// Continue with success path</span></div>
 <div class="line">  <span class="keywordflow">return</span> {};</div>
 <div class="line">}</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md154"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md146"></a>
 Testing Your Driver</h1>
-<h2><a class="anchor" id="autotoc_md155"></a>
+<h2><a class="anchor" id="autotoc_md147"></a>
 Test Categories</h2>
 <p><b>1. Basic Initialization:</b> </p><div class="fragment"><div class="line">TEST(YourDriverTest, InitializeSuccessfully) {</div>
 <div class="line">  MockDevice device;</div>
@@ -697,7 +697,7 @@ Test Categories</h2>
 <div class="line">  EXPECT_FALSE(result.has_value());</div>
 <div class="line">  EXPECT_EQ(result.error().code, ErrorCode::DriverNotInitialized);</div>
 <div class="line">}</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md156"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md148"></a>
 Hardware Testing Checklist</h2>
 <p>Test with actual hardware:</p><ul>
 <li>[ ] Initialization completes without errors</li>
@@ -711,9 +711,9 @@ Hardware Testing Checklist</h2>
 <li>[ ] Both display modes work (B/W and grayscale)</li>
 <li>[ ] No memory leaks over many cycles</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md157"></a>
+<h1><a class="anchor" id="autotoc_md149"></a>
 Optimization Tips</h1>
-<h2><a class="anchor" id="autotoc_md158"></a>
+<h2><a class="anchor" id="autotoc_md150"></a>
 SPI Transfer Optimization</h2>
 <p><b>Batch Transfers:</b> </p><div class="fragment"><div class="line"><span class="comment">// Good: Single large transfer</span></div>
 <div class="line">send_data(std::span&lt;const uint8_t&gt;{buffer.data(), buffer.size()});</div>
@@ -728,7 +728,7 @@ SPI Transfer Optimization</h2>
 <div class="line">  <span class="keywordtype">size_t</span> chunk_size = std::min(CHUNK_SIZE, buffer.size() - i);</div>
 <div class="line">  send_data(buffer.subspan(i, chunk_size));</div>
 <div class="line">}</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md159"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md151"></a>
 Memory Efficiency</h2>
 <p><b>LUT Storage:</b> </p><div class="fragment"><div class="line"><span class="comment">// Good: Compile-time constant</span></div>
 <div class="line"><span class="keyword">constexpr</span> std::array&lt;uint8_t, 30&gt; LUT = { ... };</div>
@@ -744,7 +744,7 @@ Memory Efficiency</h2>
 <div class="line"><span class="keyword">auto</span> display(buffer) {</div>
 <div class="line">  std::vector&lt;uint8_t&gt; temp(buffer.size());  <span class="comment">// Allocates every time!</span></div>
 <div class="line">}</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md160"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md152"></a>
 Performance Profiling</h2>
 <p>Profile critical sections:</p>
 <div class="fragment"><div class="line"><span class="preprocessor">#include &lt;chrono&gt;</span></div>
@@ -754,10 +754,10 @@ Performance Profiling</h2>
 <div class="line"><span class="keyword">auto</span> end = std::chrono::steady_clock::now();</div>
 <div class="line"><span class="keyword">auto</span> duration = std::chrono::duration_cast&lt;std::chrono::milliseconds&gt;(end - start);</div>
 <div class="line">std::cout &lt;&lt; <span class="stringliteral">&quot;Operation took &quot;</span> &lt;&lt; duration.count() &lt;&lt; <span class="stringliteral">&quot;ms\n&quot;</span>;</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md161"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md153"></a>
 Implementation Checklist</h1>
 <p>Before submitting your driver:</p>
-<h2><a class="anchor" id="autotoc_md162"></a>
+<h2><a class="anchor" id="autotoc_md154"></a>
 Code Completeness</h2>
 <ul>
 <li>[ ] All pure virtual methods implemented</li>
@@ -767,7 +767,7 @@ Code Completeness</h2>
 <li>[ ] Width/height constants match datasheet</li>
 <li>[ ] Buffer size calculation correct</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md163"></a>
+<h2><a class="anchor" id="autotoc_md155"></a>
 State Management</h2>
 <ul>
 <li>[ ] <code>initialized_</code> flag used correctly</li>
@@ -775,7 +775,7 @@ State Management</h2>
 <li>[ ] <code>current_mode_</code> tracked</li>
 <li>[ ] Idempotent sleep/wake</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md164"></a>
+<h2><a class="anchor" id="autotoc_md156"></a>
 Transparent Sleep/Wake</h2>
 <ul>
 <li>[ ] <code>display()</code> checks <code>is_asleep_</code> and calls <code>wake()</code> if needed</li>
@@ -783,7 +783,7 @@ Transparent Sleep/Wake</h2>
 <li>[ ] <code>wake()</code> clears <code>is_asleep_ = false</code></li>
 <li>[ ] <code>init()</code> clears <code>is_asleep_ = false</code></li>
 </ul>
-<h2><a class="anchor" id="autotoc_md165"></a>
+<h2><a class="anchor" id="autotoc_md157"></a>
 Error Handling</h2>
 <ul>
 <li>[ ] All operations return <code>std::expected&lt;void, Error&gt;</code></li>
@@ -791,7 +791,7 @@ Error Handling</h2>
 <li>[ ] Error messages are descriptive</li>
 <li>[ ] Edge cases handled (null buffers, wrong size, etc.)</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md166"></a>
+<h2><a class="anchor" id="autotoc_md158"></a>
 Testing</h2>
 <ul>
 <li>[ ] Unit tests pass</li>
@@ -800,7 +800,7 @@ Testing</h2>
 <li>[ ] Both display modes tested</li>
 <li>[ ] Multiple orientations tested</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md167"></a>
+<h2><a class="anchor" id="autotoc_md159"></a>
 Documentation</h2>
 <ul>
 <li>[ ] Header comments explain purpose</li>
@@ -808,7 +808,7 @@ Documentation</h2>
 <li>[ ] Example usage provided</li>
 <li>[ ] Added to README driver list</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md168"></a>
+<h2><a class="anchor" id="autotoc_md160"></a>
 Code Quality</h2>
 <ul>
 <li>[ ] Follows project code style (clang-format)</li>
@@ -817,9 +817,9 @@ Code Quality</h2>
 <li>[ ] RAII for resources</li>
 <li>[ ] No raw pointers</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md169"></a>
+<h1><a class="anchor" id="autotoc_md161"></a>
 Common Issues &amp; Solutions</h1>
-<h2><a class="anchor" id="autotoc_md170"></a>
+<h2><a class="anchor" id="autotoc_md162"></a>
 Display Not Responding</h2>
 <p><b>Problem:</b> Display doesn't update or shows garbage.</p>
 <p><b>Solutions:</b></p><ol type="1">
@@ -829,7 +829,7 @@ Display Not Responding</h2>
 <li>Verify SPI transfer byte order (MSB vs LSB first)</li>
 <li>Check DC pin toggling (command vs data)</li>
 </ol>
-<h2><a class="anchor" id="autotoc_md171"></a>
+<h2><a class="anchor" id="autotoc_md163"></a>
 Slow Refresh</h2>
 <p><b>Problem:</b> Display update takes too long.</p>
 <p><b>Solutions:</b></p><ol type="1">
@@ -839,7 +839,7 @@ Slow Refresh</h2>
 <li>Profile to find bottlenecks</li>
 <li>Remember: e-paper is inherently slow (~2s is normal)</li>
 </ol>
-<h2><a class="anchor" id="autotoc_md172"></a>
+<h2><a class="anchor" id="autotoc_md164"></a>
 Sleep Not Working</h2>
 <p><b>Problem:</b> Display doesn't sleep or wake.</p>
 <p><b>Solutions:</b></p><ol type="1">
@@ -849,7 +849,7 @@ Sleep Not Working</h2>
 <li>Some displays need special wake sequence (not just re-init)</li>
 <li>Consult datasheet for power-down requirements</li>
 </ol>
-<h2><a class="anchor" id="autotoc_md173"></a>
+<h2><a class="anchor" id="autotoc_md165"></a>
 Grayscale Not Working</h2>
 <p><b>Problem:</b> Only black and white appear, no grays.</p>
 <p><b>Solutions:</b></p><ol type="1">
@@ -859,9 +859,9 @@ Grayscale Not Working</h2>
 <li>Some displays don't support grayscale - check capabilities</li>
 <li>Test with simple grayscale pattern first</li>
 </ol>
-<h1><a class="anchor" id="autotoc_md174"></a>
+<h1><a class="anchor" id="autotoc_md166"></a>
 Contributing Your Driver</h1>
-<h2><a class="anchor" id="autotoc_md175"></a>
+<h2><a class="anchor" id="autotoc_md167"></a>
 Pull Request Requirements</h2>
 <p>When contributing a new driver:</p>
 <ol type="1">
@@ -888,7 +888,7 @@ Pull Request Requirements</h2>
 </ul>
 </li>
 </ol>
-<h2><a class="anchor" id="autotoc_md176"></a>
+<h2><a class="anchor" id="autotoc_md168"></a>
 Pull Request Template</h2>
 <div class="fragment"><div class="line">## New Driver: EPD42 (4.2&quot; Display)</div>
 <div class="line"> </div>
@@ -921,7 +921,7 @@ Pull Request Template</h2>
 <div class="line">- [x] All tests pass</div>
 <div class="line">- [x] Documentation updated</div>
 <div class="line">- [x] Example included</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md177"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md169"></a>
 Maintenance Responsibilities</h2>
 <p>As a driver contributor, you're expected to:</p><ul>
 <li>Respond to issues related to your driver</li>

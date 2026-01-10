@@ -1,10 +1,7 @@
 var searchData=
 [
-  ['device_2ecpp_0',['device.cpp',['../d3/dd4/device_8cpp.html',1,'']]],
-  ['device_2ehpp_1',['device.hpp',['../d5/d08/device_8hpp.html',1,'']]],
-  ['device_5fcolor_2ehpp_2',['device_color.hpp',['../d5/d94/device__color_8hpp.html',1,'']]],
-  ['display_2ecpp_3',['display.cpp',['../db/d86/display_8cpp.html',1,'']]],
-  ['display_2ehpp_4',['display.hpp',['../d2/da4/display_8hpp.html',1,'']]],
-  ['driver_2ehpp_5',['driver.hpp',['../d7/d7e/driver_8hpp.html',1,'']]],
-  ['driver_2emd_6',['DRIVER.md',['../de/d79/DRIVER_8md.html',1,'']]]
+  ['capabilities_2ehpp_0',['capabilities.hpp',['../d8/d9d/capabilities_8hpp.html',1,'']]],
+  ['color_2ehpp_1',['color.hpp',['../d6/dfd/color_8hpp.html',1,'']]],
+  ['color_5fmanager_2ehpp_2',['color_manager.hpp',['../d6/d9f/color__manager_8hpp.html',1,'']]],
+  ['commands_2ehpp_3',['commands.hpp',['../d2/d99/commands_8hpp.html',1,'']]]
 ];

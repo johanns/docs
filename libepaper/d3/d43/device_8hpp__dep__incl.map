@@ -1,13 +1,25 @@
 <map id="include/epaper/device.hpp" name="include/epaper/device.hpp">
-<area shape="rect" id="Node000001" title=" " alt="" coords="211,5,405,31"/>
-<area shape="rect" id="Node000002" href="$d2/da4/display_8hpp.html" title=" " alt="" coords="5,86,200,111"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="266,38,134,88,132,83,265,33"/>
-<area shape="rect" id="Node000004" href="$d1/d76/epd27_8hpp.html" title=" " alt="" coords="225,79,391,119"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="311,44,311,79,305,79,305,44"/>
-<area shape="rect" id="Node000006" href="$d3/dd4/device_8cpp.html" title=" " alt="" coords="416,86,531,111"/>
-<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="346,34,450,84,448,88,343,39"/>
-<area shape="rect" id="Node000003" href="$db/d86/display_8cpp.html" title=" " alt="" coords="44,167,161,192"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="105,125,105,166,100,166,100,125"/>
-<area shape="rect" id="Node000005" href="$d8/d1c/epd27_8cpp.html" title=" " alt="" coords="227,167,389,192"/>
-<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="311,132,311,166,305,166,305,132"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="421,5,614,31"/>
+<area shape="rect" id="Node000002" href="$d2/da4/display_8hpp.html" title=" " alt="" coords="190,86,384,111"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="472,38,321,89,320,83,470,33"/>
+<area shape="rect" id="Node000007" href="$d1/d76/epd27_8hpp.html" title=" " alt="" coords="434,79,601,119"/>
+<area shape="poly" id="edge12_Node000001_Node000007" title=" " alt="" coords="520,44,520,79,515,79,515,44"/>
+<area shape="rect" id="Node000009" href="$d3/dd4/device_8cpp.html" title=" " alt="" coords="626,86,740,111"/>
+<area shape="poly" id="edge14_Node000001_Node000009" title=" " alt="" coords="555,34,660,84,658,88,553,39"/>
+<area shape="rect" id="Node000003" href="$da/dc6/builders_8hpp.html" title=" " alt="" coords="210,255,364,295"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="317,116,344,137,367,165,373,187,367,208,345,236,318,257,315,252,341,232,362,205,368,187,362,168,341,141,314,120"/>
+<area shape="rect" id="Node000004" href="$db/d86/display_8cpp.html" title=" " alt="" coords="50,343,167,368"/>
+<area shape="poly" id="edge11_Node000002_Node000004" title=" " alt="" coords="178,116,82,137,44,151,21,168,10,190,9,214,16,239,29,264,64,308,96,341,93,344,60,312,24,266,11,241,4,215,5,189,17,165,42,147,81,132,177,111"/>
+<area shape="rect" id="Node000005" href="$d2/d99/commands_8hpp.html" title=" " alt="" coords="31,167,186,207"/>
+<area shape="poly" id="edge5_Node000002_Node000005" title=" " alt="" coords="245,119,141,169,139,164,243,115"/>
+<area shape="rect" id="Node000006" href="$d6/d6f/styles_8hpp.html" title=" " alt="" coords="210,167,364,207"/>
+<area shape="poly" id="edge9_Node000002_Node000006" title=" " alt="" coords="290,125,290,166,284,166,284,125"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="348,245,370,228,386,205,392,187,386,168,374,150,358,136,322,114,324,109,361,131,378,147,391,166,397,187,391,208,373,231,351,249"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="233,303,136,345,134,340,231,298"/>
+<area shape="poly" id="edge6_Node000005_Node000002" title=" " alt="" coords="166,159,268,109,270,114,169,163"/>
+<area shape="poly" id="edge7_Node000005_Node000003" title=" " alt="" coords="161,210,249,252,247,257,159,215"/>
+<area shape="poly" id="edge8_Node000005_Node000004" title=" " alt="" coords="111,221,111,343,106,343,106,221"/>
+<area shape="poly" id="edge10_Node000006_Node000003" title=" " alt="" coords="290,221,290,254,284,254,284,221"/>
+<area shape="rect" id="Node000008" href="$d8/d1c/epd27_8cpp.html" title=" " alt="" coords="464,174,625,199"/>
+<area shape="poly" id="edge13_Node000007_Node000008" title=" " alt="" coords="530,131,543,173,538,174,525,133"/>
 </map>

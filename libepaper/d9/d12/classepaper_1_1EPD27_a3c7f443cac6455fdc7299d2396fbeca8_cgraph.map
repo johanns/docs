@@ -1,0 +1,6 @@
+<map id="epaper::EPD27::clear" name="epaper::EPD27::clear">
+<area shape="rect" id="Node000001" title="Clear the display (typically to white)." alt="" coords="5,29,163,55"/>
+<area shape="rect" id="Node000002" href="$db/da4/namespaceepaper.html#ae87c16acc02a64356214d15caff24201" title=" " alt="" coords="211,29,381,55"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="163,39,197,39,197,45,163,45"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="261,31,254,21,258,11,272,5,296,3,325,6,337,15,334,20,323,11,296,8,274,10,262,15,259,20,266,28"/>
+</map>

@@ -8,7 +8,7 @@ var searchData=
   ['val6_5',['VAL6',['../d6/d82/namespaceepaper_1_1PowerOptimization.html#a79754a035677f72af64c6aa2f3bf043a',1,'epaper::PowerOptimization']]],
   ['val7_6',['VAL7',['../d6/d82/namespaceepaper_1_1PowerOptimization.html#a11deaf5c9061ce6886d1d870d5df3e5e',1,'epaper::PowerOptimization']]],
   ['value_7',['value',['../d2/d33/structepaper_1_1DeviceColor.html#a4aa2caad5a11c6ee8031826f49ace987',1,'epaper::DeviceColor']]],
-  ['variables_8',['Required State Variables',['../db/d9c/md_docs_2DRIVER.html#autotoc_md147',1,'']]],
+  ['variables_8',['Required State Variables',['../db/d9c/md_docs_2DRIVER.html#autotoc_md139',1,'']]],
   ['vcm_5fdc_5fsetting_9',['VCM_DC_SETTING',['../db/da4/namespaceepaper.html#a6c5225e48086e0ca88fc79574a4000fea5fba3f010d44da0040f273509fffea1e',1,'epaper']]],
   ['vcm_5fdc_5fsetting_5fvalue_10',['VCM_DC_SETTING_VALUE',['../d6/dd1/namespaceepaper_1_1PanelConfig.html#a31e9cbf2013f27ebad41e52d325c3782',1,'epaper::PanelConfig']]],
   ['vcom_5fdata_5finterval_11',['VCOM_DATA_INTERVAL',['../db/da4/namespaceepaper.html#a6c5225e48086e0ca88fc79574a4000feae4c9a76f9fb6f2dc46d31210aac535b0',1,'epaper']]],

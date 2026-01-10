@@ -73,8 +73,11 @@ $(function() {
   <div class="headertitle"><div class="title">Modern C++ E-Paper Display Library </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p><a class="anchor" id="md_README"></a> A modern C++23 library for controlling Waveshare e-paper displays on Raspberry Pi with transparent sleep/wake management and clean architecture.</p>
+<div class="textblock"><p><a class="anchor" id="md_README"></a> A modern C++23 library for controlling Waveshare e-paper displays on Raspberry Pi with transparent sleep/wake management and a fluent builder API.</p>
 <p><a href="https://en.cppreference.com/w/cpp/23"><img src="https://img.shields.io/badge/C%2B%2B-23-blue.svg" alt="C++23" style="pointer-events: none;" class="inline"/></a> [<img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License: MIT" style="pointer-events: none;" class="inline"/>](LICENSE)</p>
+<blockquote class="doxtable">
+<p>&zwj;<b>See <a href="https://docs.jsg.io/libepaper">docs</a> for complete documentation.</b> </p>
+</blockquote>
 <h1><a class="anchor" id="autotoc_md1"></a>
 ✨ Quick Example</h1>
 <div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="d5/d08/device_8hpp.html">epaper/device.hpp</a>&gt;</span></div>
@@ -92,20 +95,28 @@ $(function() {
 <div class="line">                                         Orientation::Landscape90).value();</div>
 <div class="line"> </div>
 <div class="line">    display-&gt;clear(Color::White);</div>
-<div class="line">    display-&gt;draw_string(20, 70, <span class="stringliteral">&quot;Hello, libepaper!&quot;</span>,</div>
-<div class="line">                        Font::font24(), Color::Black, Color::White);</div>
+<div class="line">    display-&gt;draw(</div>
+<div class="line">        display-&gt;text(<span class="stringliteral">&quot;Hello, libepaper!&quot;</span>)</div>
+<div class="line">            .at(20, 70)</div>
+<div class="line">            .font(&amp;Font::font24())</div>
+<div class="line">            .foreground(Color::Black)</div>
+<div class="line">            .background(Color::White)</div>
+<div class="line">            .build()</div>
+<div class="line">    );</div>
 <div class="line">    display-&gt;refresh();</div>
 <div class="line"> </div>
 <div class="line">    <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>
-<div class="ttc" id="aclassepaper_1_1Device_html"><div class="ttname"><a href="d2/d80/classepaper_1_1Device.html">epaper::Device</a></div><div class="ttdoc">RAII wrapper for BCM2835 device.</div><div class="ttdef"><b>Definition</b> device.hpp:44</div></div>
-<div class="ttc" id="aclassepaper_1_1Device_html_ae0a60dbaca6d6c4e442982338748bcbb"><div class="ttname"><a href="d2/d80/classepaper_1_1Device.html#ae0a60dbaca6d6c4e442982338748bcbb">epaper::Device::init</a></div><div class="ttdeci">auto init() -&gt; std::expected&lt; void, Error &gt;</div><div class="ttdoc">Initialize the BCM2835 library and SPI.</div><div class="ttdef"><b>Definition</b> device.cpp:40</div></div>
+<div class="ttc" id="aclassepaper_1_1Device_html"><div class="ttname"><a href="d2/d80/classepaper_1_1Device.html">epaper::Device</a></div><div class="ttdoc">RAII wrapper for GPIO and SPI device access.</div><div class="ttdef"><b>Definition</b> device.hpp:78</div></div>
+<div class="ttc" id="aclassepaper_1_1Device_html_ae0a60dbaca6d6c4e442982338748bcbb"><div class="ttname"><a href="d2/d80/classepaper_1_1Device.html#ae0a60dbaca6d6c4e442982338748bcbb">epaper::Device::init</a></div><div class="ttdeci">auto init() -&gt; std::expected&lt; void, Error &gt;</div><div class="ttdoc">Initialize the GPIO (libgpiod) and SPI (SPIdev) interfaces.</div><div class="ttdef"><b>Definition</b> device.cpp:160</div></div>
 <div class="ttc" id="adevice_8hpp_html"><div class="ttname"><a href="d5/d08/device_8hpp.html">device.hpp</a></div></div>
 <div class="ttc" id="adisplay_8hpp_html"><div class="ttname"><a href="d2/da4/display_8hpp.html">display.hpp</a></div></div>
 <div class="ttc" id="aepd27_8hpp_html"><div class="ttname"><a href="d1/d76/epd27_8hpp.html">epd27.hpp</a></div></div>
 <div class="ttc" id="afont_8hpp_html"><div class="ttname"><a href="df/d50/font_8hpp.html">font.hpp</a></div></div>
 <div class="ttc" id="anamespaceepaper_html"><div class="ttname"><a href="db/da4/namespaceepaper.html">epaper</a></div><div class="ttdef"><b>Definition</b> color.hpp:5</div></div>
-</div><!-- fragment --><p>👉 <b>See examples/ for complete applications including a real-time crypto dashboard!</b></p>
+</div><!-- fragment --><blockquote class="doxtable">
+<p>&zwj;👉 <b>See examples/ for complete applications.</b> </p>
+</blockquote>
 <h1><a class="anchor" id="autotoc_md2"></a>
 🎯 Features</h1>
 <ul>
@@ -121,175 +132,58 @@ $(function() {
 <li><b>Zero-Cost Abstractions</b>: Modern C++ with no runtime overhead</li>
 </ul>
 <h1><a class="anchor" id="autotoc_md3"></a>
+🚀 Quick Start</h1>
+<h2><a class="anchor" id="autotoc_md4"></a>
+1. Installation</h2>
+<p>Run the automated setup script to install dependencies (cmake, g++-14, libgpiod, etc.):</p>
+<div class="fragment"><div class="line">./bin/setup</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md5"></a>
+2. Build &amp; Run</h2>
+<div class="fragment"><div class="line">./bin/build</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md6"></a>
+3. Run Example</h2>
+<div class="fragment"><div class="line"># Run crypto dashboard (live prices with charts)</div>
+<div class="line">./build/examples/crypto_dashboard/crypto_dashboard</div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md7"></a>
 📚 Documentation</h1>
-<p><b><a href="https://docs.jsg.io/libepaper/index.html">Full API Reference</a></b></p>
 <table class="markdownTable">
 <tr class="markdownTableHead">
 <th class="markdownTableHeadNone">Document   </th><th class="markdownTableHeadNone">Description    </th></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone"><b>Examples &amp; Tutorials</b>   </td><td class="markdownTableBodyNone">Get started quickly with working examples    </td></tr>
-<tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone"><b><a class="el" href="d7/d15/md_docs_2API.html">API Reference</a></b>   </td><td class="markdownTableBodyNone">Complete API guide with usage patterns    </td></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone"><b><a class="el" href="d4/d34/md_docs_2ARCHITECTURE.html">Architecture Guide</a></b>   </td><td class="markdownTableBodyNone">Deep dive into design, decisions, and diagrams    </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone"><b><a class="el" href="db/d9c/md_docs_2DRIVER.html">Driver Development</a></b>   </td><td class="markdownTableBodyNone">Write drivers for new displays   </td></tr>
+<td class="markdownTableBodyNone"><b><a class="el" href="d4/d34/md_docs_2ARCHITECTURE.html">Architecture Guide</a></b>   </td><td class="markdownTableBodyNone">Deep dive into design and implementation    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b><a class="el" href="db/d9c/md_docs_2DRIVER.html">Driver Development</a></b>   </td><td class="markdownTableBodyNone">Guide to writing new display drivers    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Examples</b>   </td><td class="markdownTableBodyNone">Tutorials and working examples   </td></tr>
 </table>
-<h1><a class="anchor" id="autotoc_md4"></a>
-🚀 Quick Start</h1>
-<h2><a class="anchor" id="autotoc_md5"></a>
-1. Installation</h2>
-<p>Run the automated setup script:</p>
-<div class="fragment"><div class="line">./bin/setup</div>
-</div><!-- fragment --><p>Or manually install dependencies:</p>
-<div class="fragment"><div class="line">sudo apt install cmake g++-14 libbcm2835-dev libcurl4-openssl-dev nlohmann-json3-dev</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md6"></a>
-2. Enable SPI</h2>
-<div class="fragment"><div class="line">sudo raspi-config</div>
-<div class="line"># Interface Options → SPI → Enable</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md7"></a>
-3. Hardware Connection</h2>
-<table class="markdownTable">
-<tr class="markdownTableHead">
-<th class="markdownTableHeadNone">E-Paper Pin   </th><th class="markdownTableHeadNone">Raspberry Pi GPIO    </th></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">RST   </td><td class="markdownTableBodyNone">GPIO 17    </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">DC   </td><td class="markdownTableBodyNone">GPIO 25    </td></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">CS   </td><td class="markdownTableBodyNone">GPIO 8 (CE0)    </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">BUSY   </td><td class="markdownTableBodyNone">GPIO 24    </td></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">MOSI   </td><td class="markdownTableBodyNone">GPIO 10 (MOSI)    </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">SCLK   </td><td class="markdownTableBodyNone">GPIO 11 (SCLK)    </td></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">GND   </td><td class="markdownTableBodyNone">GND    </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">VCC   </td><td class="markdownTableBodyNone">3.3V   </td></tr>
-</table>
-<h2><a class="anchor" id="autotoc_md8"></a>
-4. Build</h2>
-<div class="fragment"><div class="line">./bin/build</div>
-</div><!-- fragment --><p>Or manually:</p>
-<div class="fragment"><div class="line">cmake -S . -B build -DCMAKE_CXX_COMPILER=g++-14</div>
-<div class="line">cmake --build build -j$(nproc)</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md9"></a>
-5. Run Example</h2>
-<div class="fragment"><div class="line"># Run crypto dashboard (live prices with charts)</div>
-<div class="line">sudo ./build/examples/crypto_dashboard/crypto_dashboard</div>
-<div class="line"> </div>
-<div class="line"># Run tests</div>
-<div class="line">sudo ./build/tests/test_auto_sleep</div>
-</div><!-- fragment --><p><b>Note:</b> Root privileges (<code>sudo</code>) required for GPIO/SPI access.</p>
-<h1><a class="anchor" id="autotoc_md10"></a>
-🧪 Testing</h1>
-<div class="fragment"><div class="line"># Run all tests</div>
-<div class="line">cd build/tests</div>
-<div class="line">sudo ./run_all_tests.sh</div>
-<div class="line"> </div>
-<div class="line"># Run specific test</div>
-<div class="line">sudo ./test_auto_sleep</div>
-</div><!-- fragment --><p>See tests/README.md for details.</p>
-<h1><a class="anchor" id="autotoc_md11"></a>
+<h1><a class="anchor" id="autotoc_md8"></a>
 🤝 Contributing</h1>
-<p>We welcome contributions! This project uses <b>Conventional Commits</b> for clear history.</p>
-<h2><a class="anchor" id="autotoc_md12"></a>
-Commit Format</h2>
-<div class="fragment"><div class="line">&lt;type&gt;(&lt;scope&gt;): &lt;subject&gt;</div>
-<div class="line"> </div>
-<div class="line">&lt;body&gt;</div>
-<div class="line"> </div>
-<div class="line">&lt;footer&gt;</div>
-</div><!-- fragment --><p><b>Types:</b></p><ul>
-<li><code>feat</code>: New feature</li>
-<li><code>fix</code>: Bug fix</li>
-<li><code>docs</code>: Documentation changes</li>
-<li><code>style</code>: Code formatting</li>
-<li><code>refactor</code>: Code refactoring</li>
-<li><code>perf</code>: Performance improvements</li>
-<li><code>test</code>: Test additions/updates</li>
-<li><code>chore</code>: Maintenance tasks</li>
-</ul>
-<p><b>Scopes:</b> <code>device</code>, <code>driver</code>, <code>display</code>, <code>docs</code>, <code>examples</code>, <code>tests</code></p>
-<h2><a class="anchor" id="autotoc_md13"></a>
-Examples</h2>
-<div class="fragment"><div class="line">feat(driver): add EPD42 display driver support</div>
-<div class="line"> </div>
-<div class="line">Implements the Driver interface for Waveshare 4.2&quot; displays.</div>
-<div class="line">Supports both black/white and 4-level grayscale modes.</div>
-<div class="line"> </div>
-<div class="line">fix(display): correct auto-wake behavior in refresh()</div>
-<div class="line"> </div>
-<div class="line">The previous implementation didn&#39;t check is_asleep_ before refresh.</div>
-<div class="line">Now transparently wakes display if needed.</div>
-<div class="line"> </div>
-<div class="line">docs(readme): restructure documentation for clarity</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md14"></a>
-Pull Request Process</h2>
-<ol type="1">
-<li>Fork and create a feature branch</li>
-<li>Follow project coding standards (run <code>./bin/format</code>)</li>
-<li>Add/update tests as needed</li>
-<li>Use conventional commit messages</li>
-<li>Update documentation</li>
-<li>Submit PR with clear description</li>
-</ol>
-<h1><a class="anchor" id="autotoc_md15"></a>
+<p>We welcome contributions! Please see CONTRIBUTING.md for our commit format and PR process.</p>
+<h1><a class="anchor" id="autotoc_md9"></a>
 🏗️ Supported Hardware</h1>
 <p><b>Currently Implemented:</b></p><ul>
 <li>Waveshare 2.7" e-Paper Display (176×264 pixels)
 
 &lt;strong&gt;Easy to Extend:&lt;/strong&gt;
-The abstract driver interface makes it straightforward to add support for other displays. See @ref "/mnt/nas/libepaper2/docs/DRIVER.md" "<a class="el" href="de/d79/DRIVER_8md.html">docs/DRIVER.md</a>" for a guide to writing new drivers.
-
-@section autotoc_md16 🔧 Development
-
-@subsection autotoc_md17 Requirements
-
-- C++23 capable compiler (GCC 14+ or Clang 18+)
-- CMake 3.25+
-- BCM2835 library
-- Raspberry Pi with SPI enabled
-
-@subsection autotoc_md18 Project Structure
-
-@icode 
-libepaper/
-├── include/epaper/        # Public API headers
-│   ├── device.hpp         # Hardware abstraction
-│   ├── display.hpp        # High-level display API
-│   ├── drivers/           # Driver interface &amp; implementations
-│   └── font.hpp           # Font rendering
-├── src/                   # Implementation files
-├── examples/              # Example applications
-│   ├── bmp_debug_example/ # BMP export for debugging
-│   └── crypto_dashboard/  # Real-time crypto price dashboard
-├── tests/                 # Test suite
-├── docs/                  # Comprehensive documentation
-└── bin/                   # Build and setup scripts
-@endicode 
-
-@section autotoc_md19 🙏 Acknowledgments
-
-- &lt;strong&gt;Waveshare&lt;/strong&gt; for the e-Paper hardware and original library
-- &lt;strong&gt;BCM2835 library authors&lt;/strong&gt; for Raspberry Pi GPIO access
-- &lt;strong&gt;stb_image library authors&lt;/strong&gt; for image loading
-
-@section autotoc_md20 📄 License
-
-MIT License - see [LICENSE](LICENSE) file for details.
-
-Copyright (c) 2025 Johanns Gregorian
-
-&lt;hr&gt;
-
-&lt;strong&gt;Getting Started?&lt;/strong&gt; → @ref "/mnt/nas/libepaper2/examples/README.md" "Examples"
-&lt;strong&gt;API Questions?&lt;/strong&gt; → @ref "/mnt/nas/libepaper2/docs/API.md" "API Reference"
-&lt;strong&gt;Architecture Deep Dive?&lt;/strong&gt; → @ref "/mnt/nas/libepaper2/docs/ARCHITECTURE.md" "Architecture Guide"
-&lt;strong&gt;Writing a Driver?&lt;/strong&gt; → @ref "/mnt/nas/libepaper2/docs/DRIVER.md" "Driver Development" </li>
+The abstract driver interface makes it straightforward to add support for other displays. See @ref "/mnt/nas/libepaper/docs/DRIVER.md" "<a class="el" href="de/d79/DRIVER_8md.html">docs/DRIVER.md</a>" for a guide to writing new drivers.</li>
 </ul>
+<h1><a class="anchor" id="autotoc_md10"></a>
+🔧 Development</h1>
+<h2><a class="anchor" id="autotoc_md11"></a>
+Requirements</h2>
+<ul>
+<li>Raspberry Pi OS, Debian 12 (Bookworm), or Ubuntu 24.04 (Jammy Jellyfish)</li>
+<li>C++23 capable compiler (GCC 14+ or Clang 18+)</li>
+<li>CMake 3.25+</li>
+<li>libgpiod library (user-space GPIO access)</li>
+<li>Raspberry Pi with SPI enabled</li>
+<li>User in <code>gpio</code> and <code>spi</code> groups (no sudo required)</li>
+</ul>
+<h1><a class="anchor" id="autotoc_md12"></a>
+📄 License</h1>
+<p>MIT License - see [LICENSE](LICENSE) file for details. Copyright (c) 2021 - 2026 Johanns Gregorian (<a href="https://github.com/johanns">https://github.com/johanns</a>) </p>
 </div></div><!-- PageDoc -->
 </div><!-- contents -->
 <!-- start footer part -->

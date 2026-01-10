@@ -1,0 +1,5 @@
+<map id="epaper::CircleCommand" name="epaper::CircleCommand">
+<area shape="rect" id="Node000001" title="Command for drawing a circle." alt="" coords="5,93,184,119"/>
+<area shape="rect" id="Node000002" href="$d7/d38/structepaper_1_1Point.html" title="A 2D point in display coordinate space." alt="" coords="41,5,149,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="97,45,97,93,92,93,92,45"/>
+</map>

@@ -1,7 +1,8 @@
 var searchData=
 [
-  ['_7edevice_0',['~Device',['../d2/d80/classepaper_1_1Device.html#a1261fba9b80a1d0e1e381b971b40e9e1',1,'epaper::Device']]],
-  ['_7edisplay_1',['~Display',['../d2/da8/classepaper_1_1Display.html#a172325ae2ef44cbcd8eb72c0ec00b79e',1,'epaper::Display']]],
-  ['_7edriver_2',['~Driver',['../d6/d4c/classepaper_1_1Driver.html#a20a6f813a8d576a15e4b55ff5c8639fb',1,'epaper::Driver']]],
-  ['_7eepd27_3',['~EPD27',['../d9/d12/classepaper_1_1EPD27.html#af101d9821f562c29a16712f8fe4c162f',1,'epaper::EPD27']]]
+  ['wake_0',['wake',['../d2/da8/classepaper_1_1Display.html#a266e1c28bc10bb2beec7e8add6833895',1,'epaper::Display::wake()'],['../d6/d4c/classepaper_1_1Driver.html#a1cd40e60d18bc1903ba5e90fa2be4443',1,'epaper::Driver::wake()'],['../d9/d12/classepaper_1_1EPD27.html#a5c198a66f801e02209408ad2b6041a10',1,'epaper::EPD27::wake()']]],
+  ['what_1',['what',['../df/d40/structepaper_1_1Error.html#a5a7dc983be378fd97dffc35f73330ead',1,'epaper::Error']]],
+  ['width_2',['width',['../d2/da8/classepaper_1_1Display.html#a6173c4e10982fb97fb0db821bdb6f95a',1,'epaper::Display::width()'],['../d4/df4/classepaper_1_1LineBuilder.html#a2252d9c541ab9befa19ef815b17e8509',1,'epaper::LineBuilder::width()'],['../d6/d4c/classepaper_1_1Driver.html#acb47947f0bc93af52cc5fdb2590afcff',1,'epaper::Driver::width()'],['../d9/d12/classepaper_1_1EPD27.html#a30c6077075c26623278c22b40c65540a',1,'epaper::EPD27::width()'],['../d7/d6c/classepaper_1_1Font.html#a3b4ab761cdbea45577f1b4c4870ca87f',1,'epaper::Font::width()'],['../d3/dc8/classepaper_1_1Framebuffer.html#a907facc3bd43a152c53905bcae68853f',1,'epaper::Framebuffer::width()']]],
+  ['with_5fstyle_3',['with_style',['../d4/df4/classepaper_1_1LineBuilder.html#ae70b9e2f460d0ce6853781b118f0722e',1,'epaper::LineBuilder::with_style()'],['../dc/dcc/classepaper_1_1RectangleBuilder.html#a7c9ee013dff662867ebdccc191825113',1,'epaper::RectangleBuilder::with_style()'],['../dd/d5e/classepaper_1_1CircleBuilder.html#af12d637f18711faf9273d063f9a78d57',1,'epaper::CircleBuilder::with_style()'],['../dd/d72/classepaper_1_1TextBuilder.html#a068cb98e47a0203baa299ffc232ffebe',1,'epaper::TextBuilder::with_style()']]],
+  ['write_5fpin_4',['write_pin',['../d2/d80/classepaper_1_1Device.html#a836e649e672c80b435d8f91eb1a4b24b',1,'epaper::Device']]]
 ];

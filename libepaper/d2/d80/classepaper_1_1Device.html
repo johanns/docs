@@ -82,30 +82,34 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>RAII wrapper for BCM2835 device.  
+<p>RAII wrapper for GPIO and SPI device access.  
  <a href="../../d2/d80/classepaper_1_1Device.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="../../d5/d08/device_8hpp_source.html">device.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a0490974d012e5684e544b0d9b9e211db" id="r_a0490974d012e5684e544b0d9b9e211db"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d80/classepaper_1_1Device.html#a0490974d012e5684e544b0d9b9e211db">Device</a> ()=<a class="el" href="../../db/da4/namespaceepaper.html#ae87c16acc02a64356214d15caff24201">default</a></td></tr>
-<tr class="separator:a0490974d012e5684e544b0d9b9e211db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac312d324f7f88f263deea118d5622fa1" id="r_ac312d324f7f88f263deea118d5622fa1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d80/classepaper_1_1Device.html#ac312d324f7f88f263deea118d5622fa1">Device</a> ()</td></tr>
+<tr class="memdesc:ac312d324f7f88f263deea118d5622fa1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a <a class="el" href="../../d2/d80/classepaper_1_1Device.html" title="RAII wrapper for GPIO and SPI device access.">Device</a> with default configuration.  <br /></td></tr>
+<tr class="separator:ac312d324f7f88f263deea118d5622fa1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3ba5c79a065122d144ed2708d209a51" id="r_ad3ba5c79a065122d144ed2708d209a51"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d80/classepaper_1_1Device.html#ad3ba5c79a065122d144ed2708d209a51">Device</a> (<a class="el" href="../../db/da4/namespaceepaper.html#ae87c16acc02a64356214d15caff24201">const</a> <a class="el" href="../../d6/d43/structepaper_1_1DeviceConfig.html">DeviceConfig</a> &amp;config)</td></tr>
+<tr class="memdesc:ad3ba5c79a065122d144ed2708d209a51"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a <a class="el" href="../../d2/d80/classepaper_1_1Device.html" title="RAII wrapper for GPIO and SPI device access.">Device</a> with custom configuration.  <br /></td></tr>
+<tr class="separator:ad3ba5c79a065122d144ed2708d209a51"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1261fba9b80a1d0e1e381b971b40e9e1" id="r_a1261fba9b80a1d0e1e381b971b40e9e1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d80/classepaper_1_1Device.html#a1261fba9b80a1d0e1e381b971b40e9e1">~Device</a> () <a class="el" href="../../db/da4/namespaceepaper.html#ae87c16acc02a64356214d15caff24201">noexcept</a></td></tr>
-<tr class="memdesc:a1261fba9b80a1d0e1e381b971b40e9e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor. Cleans up BCM2835 and SPI resources.  <br /></td></tr>
+<tr class="memdesc:a1261fba9b80a1d0e1e381b971b40e9e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor. Cleans up GPIO and SPI resources.  <br /></td></tr>
 <tr class="separator:a1261fba9b80a1d0e1e381b971b40e9e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6696fbe83e3e1d2ef072937856e9a760" id="r_a6696fbe83e3e1d2ef072937856e9a760"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d80/classepaper_1_1Device.html#a6696fbe83e3e1d2ef072937856e9a760">Device</a> (<a class="el" href="../../db/da4/namespaceepaper.html#ae87c16acc02a64356214d15caff24201">const</a> <a class="el" href="../../d2/d80/classepaper_1_1Device.html">Device</a> &amp;)=<a class="el" href="../../db/da4/namespaceepaper.html#ae87c16acc02a64356214d15caff24201">delete</a></td></tr>
 <tr class="separator:a6696fbe83e3e1d2ef072937856e9a760"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a33f432e46646babe13cba4c25f691974" id="r_a33f432e46646babe13cba4c25f691974"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d2/d80/classepaper_1_1Device.html">Device</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d80/classepaper_1_1Device.html#a33f432e46646babe13cba4c25f691974">operator=</a> (<a class="el" href="../../db/da4/namespaceepaper.html#ae87c16acc02a64356214d15caff24201">const</a> <a class="el" href="../../d2/d80/classepaper_1_1Device.html">Device</a> &amp;)=<a class="el" href="../../db/da4/namespaceepaper.html#ae87c16acc02a64356214d15caff24201">delete</a></td></tr>
-<tr class="separator:a33f432e46646babe13cba4c25f691974"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89045a5c2ba441d18f9e7ffb17853fad" id="r_a89045a5c2ba441d18f9e7ffb17853fad"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/da4/namespaceepaper.html#ae87c16acc02a64356214d15caff24201">auto</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d80/classepaper_1_1Device.html#a89045a5c2ba441d18f9e7ffb17853fad">operator=</a> (<a class="el" href="../../db/da4/namespaceepaper.html#ae87c16acc02a64356214d15caff24201">const</a> <a class="el" href="../../d2/d80/classepaper_1_1Device.html">Device</a> &amp;) -&gt; <a class="el" href="../../d2/d80/classepaper_1_1Device.html">Device</a> &amp;=<a class="el" href="../../db/da4/namespaceepaper.html#ae87c16acc02a64356214d15caff24201">delete</a></td></tr>
+<tr class="separator:a89045a5c2ba441d18f9e7ffb17853fad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae3e8e6e8fc9342b891a932c80638702e" id="r_ae3e8e6e8fc9342b891a932c80638702e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d80/classepaper_1_1Device.html#ae3e8e6e8fc9342b891a932c80638702e">Device</a> (<a class="el" href="../../d2/d80/classepaper_1_1Device.html">Device</a> &amp;&amp;<a class="el" href="../../db/da4/namespaceepaper.html#ae87c16acc02a64356214d15caff24201">other</a>) <a class="el" href="../../db/da4/namespaceepaper.html#ae87c16acc02a64356214d15caff24201">noexcept</a></td></tr>
 <tr class="memdesc:ae3e8e6e8fc9342b891a932c80638702e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Move constructor.  <br /></td></tr>
 <tr class="separator:ae3e8e6e8fc9342b891a932c80638702e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a950beacb2396c54d86fa53db99852aa4" id="r_a950beacb2396c54d86fa53db99852aa4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d2/d80/classepaper_1_1Device.html">Device</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d80/classepaper_1_1Device.html#a950beacb2396c54d86fa53db99852aa4">operator=</a> (<a class="el" href="../../d2/d80/classepaper_1_1Device.html">Device</a> &amp;&amp;<a class="el" href="../../db/da4/namespaceepaper.html#ae87c16acc02a64356214d15caff24201">other</a>) <a class="el" href="../../db/da4/namespaceepaper.html#ae87c16acc02a64356214d15caff24201">noexcept</a></td></tr>
-<tr class="memdesc:a950beacb2396c54d86fa53db99852aa4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Move assignment operator.  <br /></td></tr>
-<tr class="separator:a950beacb2396c54d86fa53db99852aa4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38b844be1fdbf20bc217a9f268ab058c" id="r_a38b844be1fdbf20bc217a9f268ab058c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/da4/namespaceepaper.html#ae87c16acc02a64356214d15caff24201">auto</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d80/classepaper_1_1Device.html#a38b844be1fdbf20bc217a9f268ab058c">operator=</a> (<a class="el" href="../../d2/d80/classepaper_1_1Device.html">Device</a> &amp;&amp;<a class="el" href="../../db/da4/namespaceepaper.html#ae87c16acc02a64356214d15caff24201">other</a>) <a class="el" href="../../db/da4/namespaceepaper.html#ae87c16acc02a64356214d15caff24201">noexcept</a> -&gt; <a class="el" href="../../d2/d80/classepaper_1_1Device.html">Device</a> &amp;</td></tr>
+<tr class="memdesc:a38b844be1fdbf20bc217a9f268ab058c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Move assignment operator.  <br /></td></tr>
+<tr class="separator:a38b844be1fdbf20bc217a9f268ab058c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae0a60dbaca6d6c4e442982338748bcbb" id="r_ae0a60dbaca6d6c4e442982338748bcbb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/da4/namespaceepaper.html#ae87c16acc02a64356214d15caff24201">auto</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d80/classepaper_1_1Device.html#ae0a60dbaca6d6c4e442982338748bcbb">init</a> () -&gt; std::expected&lt; <a class="el" href="../../db/da4/namespaceepaper.html#ae87c16acc02a64356214d15caff24201">void</a>, <a class="el" href="../../df/d40/structepaper_1_1Error.html">Error</a> &gt;</td></tr>
-<tr class="memdesc:ae0a60dbaca6d6c4e442982338748bcbb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the BCM2835 library and SPI.  <br /></td></tr>
+<tr class="memdesc:ae0a60dbaca6d6c4e442982338748bcbb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the GPIO (libgpiod) and SPI (SPIdev) interfaces.  <br /></td></tr>
 <tr class="separator:ae0a60dbaca6d6c4e442982338748bcbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab17f20316983ffcdb0b50bf730c9b3b6" id="r_ab17f20316983ffcdb0b50bf730c9b3b6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/da4/namespaceepaper.html#ae87c16acc02a64356214d15caff24201">auto</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d80/classepaper_1_1Device.html#ab17f20316983ffcdb0b50bf730c9b3b6">is_initialized</a> () <a class="el" href="../../db/da4/namespaceepaper.html#ae87c16acc02a64356214d15caff24201">const</a> <a class="el" href="../../db/da4/namespaceepaper.html#ae87c16acc02a64356214d15caff24201">noexcept</a> -&gt; <a class="el" href="../../db/da4/namespaceepaper.html#ae87c16acc02a64356214d15caff24201">bool</a></td></tr>
 <tr class="separator:ab17f20316983ffcdb0b50bf730c9b3b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -130,14 +134,45 @@ Static Public Member Functions</h2></td></tr>
 <tr class="separator:a5e85ea885c617284b71bed10371fdd41"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>RAII wrapper for BCM2835 device. </p>
-<p>Manages the lifecycle of the BCM2835 library and SPI interface. Follows the RAII pattern with automatic resource cleanup.</p>
-<dl class="section note"><dt>Note</dt><dd>Exception Safety: Strong guarantee for all operations. Destructor is noexcept and will never throw. Move operations are noexcept. </dd></dl>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="../../d3/d4c/_2mnt_2nas_2libepaper2_2include_2epaper_2display_8hpp-example.html#_a0">/mnt/nas/libepaper2/include/epaper/display.hpp</a>.</dd>
+<div class="textblock"><p>RAII wrapper for GPIO and SPI device access. </p>
+<p>Manages the lifecycle of libgpiod (GPIO) and Linux SPIdev (SPI) interfaces. Follows the RAII pattern with automatic resource cleanup.</p>
+<dl class="section note"><dt>Note</dt><dd>Exception Safety: Strong guarantee for all operations. Destructor is noexcept and will never throw. Move operations are noexcept.</dd>
+<dd>
+GPIO operations can be used for button handling: <div class="fragment"><div class="line"><a class="code hl_function" href="../../db/da4/namespaceepaper.html#ae87c16acc02a64356214d15caff24201">device</a>.set_pin_input(<a class="code hl_function" href="../../db/da4/namespaceepaper.html#ae87c16acc02a64356214d15caff24201">button_pin</a>);</div>
+<div class="line"><span class="keywordtype">bool</span> <a class="code hl_function" href="../../db/da4/namespaceepaper.html#ae87c16acc02a64356214d15caff24201">pressed</a> = <a class="code hl_function" href="../../db/da4/namespaceepaper.html#ae87c16acc02a64356214d15caff24201">device</a>.read_pin(<a class="code hl_function" href="../../db/da4/namespaceepaper.html#ae87c16acc02a64356214d15caff24201">button_pin</a>);</div>
+<div class="ttc" id="anamespaceepaper_html_ae87c16acc02a64356214d15caff24201"><div class="ttname"><a href="../../db/da4/namespaceepaper.html#ae87c16acc02a64356214d15caff24201">epaper::create_display</a></div><div class="ttdeci">auto create_display(Device &amp;device, DisplayMode mode, Orientation orientation=Orientation::Portrait0, bool auto_sleep=true) -&gt; std::expected&lt; Display, Error &gt;</div><div class="ttdef"><b>Definition</b> display.hpp:733</div></div>
+</div><!-- fragment --> </dd></dl>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="../../d4/d26/_2mnt_2nas_2libepaper_2include_2epaper_2display_8hpp-example.html#_a0">/mnt/nas/libepaper/include/epaper/display.hpp</a>.</dd>
 </dl>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a0490974d012e5684e544b0d9b9e211db" name="a0490974d012e5684e544b0d9b9e211db"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0490974d012e5684e544b0d9b9e211db">&#9670;&#160;</a></span>Device() <span class="overload">[1/3]</span></h2>
+<a id="ac312d324f7f88f263deea118d5622fa1" name="ac312d324f7f88f263deea118d5622fa1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac312d324f7f88f263deea118d5622fa1">&#9670;&#160;</a></span>Device() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">epaper::Device::Device </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Construct a <a class="el" href="../../d2/d80/classepaper_1_1Device.html" title="RAII wrapper for GPIO and SPI device access.">Device</a> with default configuration. </p>
+<p>Uses default <a class="el" href="../../d6/d43/structepaper_1_1DeviceConfig.html">DeviceConfig</a> values:</p><ul>
+<li>GPIO chip: "/dev/gpiochip0"</li>
+<li>SPI device: "/dev/spidev0.0"</li>
+<li>SPI speed: 1953125 Hz (~1.95MHz) </li>
+</ul>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="../../d0/d8f/_2mnt_2nas_2libepaper_2include_2epaper_2device_8hpp-example.html#a4">/mnt/nas/libepaper/include/epaper/device.hpp</a>.</dd>
+</dl>
+
+</div>
+</div>
+<a id="ad3ba5c79a065122d144ed2708d209a51" name="ad3ba5c79a065122d144ed2708d209a51"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad3ba5c79a065122d144ed2708d209a51">&#9670;&#160;</a></span>Device() <span class="overload">[2/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -148,16 +183,25 @@ Static Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">epaper::Device::Device </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype"><a class="el" href="../../db/da4/namespaceepaper.html#ae87c16acc02a64356214d15caff24201">const</a> <a class="el" href="../../d6/d43/structepaper_1_1DeviceConfig.html">DeviceConfig</a> &amp;&#160;</td>
+          <td class="paramname"><em>config</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Construct a <a class="el" href="../../d2/d80/classepaper_1_1Device.html" title="RAII wrapper for GPIO and SPI device access.">Device</a> with custom configuration. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">config</td><td><a class="el" href="../../d2/d80/classepaper_1_1Device.html" title="RAII wrapper for GPIO and SPI device access.">Device</a> configuration specifying paths and settings </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -179,29 +223,20 @@ Static Public Member Functions</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+<span class="mlabels"><span class="mlabel">default</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Destructor. Cleans up BCM2835 and SPI resources. </p>
+<p>Destructor. Cleans up GPIO and SPI resources. </p>
 <dl class="section note"><dt>Note</dt><dd>Exception Safety: Nothrow guarantee - never throws exceptions. </dd></dl>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="../../d2/d80/classepaper_1_1Device_a1261fba9b80a1d0e1e381b971b40e9e1_cgraph.png" border="0" usemap="#ad2/d80/classepaper_1_1Device_a1261fba9b80a1d0e1e381b971b40e9e1_cgraph" alt=""/></div>
-<map name="ad2/d80/classepaper_1_1Device_a1261fba9b80a1d0e1e381b971b40e9e1_cgraph" id="ad2/d80/classepaper_1_1Device_a1261fba9b80a1d0e1e381b971b40e9e1_cgraph">
-<area shape="rect" title="Destructor. Cleans up BCM2835 and SPI resources." alt="" coords="5,29,189,55"/>
-<area shape="rect" href="../../db/da4/namespaceepaper.html#ae87c16acc02a64356214d15caff24201" title=" " alt="" coords="237,29,408,55"/>
-<area shape="poly" title=" " alt="" coords="190,39,224,39,224,45,190,45"/>
-<area shape="poly" title=" " alt="" coords="286,31,278,21,282,11,298,5,323,3,354,7,366,16,363,20,352,11,323,8,299,10,286,15,283,20,290,27"/>
-</map>
-</div>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="../../d0/d8f/_2mnt_2nas_2libepaper_2include_2epaper_2device_8hpp-example.html#a5">/mnt/nas/libepaper/include/epaper/device.hpp</a>.</dd>
+</dl>
 
 </div>
 </div>
 <a id="a6696fbe83e3e1d2ef072937856e9a760" name="a6696fbe83e3e1d2ef072937856e9a760"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6696fbe83e3e1d2ef072937856e9a760">&#9670;&#160;</a></span>Device() <span class="overload">[2/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a6696fbe83e3e1d2ef072937856e9a760">&#9670;&#160;</a></span>Device() <span class="overload">[3/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -227,7 +262,7 @@ Here is the call graph for this function:</div>
 </div>
 </div>
 <a id="ae3e8e6e8fc9342b891a932c80638702e" name="ae3e8e6e8fc9342b891a932c80638702e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae3e8e6e8fc9342b891a932c80638702e">&#9670;&#160;</a></span>Device() <span class="overload">[3/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ae3e8e6e8fc9342b891a932c80638702e">&#9670;&#160;</a></span>Device() <span class="overload">[4/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -253,7 +288,7 @@ Here is the call graph for this function:</div>
 <p>Move constructor. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">other</td><td><a class="el" href="../../d2/d80/classepaper_1_1Device.html" title="RAII wrapper for BCM2835 device.">Device</a> to move from </td></tr>
+    <tr><td class="paramname">other</td><td><a class="el" href="../../d2/d80/classepaper_1_1Device.html" title="RAII wrapper for GPIO and SPI device access.">Device</a> to move from </td></tr>
   </table>
   </dd>
 </dl>
@@ -296,6 +331,8 @@ Here is the call graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="../../d0/d8f/_2mnt_2nas_2libepaper_2include_2epaper_2device_8hpp-example.html#a15">/mnt/nas/libepaper/include/epaper/device.hpp</a>.</dd>
+</dl>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -343,6 +380,8 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="../../d0/d8f/_2mnt_2nas_2libepaper_2include_2epaper_2device_8hpp-example.html#a16">/mnt/nas/libepaper/include/epaper/device.hpp</a>.</dd>
+</dl>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -372,18 +411,18 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Initialize the BCM2835 library and SPI. </p>
-<p>This must be called before any other operations on the device. Idempotent - calling <a class="el" href="../../d2/d80/classepaper_1_1Device.html#ae0a60dbaca6d6c4e442982338748bcbb" title="Initialize the BCM2835 library and SPI.">init()</a> on an already initialized device succeeds.</p>
+<p>Initialize the GPIO (libgpiod) and SPI (SPIdev) interfaces. </p>
+<p>This must be called before any other operations on the device. Idempotent - calling <a class="el" href="../../d2/d80/classepaper_1_1Device.html#ae0a60dbaca6d6c4e442982338748bcbb" title="Initialize the GPIO (libgpiod) and SPI (SPIdev) interfaces.">init()</a> on an already initialized device succeeds.</p>
 <dl class="section return"><dt>Returns</dt><dd>void on success, <a class="el" href="../../df/d40/structepaper_1_1Error.html" title="Unified error type containing code and optional message.">Error</a> on failure </dd></dl>
 <dl class="section note"><dt>Note</dt><dd>Exception Safety: Strong guarantee - if initialization fails, the device remains in an uninitialized state. </dd></dl>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="../../d3/d4c/_2mnt_2nas_2libepaper2_2include_2epaper_2display_8hpp-example.html#a1">/mnt/nas/libepaper2/include/epaper/display.hpp</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="../../d0/d8f/_2mnt_2nas_2libepaper_2include_2epaper_2device_8hpp-example.html#a7">/mnt/nas/libepaper/include/epaper/device.hpp</a>, and <a class="el" href="../../d4/d26/_2mnt_2nas_2libepaper_2include_2epaper_2display_8hpp-example.html#a1">/mnt/nas/libepaper/include/epaper/display.hpp</a>.</dd>
 </dl>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d2/d80/classepaper_1_1Device_ae0a60dbaca6d6c4e442982338748bcbb_cgraph.png" border="0" usemap="#ad2/d80/classepaper_1_1Device_ae0a60dbaca6d6c4e442982338748bcbb_cgraph" alt=""/></div>
 <map name="ad2/d80/classepaper_1_1Device_ae0a60dbaca6d6c4e442982338748bcbb_cgraph" id="ad2/d80/classepaper_1_1Device_ae0a60dbaca6d6c4e442982338748bcbb_cgraph">
-<area shape="rect" title="Initialize the BCM2835 library and SPI." alt="" coords="5,29,155,55"/>
+<area shape="rect" title="Initialize the GPIO (libgpiod) and SPI (SPIdev) interfaces." alt="" coords="5,29,155,55"/>
 <area shape="rect" href="../../db/da4/namespaceepaper.html#ae87c16acc02a64356214d15caff24201" title=" " alt="" coords="203,29,373,55"/>
 <area shape="poly" title=" " alt="" coords="155,39,189,39,189,45,155,45"/>
 <area shape="poly" title=" " alt="" coords="254,31,247,21,250,11,265,5,288,3,317,6,328,15,325,20,315,11,288,8,266,10,254,15,252,20,258,28"/>
@@ -405,20 +444,22 @@ Here is the call graph for this function:</div>
           <td class="memname"><a class="el" href="../../db/da4/namespaceepaper.html#ae87c16acc02a64356214d15caff24201">auto</a> epaper::Device::is_initialized </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td> const -&gt; <a class="el" href="../../db/da4/namespaceepaper.html#ae87c16acc02a64356214d15caff24201">bool</a> </td>
+          <td> const -&gt; <a class="el" href="../../db/da4/namespaceepaper.html#ae87c16acc02a64356214d15caff24201">bool</a></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="../../d0/d8f/_2mnt_2nas_2libepaper_2include_2epaper_2device_8hpp-example.html#a8">/mnt/nas/libepaper/include/epaper/device.hpp</a>.</dd>
+</dl>
 
 </div>
 </div>
-<a id="a33f432e46646babe13cba4c25f691974" name="a33f432e46646babe13cba4c25f691974"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a33f432e46646babe13cba4c25f691974">&#9670;&#160;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+<a id="a89045a5c2ba441d18f9e7ffb17853fad" name="a89045a5c2ba441d18f9e7ffb17853fad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a89045a5c2ba441d18f9e7ffb17853fad">&#9670;&#160;</a></span>operator=() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -427,11 +468,11 @@ Here is the call graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../d2/d80/classepaper_1_1Device.html">Device</a> &amp; epaper::Device::operator= </td>
+          <td class="memname"><a class="el" href="../../db/da4/namespaceepaper.html#ae87c16acc02a64356214d15caff24201">auto</a> epaper::Device::operator= </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="../../db/da4/namespaceepaper.html#ae87c16acc02a64356214d15caff24201">const</a> <a class="el" href="../../d2/d80/classepaper_1_1Device.html">Device</a> &amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td> -&gt;  <a class="el" href="../../d2/d80/classepaper_1_1Device.html">Device</a> &amp;=<a class="el" href="../../db/da4/namespaceepaper.html#ae87c16acc02a64356214d15caff24201">delete</a></td>
         </tr>
       </table>
   </td>
@@ -440,11 +481,13 @@ Here is the call graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="../../d0/d8f/_2mnt_2nas_2libepaper_2include_2epaper_2device_8hpp-example.html#a6">/mnt/nas/libepaper/include/epaper/device.hpp</a>.</dd>
+</dl>
 
 </div>
 </div>
-<a id="a950beacb2396c54d86fa53db99852aa4" name="a950beacb2396c54d86fa53db99852aa4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a950beacb2396c54d86fa53db99852aa4">&#9670;&#160;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+<a id="a38b844be1fdbf20bc217a9f268ab058c" name="a38b844be1fdbf20bc217a9f268ab058c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a38b844be1fdbf20bc217a9f268ab058c">&#9670;&#160;</a></span>operator=() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -453,11 +496,11 @@ Here is the call graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../d2/d80/classepaper_1_1Device.html">Device</a> &amp; epaper::Device::operator= </td>
+          <td class="memname"><a class="el" href="../../db/da4/namespaceepaper.html#ae87c16acc02a64356214d15caff24201">auto</a> epaper::Device::operator= </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="../../d2/d80/classepaper_1_1Device.html">Device</a> &amp;&amp;&#160;</td>
           <td class="paramname"><em>other</em></td><td>)</td>
-          <td></td>
+          <td> -&gt; <a class="el" href="../../d2/d80/classepaper_1_1Device.html">Device</a> &amp;</td>
         </tr>
       </table>
   </td>
@@ -470,7 +513,7 @@ Here is the call graph for this function:</div>
 <p>Move assignment operator. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">other</td><td><a class="el" href="../../d2/d80/classepaper_1_1Device.html" title="RAII wrapper for BCM2835 device.">Device</a> to move from </td></tr>
+    <tr><td class="paramname">other</td><td><a class="el" href="../../d2/d80/classepaper_1_1Device.html" title="RAII wrapper for GPIO and SPI device access.">Device</a> to move from </td></tr>
   </table>
   </dd>
 </dl>
@@ -479,8 +522,8 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="../../d2/d80/classepaper_1_1Device_a950beacb2396c54d86fa53db99852aa4_cgraph.png" border="0" usemap="#ad2/d80/classepaper_1_1Device_a950beacb2396c54d86fa53db99852aa4_cgraph" alt=""/></div>
-<map name="ad2/d80/classepaper_1_1Device_a950beacb2396c54d86fa53db99852aa4_cgraph" id="ad2/d80/classepaper_1_1Device_a950beacb2396c54d86fa53db99852aa4_cgraph">
+<div class="center"><img src="../../d2/d80/classepaper_1_1Device_a38b844be1fdbf20bc217a9f268ab058c_cgraph.png" border="0" usemap="#ad2/d80/classepaper_1_1Device_a38b844be1fdbf20bc217a9f268ab058c_cgraph" alt=""/></div>
+<map name="ad2/d80/classepaper_1_1Device_a38b844be1fdbf20bc217a9f268ab058c_cgraph" id="ad2/d80/classepaper_1_1Device_a38b844be1fdbf20bc217a9f268ab058c_cgraph">
 <area shape="rect" title="Move assignment operator." alt="" coords="5,29,200,55"/>
 <area shape="rect" href="../../db/da4/namespaceepaper.html#ae87c16acc02a64356214d15caff24201" title=" " alt="" coords="248,29,419,55"/>
 <area shape="poly" title=" " alt="" coords="200,39,234,39,234,45,200,45"/>
@@ -505,6 +548,8 @@ Here is the call graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="../../d0/d8f/_2mnt_2nas_2libepaper_2include_2epaper_2device_8hpp-example.html#a12">/mnt/nas/libepaper/include/epaper/device.hpp</a>.</dd>
+</dl>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -534,6 +579,8 @@ Here is the call graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="../../d0/d8f/_2mnt_2nas_2libepaper_2include_2epaper_2device_8hpp-example.html#a10">/mnt/nas/libepaper/include/epaper/device.hpp</a>.</dd>
+</dl>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -563,6 +610,8 @@ Here is the call graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="../../d0/d8f/_2mnt_2nas_2libepaper_2include_2epaper_2device_8hpp-example.html#a9">/mnt/nas/libepaper/include/epaper/device.hpp</a>.</dd>
+</dl>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -592,6 +641,8 @@ Here is the call graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="../../d0/d8f/_2mnt_2nas_2libepaper_2include_2epaper_2device_8hpp-example.html#a13">/mnt/nas/libepaper/include/epaper/device.hpp</a>.</dd>
+</dl>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -621,6 +672,8 @@ Here is the call graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="../../d0/d8f/_2mnt_2nas_2libepaper_2include_2epaper_2device_8hpp-example.html#a14">/mnt/nas/libepaper/include/epaper/device.hpp</a>.</dd>
+</dl>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -660,6 +713,8 @@ Here is the call graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="../../d0/d8f/_2mnt_2nas_2libepaper_2include_2epaper_2device_8hpp-example.html#a11">/mnt/nas/libepaper/include/epaper/device.hpp</a>.</dd>
+</dl>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
