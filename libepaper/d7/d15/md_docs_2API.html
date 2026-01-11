@@ -73,8 +73,8 @@ $(function() {
   <div class="headertitle"><div class="title">API Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p><a class="anchor" id="autotoc_md13"></a> A comprehensive guide to using the libepaper API for e-paper display control.</p>
-<h1><a class="anchor" id="autotoc_md14"></a>
+<div class="textblock"><p><a class="anchor" id="autotoc_md16"></a> A comprehensive guide to using the libepaper API for e-paper display control.</p>
+<h1><a class="anchor" id="autotoc_md17"></a>
 Table of Contents</h1>
 <ul>
 <li>Getting Started</li>
@@ -88,9 +88,9 @@ Table of Contents</h1>
 <li>Common Patterns</li>
 <li>Troubleshooting</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md15"></a>
+<h1><a class="anchor" id="autotoc_md18"></a>
 Getting Started</h1>
-<h2><a class="anchor" id="autotoc_md16"></a>
+<h2><a class="anchor" id="autotoc_md19"></a>
 Requirements</h2>
 <ul>
 <li>Raspberry Pi with SPI enabled</li>
@@ -98,7 +98,7 @@ Requirements</h2>
 <li>libgpiod library installed (<code>sudo apt install libgpiod-dev</code>)</li>
 <li>User in <code>gpio</code> and <code>spi</code> groups (no sudo required)</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md17"></a>
+<h2><a class="anchor" id="autotoc_md20"></a>
 Basic Setup</h2>
 <div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="../../d5/d08/device_8hpp.html">epaper/device.hpp</a>&gt;</span></div>
 <div class="line"><span class="preprocessor">#include &lt;<a class="code" href="../../d2/da4/display_8hpp.html">epaper/display.hpp</a>&gt;</span></div>
@@ -162,7 +162,7 @@ Basic Setup</h2>
 <div class="ttc" id="aepd27_8hpp_html"><div class="ttname"><a href="../../d1/d76/epd27_8hpp.html">epd27.hpp</a></div></div>
 <div class="ttc" id="afont_8hpp_html"><div class="ttname"><a href="../../df/d50/font_8hpp.html">font.hpp</a></div></div>
 <div class="ttc" id="anamespaceepaper_html"><div class="ttname"><a href="../../db/da4/namespaceepaper.html">epaper</a></div><div class="ttdef"><b>Definition</b> color.hpp:5</div></div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md18"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md21"></a>
 Your First Program</h2>
 <p>Here's a complete minimal example that draws a rectangle with text:</p>
 <div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="../../d5/d08/device_8hpp.html">epaper/device.hpp</a>&gt;</span></div>
@@ -249,9 +249,9 @@ Your First Program</h2>
 <div class="line"> </div>
 <div class="line"># Run (no sudo required with proper group membership)</div>
 <div class="line">./build/your_program</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md19"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md22"></a>
 Display Creation &amp; Management</h1>
-<h2><a class="anchor" id="autotoc_md20"></a>
+<h2><a class="anchor" id="autotoc_md23"></a>
 Creating a Display</h2>
 <p>Use the factory function <code>create_display&lt;Driver&gt;()</code> to create displays:</p>
 <div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="../../d2/da4/display_8hpp.html">epaper/display.hpp</a>&gt;</span></div>
@@ -272,10 +272,10 @@ Creating a Display</h2>
 <div class="line"> </div>
 <div class="line"><span class="comment">// Use with -&gt; operator</span></div>
 <div class="line">display-&gt;draw(display-&gt;point().at(10, 10).color(Color::Black).build());</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md21"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md24"></a>
 Display Modes</h2>
 <p>The library supports two display modes:</p>
-<h3><a class="anchor" id="autotoc_md22"></a>
+<h3><a class="anchor" id="autotoc_md25"></a>
 BlackWhite Mode (1 bit per pixel)</h3>
 <p>Pure binary output - only black and white pixels.</p>
 <div class="fragment"><div class="line"><span class="keyword">auto</span> display = create_display&lt;EPD27&gt;(</div>
@@ -297,7 +297,7 @@ BlackWhite Mode (1 bit per pixel)</h3>
 <li>Smaller memory footprint (5,808 bytes for 2.7")
 - Faster SPI transfers
 
-@subsubsection autotoc_md23 Grayscale4 Mode (2 bits per pixel)
+@subsubsection autotoc_md26 Grayscale4 Mode (2 bits per pixel)
 
 Four-level grayscale output.
 
@@ -326,7 +326,7 @@ display-&gt;draw(display-&gt;point().at(40, 40).color(Color::Black).build());  /
 <li>Slightly slower SPI transfer</li>
 <li>Better visual quality</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md24"></a>
+<h2><a class="anchor" id="autotoc_md27"></a>
 Orientation</h2>
 <p>The library supports four orientations with automatic coordinate transformation:</p>
 <div class="fragment"><div class="line"><span class="comment">// Portrait (default) - 176x264 pixels</span></div>
@@ -378,10 +378,24 @@ Orientation</h2>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone">Landscape270   </td><td class="markdownTableBodyNone">270° CW   </td><td class="markdownTableBodyNone">264×176   </td><td class="markdownTableBodyNone">Physical bottom-left   </td></tr>
 </table>
-<h1><a class="anchor" id="autotoc_md25"></a>
+<h1><a class="anchor" id="autotoc_md28"></a>
 Drawing Operations</h1>
 <p>All drawing operations are <b>noexcept</b> and never fail. Out-of-bounds coordinates are silently clipped.</p>
-<h2><a class="anchor" id="autotoc_md26"></a>
+<h2><a class="anchor" id="autotoc_md29"></a>
+Framebuffered Drawing (Atomic Updates)</h2>
+<p>All drawing happens off-screen in an in-memory framebuffer. Calls like <code>draw(...)</code> only update this buffer; nothing is sent to the panel until you call <code>refresh()</code>. This gives:</p><ul>
+<li>Tear/flicker-free updates (no incremental drawing on-screen)</li>
+<li>Batched SPI transfers for performance</li>
+<li>Fewer panel updates, reducing ghosting and wear</li>
+</ul>
+<div class="fragment"><div class="line"><span class="comment">// Compose the frame in memory</span></div>
+<div class="line">display-&gt;clear(Color::White);</div>
+<div class="line">display-&gt;draw(display-&gt;rect(10, 10, 80, 40).fill(Color::Black).build());</div>
+<div class="line">display-&gt;draw(display-&gt;text(<span class="stringliteral">&quot;Hello&quot;</span>).at(20, 70).build());</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Paint it once, atomically</span></div>
+<div class="line">display-&gt;refresh();</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md30"></a>
 Points</h2>
 <div class="fragment"><div class="line"><span class="comment">// Draw a single pixel</span></div>
 <div class="line">display-&gt;draw(display-&gt;point().at(x, y).color(Color::Black).build());</div>
@@ -398,7 +412,7 @@ Points</h2>
 <li><code>Pixel4x4</code>: 4×4 pixel block</li>
 <li><code>Pixel5x5</code>: 5×5 pixel block</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md27"></a>
+<h2><a class="anchor" id="autotoc_md31"></a>
 Lines</h2>
 <div class="fragment"><div class="line"><span class="comment">// Draw a line from (x1, y1) to (x2, y2)</span></div>
 <div class="line">display-&gt;draw(</div>
@@ -452,7 +466,7 @@ Lines</h2>
 <div class="line">            .build()</div>
 <div class="line">    );</div>
 <div class="line">}</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md28"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md32"></a>
 Rectangles</h2>
 <div class="fragment"><div class="line"><span class="comment">// Draw a rectangle outline</span></div>
 <div class="line">display-&gt;draw(</div>
@@ -526,7 +540,7 @@ Rectangles</h2>
 <div class="line">        .background(Color::Black)</div>
 <div class="line">        .build()</div>
 <div class="line">);</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md29"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md33"></a>
 Circles</h2>
 <div class="fragment"><div class="line"><span class="comment">// Draw a circle outline</span></div>
 <div class="line">display-&gt;draw(</div>
@@ -575,7 +589,7 @@ Circles</h2>
 <div class="line">            .build()</div>
 <div class="line">    );</div>
 <div class="line">}</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md30"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md34"></a>
 Text &amp; Fonts</h2>
 <div class="fragment"><div class="line"><span class="comment">// Draw text</span></div>
 <div class="line">display-&gt;draw(</div>
@@ -639,7 +653,7 @@ Text &amp; Fonts</h2>
 <div class="line">display-&gt;draw(display-&gt;text(<span class="stringliteral">&quot;Line 2&quot;</span>).at(x, y).font(&amp;Font::font16()).foreground(Color::Black).background(Color::White).build());</div>
 <div class="line">y += line_height;</div>
 <div class="line">display-&gt;draw(display-&gt;text(<span class="stringliteral">&quot;Line 3&quot;</span>).at(x, y).font(&amp;Font::font16()).foreground(Color::Black).background(Color::White).build());</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md31"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md35"></a>
 Numbers</h2>
 <div class="fragment"><div class="line"><span class="comment">// Draw an integer using TextBuilder</span></div>
 <div class="line"><span class="keywordtype">int</span> value = 42;</div>
@@ -724,7 +738,7 @@ Numbers</h2>
 <div class="line">        .background(Color::White)</div>
 <div class="line">        .build()</div>
 <div class="line">);</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md32"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md36"></a>
 Bitmaps</h2>
 <div class="fragment"><div class="line"><span class="comment">// Draw from raw pixel data</span></div>
 <div class="line">std::vector&lt;Color&gt; pixels = {</div>
@@ -770,9 +784,9 @@ Bitmaps</h2>
 <div class="line">display-&gt;draw_bitmap_from_file(100, 50, <span class="stringliteral">&quot;company_logo.png&quot;</span>);</div>
 <div class="line"> </div>
 <div class="line"><span class="comment">// No manual color processing needed!</span></div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md33"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md37"></a>
 Color &amp; Grayscale</h1>
-<h2><a class="anchor" id="autotoc_md34"></a>
+<h2><a class="anchor" id="autotoc_md38"></a>
 Color Enum</h2>
 <div class="fragment"><div class="line"><span class="keyword">enum class</span> <a class="code hl_enumeration" href="../../db/da4/namespaceepaper.html#abbcfe3e537fe42c69ae050cbfb36fcc3">Color</a> {</div>
 <div class="line">    White,  <span class="comment">// Value: 0 (lightest)</span></div>
@@ -781,7 +795,7 @@ Color Enum</h2>
 <div class="line">    Black   <span class="comment">// Value: 3 (darkest)</span></div>
 <div class="line">};</div>
 <div class="ttc" id="anamespaceepaper_html_abbcfe3e537fe42c69ae050cbfb36fcc3"><div class="ttname"><a href="../../db/da4/namespaceepaper.html#abbcfe3e537fe42c69ae050cbfb36fcc3">epaper::Color</a></div><div class="ttdeci">Color</div><div class="ttdoc">Color representation for e-paper displays.</div><div class="ttdef"><b>Definition</b> display.hpp:35</div></div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md35"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md39"></a>
 Color Mapping by Display Mode</h2>
 <table class="markdownTable">
 <tr class="markdownTableHead">
@@ -795,7 +809,7 @@ Color Mapping by Display Mode</h2>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone">Black   </td><td class="markdownTableBodyNone">Black (1)   </td><td class="markdownTableBodyNone">Black (3)   </td></tr>
 </table>
-<h2><a class="anchor" id="autotoc_md36"></a>
+<h2><a class="anchor" id="autotoc_md40"></a>
 Working with Grayscale</h2>
 <div class="fragment"><div class="line"><span class="keyword">auto</span> display = create_display&lt;EPD27&gt;(device, DisplayMode::Grayscale4,</div>
 <div class="line">                                     Orientation::Portrait0);</div>
@@ -819,9 +833,9 @@ Working with Grayscale</h2>
 <div class="line"> </div>
 <div class="line"><span class="comment">// Draw anti-aliased graphics</span></div>
 <div class="line"><span class="comment">// (manually, by using intermediate gray levels at edges)</span></div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md37"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md41"></a>
 Display Refresh &amp; Power Management</h1>
-<h2><a class="anchor" id="autotoc_md38"></a>
+<h2><a class="anchor" id="autotoc_md42"></a>
 Refresh Behavior</h2>
 <p>Call <code>refresh()</code> to update the physical display with the framebuffer contents.</p>
 <div class="fragment"><div class="line"><span class="comment">// Draw operations modify the framebuffer</span></div>
@@ -852,7 +866,7 @@ Refresh Behavior</h2>
 <div class="line"> </div>
 <div class="line"><span class="comment">// Now the screen shows the updates!</span></div>
 </div><!-- fragment --><p><b>Important:</b> <code>refresh()</code> is a <b>blocking operation</b> that takes ~2 seconds for the EPD27.</p>
-<h2><a class="anchor" id="autotoc_md39"></a>
+<h2><a class="anchor" id="autotoc_md43"></a>
 Auto-Sleep (IMPORTANT!)</h2>
 <p><b>The library automatically manages sleep/wake cycles to prevent screen burn-in.</b></p>
 <div class="fragment"><div class="line"><span class="comment">// Create display with auto-sleep enabled (default and recommended)</span></div>
@@ -888,7 +902,7 @@ Auto-Sleep (IMPORTANT!)</h2>
 <li><b>Correct</b>: Impossible to forget to wake</li>
 <li><b>Simple</b>: Same code works for all scenarios</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md40"></a>
+<h2><a class="anchor" id="autotoc_md44"></a>
 Disabling Auto-Sleep</h2>
 <p>For special use cases where you need manual control:</p>
 <div class="fragment"><div class="line"><span class="comment">// Disable auto-sleep</span></div>
@@ -910,7 +924,7 @@ Disabling Auto-Sleep</h2>
 <li>Benchmarking/testing</li>
 </ul>
 <p><b>Recommendation:</b> Keep auto-sleep <b>enabled</b> (default). It prevents hardware damage and the library handles wake automatically.</p>
-<h2><a class="anchor" id="autotoc_md41"></a>
+<h2><a class="anchor" id="autotoc_md45"></a>
 Manual Power Control</h2>
 <p>The library also provides explicit power control methods:</p>
 <div class="fragment"><div class="line"><span class="comment">// Put display to sleep (usually automatic with auto-sleep)</span></div>
@@ -925,9 +939,9 @@ Manual Power Control</h2>
 <div class="line">    <span class="comment">// ... later ...</span></div>
 <div class="line">    display-&gt;power_on();   <span class="comment">// Restore power, requires re-init</span></div>
 <div class="line">}</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md42"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md46"></a>
 Error Handling</h1>
-<h2><a class="anchor" id="autotoc_md43"></a>
+<h2><a class="anchor" id="autotoc_md47"></a>
 Using &lt;tt&gt;std::expected&lt;/tt&gt;</h2>
 <p>All operations that can fail return <code>std::expected&lt;T, Error&gt;</code>:</p>
 <div class="fragment"><div class="line"><span class="comment">// Check for errors</span></div>
@@ -947,7 +961,7 @@ Using &lt;tt&gt;std::expected&lt;/tt&gt;</h2>
 <div class="line">} <span class="keywordflow">catch</span> (<span class="keyword">const</span> std::bad_expected_access&lt;Error&gt;&amp; e) {</div>
 <div class="line">    std::cerr &lt;&lt; <span class="stringliteral">&quot;Error: &quot;</span> &lt;&lt; e.error().what() &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
 <div class="line">}</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md44"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md48"></a>
 Common Errors</h2>
 <table class="markdownTable">
 <tr class="markdownTableHead">
@@ -969,7 +983,7 @@ Common Errors</h2>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone"><code>InvalidFormat</code>   </td><td class="markdownTableBodyNone">Unsupported image format   </td><td class="markdownTableBodyNone">Use PNG/JPEG/BMP   </td></tr>
 </table>
-<h2><a class="anchor" id="autotoc_md45"></a>
+<h2><a class="anchor" id="autotoc_md49"></a>
 Error Recovery Strategies</h2>
 <p><b>1. Retry with Exponential Backoff:</b> </p><div class="fragment"><div class="line"><span class="keyword">auto</span> retry_refresh = [&amp;](<span class="keywordtype">int</span> max_attempts = 3) -&gt; std::expected&lt;void, Error&gt; {</div>
 <div class="line">    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> attempt = 1; attempt &lt;= max_attempts; ++attempt) {</div>
@@ -1021,9 +1035,9 @@ Error Recovery Strategies</h2>
 <div class="line">            .build()</div>
 <div class="line">    );</div>
 <div class="line">}</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md46"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md50"></a>
 Advanced Topics</h1>
-<h2><a class="anchor" id="autotoc_md47"></a>
+<h2><a class="anchor" id="autotoc_md51"></a>
 Button Handling</h2>
 <p>The <code>Device</code> class provides GPIO operations that can be used to handle buttons on your e-paper display (e.g., Waveshare 2.7" includes KEY1, KEY2, KEY3 buttons).
 
@@ -1076,7 +1090,7 @@ int main() {
 
 &lt;strong&gt;Note:&lt;/strong&gt; Button pin numbers vary by hardware. Check your Waveshare display documentation for the correct GPIO pin assignments. The library provides the GPIO API; you implement the button handling logic.
 
-@subsection autotoc_md48 Framebuffer Direct Access
+@subsection autotoc_md52 Framebuffer Direct Access
 
 For advanced users who need direct pixel manipulation:
 
@@ -1098,7 +1112,7 @@ for (size_t y = 0; y &lt; display-&gt;effective_height(); ++y) {
 
 &lt;strong&gt;Warning:&lt;/strong&gt; Direct access bypasses orientation transforms. Use carefully!
 
-@subsection autotoc_md49 Custom Drawing Functions
+@subsection autotoc_md53 Custom Drawing Functions
 
 Build your own drawing primitives on top of &lt;tt&gt;set_pixel()&lt;/tt&gt;:
 
@@ -1118,7 +1132,7 @@ void draw_star(Display&amp; display, size_t cx, size_t cy, size_t r, Color color
 }
 @endicode 
 
-@subsection autotoc_md50 Performance Optimization
+@subsection autotoc_md54 Performance Optimization
 
 &lt;strong&gt;Batch Drawing Operations:&lt;/strong&gt;
 @icode{cpp} 
@@ -1174,9 +1188,9 @@ while (running) {
 }
 @endicode 
 
-@section autotoc_md51 Best Practices
+@section autotoc_md55 Best Practices
 
-@subsection autotoc_md52 1. Keep Auto-Sleep Enabled
+@subsection autotoc_md56 1. Keep Auto-Sleep Enabled
 
 @icode{cpp} 
 // ✅ Good: Auto-sleep enabled (default)
@@ -1188,7 +1202,7 @@ auto display = create_display&lt;EPD27&gt;(device, DisplayMode::BlackWhite,
                                      Orientation::Portrait0, false);
 @endicode 
 
-@subsection autotoc_md53 2. Always Check Initialization
+@subsection autotoc_md57 2. Always Check Initialization
 
 @icode{cpp} 
 // ✅ Good: Check every expected result
@@ -1203,7 +1217,7 @@ if (!device_result) {
 device.init();  // What if this fails?
 @endicode 
 
-@subsection autotoc_md54 3. Batch Drawing Operations
+@subsection autotoc_md58 3. Batch Drawing Operations
 
 @icode{cpp} 
 // ✅ Good: Draw everything, then refresh once
@@ -1220,7 +1234,7 @@ draw_content(display);
 display-&gt;refresh();
 @endicode 
 
-@subsection autotoc_md55 4. Use Appropriate Fonts
+@subsection autotoc_md59 4. Use Appropriate Fonts
 
 @icode{cpp} 
 // ✅ Good: Font size matches purpose
@@ -1232,7 +1246,7 @@ display-&gt;draw(display-&gt;text("Footer").at(10, 150).font(&amp;Font::font8())
 display-&gt;draw(display-&gt;text("Title").at(10, 10).font(&amp;Font::font8())...);  // Too small!
 @endicode 
 
-@subsection autotoc_md56 5. Handle Errors Gracefully
+@subsection autotoc_md60 5. Handle Errors Gracefully
 
 @icode{cpp} 
 // ✅ Good: Fallback on error
@@ -1246,9 +1260,9 @@ if (!result) {
 display-&gt;draw_bitmap_from_file(10, 10, "icon.png").value();  // May throw!
 @endicode 
 
-@section autotoc_md57 Common Patterns
+@section autotoc_md61 Common Patterns
 
-@subsection autotoc_md58 Pattern: Status Dashboard
+@subsection autotoc_md62 Pattern: Status Dashboard
 
 @icode{cpp} 
 void render_dashboard(Display&amp; display, const SystemStatus&amp; status) {
@@ -1299,7 +1313,7 @@ void render_dashboard(Display&amp; display, const SystemStatus&amp; status) {
 }
 @endicode 
 
-@subsection autotoc_md59 Pattern: Multi-Screen Rotation
+@subsection autotoc_md63 Pattern: Multi-Screen Rotation
 
 @icode{cpp} 
 enum class Screen { Overview, Details, Settings };
@@ -1340,13 +1354,13 @@ while (running) {
 }
 @endicode 
 
-@subsection autotoc_md60 Pattern: Periodic Updates
+@subsection autotoc_md64 Pattern: Periodic Updates
 
 See the &lt;a href="../examples/crypto_dashboard/" &gt;crypto dashboard example&lt;/a&gt; for a complete real-world implementation.
 
-@section autotoc_md61 Debugging &amp; Troubleshooting
+@section autotoc_md65 Debugging &amp; Troubleshooting
 
-@subsection autotoc_md62 BMP Export for Debugging
+@subsection autotoc_md66 BMP Export for Debugging
 
 &lt;strong&gt;NEW:&lt;/strong&gt; Save your framebuffer to a BMP file for instant visual inspection without waiting for slow display refresh!
 
@@ -1411,7 +1425,7 @@ display-&gt;refresh();  // Only one slow refresh needed!
 
 See &lt;tt&gt;examples/bmp_debug_example.cpp&lt;/tt&gt; for a complete demonstration.
 
-@subsection autotoc_md63 Display Not Responding
+@subsection autotoc_md67 Display Not Responding
 
 &lt;strong&gt;Symptoms:&lt;/strong&gt; No output on display, or refresh hangs indefinitely.
 
@@ -1422,7 +1436,7 @@ See &lt;tt&gt;examples/bmp_debug_example.cpp&lt;/tt&gt; for a complete demonstra
 4. If not in groups, add with: &lt;tt&gt;sudo usermod -a -G gpio,spi \$USER&lt;/tt&gt; (then log out/in)
 4. Check display power supply (3.3V, sufficient current)
 
-@subsection autotoc_md64 Garbled Output
+@subsection autotoc_md68 Garbled Output
 
 &lt;strong&gt;Symptoms:&lt;/strong&gt; Random pixels, incorrect rendering.
 
@@ -1432,7 +1446,7 @@ See &lt;tt&gt;examples/bmp_debug_example.cpp&lt;/tt&gt; for a complete demonstra
 3. Ensure display mode matches drawing colors
 4. Check framebuffer isn't corrupted (clear before drawing)
 
-@subsection autotoc_md65 Slow Performance
+@subsection autotoc_md69 Slow Performance
 
 &lt;strong&gt;Symptoms:&lt;/strong&gt; Long delays, sluggish updates.
 
@@ -1442,7 +1456,7 @@ See &lt;tt&gt;examples/bmp_debug_example.cpp&lt;/tt&gt; for a complete demonstra
 3. Profile code to find bottlenecks
 4. Remember: e-paper refresh is inherently slow (~2s for EPD27)
 
-@subsection autotoc_md66 Memory Issues
+@subsection autotoc_md70 Memory Issues
 
 &lt;strong&gt;Symptoms:&lt;/strong&gt; Out of memory errors, crashes on Raspberry Pi Zero.
 
@@ -1452,7 +1466,7 @@ See &lt;tt&gt;examples/bmp_debug_example.cpp&lt;/tt&gt; for a complete demonstra
 3. Clear framebuffer when switching contexts
 4. Consider using Raspberry Pi 3/4 (more RAM)
 
-@subsection autotoc_md67 Colors Not Displaying
+@subsection autotoc_md71 Colors Not Displaying
 
 &lt;strong&gt;Symptoms:&lt;/strong&gt; Gray colors appear as black.
 

@@ -73,8 +73,8 @@ $(function() {
   <div class="headertitle"><div class="title">Architecture Guide</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p><a class="anchor" id="autotoc_md69"></a> A comprehensive technical guide to the libepaper architecture, design decisions, and implementation details.</p>
-<h1><a class="anchor" id="autotoc_md70"></a>
+<div class="textblock"><p><a class="anchor" id="autotoc_md73"></a> A comprehensive technical guide to the libepaper architecture, design decisions, and implementation details.</p>
+<h1><a class="anchor" id="autotoc_md74"></a>
 Table of Contents</h1>
 <ul>
 <li>Design Philosophy</li>
@@ -88,10 +88,10 @@ Table of Contents</h1>
 <li>Testing Architecture</li>
 <li>Future Extensions</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md71"></a>
+<h1><a class="anchor" id="autotoc_md75"></a>
 Design Philosophy</h1>
 <p>The libepaper library is built on modern C++23 principles prioritizing safety, simplicity, and extensibility.</p>
-<h2><a class="anchor" id="autotoc_md72"></a>
+<h2><a class="anchor" id="autotoc_md76"></a>
 Core Principles</h2>
 <ol type="1">
 <li><b>Modern C++23</b>: Leverage the latest language features for safety and expressiveness<ul>
@@ -126,9 +126,9 @@ Core Principles</h2>
 </ul>
 </li>
 </ol>
-<h1><a class="anchor" id="autotoc_md73"></a>
+<h1><a class="anchor" id="autotoc_md77"></a>
 System Architecture</h1>
-<h2><a class="anchor" id="autotoc_md74"></a>
+<h2><a class="anchor" id="autotoc_md78"></a>
 High-Level Architecture</h2>
 <div class="fragment"><div class="line">graph TD</div>
 <div class="line">    A[Application Layer] --&gt; B[Display API]</div>
@@ -145,7 +145,7 @@ High-Level Architecture</h2>
 <div class="line">    style E fill:#42a5f5,stroke:#0d47a1,stroke-width:2px,color:#000</div>
 <div class="line">    style F fill:#1e88e5,stroke:#0d47a1,stroke-width:2px,color:#fff</div>
 <div class="line">    style G fill:#1565c0,stroke:#0d47a1,stroke-width:2px,color:#fff</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md75"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md79"></a>
 Layer Responsibilities</h2>
 <p><b>Application Layer</b></p><ul>
 <li>User code and business logic</li>
@@ -183,9 +183,9 @@ Layer Responsibilities</h2>
 <li>Low-level hardware interface</li>
 <li>User-space access (no sudo required)</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md76"></a>
+<h1><a class="anchor" id="autotoc_md80"></a>
 Component Deep Dive</h1>
-<h2><a class="anchor" id="autotoc_md77"></a>
+<h2><a class="anchor" id="autotoc_md81"></a>
 Device Layer: libgpiod/SPIdev Hardware Interface</h2>
 <p>The <code>Device</code> class wraps libgpiod (GPIO) and Linux SPIdev (SPI) for safe hardware access.</p>
 <div class="fragment"><div class="line">classDiagram</div>
@@ -241,7 +241,7 @@ Device Layer: libgpiod/SPIdev Hardware Interface</h2>
 <li><b>Resource Safety</b>: Automatic cleanup prevents resource leaks</li>
 <li><b>Flexibility</b>: DeviceConfig enables different hardware setups</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md78"></a>
+<h2><a class="anchor" id="autotoc_md82"></a>
 Driver Interface: Hardware Abstraction</h2>
 <p>The abstract <code>Driver</code> class defines the contract for display hardware.</p>
 <div class="fragment"><div class="line">classDiagram</div>
@@ -289,7 +289,7 @@ Driver Interface: Hardware Abstraction</h2>
 <li><b>Testing</b>: Mock drivers for unit tests</li>
 <li><b>Separation of Concerns</b>: Hardware details isolated in drivers</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md79"></a>
+<h2><a class="anchor" id="autotoc_md83"></a>
 Display Class: High-Level API</h2>
 <p>The <code>Display</code> class provides user-facing drawing operations and manages display state.</p>
 <div class="fragment"><div class="line">classDiagram</div>
@@ -371,7 +371,7 @@ Display Class: High-Level API</h2>
 <li><b>State Tracking</b>: Driver maintains <code>is_asleep_</code> flag for idempotent operations</li>
 <li><b>Developer Ergonomics</b>: No manual sleep/wake management needed</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md80"></a>
+<h2><a class="anchor" id="autotoc_md84"></a>
 Color Management</h2>
 <p>The library supports both black/white and grayscale displays with a unified color system.</p>
 <div class="fragment"><div class="line">graph LR</div>
@@ -399,7 +399,7 @@ Color Management</h2>
 <li><b>BlackWhite mode</b>: 1 bit per pixel, packed 8 pixels per byte</li>
 <li><b>Grayscale4 mode</b>: 2 bits per pixel, packed 4 pixels per byte</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md81"></a>
+<h2><a class="anchor" id="autotoc_md85"></a>
 Automatic Color Conversion</h2>
 <p>The library includes a sophisticated color management system that automatically handles color conversion from RGB/RGBA to display-appropriate formats.</p>
 <p><b>ColorManager Class:</b></p>
@@ -435,9 +435,9 @@ Automatic Color Conversion</h2>
 <li><b>Mode aware</b>: Automatically adapts to BlackWhite or Grayscale4 display mode</li>
 </ul>
 <p>This means developers can use standard color images and the library handles all conversion automatically.</p>
-<h1><a class="anchor" id="autotoc_md82"></a>
+<h1><a class="anchor" id="autotoc_md86"></a>
 Data Flow</h1>
-<h2><a class="anchor" id="autotoc_md83"></a>
+<h2><a class="anchor" id="autotoc_md87"></a>
 Display Refresh Flow</h2>
 <div class="fragment"><div class="line">sequenceDiagram</div>
 <div class="line">    participant App</div>
@@ -465,7 +465,7 @@ Display Refresh Flow</h2>
 <div class="line"> </div>
 <div class="line">    Driver--&gt;&gt;Display: Success</div>
 <div class="line">    Display--&gt;&gt;App: Success</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md84"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md88"></a>
 Drawing Operation Flow</h2>
 <div class="fragment"><div class="line">sequenceDiagram</div>
 <div class="line">    participant App</div>
@@ -482,7 +482,7 @@ Drawing Operation Flow</h2>
 <div class="line">        Framebuffer-&gt;&gt;Framebuffer: Update buffer byte</div>
 <div class="line">    end</div>
 <div class="line">    Display--&gt;&gt;App: void (always succeeds)</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md85"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md89"></a>
 Initialization Flow</h2>
 <div class="fragment"><div class="line">sequenceDiagram</div>
 <div class="line">    participant App</div>
@@ -507,9 +507,9 @@ Initialization Flow</h2>
 <div class="line">    Display-&gt;&gt;Display: Allocate framebuffer</div>
 <div class="line">    Display-&gt;&gt;Display: Setup orientation</div>
 <div class="line">    Display--&gt;&gt;App: unique_ptr&lt;Display&gt;</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md86"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md90"></a>
 Design Decisions</h1>
-<h2><a class="anchor" id="autotoc_md87"></a>
+<h2><a class="anchor" id="autotoc_md91"></a>
 Why &lt;tt&gt;std::expected&lt;/tt&gt; Over Exceptions?</h2>
 <p><b>Decision:</b> Use <code>std::expected&lt;T, Error&gt;</code> for recoverable errors instead of exceptions.</p>
 <p><b>Rationale:</b></p><ol type="1">
@@ -524,7 +524,7 @@ Why &lt;tt&gt;std::expected&lt;/tt&gt; Over Exceptions?</h2>
 <li><b>Learning Curve</b>: Newer C++23 feature</li>
 <li><b>Benefits</b>: Type safety, performance, explicitness</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md88"></a>
+<h2><a class="anchor" id="autotoc_md92"></a>
 Why Transparent Sleep/Wake Management?</h2>
 <p><b>Problem:</b> EPD27 hardware requires deep sleep to prevent burn-in, but doesn't support wake without full re-initialization.</p>
 <p><b>Previous Approach (Manual):</b> </p><div class="fragment"><div class="line">display-&gt;refresh();  <span class="comment">// First render</span></div>
@@ -549,7 +549,7 @@ Why Transparent Sleep/Wake Management?</h2>
 <li><b>Hardware Abstraction</b>: Hide EPD27 limitation from users</li>
 <li><b>Consistent API</b>: Same code works for different displays</li>
 </ol>
-<h2><a class="anchor" id="autotoc_md89"></a>
+<h2><a class="anchor" id="autotoc_md93"></a>
 Why Composition Over Inheritance?</h2>
 <p><b>Decision:</b> Minimize inheritance, prefer composition and dependency injection.</p>
 <p><b>Example: Display Construction</b> </p><div class="fragment"><div class="line"><span class="comment">// Composition: Display receives driver by reference</span></div>
@@ -566,7 +566,7 @@ Why Composition Over Inheritance?</h2>
 <li><b>Simplicity</b>: Flat structure, no deep hierarchies</li>
 <li><b>Single Responsibility</b>: Each class has one job</li>
 </ol>
-<h2><a class="anchor" id="autotoc_md90"></a>
+<h2><a class="anchor" id="autotoc_md94"></a>
 Why Abstract Driver Interface?</h2>
 <p><b>Decision:</b> Single abstract <code>Driver</code> interface, not multiple interfaces.</p>
 <p><b>Rationale:</b></p><ol type="1">
@@ -580,7 +580,7 @@ Why Abstract Driver Interface?</h2>
 <li>Can support color displays by extending <code>Color</code> enum</li>
 <li>Can add partial refresh if hardware supports it</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md91"></a>
+<h2><a class="anchor" id="autotoc_md95"></a>
 Memory Management Strategy</h2>
 <p><b>Decision:</b> RAII for all resources, no manual <code>new</code>/<code>delete</code>.</p>
 <p><b>Patterns:</b></p><ol type="1">
@@ -595,9 +595,9 @@ Memory Management Strategy</h2>
 <li><b>No Leaks</b>: Impossible to forget to free</li>
 <li><b>Move Semantics</b>: Efficient transfers without copying</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md92"></a>
+<h1><a class="anchor" id="autotoc_md96"></a>
 Hardware Interface</h1>
-<h2><a class="anchor" id="autotoc_md93"></a>
+<h2><a class="anchor" id="autotoc_md97"></a>
 SPI Communication Protocol</h2>
 <p>The e-paper display uses SPI for communication with a command/data distinction.</p>
 <div class="fragment"><div class="line">sequenceDiagram</div>
@@ -628,7 +628,7 @@ SPI Communication Protocol</h2>
 <li><b>RST (Reset)</b>: LOW = reset, HIGH = normal operation</li>
 <li><b>BUSY</b>: HIGH = display busy, LOW = ready for commands</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md94"></a>
+<h2><a class="anchor" id="autotoc_md98"></a>
 EPD27 Command Set</h2>
 <p>Key commands used by the EPD27 driver:</p>
 <table class="markdownTable">
@@ -667,7 +667,7 @@ EPD27 Command Set</h2>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone">SET_RAM_Y_COUNTER   </td><td class="markdownTableBodyNone">0x4F   </td><td class="markdownTableBodyNone">Set RAM Y counter   </td></tr>
 </table>
-<h2><a class="anchor" id="autotoc_md95"></a>
+<h2><a class="anchor" id="autotoc_md99"></a>
 Initialization Sequence</h2>
 <div class="fragment"><div class="line">graph TD</div>
 <div class="line">    A[Start] --&gt; B[Hardware Reset]</div>
@@ -686,7 +686,7 @@ Initialization Sequence</h2>
 <div class="line"> </div>
 <div class="line">    style A fill:#e3f2fd,stroke:#1976d2,stroke-width:2px,color:#000</div>
 <div class="line">    style N fill:#66bb6a,stroke:#2e7d32,stroke-width:2px,color:#fff</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md96"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md100"></a>
 Pin Configuration</h2>
 <p>Default Raspberry Pi GPIO pin assignments:</p>
 <div class="fragment"><div class="line">graph LR</div>
@@ -727,9 +727,9 @@ Pin Configuration</h2>
 <div class="line">    style BUSY fill:#64b5f6,stroke:#0d47a1,stroke-width:2px,color:#000</div>
 <div class="line">    style MOSI fill:#42a5f5,stroke:#0d47a1,stroke-width:2px,color:#000</div>
 <div class="line">    style SCLK fill:#42a5f5,stroke:#0d47a1,stroke-width:2px,color:#000</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md97"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md101"></a>
 Performance Considerations</h1>
-<h2><a class="anchor" id="autotoc_md98"></a>
+<h2><a class="anchor" id="autotoc_md102"></a>
 Framebuffer Size</h2>
 <p>Memory footprint varies by display mode:</p>
 <p><b>2.7" Display (176x264 pixels = 46,464 pixels):&lt;/strong&gt;
@@ -740,7 +740,7 @@ Framebuffer Size</h2>
 <li><b>Black/White mode</b>: 15,000 bytes</li>
 <li><b>Grayscale4 mode</b>: 30,000 bytes</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md99"></a>
+<h2><a class="anchor" id="autotoc_md103"></a>
 Refresh Times</h2>
 <p>Approximate refresh times for EPD27:</p>
 <ul>
@@ -753,7 +753,7 @@ Refresh Times</h2>
 <li>Minimize <code>refresh()</code> calls (e.g., 5-second intervals for live data)</li>
 <li>Use auto-sleep to protect hardware between refreshes</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md100"></a>
+<h2><a class="anchor" id="autotoc_md104"></a>
 SPI Transfer Rates</h2>
 <p>The Linux SPIdev operates at configurable speeds:</p><ul>
 <li><b>Current</b>: ~1.95 MHz (250MHz / 128, equivalent to previous BCM2835 CLOCK_DIVIDER_128)</li>
@@ -763,9 +763,9 @@ SPI Transfer Rates</h2>
 <li>At ~1.95 MHz: ~24ms for 5,808 bytes (black/white mode)</li>
 <li>Negligible compared to display refresh time (~2s)</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md101"></a>
+<h1><a class="anchor" id="autotoc_md105"></a>
 Error Handling Strategy</h1>
-<h2><a class="anchor" id="autotoc_md102"></a>
+<h2><a class="anchor" id="autotoc_md106"></a>
 Error Types</h2>
 <div class="fragment"><div class="line"><span class="keyword">enum class</span> ErrorCode {</div>
 <div class="line">  <span class="comment">// Device errors (hardware layer)</span></div>
@@ -796,7 +796,7 @@ Error Types</h2>
 <div class="line">  std::string message;  <span class="comment">// Optional context</span></div>
 <div class="line">  <span class="keyword">auto</span> what() const -&gt; std::string_view;</div>
 <div class="line">};</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md103"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md107"></a>
 Recovery Strategies</h2>
 <p><b>1. Initialization Errors:</b> </p><div class="fragment"><div class="line"><span class="keyword">auto</span> result = device.init();</div>
 <div class="line"><span class="keywordflow">if</span> (!result) {</div>
@@ -812,9 +812,9 @@ Recovery Strategies</h2>
 <div class="line">}</div>
 </div><!-- fragment --><p><b>3. Benign Errors:</b> </p><div class="fragment"><div class="line"><span class="comment">// Drawing operations never fail - out of bounds is clipped</span></div>
 <div class="line">display-&gt;draw(display-&gt;point().at(1000, 1000).color(Color::Black).build());  <span class="comment">// Safely ignored</span></div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md104"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md108"></a>
 Testing Architecture</h1>
-<h2><a class="anchor" id="autotoc_md105"></a>
+<h2><a class="anchor" id="autotoc_md109"></a>
 Test Organization</h2>
 <div class="fragment"><div class="line">tests/</div>
 <div class="line">├── test_auto_sleep.cpp          # Auto-sleep behavior</div>
@@ -828,7 +828,7 @@ Test Organization</h2>
 <div class="line">├── test_orientations.cpp        # Display rotation</div>
 <div class="line">├── test_power_management.cpp    # Sleep/wake cycles</div>
 <div class="line">└── test_stress.cpp              # Performance &amp; stability</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md106"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md110"></a>
 Hardware Mocking Strategy</h2>
 <p>For CI/CD and unit tests without Raspberry Pi hardware:</p>
 <div class="fragment"><div class="line"><span class="keyword">class </span>MockDevice : <span class="keyword">public</span> Device {</div>
@@ -844,9 +844,9 @@ Hardware Mocking Strategy</h2>
 <div class="line"> </div>
 <div class="line">  std::vector&lt;std::vector&lt;std::byte&gt;&gt; spi_calls_;  <span class="comment">// For assertions</span></div>
 <div class="line">};</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md107"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md111"></a>
 Future Extensions</h1>
-<h2><a class="anchor" id="autotoc_md108"></a>
+<h2><a class="anchor" id="autotoc_md112"></a>
 Partial Refresh Support</h2>
 <p>Some e-paper displays support partial refresh (faster updates of screen regions).</p>
 <p><b>Requirements:</b></p><ul>
@@ -854,7 +854,7 @@ Partial Refresh Support</h2>
 <li>Driver capability query: <code>supports_partial_refresh()</code></li>
 <li>New API: <code>refresh_region(x, y, width, height)</code></li>
 </ul>
-<h2><a class="anchor" id="autotoc_md109"></a>
+<h2><a class="anchor" id="autotoc_md113"></a>
 Color Display Support</h2>
 <p>Adding red/yellow e-paper displays would require:</p>
 <p><b>1. Extend Color Enum:</b> </p><div class="fragment"><div class="line"><span class="keyword">enum class</span> Color {</div>
@@ -870,7 +870,7 @@ Color Display Support</h2>
 <li>Two-pass display update (black, then color)</li>
 <li>Color-specific LUTs</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md110"></a>
+<h2><a class="anchor" id="autotoc_md114"></a>
 Additional Display Drivers</h2>
 <p><b>Easy to Add:</b></p><ul>
 <li>1.54" displays (200x200)

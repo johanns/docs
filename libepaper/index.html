@@ -73,7 +73,7 @@ $(function() {
   <div class="headertitle"><div class="title">Modern C++ E-Paper Display Library </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p><a class="anchor" id="md_README"></a> A modern C++23 library for controlling Waveshare e-paper displays on Raspberry Pi with transparent sleep/wake management and a fluent builder API.</p>
+<div class="textblock"><p><a class="anchor" id="md_README"></a> A modern C++23 library for controlling Waveshare e-paper displays on Raspberry Pi, featuring transparent sleep/wake management and a fluent builder API.</p>
 <p><a href="https://en.cppreference.com/w/cpp/23"><img src="https://img.shields.io/badge/C%2B%2B-23-blue.svg" alt="C++23" style="pointer-events: none;" class="inline"/></a> [<img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License: MIT" style="pointer-events: none;" class="inline"/>](LICENSE)</p>
 <blockquote class="doxtable">
 <p>&zwj;<b>See <a href="https://docs.jsg.io/libepaper">docs</a> for complete documentation.</b> </p>
@@ -127,24 +127,78 @@ $(function() {
 <li><b>Automatic Color Conversion</b>: RGB images automatically converted to grayscale with intelligent quantization</li>
 <li><b>Multiple Display Modes</b>: Black/white (1-bit) and 4-level grayscale (2-bit)</li>
 <li><b>Display Orientation</b>: Rotate 0°, 90°, 180°, 270° with automatic coordinate transformation</li>
-<li><b>Extensible Drivers</b>: Abstract driver interface for easy addition of new displays</li>
+<li><b>Extensible Drivers</b>: Abstract driver interface for easy support of new displays</li>
 <li><b>Type Safety</b>: Strong typing with <code>std::expected</code> error handling</li>
 <li><b>Zero-Cost Abstractions</b>: Modern C++ with no runtime overhead</li>
 </ul>
 <h1><a class="anchor" id="autotoc_md3"></a>
 🚀 Quick Start</h1>
 <h2><a class="anchor" id="autotoc_md4"></a>
-1. Installation</h2>
-<p>Run the automated setup script to install dependencies (cmake, g++-14, libgpiod, etc.):</p>
+Use as a dependency in your CMake project</h2>
+<p>Link the <code>libepaper</code> target via CMake FetchContent:</p>
+<div class="fragment"><div class="line">include(FetchContent)</div>
+<div class="line"> </div>
+<div class="line">FetchContent_Declare(</div>
+<div class="line">     epaper</div>
+<div class="line">     GIT_REPOSITORY https://github.com/johanns/libepaper</div>
+<div class="line">     GIT_TAG        main</div>
+<div class="line">)</div>
+<div class="line">FetchContent_MakeAvailable(epaper)</div>
+<div class="line"> </div>
+<div class="line">add_executable(my_app src/main.cpp)</div>
+<div class="line">target_link_libraries(my_app PRIVATE libepaper)</div>
+</div><!-- fragment --><p>Then build your project as usual (Debug or Release mode).</p>
+<h2><a class="anchor" id="autotoc_md5"></a>
+Run examples from the repository</h2>
+<ol type="1">
+<li><p class="startli">Install dependencies and set up the system:</p>
 <div class="fragment"><div class="line">./bin/setup</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md5"></a>
-2. Build &amp; Run</h2>
+</div><!-- fragment --></li>
+<li><p class="startli">Build the library (Release by default, use <code>--type Debug</code> for debug builds):</p>
 <div class="fragment"><div class="line">./bin/build</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md6"></a>
-3. Run Example</h2>
-<div class="fragment"><div class="line"># Run crypto dashboard (live prices with charts)</div>
-<div class="line">./build/examples/crypto_dashboard/crypto_dashboard</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md7"></a>
+<div class="line"># ./bin/build --type Debug</div>
+</div><!-- fragment --></li>
+<li><p class="startli">Run an example:</p>
+<div class="fragment"><div class="line">./build/examples/crypto_dashboard/crypto_dashboard</div>
+</div><!-- fragment --></li>
+</ol>
+<h1><a class="anchor" id="autotoc_md6"></a>
+🧩 Alternative Integration Options</h1>
+<p>For other integration methods:</p>
+<h2><a class="anchor" id="autotoc_md7"></a>
+Option A — Vendored submodule with add_subdirectory</h2>
+<div class="fragment"><div class="line">git submodule add https://github.com/johanns/libepaper external/libepaper</div>
+<div class="line">git submodule update --init --recursive</div>
+</div><!-- fragment --><div class="fragment"><div class="line">add_subdirectory(external/libepaper)</div>
+<div class="line">add_executable(my_app src/main.cpp)</div>
+<div class="line">target_link_libraries(my_app PRIVATE libepaper)</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md8"></a>
+Option B — System-wide installation</h2>
+<div class="fragment"><div class="line">cd libepaper</div>
+<div class="line">./bin/setup</div>
+<div class="line">cmake -S . -B build -DCMAKE_BUILD_TYPE=Release</div>
+<div class="line">cmake --build build -j</div>
+<div class="line">sudo cmake --install build</div>
+</div><!-- fragment --><div class="fragment"><div class="line">find_path(EPAPER_INCLUDE_DIR epaper/display.hpp PATH_SUFFIXES epaper)</div>
+<div class="line">find_library(EPAPER_LIBRARY NAMES epaper)</div>
+<div class="line"> </div>
+<div class="line">add_executable(my_app src/main.cpp)</div>
+<div class="line">target_include_directories(my_app PRIVATE ${EPAPER_INCLUDE_DIR})</div>
+<div class="line">target_link_libraries(my_app PRIVATE ${EPAPER_LIBRARY} gpiod m)</div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md9"></a>
+⚙️ Build Configuration</h1>
+<p>Build with Release (default) or Debug optimization:</p>
+<p>Using our script:</p>
+<div class="fragment"><div class="line">./bin/build                      # Release (default)</div>
+<div class="line">./bin/build --type Debug         # Debug</div>
+<div class="line">./bin/build examples --type Release</div>
+</div><!-- fragment --><p>Using raw CMake:</p>
+<div class="fragment"><div class="line">cmake -S . -B build -DCMAKE_BUILD_TYPE=Debug</div>
+<div class="line">cmake --build build -j</div>
+<div class="line"> </div>
+<div class="line">cmake -S . -B build -DCMAKE_BUILD_TYPE=Release</div>
+<div class="line">cmake --build build -j</div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md10"></a>
 📚 Documentation</h1>
 <table class="markdownTable">
 <tr class="markdownTableHead">
@@ -158,20 +212,20 @@ $(function() {
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone"><b>Examples</b>   </td><td class="markdownTableBodyNone">Tutorials and working examples   </td></tr>
 </table>
-<h1><a class="anchor" id="autotoc_md8"></a>
+<h1><a class="anchor" id="autotoc_md11"></a>
 🤝 Contributing</h1>
 <p>We welcome contributions! Please see CONTRIBUTING.md for our commit format and PR process.</p>
-<h1><a class="anchor" id="autotoc_md9"></a>
+<h1><a class="anchor" id="autotoc_md12"></a>
 🏗️ Supported Hardware</h1>
 <p><b>Currently Implemented:</b></p><ul>
 <li>Waveshare 2.7" e-Paper Display (176×264 pixels)
 
 &lt;strong&gt;Easy to Extend:&lt;/strong&gt;
-The abstract driver interface makes it straightforward to add support for other displays. See @ref "/mnt/nas/libepaper/docs/DRIVER.md" "<a class="el" href="de/d79/DRIVER_8md.html">docs/DRIVER.md</a>" for a guide to writing new drivers.</li>
+The abstract driver interface makes adding support for additional displays straightforward. See @ref "/mnt/nas/libepaper/docs/DRIVER.md" "<a class="el" href="de/d79/DRIVER_8md.html">docs/DRIVER.md</a>" for a guide to writing new drivers.</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md10"></a>
+<h1><a class="anchor" id="autotoc_md13"></a>
 🔧 Development</h1>
-<h2><a class="anchor" id="autotoc_md11"></a>
+<h2><a class="anchor" id="autotoc_md14"></a>
 Requirements</h2>
 <ul>
 <li>Raspberry Pi OS, Debian 12 (Bookworm), or Ubuntu 24.04 (Jammy Jellyfish)</li>
@@ -181,7 +235,7 @@ Requirements</h2>
 <li>Raspberry Pi with SPI enabled</li>
 <li>User in <code>gpio</code> and <code>spi</code> groups (no sudo required)</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md12"></a>
+<h1><a class="anchor" id="autotoc_md15"></a>
 📄 License</h1>
 <p>MIT License - see [LICENSE](LICENSE) file for details. Copyright (c) 2021 - 2026 Johanns Gregorian (<a href="https://github.com/johanns">https://github.com/johanns</a>) </p>
 </div></div><!-- PageDoc -->

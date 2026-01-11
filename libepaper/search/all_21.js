@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['🏗️_20supported_20hardware_0',['🏗️ Supported Hardware',['../index.html#autotoc_md9',1,'']]]
+  ['✨_20quick_20example_0',['✨ Quick Example',['../index.html#autotoc_md1',1,'']]]
 ];

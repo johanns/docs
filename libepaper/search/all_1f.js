@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['✨_20quick_20example_0',['✨ Quick Example',['../index.html#autotoc_md1',1,'']]]
+  ['—_20system_20wide_20installation_0',['Option B — System-wide installation',['../index.html#autotoc_md8',1,'']]],
+  ['—_20vendored_20submodule_20with_20add_5fsubdirectory_1',['Option A — Vendored submodule with add_subdirectory',['../index.html#autotoc_md7',1,'']]]
 ];
