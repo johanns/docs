@@ -1,0 +1,11 @@
+<map id="epaper::Display::save_framebuffer_to_png" name="epaper::Display::save_framebuffer_to_png">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,35,168,75"/>
+<area shape="rect" id="Node000002" href="$dc/dd2/classepaper_1_1ImageIO.html#af8fe54d1adaf65835a57caf0e50734d8" title=" " alt="" coords="216,5,431,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="168,42,202,38,203,43,169,47"/>
+<area shape="rect" id="Node000004" href="$dc/dd2/classepaper_1_1ImageIO.html#ad84cdfa404c93c563c69ae7ba5542c53" title=" " alt="" coords="223,70,423,95"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="169,62,210,67,209,72,168,67"/>
+<area shape="rect" id="Node000003" href="$d9/d29/classepaper_1_1ColorManager.html#af50996a3a33d05f8f6331a98edaef813" title="Convert Color enum to RGB." alt="" coords="479,5,645,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="431,23,465,23,465,28,431,28"/>
+<area shape="rect" id="Node000005" href="$dc/da1/mock__driver_8hpp.html#a75da9be67f1e7938ebaf95cc0e316e90" title=" " alt="" coords="503,70,621,95"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="423,80,490,80,490,85,423,85"/>
+</map>

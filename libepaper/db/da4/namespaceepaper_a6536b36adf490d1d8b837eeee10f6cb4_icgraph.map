@@ -1,0 +1,17 @@
+<map id="epaper::calculate_bw_position" name="epaper::calculate_bw_position">
+<area shape="rect" id="Node000001" title="Calculate byte index and bit mask for B/W mode pixel." alt="" coords="472,73,632,113"/>
+<area shape="rect" id="Node000002" href="$db/da4/namespaceepaper.html#a211f15e728528fdf212242393979b569" title="Read a pixel from a B/W mode buffer." alt="" coords="245,5,405,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="491,70,423,45,383,33,385,28,425,39,493,65"/>
+<area shape="rect" id="Node000004" href="$db/da4/namespaceepaper.html#af44b0b5418e498436b85b0be41d449ec" title="Read a pixel from a BWR or BWY mode buffer." alt="" coords="225,55,424,80"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="458,85,424,81,424,76,458,80"/>
+<area shape="rect" id="Node000005" href="$db/da4/namespaceepaper.html#a3de2866c6b357334dc0276fd31a6e7f3" title="Write a pixel to a B/W mode buffer." alt="" coords="245,104,404,129"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="458,105,404,111,404,106,458,100"/>
+<area shape="rect" id="Node000007" href="$db/da4/namespaceepaper.html#adf3b66172f08771cec4a9b5ecc3c199a" title="Write a pixel to a BWR or BWY mode buffer." alt="" coords="225,153,424,179"/>
+<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="489,120,425,143,380,156,379,151,423,138,487,115"/>
+<area shape="rect" id="Node000003" href="$db/da4/namespaceepaper.html#adf82ab807547e63dfabf8ecba1b49b0a" title="Read a pixel from a buffer based on display mode." alt="" coords="5,31,177,71"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="232,34,178,42,177,36,231,29"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="212,62,177,60,178,55,212,57"/>
+<area shape="rect" id="Node000006" href="$db/da4/namespaceepaper.html#a7dfc54379ce54b633094016b0999396c" title="Write a pixel to a buffer based on display mode." alt="" coords="15,113,167,153"/>
+<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="232,126,168,130,167,125,231,120"/>
+<area shape="poly" id="edge8_Node000007_Node000006" title=" " alt="" coords="222,154,167,146,168,141,223,149"/>
+</map>

@@ -1,6 +1,0 @@
-<map id="epaper::Display::get_pixel" name="epaper::Display::get_pixel">
-<area shape="rect" id="Node000001" title="Get the color of a pixel." alt="" coords="5,22,157,62"/>
-<area shape="rect" id="Node000002" href="$db/da4/namespaceepaper.html#ae87c16acc02a64356214d15caff24201" title=" " alt="" coords="205,29,376,55"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="158,39,191,39,191,45,158,45"/>
-<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="257,31,249,21,253,11,267,5,291,3,320,6,331,15,328,20,318,11,291,8,269,10,257,15,254,20,261,28"/>
-</map>

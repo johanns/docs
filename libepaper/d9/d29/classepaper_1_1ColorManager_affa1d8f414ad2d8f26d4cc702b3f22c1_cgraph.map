@@ -1,0 +1,21 @@
+<map id="epaper::ColorManager::dither_image" name="epaper::ColorManager::dither_image">
+<area shape="rect" id="Node000001" title="Dither an RGB image to device colors using Floyd&#45;Steinberg." alt="" coords="5,133,172,173"/>
+<area shape="rect" id="Node000002" href="$d9/d29/classepaper_1_1ColorManager.html#a0d7e34cf9998842e946328ee6caddc0f" title="Generic conversion based on display mode template parameter." alt="" coords="220,133,387,173"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="173,151,206,151,206,156,173,156"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="263,134,261,124,267,114,282,109,303,107,328,110,342,117,339,122,327,115,303,112,283,114,271,119,266,125,268,132"/>
+<area shape="rect" id="Node000003" href="$d9/d29/classepaper_1_1ColorManager.html#a201e652810ec3897e7199df0029ae0e1" title="Convert RGB color to 1&#45;bit black/white." alt="" coords="435,5,601,45"/>
+<area shape="poly" id="edge3_Node000002_Node000003" title=" " alt="" coords="339,131,383,99,433,67,473,48,476,53,436,72,386,103,342,135"/>
+<area shape="rect" id="Node000004" href="$d9/d29/classepaper_1_1ColorManager.html#ad28d8e37a6363f8594f5e1c2584a4649" title=" " alt="" coords="435,69,601,109"/>
+<area shape="poly" id="edge5_Node000002_Node000004" title=" " alt="" coords="386,135,461,111,462,117,388,140"/>
+<area shape="rect" id="Node000005" href="$d9/d29/classepaper_1_1ColorManager.html#a53d7e02c341761007b20bc8e29798116" title=" " alt="" coords="435,133,601,173"/>
+<area shape="poly" id="edge7_Node000002_Node000005" title=" " alt="" coords="387,159,421,160,421,165,387,165"/>
+<area shape="rect" id="Node000006" href="$d9/d29/classepaper_1_1ColorManager.html#add2448409985ce8a0a271c91f3a36f1b" title=" " alt="" coords="435,197,601,237"/>
+<area shape="poly" id="edge9_Node000002_Node000006" title=" " alt="" coords="348,171,422,195,421,200,346,176"/>
+<area shape="rect" id="Node000007" href="$d9/d29/classepaper_1_1ColorManager.html#abc0c73fe3eccccd33e145ed4f28cb961" title=" " alt="" coords="435,261,601,301"/>
+<area shape="poly" id="edge11_Node000002_Node000007" title=" " alt="" coords="321,171,365,211,425,253,422,257,362,215,317,175"/>
+<area shape="poly" id="edge4_Node000003_Node000002" title=" " alt="" coords="436,47,436,48,378,86,330,126,327,121,375,81,433,43,434,43"/>
+<area shape="poly" id="edge6_Node000004_Node000002" title=" " alt="" coords="435,108,361,131,359,126,434,103"/>
+<area shape="poly" id="edge8_Node000005_Node000002" title=" " alt="" coords="434,147,401,147,401,142,434,142"/>
+<area shape="poly" id="edge10_Node000006_Node000002" title=" " alt="" coords="473,200,399,176,401,171,475,195"/>
+<area shape="poly" id="edge12_Node000007_Node000002" title=" " alt="" coords="486,264,433,240,390,212,350,184,353,180,393,208,436,235,488,259"/>
+</map>

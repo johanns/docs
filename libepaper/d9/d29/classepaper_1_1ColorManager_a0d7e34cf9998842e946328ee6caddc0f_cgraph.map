@@ -1,0 +1,19 @@
+<map id="epaper::ColorManager::convert" name="epaper::ColorManager::convert">
+<area shape="rect" id="Node000001" title="Generic conversion based on display mode template parameter." alt="" coords="5,133,172,173"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="49,134,46,124,53,114,67,109,89,107,114,110,127,117,125,122,112,115,89,112,68,114,56,119,51,125,54,132"/>
+<area shape="rect" id="Node000002" href="$d9/d29/classepaper_1_1ColorManager.html#a201e652810ec3897e7199df0029ae0e1" title="Convert RGB color to 1&#45;bit black/white." alt="" coords="220,5,387,45"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="124,131,168,99,219,67,259,48,261,53,221,72,171,103,127,135"/>
+<area shape="rect" id="Node000003" href="$d9/d29/classepaper_1_1ColorManager.html#ad28d8e37a6363f8594f5e1c2584a4649" title=" " alt="" coords="220,69,387,109"/>
+<area shape="poly" id="edge4_Node000001_Node000003" title=" " alt="" coords="172,135,246,111,248,117,173,140"/>
+<area shape="rect" id="Node000004" href="$d9/d29/classepaper_1_1ColorManager.html#a53d7e02c341761007b20bc8e29798116" title=" " alt="" coords="220,133,387,173"/>
+<area shape="poly" id="edge6_Node000001_Node000004" title=" " alt="" coords="173,159,206,160,206,165,173,165"/>
+<area shape="rect" id="Node000005" href="$d9/d29/classepaper_1_1ColorManager.html#add2448409985ce8a0a271c91f3a36f1b" title=" " alt="" coords="220,197,387,237"/>
+<area shape="poly" id="edge8_Node000001_Node000005" title=" " alt="" coords="133,171,208,195,206,200,132,176"/>
+<area shape="rect" id="Node000006" href="$d9/d29/classepaper_1_1ColorManager.html#abc0c73fe3eccccd33e145ed4f28cb961" title=" " alt="" coords="220,261,387,301"/>
+<area shape="poly" id="edge10_Node000001_Node000006" title=" " alt="" coords="106,171,150,211,210,253,207,257,147,215,103,175"/>
+<area shape="poly" id="edge3_Node000002_Node000001" title=" " alt="" coords="222,47,221,48,163,86,116,126,112,121,160,81,219,43,219,43"/>
+<area shape="poly" id="edge5_Node000003_Node000001" title=" " alt="" coords="221,108,146,131,144,126,219,103"/>
+<area shape="poly" id="edge7_Node000004_Node000001" title=" " alt="" coords="220,147,186,147,186,142,220,142"/>
+<area shape="poly" id="edge9_Node000005_Node000001" title=" " alt="" coords="259,200,185,176,186,171,260,195"/>
+<area shape="poly" id="edge11_Node000006_Node000001" title=" " alt="" coords="271,264,219,240,175,212,135,184,139,180,178,208,221,235,273,259"/>
+</map>

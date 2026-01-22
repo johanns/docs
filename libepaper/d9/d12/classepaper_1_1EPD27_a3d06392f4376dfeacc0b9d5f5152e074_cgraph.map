@@ -1,0 +1,7 @@
+<map id="epaper::EPD27::init" name="epaper::EPD27::init">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,31,152,56"/>
+<area shape="rect" id="Node000002" href="$db/da4/namespaceepaper.html#a1ff77c9e043c0eb628f1aeb932f9f459" title="Check if mode supports color (non&#45;grayscale)." alt="" coords="200,5,369,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="152,32,186,27,187,33,153,37"/>
+<area shape="rect" id="Node000003" href="$d9/d12/classepaper_1_1EPD27.html#a0bc10082ed844da4381a040a9fda9daf" title=" " alt="" coords="203,55,366,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="153,49,190,54,189,59,152,55"/>
+</map>

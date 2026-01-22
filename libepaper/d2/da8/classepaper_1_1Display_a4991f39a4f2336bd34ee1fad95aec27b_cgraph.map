@@ -1,0 +1,7 @@
+<map id="epaper::Display::get_num_planes" name="epaper::Display::get_num_planes">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,23,157,63"/>
+<area shape="rect" id="Node000002" href="$d2/da8/classepaper_1_1Display.html#aea121670a99df8829b9e4a5af4cff045" title=" " alt="" coords="205,5,373,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="157,31,191,27,192,33,158,37"/>
+<area shape="rect" id="Node000003" href="$db/da4/namespaceepaper.html#a178373f48ebb1e304875d769e7f3a2b0" title="Get number of color planes required for a display mode." alt="" coords="212,55,367,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="158,49,199,54,198,60,157,55"/>
+</map>

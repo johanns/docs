@@ -1,0 +1,19 @@
+<map id="epaper::ColorManager::convert_to_gray4" name="epaper::ColorManager::convert_to_gray4">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,101,172,141"/>
+<area shape="rect" id="Node000002" href="$d9/d29/classepaper_1_1ColorManager.html#a0d7e34cf9998842e946328ee6caddc0f" title="Generic conversion based on display mode template parameter." alt="" coords="220,101,387,141"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="173,127,206,128,206,133,173,133"/>
+<area shape="poly" id="edge9_Node000002_Node000001" title=" " alt="" coords="220,115,186,115,186,110,220,110"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="263,102,261,92,267,82,282,77,303,75,328,78,342,85,339,90,327,83,303,80,283,82,271,87,266,93,268,100"/>
+<area shape="rect" id="Node000003" href="$d9/d29/classepaper_1_1ColorManager.html#a201e652810ec3897e7199df0029ae0e1" title="Convert RGB color to 1&#45;bit black/white." alt="" coords="435,5,601,45"/>
+<area shape="poly" id="edge3_Node000002_Node000003" title=" " alt="" coords="365,99,434,67,477,49,479,54,436,72,367,104"/>
+<area shape="rect" id="Node000004" href="$d9/d29/classepaper_1_1ColorManager.html#ad28d8e37a6363f8594f5e1c2584a4649" title=" " alt="" coords="435,69,601,109"/>
+<area shape="poly" id="edge5_Node000002_Node000004" title=" " alt="" coords="387,115,428,109,428,114,388,120"/>
+<area shape="rect" id="Node000005" href="$d9/d29/classepaper_1_1ColorManager.html#a53d7e02c341761007b20bc8e29798116" title=" " alt="" coords="435,133,601,173"/>
+<area shape="poly" id="edge7_Node000002_Node000005" title=" " alt="" coords="380,139,421,145,420,150,380,144"/>
+<area shape="rect" id="Node000006" href="$d9/d29/classepaper_1_1ColorManager.html#abc0c73fe3eccccd33e145ed4f28cb961" title=" " alt="" coords="435,197,601,237"/>
+<area shape="poly" id="edge10_Node000002_Node000006" title=" " alt="" coords="328,139,424,190,421,194,325,144"/>
+<area shape="poly" id="edge4_Node000003_Node000002" title=" " alt="" coords="436,48,436,48,339,97,337,92,434,43,434,43"/>
+<area shape="poly" id="edge6_Node000004_Node000002" title=" " alt="" coords="435,96,394,102,393,96,434,90"/>
+<area shape="poly" id="edge8_Node000005_Node000002" title=" " alt="" coords="441,136,400,130,401,124,442,131"/>
+<area shape="poly" id="edge11_Node000006_Node000002" title=" " alt="" coords="489,200,434,176,377,150,379,145,436,171,491,195"/>
+</map>

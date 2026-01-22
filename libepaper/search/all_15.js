@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['quality_0',['Code Quality',['../db/d9c/md_docs_2DRIVER.html#autotoc_md164',1,'']]],
-  ['quick_20example_1',['✨ Quick Example',['../index.html#autotoc_md1',1,'']]],
-  ['quick_20start_2',['🚀 Quick Start',['../index.html#autotoc_md3',1,'']]]
+  ['x_0',['x',['../d7/d38/structepaper_1_1Point.html#ae16b5f4afecb1d7073f52018979ddfdd',1,'epaper::Point']]]
 ];

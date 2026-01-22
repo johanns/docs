@@ -1,0 +1,5 @@
+<map id="epaper::get_pixel_spectra6" name="epaper::get_pixel_spectra6">
+<area shape="rect" id="Node000001" title="Read a pixel from a Spectra6 mode buffer." alt="" coords="225,13,423,38"/>
+<area shape="rect" id="Node000002" href="$db/da4/namespaceepaper.html#adf82ab807547e63dfabf8ecba1b49b0a" title="Read a pixel from a buffer based on display mode." alt="" coords="5,5,177,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="212,28,178,28,178,23,212,23"/>
+</map>

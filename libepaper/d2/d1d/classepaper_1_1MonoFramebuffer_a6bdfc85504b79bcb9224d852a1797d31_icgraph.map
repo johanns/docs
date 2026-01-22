@@ -1,0 +1,5 @@
+<map id="epaper::MonoFramebuffer::clear" name="epaper::MonoFramebuffer::clear">
+<area shape="rect" id="Node000001" title="Clear the framebuffer to a color." alt="" coords="244,5,435,45"/>
+<area shape="rect" id="Node000002" href="$d2/d1d/classepaper_1_1MonoFramebuffer.html#a0f5321351f439731d985b80d3f9888ec" title="Construct a mono framebuffer." alt="" coords="5,5,196,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="230,28,196,28,196,23,230,23"/>
+</map>

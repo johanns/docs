@@ -1,0 +1,10 @@
+<map id="include/epaper/io" name="include/epaper/io">
+<area shape="rect" id="node1" href="dir_7ec72a83aebeb2a8eff3fde7294cdb85.html" title="color" alt="" coords="27,125,82,151"/>
+<area shape="rect" id="node2" href="dir_a21429905a1840e61073a0d6e200290f.html" title="core" alt="" coords="107,125,157,151"/>
+<area shape="rect" id="node3" href="dir_e1613579004a76e0a2b3d80f01e723b7.html" title="io" alt="" coords="74,52,113,77"/>
+<area shape="poly" id="edge1" href="dir_000010_000000.html" alt="" coords="89,79,70,115,65,112,85,76"/>
+<area shape="rect" id="edge1-headlabel" href="dir_000010_000000.html" title="1" alt="" coords="72,106,82,121"/>
+<area shape="poly" id="edge2" href="dir_000010_000001.html" alt="" coords="102,76,122,112,117,115,97,79"/>
+<area shape="rect" id="edge2-headlabel" href="dir_000010_000001.html" title="3" alt="" coords="120,98,129,113"/>
+<area shape="rect" id="clust1" href="dir_8be0177ccea84a4174c5b41428df88d0.html" title="epaper" alt="" coords="16,16,168,161"/>
+</map>

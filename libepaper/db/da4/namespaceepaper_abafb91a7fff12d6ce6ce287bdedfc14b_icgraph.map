@@ -1,0 +1,11 @@
+<map id="epaper::calculate_gray_position" name="epaper::calculate_gray_position">
+<area shape="rect" id="Node000001" title="Calculate byte index and pixel shift for Grayscale4 mode pixel." alt="" coords="485,39,656,79"/>
+<area shape="rect" id="Node000002" href="$db/da4/namespaceepaper.html#ab767480178516376f4002d5f79b11529" title="Read a pixel from a Grayscale4 mode buffer." alt="" coords="225,17,437,42"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="471,49,435,45,435,39,472,44"/>
+<area shape="rect" id="Node000004" href="$db/da4/namespaceepaper.html#a2160d0be5b8b2eb1b4b7998f8c4c57b5" title="Write a pixel to a Grayscale4 mode buffer." alt="" coords="226,70,437,95"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="472,71,437,75,437,69,472,66"/>
+<area shape="rect" id="Node000003" href="$db/da4/namespaceepaper.html#adf82ab807547e63dfabf8ecba1b49b0a" title="Read a pixel from a buffer based on display mode." alt="" coords="5,5,177,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="212,30,178,29,178,24,212,25"/>
+<area shape="rect" id="Node000005" href="$db/da4/namespaceepaper.html#a7dfc54379ce54b633094016b0999396c" title="Write a pixel to a buffer based on display mode." alt="" coords="15,69,167,109"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="213,89,168,90,167,85,212,83"/>
+</map>

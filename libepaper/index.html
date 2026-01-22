@@ -78,12 +78,12 @@ $(function() {
 <blockquote class="doxtable">
 <p>&zwj;<b>See <a href="https://docs.jsg.io/libepaper">docs</a> for complete documentation.</b> </p>
 </blockquote>
-<h1><a class="anchor" id="autotoc_md1"></a>
+<h1><a class="anchor" id="autotoc_md-quick-example"></a>
 ✨ Quick Example</h1>
-<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="d5/d08/device_8hpp.html">epaper/device.hpp</a>&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="d2/da4/display_8hpp.html">epaper/display.hpp</a>&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="d1/d76/epd27_8hpp.html">epaper/drivers/epd27.hpp</a>&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="df/d50/font_8hpp.html">epaper/font.hpp</a>&gt;</span></div>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="d5/d08/device_8hpp.html">epaper/core/device.hpp</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="d2/da4/display_8hpp.html">epaper/core/display.hpp</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="d1/d76/epd27_8hpp.html">epaper/drivers/epd27.hpp</a>&gt;</span>  <span class="comment">// Use your driver</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="df/d50/font_8hpp.html">epaper/graphics/font.hpp</a>&gt;</span></div>
 <div class="line"> </div>
 <div class="line"><span class="keyword">using namespace </span><a class="code hl_namespace" href="db/da4/namespaceepaper.html">epaper</a>;</div>
 <div class="line"> </div>
@@ -91,7 +91,8 @@ $(function() {
 <div class="line">    <a class="code hl_class" href="d2/d80/classepaper_1_1Device.html">Device</a> device;</div>
 <div class="line">    device.<a class="code hl_function" href="d2/d80/classepaper_1_1Device.html#ae0a60dbaca6d6c4e442982338748bcbb">init</a>().value();</div>
 <div class="line"> </div>
-<div class="line">    <span class="keyword">auto</span> display = create_display&lt;EPD27&gt;(device, DisplayMode::BlackWhite,</div>
+<div class="line">    <span class="comment">// Replace EPD27 with your driver (EPD27, MockDriver, etc.)</span></div>
+<div class="line">    <span class="keyword">auto</span> display = create_display&lt;EPD27, MonoFramebuffer&gt;(device, DisplayMode::BlackWhite,</div>
 <div class="line">                                         Orientation::Landscape90).value();</div>
 <div class="line"> </div>
 <div class="line">    display-&gt;clear(Color::White);</div>
@@ -107,17 +108,17 @@ $(function() {
 <div class="line"> </div>
 <div class="line">    <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>
-<div class="ttc" id="aclassepaper_1_1Device_html"><div class="ttname"><a href="d2/d80/classepaper_1_1Device.html">epaper::Device</a></div><div class="ttdoc">RAII wrapper for GPIO and SPI device access.</div><div class="ttdef"><b>Definition</b> device.hpp:78</div></div>
-<div class="ttc" id="aclassepaper_1_1Device_html_ae0a60dbaca6d6c4e442982338748bcbb"><div class="ttname"><a href="d2/d80/classepaper_1_1Device.html#ae0a60dbaca6d6c4e442982338748bcbb">epaper::Device::init</a></div><div class="ttdeci">auto init() -&gt; std::expected&lt; void, Error &gt;</div><div class="ttdoc">Initialize the GPIO (libgpiod) and SPI (SPIdev) interfaces.</div><div class="ttdef"><b>Definition</b> device.cpp:160</div></div>
+<div class="ttc" id="aclassepaper_1_1Device_html"><div class="ttname"><a href="d2/d80/classepaper_1_1Device.html">epaper::Device</a></div><div class="ttdef"><b>Definition</b> device.hpp:158</div></div>
+<div class="ttc" id="aclassepaper_1_1Device_html_ae0a60dbaca6d6c4e442982338748bcbb"><div class="ttname"><a href="d2/d80/classepaper_1_1Device.html#ae0a60dbaca6d6c4e442982338748bcbb">epaper::Device::init</a></div><div class="ttdeci">auto init() -&gt; std::expected&lt; void, Error &gt;</div><div class="ttdoc">Initialize the GPIO (libgpiod) and SPI (SPIdev) interfaces.</div><div class="ttdef"><b>Definition</b> device.cpp:152</div></div>
 <div class="ttc" id="adevice_8hpp_html"><div class="ttname"><a href="d5/d08/device_8hpp.html">device.hpp</a></div></div>
 <div class="ttc" id="adisplay_8hpp_html"><div class="ttname"><a href="d2/da4/display_8hpp.html">display.hpp</a></div></div>
 <div class="ttc" id="aepd27_8hpp_html"><div class="ttname"><a href="d1/d76/epd27_8hpp.html">epd27.hpp</a></div></div>
-<div class="ttc" id="afont_8hpp_html"><div class="ttname"><a href="df/d50/font_8hpp.html">font.hpp</a></div></div>
+<div class="ttc" id="afont_8hpp_html"><div class="ttname"><a href="df/d50/font_8hpp.html">font.hpp</a></div><div class="ttdoc">Bitmap font rendering for e-paper displays.</div></div>
 <div class="ttc" id="anamespaceepaper_html"><div class="ttname"><a href="db/da4/namespaceepaper.html">epaper</a></div><div class="ttdef"><b>Definition</b> color.hpp:5</div></div>
 </div><!-- fragment --><blockquote class="doxtable">
 <p>&zwj;👉 <b>See examples/ for complete applications.</b> </p>
 </blockquote>
-<h1><a class="anchor" id="autotoc_md2"></a>
+<h1><a class="anchor" id="autotoc_md-features"></a>
 🎯 Features</h1>
 <ul>
 <li><b>Modern C++23</b>: <code>std::expected</code>, <code>std::span</code>, concepts, and ranges</li>
@@ -131,9 +132,34 @@ $(function() {
 <li><b>Type Safety</b>: Strong typing with <code>std::expected</code> error handling</li>
 <li><b>Zero-Cost Abstractions</b>: Modern C++ with no runtime overhead</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md3"></a>
-🚀 Quick Start</h1>
-<h2><a class="anchor" id="autotoc_md4"></a>
+<h1><a class="anchor" id="️-driver-selection"></a>
+�️ Driver Selection</h1>
+<p>All drivers are compiled into the library. To use a driver:</p>
+<ol type="1">
+<li><b>Include the driver header</b> for your display: <div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="d1/d76/epd27_8hpp.html">epaper/drivers/epd27.hpp</a>&gt;</span>       <span class="comment">// Waveshare 2.7&quot; B/W</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="dc/da1/mock__driver_8hpp.html">epaper/drivers/mock_driver.hpp</a>&gt;</span> <span class="comment">// Software-only testing</span></div>
+<div class="ttc" id="amock__driver_8hpp_html"><div class="ttname"><a href="dc/da1/mock__driver_8hpp.html">mock_driver.hpp</a></div></div>
+</div><!-- fragment --></li>
+<li><b>Use the driver class</b> in <code>create_display&lt;&gt;()</code>: <div class="fragment"><div class="line"><span class="keyword">auto</span> display = create_display&lt;EPD27, MonoFramebuffer&gt;(device, DisplayMode::BlackWhite,</div>
+<div class="line">                                    Orientation::Landscape90).value();</div>
+</div><!-- fragment --></li>
+</ol>
+<h2><a class="anchor" id="available-drivers"></a>
+Available Drivers</h2>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Driver   </th><th class="markdownTableHeadNone">Hardware   </th><th class="markdownTableHeadNone">Dimensions   </th><th class="markdownTableHeadNone">Color Support    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>EPD27</b>   </td><td class="markdownTableBodyNone">Waveshare 2.7"   </td><td class="markdownTableBodyNone">176×264   </td><td class="markdownTableBodyNone">B/W, Grayscale4    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">**MockDriver**   </td><td class="markdownTableBodyNone">Software only   </td><td class="markdownTableBodyNone">Configurable   </td><td class="markdownTableBodyNone">B/W (outputs PNG)   </td></tr>
+</table>
+<blockquote class="doxtable">
+<p>&zwj;📖 See <a href="doxygen/html/index.html">Doxygen documentation</a> for detailed driver API specifications </p>
+</blockquote>
+<h1><a class="anchor" id="autotoc_md-quick-start"></a>
+�🚀 Quick Start</h1>
+<h2><a class="anchor" id="use-as-a-dependency-in-your-cmake-project"></a>
 Use as a dependency in your CMake project</h2>
 <p>Link the <code>libepaper</code> target via CMake FetchContent:</p>
 <div class="fragment"><div class="line">include(FetchContent)</div>
@@ -148,7 +174,7 @@ Use as a dependency in your CMake project</h2>
 <div class="line">add_executable(my_app src/main.cpp)</div>
 <div class="line">target_link_libraries(my_app PRIVATE libepaper)</div>
 </div><!-- fragment --><p>Then build your project as usual (Debug or Release mode).</p>
-<h2><a class="anchor" id="autotoc_md5"></a>
+<h2><a class="anchor" id="run-examples-from-the-repository"></a>
 Run examples from the repository</h2>
 <ol type="1">
 <li><p class="startli">Install dependencies and set up the system:</p>
@@ -162,17 +188,17 @@ Run examples from the repository</h2>
 <div class="fragment"><div class="line">./build/examples/crypto_dashboard/crypto_dashboard</div>
 </div><!-- fragment --></li>
 </ol>
-<h1><a class="anchor" id="autotoc_md6"></a>
+<h1><a class="anchor" id="autotoc_md-alternative-integration-options"></a>
 🧩 Alternative Integration Options</h1>
 <p>For other integration methods:</p>
-<h2><a class="anchor" id="autotoc_md7"></a>
+<h2><a class="anchor" id="option-a--vendored-submodule-with-add_subdirectory"></a>
 Option A — Vendored submodule with add_subdirectory</h2>
 <div class="fragment"><div class="line">git submodule add https://github.com/johanns/libepaper external/libepaper</div>
 <div class="line">git submodule update --init --recursive</div>
 </div><!-- fragment --><div class="fragment"><div class="line">add_subdirectory(external/libepaper)</div>
 <div class="line">add_executable(my_app src/main.cpp)</div>
 <div class="line">target_link_libraries(my_app PRIVATE libepaper)</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md8"></a>
+</div><!-- fragment --><h2><a class="anchor" id="option-b--system-wide-installation"></a>
 Option B — System-wide installation</h2>
 <div class="fragment"><div class="line">cd libepaper</div>
 <div class="line">./bin/setup</div>
@@ -185,47 +211,103 @@ Option B — System-wide installation</h2>
 <div class="line">add_executable(my_app src/main.cpp)</div>
 <div class="line">target_include_directories(my_app PRIVATE ${EPAPER_INCLUDE_DIR})</div>
 <div class="line">target_link_libraries(my_app PRIVATE ${EPAPER_LIBRARY} gpiod m)</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md9"></a>
+</div><!-- fragment --><h1><a class="anchor" id="️-build-configuration"></a>
 ⚙️ Build Configuration</h1>
 <p>Build with Release (default) or Debug optimization:</p>
 <p>Using our script:</p>
-<div class="fragment"><div class="line">./bin/build                      # Release (default)</div>
-<div class="line">./bin/build --type Debug         # Debug</div>
+<div class="fragment"><div class="line">./bin/build                      # Release (default, EPD27 driver)</div>
+<div class="line">./bin/build --type Debug         # Debug build</div>
+<div class="line">./bin/build --driver Mock tests  # Build tests with MockDriver (no hardware)</div>
 <div class="line">./bin/build examples --type Release</div>
 </div><!-- fragment --><p>Using raw CMake:</p>
-<div class="fragment"><div class="line">cmake -S . -B build -DCMAKE_BUILD_TYPE=Debug</div>
-<div class="line">cmake --build build -j</div>
-<div class="line"> </div>
+<div class="fragment"><div class="line"># Standard build</div>
 <div class="line">cmake -S . -B build -DCMAKE_BUILD_TYPE=Release</div>
 <div class="line">cmake --build build -j</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md10"></a>
+<div class="line"> </div>
+<div class="line"># Build with MockDriver for testing without hardware</div>
+<div class="line">cmake -S . -B build -DCMAKE_BUILD_TYPE=Release -DLIBEPAPER_DRIVER=Mock</div>
+<div class="line">cmake --build build -j</div>
+<div class="line">./build/tests/test_drawing_primitives  # Outputs PNG to mock_output/</div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md-documentation"></a>
 📚 Documentation</h1>
+<p>The library provides multiple documentation resources:</p>
+<h2><a class="anchor" id="autotoc_md-api-documentation"></a>
+📖 API Documentation</h2>
+<ul>
+<li><p class="startli"><b><a href="https://docs.jsg.io/libepaper/">Doxygen Reference</a></b> - Comprehensive API documentation with:</p><ul>
+<li>Detailed class and function documentation</li>
+<li>Usage examples for major APIs</li>
+<li>Type reference (enums, structs, concepts)</li>
+<li>Implementation notes and algorithm details</li>
+</ul>
+<p class="startli">Generate locally with: <code>doxygen</code> (outputs to <code>doxygen/html/</code>)</p>
+</li>
+</ul>
+<h2><a class="anchor" id="autotoc_md-guides"></a>
+📘 Guides</h2>
 <table class="markdownTable">
 <tr class="markdownTableHead">
 <th class="markdownTableHeadNone">Document   </th><th class="markdownTableHeadNone">Description    </th></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone"><b><a class="el" href="d7/d15/md_docs_2API.html">API Reference</a></b>   </td><td class="markdownTableBodyNone">Complete API guide with usage patterns    </td></tr>
+<td class="markdownTableBodyNone"><b>Examples</b>   </td><td class="markdownTableBodyNone">Tutorials and working examples    </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone"><b><a class="el" href="d4/d34/md_docs_2ARCHITECTURE.html">Architecture Guide</a></b>   </td><td class="markdownTableBodyNone">Deep dive into design and implementation    </td></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone"><b><a class="el" href="db/d9c/md_docs_2DRIVER.html">Driver Development</a></b>   </td><td class="markdownTableBodyNone">Guide to writing new display drivers    </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone"><b>Examples</b>   </td><td class="markdownTableBodyNone">Tutorials and working examples   </td></tr>
+<td class="markdownTableBodyNone"><b><a class="el" href="d2/dc1/md_CONTRIBUTING.html">Contributing Guide</a></b>   </td><td class="markdownTableBodyNone">Commit format and PR process   </td></tr>
 </table>
-<h1><a class="anchor" id="autotoc_md11"></a>
-🤝 Contributing</h1>
-<p>We welcome contributions! Please see CONTRIBUTING.md for our commit format and PR process.</p>
-<h1><a class="anchor" id="autotoc_md12"></a>
-🏗️ Supported Hardware</h1>
-<p><b>Currently Implemented:</b></p><ul>
-<li>Waveshare 2.7" e-Paper Display (176×264 pixels)
-
-&lt;strong&gt;Easy to Extend:&lt;/strong&gt;
-The abstract driver interface makes adding support for additional displays straightforward. See @ref "/mnt/nas/libepaper/docs/DRIVER.md" "<a class="el" href="de/d79/DRIVER_8md.html">docs/DRIVER.md</a>" for a guide to writing new drivers.</li>
+<h2><a class="anchor" id="autotoc_md-quick-reference"></a>
+💡 Quick Reference</h2>
+<p><b>Core Concepts:</b></p><ul>
+<li><b>Display</b>: Unified interface coordinating driver and framebuffer (<a href="include/epaper/core/display.hpp">epaper::Display</a>)</li>
+<li><b>Driver</b>: Hardware abstraction (SPI/GPIO communication) (<a href="include/epaper/drivers/driver_concepts.hpp">Driver concept</a>)</li>
+<li><b>Framebuffer</b>: Pixel buffer with color encoding (<a href="include/epaper/core/framebuffer.hpp">MonoFramebuffer</a>)</li>
+<li><b>Builder API</b>: Fluent drawing commands (<a href="include/epaper/draw/builders.hpp">Builders</a>)</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md13"></a>
+<p><b>Essential Headers:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="d5/d08/device_8hpp.html">epaper/core/device.hpp</a>&gt;</span>      <span class="comment">// Device initialization</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="d2/da4/display_8hpp.html">epaper/core/display.hpp</a>&gt;</span>     <span class="comment">// Display interface</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="d1/d76/epd27_8hpp.html">epaper/drivers/epd27.hpp</a>&gt;</span>    <span class="comment">// Hardware driver (replace with your driver)</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="df/d50/font_8hpp.html">epaper/graphics/font.hpp</a>&gt;</span>    <span class="comment">// Bitmap fonts (font8-font24)</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="dc/d2d/image__io_8hpp.html">epaper/io/image_io.hpp</a>&gt;</span>      <span class="comment">// PNG/JPEG loading</span></div>
+<div class="ttc" id="aimage__io_8hpp_html"><div class="ttname"><a href="dc/d2d/image__io_8hpp.html">image_io.hpp</a></div><div class="ttdoc">Image loading/saving utilities using stb_image library.</div></div>
+</div><!-- fragment --><p><b>Common Patterns:</b> </p><div class="fragment"><div class="line"><span class="comment">// 1. Initialize device</span></div>
+<div class="line"><a class="code hl_class" href="d2/d80/classepaper_1_1Device.html">Device</a> device;</div>
+<div class="line">device.<a class="code hl_function" href="d2/d80/classepaper_1_1Device.html#ae0a60dbaca6d6c4e442982338748bcbb">init</a>().value();</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// 2. Create display with driver</span></div>
+<div class="line"><span class="keyword">auto</span> display = create_display&lt;EPD27&gt;(device, DisplayMode::BlackWhite).value();</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// 3. Drawing operations</span></div>
+<div class="line">display-&gt;clear(Color::White);</div>
+<div class="line">display-&gt;line({0, 0}, {100, 100}).color(Color::Black).draw();</div>
+<div class="line">display-&gt;rectangle({10, 10}, {50, 50}).fill(DrawFill::Full).draw();</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// 4. Refresh to hardware</span></div>
+<div class="line">display-&gt;refresh();</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// 5. Power management (optional - auto-sleep enabled by default)</span></div>
+<div class="line">display-&gt;sleep();  <span class="comment">// Manual sleep</span></div>
+<div class="line">display-&gt;wake();   <span class="comment">// Manual wake</span></div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md-contributing"></a>
+🤝 Contributing</h1>
+<p>We welcome contributions! Please see <a class="el" href="d2/dc1/md_CONTRIBUTING.html">CONTRIBUTING.md</a> for our commit format and PR process.</p>
+<h1><a class="anchor" id="️-adding-new-display-support"></a>
+🏗️ Adding New Display Support</h1>
+<p>The abstract driver interface makes adding new displays straightforward:</p>
+<ol type="1">
+<li>Implement the <code>Driver</code> concept (see <a href="include/epaper/drivers/driver_concepts.hpp">driver_concepts.hpp</a>)</li>
+<li>Create driver-specific pin configuration struct</li>
+<li>Implement display protocol (init, refresh, sleep/wake)</li>
+<li>Add comprehensive Doxygen documentation</li>
+</ol>
+<p><b>Reference Implementation:</b> See <a href="include/epaper/drivers/epd27.hpp">EPD27 driver</a> for a complete example.</p>
+<p><b>Driver Interface Requirements:</b></p><ul>
+<li>Satisfy <code>Driver</code> concept constraints (width(), height(), init(), display(), etc.)</li>
+<li>Define <code>driver_traits</code> specialization for capability advertisement</li>
+<li>Use <code>std::expected&lt;T, Error&gt;</code> for all fallible operations</li>
+<li>Follow RAII patterns for resource management</li>
+</ul>
+<p><b>Testing:</b> Use <a href="include/epaper/drivers/mock_driver.hpp">MockDriver</a> for development without hardware.</p>
+<h1><a class="anchor" id="autotoc_md-development"></a>
 🔧 Development</h1>
-<h2><a class="anchor" id="autotoc_md14"></a>
+<h2><a class="anchor" id="requirements"></a>
 Requirements</h2>
 <ul>
 <li>Raspberry Pi OS, Debian 12 (Bookworm), or Ubuntu 24.04 (Jammy Jellyfish)</li>
@@ -235,7 +317,7 @@ Requirements</h2>
 <li>Raspberry Pi with SPI enabled</li>
 <li>User in <code>gpio</code> and <code>spi</code> groups (no sudo required)</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md15"></a>
+<h1><a class="anchor" id="autotoc_md-license"></a>
 📄 License</h1>
 <p>MIT License - see [LICENSE](LICENSE) file for details. Copyright (c) 2021 - 2026 Johanns Gregorian (<a href="https://github.com/johanns">https://github.com/johanns</a>) </p>
 </div></div><!-- PageDoc -->

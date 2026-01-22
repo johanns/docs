@@ -1,0 +1,7 @@
+<map id="epaper::MonoFramebuffer::supports_mode" name="epaper::MonoFramebuffer::supports_mode">
+<area shape="rect" id="Node000001" title="Check if the mode is compatible with mono framebuffer." alt="" coords="5,35,196,75"/>
+<area shape="rect" id="Node000002" href="$d2/d1d/classepaper_1_1MonoFramebuffer.html#a7d0316f173d9b104ef9a7cde98135f7b" title="Get display mode represented by this framebuffer." alt="" coords="244,5,435,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="196,40,230,36,231,41,197,46"/>
+<area shape="rect" id="Node000003" href="$db/da4/namespaceepaper.html#a178373f48ebb1e304875d769e7f3a2b0" title="Get number of color planes required for a display mode." alt="" coords="262,70,417,95"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="197,63,249,69,248,75,196,69"/>
+</map>

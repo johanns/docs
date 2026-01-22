@@ -1,5 +1,20 @@
 var searchData=
 [
-  ['refreshfailed_0',['RefreshFailed',['../db/da4/namespaceepaper.html#a32f09eb88e223406e450214ecb4cd6caae95ef019c18513cfed813845fbc1bec1',1,'epaper']]],
-  ['resolution_5fsetting_1',['RESOLUTION_SETTING',['../db/da4/namespaceepaper.html#a6c5225e48086e0ca88fc79574a4000feaf53880502995050b7c019cd545d823bb',1,'epaper']]]
+  ['panel_5fsetting_0',['PANEL_SETTING',['../db/da4/namespaceepaper.html#a6c5225e48086e0ca88fc79574a4000fea65791f332c5d5f6c524dce499c76b95d',1,'epaper']]],
+  ['partial_5fdisplay_5frefresh_1',['PARTIAL_DISPLAY_REFRESH',['../db/da4/namespaceepaper.html#a6c5225e48086e0ca88fc79574a4000fea264e2bff67cd145dbe2a0c425982c3e8',1,'epaper']]],
+  ['pixel1x1_2',['Pixel1x1',['../db/da4/namespaceepaper.html#a779d7a78e43b75490d3cfdf61a9f7f43aecf9dfa175b9f1e653b4f66fe64f6742',1,'epaper']]],
+  ['pixel2x2_3',['Pixel2x2',['../db/da4/namespaceepaper.html#a779d7a78e43b75490d3cfdf61a9f7f43a4a1ea3b72acbf95497b6ec73b6a2f0cf',1,'epaper']]],
+  ['pixel3x3_4',['Pixel3x3',['../db/da4/namespaceepaper.html#a779d7a78e43b75490d3cfdf61a9f7f43a1ba34bce6b3751bcb175a7fd73cf8870',1,'epaper']]],
+  ['pixel4x4_5',['Pixel4x4',['../db/da4/namespaceepaper.html#a779d7a78e43b75490d3cfdf61a9f7f43a38008db30f27e3ac9361acc5add6008c',1,'epaper']]],
+  ['pixel5x5_6',['Pixel5x5',['../db/da4/namespaceepaper.html#a779d7a78e43b75490d3cfdf61a9f7f43af430bb55d105bdc27e29d1de06379139',1,'epaper']]],
+  ['pixel6x6_7',['Pixel6x6',['../db/da4/namespaceepaper.html#a779d7a78e43b75490d3cfdf61a9f7f43af606297a846737096846098b257137bb',1,'epaper']]],
+  ['pixel7x7_8',['Pixel7x7',['../db/da4/namespaceepaper.html#a779d7a78e43b75490d3cfdf61a9f7f43a194c86b0b65ba5c561232ff7cf0f9033',1,'epaper']]],
+  ['pixel8x8_9',['Pixel8x8',['../db/da4/namespaceepaper.html#a779d7a78e43b75490d3cfdf61a9f7f43a1b699c08f17dc135e31a7f4c14a7d552',1,'epaper']]],
+  ['pll_5fcontrol_10',['PLL_CONTROL',['../db/da4/namespaceepaper.html#a6c5225e48086e0ca88fc79574a4000feafaa72b7fed85086f5acebd50d3d58ce8',1,'epaper']]],
+  ['portrait0_11',['Portrait0',['../db/da4/namespaceepaper.html#a5712fae5632ba03d49013b2355060098a73a521e855fc48917d4c3c5cf5eb4a1c',1,'epaper']]],
+  ['portrait180_12',['Portrait180',['../db/da4/namespaceepaper.html#a5712fae5632ba03d49013b2355060098a4db6db3129b0a313179686e2363586fd',1,'epaper']]],
+  ['power_5foff_13',['POWER_OFF',['../db/da4/namespaceepaper.html#a6c5225e48086e0ca88fc79574a4000feaa15cea80d926d7282b831d451ba8aee8',1,'epaper']]],
+  ['power_5fon_14',['POWER_ON',['../db/da4/namespaceepaper.html#a6c5225e48086e0ca88fc79574a4000fea3d6fc432ff9e2d9b890c591179a4401e',1,'epaper']]],
+  ['power_5foptimization_15',['POWER_OPTIMIZATION',['../db/da4/namespaceepaper.html#a6c5225e48086e0ca88fc79574a4000fea0e1ac6955ea0ebe3ff6519b4531b60c1',1,'epaper']]],
+  ['power_5fsetting_16',['POWER_SETTING',['../db/da4/namespaceepaper.html#a6c5225e48086e0ca88fc79574a4000feaaa52794f673889628f3ec7a9e868e2bd',1,'epaper']]]
 ];

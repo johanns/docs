@@ -1,17 +1,7 @@
 <map id="include/epaper/draw/styles.hpp" name="include/epaper/draw/styles.hpp">
-<area shape="rect" id="Node000001" title=" " alt="" coords="83,5,237,45"/>
-<area shape="rect" id="Node000002" href="$da/dc6/builders_8hpp.html" title=" " alt="" coords="140,93,295,133"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="183,56,207,92,202,95,178,58"/>
-<area shape="rect" id="Node000003" href="$d2/da4/display_8hpp.html" title=" " alt="" coords="5,181,200,207"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="172,143,115,183,112,179,169,139"/>
-<area shape="rect" id="Node000005" href="$db/d86/display_8cpp.html" title=" " alt="" coords="115,343,232,368"/>
-<area shape="poly" id="edge10_Node000002_Node000005" title=" " alt="" coords="240,144,257,176,271,215,276,256,273,277,265,296,253,312,238,326,205,345,203,340,235,322,249,309,260,293,267,275,270,256,266,216,252,178,235,146"/>
-<area shape="poly" id="edge8_Node000003_Node000001" title=" " alt="" coords="105,166,125,92,147,44,152,47,131,94,110,168"/>
-<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="136,172,196,131,199,136,139,176"/>
-<area shape="rect" id="Node000004" href="$d2/d99/commands_8hpp.html" title=" " alt="" coords="96,255,251,295"/>
-<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="117,216,150,253,146,256,113,219"/>
-<area shape="poly" id="edge9_Node000003_Node000005" title=" " alt="" coords="92,220,81,256,81,276,86,293,97,309,112,322,144,340,141,345,109,326,93,312,82,296,76,276,76,256,87,219"/>
-<area shape="poly" id="edge6_Node000004_Node000002" title=" " alt="" coords="192,242,209,206,216,168,216,133,221,133,221,168,215,207,197,244"/>
-<area shape="poly" id="edge5_Node000004_Node000003" title=" " alt="" coords="154,246,118,209,122,205,158,242"/>
-<area shape="poly" id="edge7_Node000004_Node000005" title=" " alt="" coords="176,308,176,342,171,342,171,308"/>
+<area shape="rect" id="Node000001" title="Reusable style specifications for drawing commands." alt="" coords="5,5,160,45"/>
+<area shape="rect" id="Node000002" href="$da/dc6/builders_8hpp.html" title="Fluent builder pattern for constructing drawing commands." alt="" coords="5,93,160,133"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="85,59,85,93,80,93,80,59"/>
+<area shape="rect" id="Node000003" href="$d2/da4/display_8hpp.html" title=" " alt="" coords="7,181,158,221"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="85,147,85,181,80,181,80,147"/>
 </map>

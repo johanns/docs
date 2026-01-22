@@ -1,6 +1,30 @@
 var searchData=
 [
-  ['2_20always_20check_20initialization_0',['2. Always Check Initialization',['../d7/d15/md_docs_2API.html#autotoc_md57',1,'']]],
-  ['2_20bits_20per_20pixel_1',['Grayscale4 Mode (2 bits per pixel)',['../d7/d15/md_docs_2API.html#autotoc_md26',1,'']]],
-  ['2_3a_20header_20file_2',['Step 2: Header File',['../db/d9c/md_docs_2DRIVER.html#autotoc_md127',1,'']]]
+  ['b_0',['b',['../d2/dcc/structepaper_1_1RGB.html#a8c5156e353268119f24951fce7cd907b',1,'epaper::RGB::b'],['../d1/d52/structepaper_1_1RGBA.html#a02fb20ffe5f02c52fb4af43cce47b04d',1,'epaper::RGBA::b']]],
+  ['b_20—_20system_20wide_20installation_1',['Option B — System-wide installation',['../index.html#option-b--system-wide-installation',1,'']]],
+  ['background_2',['background',['../d8/d5f/structepaper_1_1TextCommand.html#a234e86cdbb826517bd376e9527fba428',1,'epaper::TextCommand::background'],['../d8/dea/structepaper_1_1TextStyleSpec.html#a0cb9564059410353c3b6def15c7b344d',1,'epaper::TextStyleSpec::background'],['../dd/d72/classepaper_1_1TextBuilder.html#a5b9963d24edaac451647750f6bbe1801',1,'epaper::TextBuilder::background()']]],
+  ['bit_5fshift_3',['BIT_SHIFT',['../d8/d10/namespaceepaper_1_1Grayscale.html#a73523784ca957a9c1e5638f8f13ff2c4',1,'epaper::Grayscale']]],
+  ['bits_5fper_5fpixel_4',['bits_per_pixel',['../db/da4/namespaceepaper.html#a6675f393cf4fcae3d00ef0771b5c5314',1,'epaper']]],
+  ['black_5',['black',['../d4/d02/namespaceepaper_1_1colors.html#a8a3a75af8448e9025d76f488997fb973',1,'epaper::colors::Black'],['../db/da4/namespaceepaper.html#ad9615b5fb444523c58961bdee3aedf99ae90dfb84e30edf611e326eeb04d680de',1,'epaper::Black'],['../db/da4/namespaceepaper.html#abbcfe3e537fe42c69ae050cbfb36fcc3ae90dfb84e30edf611e326eeb04d680de',1,'epaper::Black'],['../db/da4/namespaceepaper.html#af9299df03459e4df33e258bd50abfde1ae90dfb84e30edf611e326eeb04d680de',1,'epaper::Black']]],
+  ['black_5fmask_6',['BLACK_MASK',['../d8/d10/namespaceepaper_1_1Grayscale.html#a561e2e852fe7f7544ed3c65b5ce50de2',1,'epaper::Grayscale']]],
+  ['blackwhite_7',['BlackWhite',['../db/da4/namespaceepaper.html#addab2a448119fd1ac16de67d1013d6c6a99797c685db8de83a742906e13ba653e',1,'epaper']]],
+  ['blue_8',['blue',['../d4/d02/namespaceepaper_1_1colors.html#a176dd5f34994ddc716ba3affa004f92e',1,'epaper::colors::Blue'],['../db/da4/namespaceepaper.html#af9299df03459e4df33e258bd50abfde1a9594eec95be70e7b1710f730fdda33d9',1,'epaper::Blue'],['../db/da4/namespaceepaper.html#abbcfe3e537fe42c69ae050cbfb36fcc3a9594eec95be70e7b1710f730fdda33d9',1,'epaper::Blue']]],
+  ['booster_5fconfig_9',['BOOSTER_CONFIG',['../db/da4/namespaceepaper.html#ac8a75868abdbb2c3eecda1fd1b6fc706',1,'epaper']]],
+  ['booster_5fsoft_5fstart_10',['BOOSTER_SOFT_START',['../db/da4/namespaceepaper.html#a6c5225e48086e0ca88fc79574a4000fea91f16c5a36abb149a378b1e0edba003f',1,'epaper']]],
+  ['boosterconfig_11',['BoosterConfig',['../d4/db5/structepaper_1_1BoosterConfig.html',1,'epaper']]],
+  ['border_5fwidth_12',['border_width',['../de/d11/structepaper_1_1RectangleCommand.html#abdfede357c3caba26c6ea2aaf77340c4',1,'epaper::RectangleCommand::border_width'],['../de/d4c/structepaper_1_1CircleCommand.html#a40277988bf18a860bc69775d0c19ff91',1,'epaper::CircleCommand::border_width'],['../db/d8e/structepaper_1_1ShapeStyleSpec.html#a65e883ebf0a25c6e9628f3c13b6faba9',1,'epaper::ShapeStyleSpec::border_width'],['../dc/dcc/classepaper_1_1RectangleBuilder.html#a26e579458618fb486cfc435324ad9ba8',1,'epaper::RectangleBuilder::border_width()'],['../dd/d5e/classepaper_1_1CircleBuilder.html#aa4938d9eb849759215490f24408a2b4a',1,'epaper::CircleBuilder::border_width()']]],
+  ['bottom_5fright_13',['bottom_right',['../dc/dcc/classepaper_1_1RectangleBuilder.html#a6406bba38ec119cc8f149c5f02cde0f1',1,'epaper::RectangleBuilder::bottom_right(std::size_t x, std::size_t y) noexcept -&gt; RectangleBuilder &amp;'],['../dc/dcc/classepaper_1_1RectangleBuilder.html#aa0fcee211636ff5ecc1091afae52f214',1,'epaper::RectangleBuilder::bottom_right(Point pt) noexcept -&gt; RectangleBuilder &amp;'],['../de/d11/structepaper_1_1RectangleCommand.html#a9d57763ca43b7f5916de2e0955d15b17',1,'epaper::RectangleCommand::bottom_right']]],
+  ['buffer_5fsize_14',['buffer_size',['../db/d32/classepaper_1_1MockDriver.html#ac4028bd0144558bf875f4c2e4c07e55a',1,'epaper::MockDriver::buffer_size()'],['../d9/d12/classepaper_1_1EPD27.html#a34aaa488c6e82e1a4d2966f7f677331b',1,'epaper::EPD27::buffer_size()']]],
+  ['build_15',['build',['../dd/d72/classepaper_1_1TextBuilder.html#ab2c97dbd8256a2621feb23a24817c02c',1,'epaper::TextBuilder::build()'],['../d4/df4/classepaper_1_1LineBuilder.html#acb8e6d4d4b8674c26f8cdba59c0f058a',1,'epaper::LineBuilder::build()'],['../dc/dcc/classepaper_1_1RectangleBuilder.html#a542df594d36c7c6e3d10a230c12a502c',1,'epaper::RectangleBuilder::build()'],['../dd/d5e/classepaper_1_1CircleBuilder.html#a38700b6351375fd58f46bc5350925dda',1,'epaper::CircleBuilder::build()'],['../d2/d86/classepaper_1_1PointBuilder.html#ab9e3c4fa08e5b92cac0463049a9f2861',1,'epaper::PointBuilder::build()']]],
+  ['build_20configuration_16',['⚙️ Build Configuration',['../index.html#️-build-configuration',1,'']]],
+  ['builders_2ehpp_17',['builders.hpp',['../da/dc6/builders_8hpp.html',1,'']]],
+  ['busy_18',['busy',['../d1/d76/structepaper_1_1EPD27PinConfig.html#a1079379da74fa319675b9c88481ef46b',1,'epaper::EPD27PinConfig']]],
+  ['busy_5fpoll_5fdelay_5fms_19',['BUSY_POLL_DELAY_MS',['../d3/df1/namespaceepaper_1_1Timing.html#a544ddde080f266ea436c05afb4e56d80',1,'epaper::Timing']]],
+  ['busy_5fstatus_5fmask_20',['BUSY_STATUS_MASK',['../d8/d2c/namespaceepaper_1_1DisplayOps.html#a5a9f965e8d2ce05439e7bc23092efef8',1,'epaper::DisplayOps']]],
+  ['busy_5fwait_5fdelay_5fms_21',['BUSY_WAIT_DELAY_MS',['../d3/df1/namespaceepaper_1_1Timing.html#a6b9532e5049a9739d0457eaf6a899f01',1,'epaper::Timing']]],
+  ['bw_5fmsb_5fmask_22',['BW_MSB_MASK',['../dc/d58/namespaceepaper_1_1pixel__constants.html#a9e3db21665e9b10f818bb84017d14fa9',1,'epaper::pixel_constants']]],
+  ['bw_5fpixels_5fper_5fbyte_23',['BW_PIXELS_PER_BYTE',['../dc/d58/namespaceepaper_1_1pixel__constants.html#a6328849e3a8e41ca4d6d25bd000c82a4',1,'epaper::pixel_constants']]],
+  ['bwr_24',['BWR',['../db/da4/namespaceepaper.html#addab2a448119fd1ac16de67d1013d6c6ae42ec2d43966f99823495bfbefd993e8',1,'epaper']]],
+  ['bwy_25',['BWY',['../db/da4/namespaceepaper.html#addab2a448119fd1ac16de67d1013d6c6a1fa4612327458ad88d579854a35c06cf',1,'epaper']]],
+  ['bytes_5fper_5fchar_26',['bytes_per_char',['../d7/d6c/classepaper_1_1Font.html#ab8a228a6211e714fdcf0235f690f57c7',1,'epaper::Font']]]
 ];

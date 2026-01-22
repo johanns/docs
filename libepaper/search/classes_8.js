@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['shapestylespec_0',['ShapeStyleSpec',['../db/d8e/structepaper_1_1ShapeStyleSpec.html',1,'epaper']]],
-  ['size_1',['Size',['../d6/dc6/structepaper_1_1Size.html',1,'epaper']]]
+  ['linebuilder_0',['LineBuilder',['../d4/df4/classepaper_1_1LineBuilder.html',1,'epaper']]],
+  ['linecommand_1',['LineCommand',['../dd/d2d/structepaper_1_1LineCommand.html',1,'epaper']]],
+  ['linestylespec_2',['LineStyleSpec',['../d7/dd0/structepaper_1_1LineStyleSpec.html',1,'epaper']]]
 ];

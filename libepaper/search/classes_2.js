@@ -1,14 +1,16 @@
 var searchData=
 [
-  ['device_0',['Device',['../d2/d80/classepaper_1_1Device.html',1,'epaper']]],
-  ['devicecolor_1',['DeviceColor',['../d2/d33/structepaper_1_1DeviceColor.html',1,'epaper']]],
-  ['devicecolor_3c_20colordepth_3a_3abits1_20_3e_2',['DeviceColor&lt; ColorDepth::Bits1 &gt;',['../d5/df5/structepaper_1_1DeviceColor_3_01ColorDepth_1_1Bits1_01_4.html',1,'epaper']]],
-  ['devicecolor_3c_20colordepth_3a_3abits2_20_3e_3',['DeviceColor&lt; ColorDepth::Bits2 &gt;',['../d6/d67/structepaper_1_1DeviceColor_3_01ColorDepth_1_1Bits2_01_4.html',1,'epaper']]],
-  ['devicecolor_3c_20colordepth_3a_3abits32_20_3e_4',['DeviceColor&lt; ColorDepth::Bits32 &gt;',['../d2/d12/structepaper_1_1DeviceColor_3_01ColorDepth_1_1Bits32_01_4.html',1,'epaper']]],
-  ['deviceconfig_5',['DeviceConfig',['../d6/d43/structepaper_1_1DeviceConfig.html',1,'epaper']]],
-  ['deviceimpl_6',['DeviceImpl',['../d5/daf/structepaper_1_1DeviceImpl.html',1,'epaper']]],
-  ['display_7',['Display',['../d2/da8/classepaper_1_1Display.html',1,'epaper']]],
-  ['driver_8',['Driver',['../d6/d4c/classepaper_1_1Driver.html',1,'epaper']]],
-  ['driver_5fcapabilities_9',['driver_capabilities',['../d4/d59/structepaper_1_1driver__capabilities.html',1,'epaper']]],
-  ['driver_5fcapabilities_3c_20epd27_20_3e_10',['driver_capabilities&lt; EPD27 &gt;',['../d0/dc6/structepaper_1_1driver__capabilities_3_01EPD27_01_4.html',1,'epaper']]]
+  ['delay_0',['Delay',['../dc/d2a/structepaper_1_1Device_1_1Delay.html',1,'epaper::Device']]],
+  ['device_1',['Device',['../d2/d80/classepaper_1_1Device.html',1,'epaper']]],
+  ['devicecolor_2',['DeviceColor',['../d2/d33/structepaper_1_1DeviceColor.html',1,'epaper']]],
+  ['devicecolor_3c_20displaymode_3a_3ablackwhite_20_3e_3',['DeviceColor&lt; DisplayMode::BlackWhite &gt;',['../dd/d2b/structepaper_1_1DeviceColor_3_01DisplayMode_1_1BlackWhite_01_4.html',1,'epaper']]],
+  ['devicecolor_3c_20displaymode_3a_3abwr_20_3e_4',['DeviceColor&lt; DisplayMode::BWR &gt;',['../d6/dbb/structepaper_1_1DeviceColor_3_01DisplayMode_1_1BWR_01_4.html',1,'epaper']]],
+  ['devicecolor_3c_20displaymode_3a_3abwy_20_3e_5',['DeviceColor&lt; DisplayMode::BWY &gt;',['../d6/d9b/structepaper_1_1DeviceColor_3_01DisplayMode_1_1BWY_01_4.html',1,'epaper']]],
+  ['devicecolor_3c_20displaymode_3a_3agrayscale4_20_3e_6',['DeviceColor&lt; DisplayMode::Grayscale4 &gt;',['../dc/d2c/structepaper_1_1DeviceColor_3_01DisplayMode_1_1Grayscale4_01_4.html',1,'epaper']]],
+  ['devicecolor_3c_20displaymode_3a_3aspectra6_20_3e_7',['DeviceColor&lt; DisplayMode::Spectra6 &gt;',['../db/d5f/structepaper_1_1DeviceColor_3_01DisplayMode_1_1Spectra6_01_4.html',1,'epaper']]],
+  ['deviceconfig_8',['DeviceConfig',['../d6/d43/structepaper_1_1DeviceConfig.html',1,'epaper']]],
+  ['display_9',['Display',['../d2/da8/classepaper_1_1Display.html',1,'epaper']]],
+  ['driver_5ftraits_10',['driver_traits',['../df/d53/structepaper_1_1driver__traits.html',1,'epaper']]],
+  ['driver_5ftraits_3c_20epd27_20_3e_11',['driver_traits&lt; EPD27 &gt;',['../d7/dc5/structepaper_1_1driver__traits_3_01EPD27_01_4.html',1,'epaper']]],
+  ['driver_5ftraits_3c_20mockdriver_20_3e_12',['driver_traits&lt; MockDriver &gt;',['../d8/d02/structepaper_1_1driver__traits_3_01MockDriver_01_4.html',1,'epaper']]]
 ];

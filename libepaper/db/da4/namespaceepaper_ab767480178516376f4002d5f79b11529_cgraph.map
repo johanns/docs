@@ -1,0 +1,5 @@
+<map id="epaper::get_pixel_grayscale4" name="epaper::get_pixel_grayscale4">
+<area shape="rect" id="Node000001" title="Read a pixel from a Grayscale4 mode buffer." alt="" coords="5,13,217,38"/>
+<area shape="rect" id="Node000002" href="$db/da4/namespaceepaper.html#abafb91a7fff12d6ce6ce287bdedfc14b" title="Calculate byte index and pixel shift for Grayscale4 mode pixel." alt="" coords="265,5,436,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="218,23,252,23,252,28,218,28"/>
+</map>

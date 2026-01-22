@@ -1,0 +1,9 @@
+<map id="epaper::MultiPlaneFramebuffer::supports_mode" name="epaper::MultiPlaneFramebuffer::supports_mode">
+<area shape="rect" id="Node000001" title="Check if the mode is compatible with this plane count." alt="" coords="5,63,228,103"/>
+<area shape="rect" id="Node000002" href="$d2/d17/classepaper_1_1MultiPlaneFramebuffer.html#ac4966f839980c1090b9cd21a674e02b8" title="Get display mode represented by this framebuffer." alt="" coords="276,5,499,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="211,60,278,46,279,51,212,65"/>
+<area shape="rect" id="Node000003" href="$db/da4/namespaceepaper.html#a178373f48ebb1e304875d769e7f3a2b0" title="Get number of color planes required for a display mode." alt="" coords="310,70,465,95"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="228,80,296,80,296,85,228,85"/>
+<area shape="rect" id="Node000004" href="$d8/d53/namespaceepaper_1_1internal.html#a0ff84ee58d91880a461575ee09e6c6a7" title=" " alt="" coords="303,120,472,160"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="212,100,290,117,289,122,211,105"/>
+</map>

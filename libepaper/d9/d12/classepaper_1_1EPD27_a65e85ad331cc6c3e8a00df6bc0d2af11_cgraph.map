@@ -1,0 +1,18 @@
+<map id="epaper::EPD27::display_planes" name="epaper::EPD27::display_planes">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,37,177,77"/>
+<area shape="rect" id="Node000002" href="$d9/d12/classepaper_1_1EPD27.html#afcb6e8be946d3d9d00b4ef55aa8a2b03" title=" " alt="" coords="225,19,397,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="178,45,212,41,212,46,178,50"/>
+<area shape="rect" id="Node000005" href="$d9/d12/classepaper_1_1EPD27.html#acbd2ec955ae6cd627ca2359f48d0773b" title=" " alt="" coords="449,70,608,95"/>
+<area shape="poly" id="edge8_Node000001_Node000005" title=" " alt="" coords="178,60,436,75,436,80,177,65"/>
+<area shape="rect" id="Node000003" href="$dc/d2a/structepaper_1_1Device_1_1Delay.html#a37d4e33cd112cd696e5d2c85593c38dd" title=" " alt="" coords="445,5,612,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="397,27,432,26,432,31,398,32"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="367,42,461,64,460,69,366,47"/>
+<area shape="rect" id="Node000004" href="$d2/d80/classepaper_1_1Device.html#a1a61a7f894638eec3f6d9e0c2129bfed" title=" " alt="" coords="660,13,851,38"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="612,23,646,23,646,28,612,28"/>
+<area shape="rect" id="Node000006" href="$d9/d12/classepaper_1_1EPD27.html#a3d06392f4376dfeacc0b9d5f5152e074" title=" " alt="" coords="682,70,829,95"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="608,80,668,80,668,85,608,85"/>
+<area shape="rect" id="Node000007" href="$db/da4/namespaceepaper.html#a1ff77c9e043c0eb628f1aeb932f9f459" title="Check if mode supports color (non&#45;grayscale)." alt="" coords="899,45,1068,70"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="829,72,885,66,885,71,830,77"/>
+<area shape="rect" id="Node000008" href="$d9/d12/classepaper_1_1EPD27.html#a0bc10082ed844da4381a040a9fda9daf" title=" " alt="" coords="902,94,1065,119"/>
+<area shape="poly" id="edge7_Node000006_Node000008" title=" " alt="" coords="829,88,889,94,888,99,829,93"/>
+</map>

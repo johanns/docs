@@ -1,6 +1,0 @@
-<map id="epaper::Framebuffer::Framebuffer" name="epaper::Framebuffer::Framebuffer">
-<area shape="rect" id="Node000001" title="Construct framebuffer for a driver." alt="" coords="5,22,160,62"/>
-<area shape="rect" id="Node000002" href="$db/da4/namespaceepaper.html#ae87c16acc02a64356214d15caff24201" title=" " alt="" coords="208,29,379,55"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="160,39,194,39,194,45,160,45"/>
-<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="259,31,251,21,255,11,270,5,293,3,323,6,334,15,331,20,321,11,293,8,271,10,259,15,257,20,263,28"/>
-</map>

@@ -1,0 +1,13 @@
+<map id="epaper::ColorManager::to_rgb" name="epaper::ColorManager::to_rgb">
+<area shape="rect" id="Node000001" title="Convert Color enum to RGB." alt="" coords="547,69,713,109"/>
+<area shape="rect" id="Node000002" href="$d2/d17/classepaper_1_1MultiPlaneFramebuffer.html#a382ceea501c1994ca70dcb6e26a4ba55" title="Clear the framebuffer to a color." alt="" coords="276,5,499,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="540,68,463,48,464,43,541,63"/>
+<area shape="rect" id="Node000004" href="$dc/dd2/classepaper_1_1ImageIO.html#af8fe54d1adaf65835a57caf0e50734d8" title=" " alt="" coords="280,69,495,109"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="533,92,495,92,495,87,533,87"/>
+<area shape="rect" id="Node000006" href="$d2/d17/classepaper_1_1MultiPlaneFramebuffer.html#a58ab8c417b59ab5549afe5e59fb7a28d" title="Set a pixel with orientation transform." alt="" coords="276,133,499,173"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="541,115,464,136,463,131,540,110"/>
+<area shape="rect" id="Node000003" href="$d2/d17/classepaper_1_1MultiPlaneFramebuffer.html#a2250d196ae8da775aab8e0ba6a1d822f" title="Construct a multi&#45;plane framebuffer." alt="" coords="5,5,228,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="262,28,228,28,228,23,262,23"/>
+<area shape="rect" id="Node000005" href="$d2/da8/classepaper_1_1Display.html#a82c884c14aa8b25cf8c43d0c9cf63c59" title=" " alt="" coords="35,69,198,109"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="266,92,198,92,198,87,266,87"/>
+</map>

@@ -1,0 +1,15 @@
+<map id="include/epaper/hal/gpio.hpp" name="include/epaper/hal/gpio.hpp">
+<area shape="rect" id="Node000001" title="GPIO pin concepts for hardware abstraction." alt="" coords="372,5,515,45"/>
+<area shape="rect" id="Node000002" href="$d5/d08/device_8hpp.html" title=" " alt="" coords="283,93,433,133"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="417,57,379,95,375,91,413,53"/>
+<area shape="rect" id="Node000007" href="$d9/d58/mock__pin_8hpp.html" title=" " alt="" coords="457,93,600,133"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="474,53,512,91,508,95,470,57"/>
+<area shape="rect" id="Node000003" href="$d2/da4/display_8hpp.html" title=" " alt="" coords="5,181,156,221"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="285,140,142,184,141,179,284,135"/>
+<area shape="rect" id="Node000004" href="$d1/d76/epd27_8hpp.html" title=" " alt="" coords="180,181,347,221"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="329,145,286,183,282,179,325,141"/>
+<area shape="rect" id="Node000005" href="$dc/da1/mock__driver_8hpp.html" title=" " alt="" coords="371,181,537,221"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="391,141,435,179,431,183,388,145"/>
+<area shape="rect" id="Node000006" href="$d3/dd4/device_8cpp.html" title=" " alt="" coords="562,189,677,214"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="429,135,585,186,584,191,428,140"/>
+</map>

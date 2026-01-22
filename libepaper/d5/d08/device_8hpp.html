@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>libepaper: include/epaper/device.hpp File Reference</title>
+<title>libepaper: include/epaper/core/device.hpp File Reference</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -70,7 +70,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="../../dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="../../dir_8be0177ccea84a4174c5b41428df88d0.html">epaper</a></li>  </ul>
+<li class="navelem"><a class="el" href="../../dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="../../dir_8be0177ccea84a4174c5b41428df88d0.html">epaper</a></li><li class="navelem"><a class="el" href="../../dir_a21429905a1840e61073a0d6e200290f.html">core</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -80,63 +80,63 @@ $(function() {
   <div class="headertitle"><div class="title">device.hpp File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="../../df/d52/errors_8hpp_source.html">epaper/errors.hpp</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="../../df/d52/errors_8hpp_source.html">epaper/core/errors.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d1/d2c/gpio_8hpp_source.html">epaper/hal/gpio.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d7/de4/spi_8hpp_source.html">epaper/hal/spi.hpp</a>&quot;</code><br />
 <code>#include &lt;cstdint&gt;</code><br />
 <code>#include &lt;expected&gt;</code><br />
-<code>#include &lt;memory&gt;</code><br />
+<code>#include &lt;gpiod.h&gt;</code><br />
 <code>#include &lt;span&gt;</code><br />
 <code>#include &lt;string&gt;</code><br />
+<code>#include &lt;unordered_map&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for device.hpp:</div>
 <div class="dyncontent">
-<div class="center"><img src="../../d8/d53/device_8hpp__incl.png" border="0" usemap="#ainclude_2epaper_2device_8hpp" alt=""/></div>
-<map name="ainclude_2epaper_2device_8hpp" id="ainclude_2epaper_2device_8hpp">
-<area shape="rect" title=" " alt="" coords="218,5,411,31"/>
-<area shape="rect" href="../../df/d52/errors_8hpp.html" title=" " alt="" coords="70,79,207,104"/>
-<area shape="poly" title=" " alt="" coords="287,33,181,76,179,71,285,28"/>
-<area shape="rect" title=" " alt="" coords="5,152,64,177"/>
-<area shape="poly" title=" " alt="" coords="221,33,125,52,85,65,59,81,50,93,43,108,37,139,32,138,38,106,45,90,56,77,83,61,123,47,220,28"/>
-<area shape="rect" title=" " alt="" coords="232,79,299,104"/>
-<area shape="poly" title=" " alt="" coords="309,33,283,69,279,66,304,29"/>
-<area shape="rect" title=" " alt="" coords="323,79,405,104"/>
-<area shape="poly" title=" " alt="" coords="325,29,350,66,346,69,321,33"/>
-<area shape="rect" title=" " alt="" coords="429,79,507,104"/>
-<area shape="poly" title=" " alt="" coords="340,28,432,70,430,75,338,33"/>
-<area shape="rect" title=" " alt="" coords="531,79,584,104"/>
-<area shape="poly" title=" " alt="" coords="355,28,518,76,517,81,353,33"/>
-<area shape="poly" title=" " alt="" coords="123,106,65,146,62,142,120,102"/>
-<area shape="rect" title=" " alt="" coords="90,152,187,177"/>
-<area shape="poly" title=" " alt="" coords="141,104,141,138,136,138,136,104"/>
+<div class="center"><img src="../../d8/d53/device_8hpp__incl.png" border="0" usemap="#ainclude_2epaper_2core_2device_8hpp" alt=""/></div>
+<map name="ainclude_2epaper_2core_2device_8hpp" id="ainclude_2epaper_2core_2device_8hpp">
+<area shape="rect" title=" " alt="" coords="478,5,629,45"/>
+<area shape="rect" href="../../df/d52/errors_8hpp.html" title=" " alt="" coords="62,93,231,119"/>
+<area shape="poly" title=" " alt="" coords="478,44,220,93,219,88,477,39"/>
+<area shape="rect" title=" " alt="" coords="5,167,64,192"/>
+<area shape="poly" title=" " alt="" coords="478,29,366,32,239,41,179,50,125,61,81,76,51,95,42,107,37,122,34,153,29,152,32,121,38,105,48,91,79,72,123,56,178,44,239,36,366,26,478,23"/>
+<area shape="rect" href="../../d1/d2c/gpio_8hpp.html" title="GPIO pin concepts for hardware abstraction." alt="" coords="255,93,406,119"/>
+<area shape="poly" title=" " alt="" coords="501,48,377,91,376,86,499,43"/>
+<area shape="rect" href="../../d7/de4/spi_8hpp.html" title="SPI bus concept for hardware abstraction." alt="" coords="482,93,625,119"/>
+<area shape="poly" title=" " alt="" coords="556,46,556,79,551,79,551,46"/>
+<area shape="rect" title=" " alt="" coords="423,167,489,192"/>
+<area shape="poly" title=" " alt="" coords="521,48,495,68,473,95,462,124,458,153,453,152,457,122,468,92,491,64,518,43"/>
+<area shape="rect" title=" " alt="" coords="581,167,635,192"/>
+<area shape="poly" title=" " alt="" coords="592,43,619,64,640,92,644,109,642,126,628,156,623,154,637,124,638,109,635,94,615,68,589,48"/>
+<area shape="rect" title=" " alt="" coords="700,93,783,119"/>
+<area shape="poly" title=" " alt="" coords="599,43,702,85,700,90,597,48"/>
+<area shape="rect" title=" " alt="" coords="807,93,878,119"/>
+<area shape="poly" title=" " alt="" coords="623,43,795,89,793,94,622,48"/>
+<area shape="rect" title=" " alt="" coords="902,93,1026,119"/>
+<area shape="poly" title=" " alt="" coords="630,38,891,88,890,93,629,44"/>
+<area shape="poly" title=" " alt="" coords="130,121,66,161,63,157,127,116"/>
+<area shape="rect" title=" " alt="" coords="98,167,195,192"/>
+<area shape="poly" title=" " alt="" coords="149,119,149,153,144,153,144,119"/>
+<area shape="rect" title=" " alt="" coords="299,167,379,192"/>
+<area shape="poly" title=" " alt="" coords="335,119,339,153,333,153,329,119"/>
+<area shape="poly" title=" " alt="" coords="520,121,387,165,386,160,518,116"/>
+<area shape="poly" title=" " alt="" coords="539,121,485,160,482,156,536,117"/>
+<area shape="poly" title=" " alt="" coords="564,117,593,154,589,157,560,121"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
-<div class="center"><img src="../../d3/d43/device_8hpp__dep__incl.png" border="0" usemap="#ainclude_2epaper_2device_8hppdep" alt=""/></div>
-<map name="ainclude_2epaper_2device_8hppdep" id="ainclude_2epaper_2device_8hppdep">
-<area shape="rect" title=" " alt="" coords="421,5,614,31"/>
-<area shape="rect" href="../../d2/da4/display_8hpp.html" title=" " alt="" coords="190,86,384,111"/>
-<area shape="poly" title=" " alt="" coords="472,38,321,89,320,83,470,33"/>
-<area shape="rect" href="../../d1/d76/epd27_8hpp.html" title=" " alt="" coords="434,79,601,119"/>
-<area shape="poly" title=" " alt="" coords="520,44,520,79,515,79,515,44"/>
-<area shape="rect" href="../../d3/dd4/device_8cpp.html" title=" " alt="" coords="626,86,740,111"/>
-<area shape="poly" title=" " alt="" coords="555,34,660,84,658,88,553,39"/>
-<area shape="rect" href="../../da/dc6/builders_8hpp.html" title=" " alt="" coords="210,255,364,295"/>
-<area shape="poly" title=" " alt="" coords="317,116,344,137,367,165,373,187,367,208,345,236,318,257,315,252,341,232,362,205,368,187,362,168,341,141,314,120"/>
-<area shape="rect" href="../../db/d86/display_8cpp.html" title=" " alt="" coords="50,343,167,368"/>
-<area shape="poly" title=" " alt="" coords="178,116,82,137,44,151,21,168,10,190,9,214,16,239,29,264,64,308,96,341,93,344,60,312,24,266,11,241,4,215,5,189,17,165,42,147,81,132,177,111"/>
-<area shape="rect" href="../../d2/d99/commands_8hpp.html" title=" " alt="" coords="31,167,186,207"/>
-<area shape="poly" title=" " alt="" coords="245,119,141,169,139,164,243,115"/>
-<area shape="rect" href="../../d6/d6f/styles_8hpp.html" title=" " alt="" coords="210,167,364,207"/>
-<area shape="poly" title=" " alt="" coords="290,125,290,166,284,166,284,125"/>
-<area shape="poly" title=" " alt="" coords="348,245,370,228,386,205,392,187,386,168,374,150,358,136,322,114,324,109,361,131,378,147,391,166,397,187,391,208,373,231,351,249"/>
-<area shape="poly" title=" " alt="" coords="233,303,136,345,134,340,231,298"/>
-<area shape="poly" title=" " alt="" coords="166,159,268,109,270,114,169,163"/>
-<area shape="poly" title=" " alt="" coords="161,210,249,252,247,257,159,215"/>
-<area shape="poly" title=" " alt="" coords="111,221,111,343,106,343,106,221"/>
-<area shape="poly" title=" " alt="" coords="290,221,290,254,284,254,284,221"/>
-<area shape="rect" href="../../d8/d1c/epd27_8cpp.html" title=" " alt="" coords="464,174,625,199"/>
-<area shape="poly" title=" " alt="" coords="530,131,543,173,538,174,525,133"/>
+<div class="center"><img src="../../d3/d43/device_8hpp__dep__incl.png" border="0" usemap="#ainclude_2epaper_2core_2device_8hppdep" alt=""/></div>
+<map name="ainclude_2epaper_2core_2device_8hppdep" id="ainclude_2epaper_2core_2device_8hppdep">
+<area shape="rect" title=" " alt="" coords="283,5,433,45"/>
+<area shape="rect" href="../../d2/da4/display_8hpp.html" title=" " alt="" coords="5,93,156,133"/>
+<area shape="poly" title=" " alt="" coords="285,52,142,96,141,91,284,47"/>
+<area shape="rect" href="../../d1/d76/epd27_8hpp.html" title=" " alt="" coords="180,93,347,133"/>
+<area shape="poly" title=" " alt="" coords="329,57,286,95,282,91,325,53"/>
+<area shape="rect" href="../../dc/da1/mock__driver_8hpp.html" title=" " alt="" coords="371,93,537,133"/>
+<area shape="poly" title=" " alt="" coords="391,53,435,91,431,95,388,57"/>
+<area shape="rect" href="../../d3/dd4/device_8cpp.html" title=" " alt="" coords="562,101,677,126"/>
+<area shape="poly" title=" " alt="" coords="429,47,585,98,584,103,428,52"/>
 </map>
 </div>
 </div>
@@ -148,15 +148,23 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d43/structepaper_1_1DeviceConfig.html">epaper::DeviceConfig</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d8d/structepaper_1_1PinConfig.html">epaper::PinConfig</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../d5/d68/classepaper_1_1Pin.html">Pin</a> configuration tracking (internal use).  <a href="../../d3/d8d/structepaper_1_1PinConfig.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d80/classepaper_1_1Device.html">epaper::Device</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">RAII wrapper for GPIO and SPI device access.  <a href="../../d2/d80/classepaper_1_1Device.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d2a/structepaper_1_1Device_1_1Delay.html">epaper::Device::Delay</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d10/classepaper_1_1Device_1_1HalOutput.html">epaper::Device::HalOutput</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d66/classepaper_1_1Device_1_1HalInput.html">epaper::Device::HalInput</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d10/classepaper_1_1Device_1_1HalSpi.html">epaper::Device::HalSpi</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
 Namespaces</h2></td></tr>
 <tr class="memitem:db/da4/namespaceepaper" id="r_db/da4/namespaceepaper"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/da4/namespaceepaper.html">epaper</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:d0/d60/namespaceepaper_1_1pins" id="r_d0/d60/namespaceepaper_1_1pins"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d60/namespaceepaper_1_1pins.html">epaper::pins</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->

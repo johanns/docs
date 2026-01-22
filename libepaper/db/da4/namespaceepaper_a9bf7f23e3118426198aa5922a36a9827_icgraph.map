@@ -1,0 +1,5 @@
+<map id="epaper::rgb_to_color_grayscale4" name="epaper::rgb_to_color_grayscale4">
+<area shape="rect" id="Node000001" title="Convert RGB to Color for 4&#45;level grayscale mode." alt="" coords="208,5,363,45"/>
+<area shape="rect" id="Node000002" href="$db/da4/namespaceepaper.html#a2ef4e936d7c87a87ef7901e2028d44e2" title="Convert RGB to Color based on display mode." alt="" coords="5,13,160,38"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="194,28,161,28,161,23,194,23"/>
+</map>

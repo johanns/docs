@@ -1,0 +1,9 @@
+<map id="include/epaper/hal/mock_pin.hpp" name="include/epaper/hal/mock_pin.hpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="76,5,219,45"/>
+<area shape="rect" id="Node000002" href="$d1/d2c/gpio_8hpp.html" title="GPIO pin concepts for hardware abstraction." alt="" coords="5,93,156,119"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="133,47,101,84,97,81,129,44"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="180,93,251,119"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="166,44,198,81,194,84,162,47"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="41,167,121,192"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="83,119,83,153,78,153,78,119"/>
+</map>

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['textcontent_0',['TextContent',['../db/da4/namespaceepaper.html#a2dc59c06f0407a252a87915d83a14570',1,'epaper']]]
+  ['planecount_0',['PlaneCount',['../d8/d53/namespaceepaper_1_1internal.html#ada18b3f4763892dfa24844ab49a61697',1,'epaper::internal']]]
 ];

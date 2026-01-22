@@ -1,0 +1,5 @@
+<map id="epaper::Graphics::draw_rectangle" name="epaper::Graphics::draw_rectangle">
+<area shape="rect" id="Node000001" title="Draw a rectangle on the framebuffer." alt="" coords="216,5,388,45"/>
+<area shape="rect" id="Node000002" href="$d2/da8/classepaper_1_1Display.html#a32d8169ec838375048653289ad1f04ad" title=" " alt="" coords="5,13,168,38"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="202,28,168,28,168,23,202,23"/>
+</map>

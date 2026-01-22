@@ -1,0 +1,14 @@
+<map id="epaper::EPD27::mode" name="epaper::EPD27::mode">
+<area shape="rect" id="Node000001" title=" " alt="" coords="847,55,1009,80"/>
+<area shape="rect" id="Node000002" href="$d9/d12/classepaper_1_1EPD27.html#a3d06392f4376dfeacc0b9d5f5152e074" title=" " alt="" coords="652,55,799,80"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="833,70,799,70,799,65,833,65"/>
+<area shape="rect" id="Node000003" href="$d9/d12/classepaper_1_1EPD27.html#acbd2ec955ae6cd627ca2359f48d0773b" title=" " alt="" coords="445,55,604,80"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="639,70,604,70,604,65,639,65"/>
+<area shape="rect" id="Node000004" href="$d9/d12/classepaper_1_1EPD27.html#a08e270369e4451fa17002e654c05d6ce" title=" " alt="" coords="233,5,390,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="455,54,366,33,368,28,456,49"/>
+<area shape="rect" id="Node000005" href="$d9/d12/classepaper_1_1EPD27.html#afcb6e8be946d3d9d00b4ef55aa8a2b03" title=" " alt="" coords="225,55,397,80"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="431,70,398,70,398,65,431,65"/>
+<area shape="rect" id="Node000006" href="$d9/d12/classepaper_1_1EPD27.html#a65e85ad331cc6c3e8a00df6bc0d2af11" title=" " alt="" coords="5,73,177,113"/>
+<area shape="poly" id="edge6_Node000003_Node000006" title=" " alt="" coords="456,85,398,94,283,100,178,99,178,94,283,95,397,89,455,80"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="212,81,178,85,177,80,211,76"/>
+</map>

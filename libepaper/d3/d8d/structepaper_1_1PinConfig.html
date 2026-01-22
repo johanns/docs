@@ -80,17 +80,26 @@ $(function() {
   <div class="headertitle"><div class="title">epaper::PinConfig Struct Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p><a class="el" href="../../d5/d68/classepaper_1_1Pin.html">Pin</a> configuration tracking (internal use).  
+ <a href="../../d3/d8d/structepaper_1_1PinConfig.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="../../d5/d08/device_8hpp_source.html">device.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:ac9753c6ad741fa7da05d9aec94e07200" id="r_ac9753c6ad741fa7da05d9aec94e07200"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/da4/namespaceepaper.html#ae87c16acc02a64356214d15caff24201">unsigned</a> <a class="el" href="../../db/da4/namespaceepaper.html#ae87c16acc02a64356214d15caff24201">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d8d/structepaper_1_1PinConfig.html#ac9753c6ad741fa7da05d9aec94e07200">offset</a></td></tr>
+<tr class="memitem:ac9753c6ad741fa7da05d9aec94e07200" id="r_ac9753c6ad741fa7da05d9aec94e07200"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d8d/structepaper_1_1PinConfig.html#ac9753c6ad741fa7da05d9aec94e07200">offset</a></td></tr>
 <tr class="separator:ac9753c6ad741fa7da05d9aec94e07200"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2eff49c00430f9888fd15ba4ec39e292" id="r_a2eff49c00430f9888fd15ba4ec39e292"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/da4/namespaceepaper.html#ae87c16acc02a64356214d15caff24201">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d8d/structepaper_1_1PinConfig.html#a2eff49c00430f9888fd15ba4ec39e292">is_output</a></td></tr>
+<tr class="memitem:a2eff49c00430f9888fd15ba4ec39e292" id="r_a2eff49c00430f9888fd15ba4ec39e292"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d8d/structepaper_1_1PinConfig.html#a2eff49c00430f9888fd15ba4ec39e292">is_output</a></td></tr>
 <tr class="separator:a2eff49c00430f9888fd15ba4ec39e292"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa489ad9c302c45cf16f8256d90a25822" id="r_aa489ad9c302c45cf16f8256d90a25822"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/da4/namespaceepaper.html#ae87c16acc02a64356214d15caff24201">enum</a> <a class="el" href="../../db/da4/namespaceepaper.html#ae87c16acc02a64356214d15caff24201">gpiod_line_value</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d8d/structepaper_1_1PinConfig.html#aa489ad9c302c45cf16f8256d90a25822">initial_value</a></td></tr>
+<tr class="memitem:aa489ad9c302c45cf16f8256d90a25822" id="r_aa489ad9c302c45cf16f8256d90a25822"><td class="memItemLeft" align="right" valign="top">enum gpiod_line_value&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d8d/structepaper_1_1PinConfig.html#aa489ad9c302c45cf16f8256d90a25822">initial_value</a></td></tr>
 <tr class="separator:aa489ad9c302c45cf16f8256d90a25822"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Data Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p><a class="el" href="../../d5/d68/classepaper_1_1Pin.html">Pin</a> configuration tracking (internal use). </p>
+<p>Stores per-pin state for reconstructing libgpiod line requests. This is an implementation detail of the dynamic pin configuration system - users do not interact with <a class="el" href="../../d3/d8d/structepaper_1_1PinConfig.html" title="Pin configuration tracking (internal use).">PinConfig</a> directly.</p>
+<dl class="section note"><dt>Note</dt><dd>libgpiod v2 requires all pins to be requested in a single batch. <a class="el" href="../../d3/d8d/structepaper_1_1PinConfig.html" title="Pin configuration tracking (internal use).">PinConfig</a> enables rebuilding requests when pins are added. </dd></dl>
+</div><h2 class="groupheader">Member Data Documentation</h2>
 <a id="aa489ad9c302c45cf16f8256d90a25822" name="aa489ad9c302c45cf16f8256d90a25822"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa489ad9c302c45cf16f8256d90a25822">&#9670;&#160;</a></span>initial_value</h2>
 
@@ -98,10 +107,12 @@ Public Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../db/da4/namespaceepaper.html#ae87c16acc02a64356214d15caff24201">enum</a> <a class="el" href="../../db/da4/namespaceepaper.html#ae87c16acc02a64356214d15caff24201">gpiod_line_value</a> epaper::PinConfig::initial_value</td>
+          <td class="memname">enum gpiod_line_value epaper::PinConfig::initial_value</td>
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="../../d1/d74/_2mnt_2nas_2libepaper_2include_2epaper_2core_2device_8hpp-example.html#a6">/mnt/nas/libepaper/include/epaper/core/device.hpp</a>.</dd>
+</dl>
 
 </div>
 </div>
@@ -112,10 +123,12 @@ Public Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../db/da4/namespaceepaper.html#ae87c16acc02a64356214d15caff24201">bool</a> epaper::PinConfig::is_output</td>
+          <td class="memname">bool epaper::PinConfig::is_output</td>
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="../../d1/d74/_2mnt_2nas_2libepaper_2include_2epaper_2core_2device_8hpp-example.html#a5">/mnt/nas/libepaper/include/epaper/core/device.hpp</a>.</dd>
+</dl>
 
 </div>
 </div>
@@ -126,15 +139,17 @@ Public Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../db/da4/namespaceepaper.html#ae87c16acc02a64356214d15caff24201">unsigned</a> <a class="el" href="../../db/da4/namespaceepaper.html#ae87c16acc02a64356214d15caff24201">int</a> epaper::PinConfig::offset</td>
+          <td class="memname">unsigned int epaper::PinConfig::offset</td>
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="../../d1/d74/_2mnt_2nas_2libepaper_2include_2epaper_2core_2device_8hpp-example.html#a4">/mnt/nas/libepaper/include/epaper/core/device.hpp</a>.</dd>
+</dl>
 
 </div>
 </div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
-<li>src/<a class="el" href="../../d3/dd4/device_8cpp.html">device.cpp</a></li>
+<li>include/epaper/core/<a class="el" href="../../d5/d08/device_8hpp_source.html">device.hpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

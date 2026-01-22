@@ -1,0 +1,9 @@
+<map id="epaper::Display::refresh" name="epaper::Display::refresh">
+<area shape="rect" id="Node000001" title="Refresh the display by transferring framebuffer to hardware." alt="" coords="5,31,183,56"/>
+<area shape="rect" id="Node000002" href="$d2/da8/classepaper_1_1Display.html#a4991f39a4f2336bd34ee1fad95aec27b" title=" " alt="" coords="231,23,383,63"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="183,41,217,41,217,46,183,46"/>
+<area shape="rect" id="Node000003" href="$d2/da8/classepaper_1_1Display.html#aea121670a99df8829b9e4a5af4cff045" title=" " alt="" coords="431,5,599,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="382,31,417,27,417,33,383,37"/>
+<area shape="rect" id="Node000004" href="$db/da4/namespaceepaper.html#a178373f48ebb1e304875d769e7f3a2b0" title="Get number of color planes required for a display mode." alt="" coords="437,55,592,80"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="383,49,424,54,423,60,382,55"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="epaper::set_pixel_spectra6" name="epaper::set_pixel_spectra6">
+<area shape="rect" id="Node000001" title="Write a pixel to a Spectra6 mode buffer." alt="" coords="205,13,401,38"/>
+<area shape="rect" id="Node000002" href="$db/da4/namespaceepaper.html#a7dfc54379ce54b633094016b0999396c" title="Write a pixel to a buffer based on display mode." alt="" coords="5,5,157,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="192,28,158,28,158,23,192,23"/>
+</map>

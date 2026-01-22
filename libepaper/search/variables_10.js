@@ -7,7 +7,7 @@ var searchData=
   ['val5_4',['VAL5',['../d6/d82/namespaceepaper_1_1PowerOptimization.html#af3b050f687a766e60bd9f4fa4488f670',1,'epaper::PowerOptimization']]],
   ['val6_5',['VAL6',['../d6/d82/namespaceepaper_1_1PowerOptimization.html#a79754a035677f72af64c6aa2f3bf043a',1,'epaper::PowerOptimization']]],
   ['val7_6',['VAL7',['../d6/d82/namespaceepaper_1_1PowerOptimization.html#a11deaf5c9061ce6886d1d870d5df3e5e',1,'epaper::PowerOptimization']]],
-  ['value_7',['value',['../d2/d33/structepaper_1_1DeviceColor.html#a4aa2caad5a11c6ee8031826f49ace987',1,'epaper::DeviceColor']]],
+  ['value_7',['value',['../d2/d33/structepaper_1_1DeviceColor.html#af5159ed628fddc3f5829a4981c77a7f0',1,'epaper::DeviceColor']]],
   ['vcm_5fdc_5fsetting_5fvalue_8',['VCM_DC_SETTING_VALUE',['../d6/dd1/namespaceepaper_1_1PanelConfig.html#a31e9cbf2013f27ebad41e52d325c3782',1,'epaper::PanelConfig']]],
   ['vcom_5fdata_5finterval_5fgrayscale_9',['VCOM_DATA_INTERVAL_GRAYSCALE',['../d8/d2c/namespaceepaper_1_1DisplayOps.html#a604b0f4959ef38e14a1f77dcf1ecceca',1,'epaper::DisplayOps']]],
   ['vcom_5fhv_5fvghl_5flv_10',['vcom_hv_vghl_lv',['../d9/d35/structepaper_1_1PowerConfig.html#adc7550719699d4ddaffb8968629aa9b3',1,'epaper::PowerConfig']]],

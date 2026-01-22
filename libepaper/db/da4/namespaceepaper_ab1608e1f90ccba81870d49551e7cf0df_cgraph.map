@@ -1,0 +1,7 @@
+<map id="epaper::get_pixel_spectra6" name="epaper::get_pixel_spectra6">
+<area shape="rect" id="Node000001" title="Read a pixel from a Spectra6 mode buffer." alt="" coords="5,45,203,70"/>
+<area shape="rect" id="Node000002" href="$db/da4/namespaceepaper.html#ad5b50614af9eb4ad30b2bd73821d9569" title="Calculate byte index and bit offset for Spectra6 (3&#45;bit) mode pixel." alt="" coords="251,5,448,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="201,42,237,37,237,43,202,47"/>
+<area shape="rect" id="Node000003" href="$db/da4/namespaceepaper.html#a217b54263ee640cb4908eb40f34336f3" title="Convert a 3&#45;bit Spectra6 value to Color." alt="" coords="262,69,437,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="202,67,249,74,248,79,201,73"/>
+</map>

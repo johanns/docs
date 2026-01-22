@@ -1,8 +1,0 @@
-<map id="epaper::Display::Display" name="epaper::Display::Display">
-<area shape="rect" id="Node000001" title="Constructs a Display with an existing driver." alt="" coords="5,29,185,55"/>
-<area shape="rect" id="Node000002" href="$d2/da8/classepaper_1_1Display.html#a1656f9bdd5b7b9eb77c198e0ee8e578d" title="Clear entire display to specified color." alt="" coords="233,29,396,55"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="185,39,219,39,219,45,185,45"/>
-<area shape="rect" id="Node000003" href="$db/da4/namespaceepaper.html#ae87c16acc02a64356214d15caff24201" title=" " alt="" coords="444,29,615,55"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="396,39,430,39,430,45,396,45"/>
-<area shape="poly" id="edge3_Node000003_Node000003" title=" " alt="" coords="494,31,487,21,491,11,505,5,529,3,559,6,571,15,568,20,557,11,529,8,507,10,495,15,492,20,499,28"/>
-</map>

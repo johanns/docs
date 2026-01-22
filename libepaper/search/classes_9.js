@@ -1,6 +1,10 @@
 var searchData=
 [
-  ['textbuilder_0',['TextBuilder',['../dd/d72/classepaper_1_1TextBuilder.html',1,'epaper']]],
-  ['textcommand_1',['TextCommand',['../d8/d5f/structepaper_1_1TextCommand.html',1,'epaper']]],
-  ['textstylespec_2',['TextStyleSpec',['../d8/dea/structepaper_1_1TextStyleSpec.html',1,'epaper']]]
+  ['mockdelay_0',['MockDelay',['../da/d11/classepaper_1_1hal_1_1MockDelay.html',1,'epaper::hal']]],
+  ['mockdriver_1',['MockDriver',['../db/d32/classepaper_1_1MockDriver.html',1,'epaper']]],
+  ['mockinputpin_2',['MockInputPin',['../d7/d19/classepaper_1_1hal_1_1MockInputPin.html',1,'epaper::hal']]],
+  ['mockoutputpin_3',['MockOutputPin',['../d5/d4f/classepaper_1_1hal_1_1MockOutputPin.html',1,'epaper::hal']]],
+  ['mockspibus_4',['MockSpiBus',['../d4/dee/classepaper_1_1hal_1_1MockSpiBus.html',1,'epaper::hal']]],
+  ['monoframebuffer_5',['MonoFramebuffer',['../d2/d1d/classepaper_1_1MonoFramebuffer.html',1,'epaper']]],
+  ['multiplaneframebuffer_6',['MultiPlaneFramebuffer',['../d2/d17/classepaper_1_1MultiPlaneFramebuffer.html',1,'epaper']]]
 ];

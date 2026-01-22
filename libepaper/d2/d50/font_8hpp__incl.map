@@ -1,9 +1,9 @@
-<map id="include/epaper/font.hpp" name="include/epaper/font.hpp">
-<area shape="rect" id="Node000001" title=" " alt="" coords="46,5,222,31"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="5,79,76,104"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="121,33,68,72,65,68,117,29"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="101,79,167,104"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="137,31,137,65,131,65,131,31"/>
-<area shape="rect" id="Node000004" title=" " alt="" coords="191,79,245,104"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="149,29,195,67,192,72,146,33"/>
+<map id="include/epaper/graphics/font.hpp" name="include/epaper/graphics/font.hpp">
+<area shape="rect" id="Node000001" title="Bitmap font rendering for e&#45;paper displays." alt="" coords="45,5,223,45"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,93,76,119"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="113,48,67,86,64,82,110,44"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="101,93,167,119"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="137,46,137,79,131,79,131,46"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="191,93,245,119"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="156,44,197,82,194,86,153,48"/>
 </map>

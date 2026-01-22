@@ -1,0 +1,9 @@
+<map id="epaper::Graphics::draw_bitmap" name="epaper::Graphics::draw_bitmap">
+<area shape="rect" id="Node000001" title="Draw a bitmap on the framebuffer." alt="" coords="427,37,599,77"/>
+<area shape="rect" id="Node000002" href="$d2/da8/classepaper_1_1Display.html#a4701be4fcce0001ad256a43181e10935" title=" " alt="" coords="216,5,379,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="412,45,378,40,379,35,413,40"/>
+<area shape="rect" id="Node000003" href="$d2/da8/classepaper_1_1Display.html#a7ce29f91f9632f93984c9ba9babcd865" title=" " alt="" coords="216,69,379,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="413,75,379,80,378,75,412,70"/>
+<area shape="rect" id="Node000004" href="$d2/da8/classepaper_1_1Display.html#afcf3fd604c5b835e7880346cab02cd50" title=" " alt="" coords="5,69,168,109"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="202,92,168,92,168,87,202,87"/>
+</map>

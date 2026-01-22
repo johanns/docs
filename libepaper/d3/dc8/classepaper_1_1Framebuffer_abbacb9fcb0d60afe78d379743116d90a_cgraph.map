@@ -1,8 +1,0 @@
-<map id="epaper::Framebuffer::get_pixel" name="epaper::Framebuffer::get_pixel">
-<area shape="rect" id="Node000001" title="Get pixel at logical coordinates (with orientation transform)." alt="" coords="5,51,160,91"/>
-<area shape="rect" id="Node000002" href="$db/da4/namespaceepaper.html#ae87c16acc02a64356214d15caff24201" title=" " alt="" coords="211,29,382,55"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="160,58,197,53,198,58,161,63"/>
-<area shape="rect" id="Node000003" href="$d3/dc8/classepaper_1_1Framebuffer.html#a194748c010486102cd08edf42f523f0d" title="Transform logical coordinates to physical based on orientation." alt="" coords="208,79,385,119"/>
-<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="161,79,195,83,194,89,160,84"/>
-<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="262,31,254,21,258,11,273,5,297,3,326,6,338,15,335,20,324,11,297,8,274,10,262,15,259,20,266,28"/>
-</map>

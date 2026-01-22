@@ -1,7 +1,0 @@
-<map id="epaper::ColorManager::convert_to_rgb32" name="epaper::ColorManager::convert_to_rgb32">
-<area shape="rect" id="Node000001" title="Convert RGB color to 32&#45;bit true color." alt="" coords="220,37,387,77"/>
-<area shape="rect" id="Node000002" href="$d9/d29/classepaper_1_1ColorManager.html#a4eafda0fb8b27fdbd0f0dec633aec38f" title="Generic conversion based on color depth template parameter." alt="" coords="5,5,172,45"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="205,45,172,40,173,35,206,40"/>
-<area shape="rect" id="Node000003" href="$d9/d29/classepaper_1_1ColorManager.html#ad8fef6152c630b6c71c3ff1bb12810c4" title="Generic conversion based on color depth template parameter with alpha." alt="" coords="5,69,172,109"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="206,74,173,80,172,74,205,69"/>
-</map>

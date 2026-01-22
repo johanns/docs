@@ -92,14 +92,14 @@ Collaboration diagram for epaper::CircleCommand:</div>
 <div class="center"><img src="../../d0/dc6/structepaper_1_1CircleCommand__coll__graph.png" border="0" usemap="#aepaper_1_1CircleCommand_coll__map" alt="Collaboration graph"/></div>
 <map name="aepaper_1_1CircleCommand_coll__map" id="aepaper_1_1CircleCommand_coll__map">
 <area shape="rect" title="Command for drawing a circle." alt="" coords="5,93,184,119"/>
-<area shape="rect" href="../../d7/d38/structepaper_1_1Point.html" title="A 2D point in display coordinate space." alt="" coords="41,5,149,31"/>
+<area shape="rect" href="../../d7/d38/structepaper_1_1Point.html" title=" " alt="" coords="41,5,149,31"/>
 <area shape="poly" title=" " alt="" coords="97,45,97,93,92,93,92,45"/>
 </map>
 <center><span class="legend">[<a href="../../graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a27322aefa945f2e791fa3555c7cd07d3" id="r_a27322aefa945f2e791fa3555c7cd07d3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/da4/namespaceepaper.html#ae87c16acc02a64356214d15caff24201">constexpr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d4c/structepaper_1_1CircleCommand.html#a27322aefa945f2e791fa3555c7cd07d3">CircleCommand</a> (<a class="el" href="../../d7/d38/structepaper_1_1Point.html">Point</a> <a class="el" href="../../db/da4/namespaceepaper.html#ae87c16acc02a64356214d15caff24201">ctr</a>, std::size_t r, <a class="el" href="../../db/da4/namespaceepaper.html#abbcfe3e537fe42c69ae050cbfb36fcc3">Color</a> <a class="el" href="../../db/da4/namespaceepaper.html#ae87c16acc02a64356214d15caff24201">c</a>=<a class="el" href="../../db/da4/namespaceepaper.html#abbcfe3e537fe42c69ae050cbfb36fcc3ae90dfb84e30edf611e326eeb04d680de">Color::Black</a>, <a class="el" href="../../db/da4/namespaceepaper.html#a779d7a78e43b75490d3cfdf61a9f7f43">DotPixel</a> <a class="el" href="../../db/da4/namespaceepaper.html#ae87c16acc02a64356214d15caff24201">w</a>=<a class="el" href="../../db/da4/namespaceepaper.html#a779d7a78e43b75490d3cfdf61a9f7f43aecf9dfa175b9f1e653b4f66fe64f6742">DotPixel::Pixel1x1</a>, <a class="el" href="../../db/da4/namespaceepaper.html#a147a76dbb81599ca8053f8dd9271bc16">DrawFill</a> <a class="el" href="../../db/da4/namespaceepaper.html#ae87c16acc02a64356214d15caff24201">f</a>=<a class="el" href="../../db/da4/namespaceepaper.html#a147a76dbb81599ca8053f8dd9271bc16ace2c8aed9c2fa0cfbed56cbda4d8bf07">DrawFill::Empty</a>) <a class="el" href="../../db/da4/namespaceepaper.html#ae87c16acc02a64356214d15caff24201">noexcept</a></td></tr>
+<tr class="memitem:a27322aefa945f2e791fa3555c7cd07d3" id="r_a27322aefa945f2e791fa3555c7cd07d3"><td class="memItemLeft" align="right" valign="top">constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d4c/structepaper_1_1CircleCommand.html#a27322aefa945f2e791fa3555c7cd07d3">CircleCommand</a> (<a class="el" href="../../d7/d38/structepaper_1_1Point.html">Point</a> ctr, std::size_t r, <a class="el" href="../../db/da4/namespaceepaper.html#abbcfe3e537fe42c69ae050cbfb36fcc3">Color</a> c=<a class="el" href="../../db/da4/namespaceepaper.html#abbcfe3e537fe42c69ae050cbfb36fcc3ae90dfb84e30edf611e326eeb04d680de">Color::Black</a>, <a class="el" href="../../db/da4/namespaceepaper.html#a779d7a78e43b75490d3cfdf61a9f7f43">DotPixel</a> w=<a class="el" href="../../db/da4/namespaceepaper.html#a779d7a78e43b75490d3cfdf61a9f7f43aecf9dfa175b9f1e653b4f66fe64f6742">DotPixel::Pixel1x1</a>, <a class="el" href="../../db/da4/namespaceepaper.html#a147a76dbb81599ca8053f8dd9271bc16">DrawFill</a> f=<a class="el" href="../../db/da4/namespaceepaper.html#a147a76dbb81599ca8053f8dd9271bc16ace2c8aed9c2fa0cfbed56cbda4d8bf07">DrawFill::Empty</a>) noexcept</td></tr>
 <tr class="memdesc:a27322aefa945f2e791fa3555c7cd07d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a circle command with specified parameters.  <br /></td></tr>
 <tr class="separator:a27322aefa945f2e791fa3555c7cd07d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -123,7 +123,24 @@ Public Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Command for drawing a circle. </p>
-<p>Encapsulates all parameters needed to draw a circle. Constructed via <a class="el" href="../../dd/d5e/classepaper_1_1CircleBuilder.html">CircleBuilder</a>. </p>
+<p>Encapsulates all parameters needed to draw a circle using midpoint algorithm. Constructed via <a class="el" href="../../dd/d5e/classepaper_1_1CircleBuilder.html">CircleBuilder</a>.</p>
+<p><b>Member Semantics:</b></p><ul>
+<li><code>center</code>: Circle center point in logical coordinates</li>
+<li><code>radius</code>: Circle radius in pixels (always positive)</li>
+<li><code>color</code>: Circle color (border and fill use same color)</li>
+<li><code>border_width</code>: Thickness of circle outline (currently unimplemented - always 1px)</li>
+<li><code>fill</code>: Empty (outline only) or Full (solid fill)</li>
+</ul>
+<p><b>Algorithm:</b></p><ul>
+<li>Midpoint circle algorithm (Bresenham's circle) - integer-only, no FPU</li>
+<li>Draws one octant, mirrors to remaining 7 using symmetry</li>
+<li>Fill implemented as horizontal scan lines between symmetric points</li>
+</ul>
+<p><b>Coordinate Clipping:</b></p><ul>
+<li>No bounds checking at construction - circles may extend beyond display edges</li>
+<li>Framebuffer set_pixel() performs clipping during rendering</li>
+</ul>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="../../dd/d5e/classepaper_1_1CircleBuilder.html">CircleBuilder</a>, <a class="el" href="../../d0/d9d/classepaper_1_1Graphics.html#a57210af5770757b47c0f01f5cef8f8ef" title="Draw a circle on the framebuffer.">Graphics::draw_circle()</a> </dd></dl>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a27322aefa945f2e791fa3555c7cd07d3" name="a27322aefa945f2e791fa3555c7cd07d3"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a27322aefa945f2e791fa3555c7cd07d3">&#9670;&#160;</a></span>CircleCommand()</h2>
@@ -135,7 +152,7 @@ Public Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../db/da4/namespaceepaper.html#ae87c16acc02a64356214d15caff24201">constexpr</a> epaper::CircleCommand::CircleCommand </td>
+          <td class="memname">constexpr epaper::CircleCommand::CircleCommand </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="../../d7/d38/structepaper_1_1Point.html">Point</a>&#160;</td>
           <td class="paramname"><em>ctr</em>, </td>
@@ -205,6 +222,8 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Border width. </p>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="../../dc/de3/_2mnt_2nas_2libepaper_2include_2epaper_2draw_2commands_8hpp-example.html#a21">/mnt/nas/libepaper/include/epaper/draw/commands.hpp</a>.</dd>
+</dl>
 
 </div>
 </div>
@@ -221,6 +240,8 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Center point. </p>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="../../dc/de3/_2mnt_2nas_2libepaper_2include_2epaper_2draw_2commands_8hpp-example.html#a18">/mnt/nas/libepaper/include/epaper/draw/commands.hpp</a>.</dd>
+</dl>
 
 </div>
 </div>
@@ -237,6 +258,8 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Circle color. </p>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="../../dc/de3/_2mnt_2nas_2libepaper_2include_2epaper_2draw_2commands_8hpp-example.html#a20">/mnt/nas/libepaper/include/epaper/draw/commands.hpp</a>.</dd>
+</dl>
 
 </div>
 </div>
@@ -253,6 +276,8 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Fill mode (empty/full) </p>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="../../dc/de3/_2mnt_2nas_2libepaper_2include_2epaper_2draw_2commands_8hpp-example.html#a22">/mnt/nas/libepaper/include/epaper/draw/commands.hpp</a>.</dd>
+</dl>
 
 </div>
 </div>
@@ -269,6 +294,8 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Circle radius in pixels. </p>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="../../dc/de3/_2mnt_2nas_2libepaper_2include_2epaper_2draw_2commands_8hpp-example.html#a19">/mnt/nas/libepaper/include/epaper/draw/commands.hpp</a>.</dd>
+</dl>
 
 </div>
 </div>

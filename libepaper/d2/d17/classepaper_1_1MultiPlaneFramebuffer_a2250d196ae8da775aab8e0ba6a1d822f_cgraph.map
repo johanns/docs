@@ -1,0 +1,25 @@
+<map id="epaper::MultiPlaneFramebuffer::MultiPlaneFramebuffer" name="epaper::MultiPlaneFramebuffer::MultiPlaneFramebuffer">
+<area shape="rect" id="Node000001" title="Construct a multi&#45;plane framebuffer." alt="" coords="5,165,228,205"/>
+<area shape="rect" id="Node000002" href="$d2/d17/classepaper_1_1MultiPlaneFramebuffer.html#a382ceea501c1994ca70dcb6e26a4ba55" title="Clear the framebuffer to a color." alt="" coords="276,165,499,205"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="228,183,262,183,262,188,228,188"/>
+<area shape="rect" id="Node000003" href="$d9/d29/classepaper_1_1ColorManager.html#a0d7e34cf9998842e946328ee6caddc0f" title="Generic conversion based on display mode template parameter." alt="" coords="547,133,713,173"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="498,168,533,163,533,169,499,173"/>
+<area shape="rect" id="Node000009" href="$d9/d29/classepaper_1_1ColorManager.html#af50996a3a33d05f8f6331a98edaef813" title="Convert Color enum to RGB." alt="" coords="547,197,713,237"/>
+<area shape="poly" id="edge14_Node000002_Node000009" title=" " alt="" coords="499,197,533,202,533,207,498,203"/>
+<area shape="poly" id="edge3_Node000003_Node000003" title=" " alt="" coords="590,134,588,124,594,114,608,109,630,107,655,110,669,117,666,122,653,115,630,112,610,114,597,119,593,125,595,132"/>
+<area shape="rect" id="Node000004" href="$d9/d29/classepaper_1_1ColorManager.html#a201e652810ec3897e7199df0029ae0e1" title="Convert RGB color to 1&#45;bit black/white." alt="" coords="761,5,928,45"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="666,131,709,99,760,67,800,48,802,53,763,72,712,103,669,135"/>
+<area shape="rect" id="Node000005" href="$d9/d29/classepaper_1_1ColorManager.html#ad28d8e37a6363f8594f5e1c2584a4649" title=" " alt="" coords="761,69,928,109"/>
+<area shape="poly" id="edge6_Node000003_Node000005" title=" " alt="" coords="713,135,787,111,789,117,715,140"/>
+<area shape="rect" id="Node000006" href="$d9/d29/classepaper_1_1ColorManager.html#a53d7e02c341761007b20bc8e29798116" title=" " alt="" coords="761,133,928,173"/>
+<area shape="poly" id="edge8_Node000003_Node000006" title=" " alt="" coords="714,159,747,160,747,165,714,165"/>
+<area shape="rect" id="Node000007" href="$d9/d29/classepaper_1_1ColorManager.html#add2448409985ce8a0a271c91f3a36f1b" title=" " alt="" coords="761,197,928,237"/>
+<area shape="poly" id="edge10_Node000003_Node000007" title=" " alt="" coords="675,171,749,195,747,200,673,176"/>
+<area shape="rect" id="Node000008" href="$d9/d29/classepaper_1_1ColorManager.html#abc0c73fe3eccccd33e145ed4f28cb961" title=" " alt="" coords="761,261,928,301"/>
+<area shape="poly" id="edge12_Node000003_Node000008" title=" " alt="" coords="668,171,692,181,715,195,729,210,738,224,754,251,749,254,733,226,725,213,712,199,690,186,666,176"/>
+<area shape="poly" id="edge5_Node000004_Node000003" title=" " alt="" coords="763,47,763,48,705,86,657,126,654,121,701,81,760,43,760,43"/>
+<area shape="poly" id="edge7_Node000005_Node000003" title=" " alt="" coords="762,108,687,131,686,126,760,103"/>
+<area shape="poly" id="edge9_Node000006_Node000003" title=" " alt="" coords="761,147,727,147,727,142,761,142"/>
+<area shape="poly" id="edge11_Node000007_Node000003" title=" " alt="" coords="800,200,726,176,728,171,802,195"/>
+<area shape="poly" id="edge13_Node000008_Node000003" title=" " alt="" coords="807,264,783,253,760,239,745,225,737,211,721,184,725,181,742,208,750,222,763,235,785,248,809,259"/>
+</map>

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['📚_20documentation_0',['📚 Documentation',['../index.html#autotoc_md10',1,'']]]
+  ['🧩_20alternative_20integration_20options_0',['🧩 Alternative Integration Options',['../index.html#autotoc_md-alternative-integration-options',1,'']]]
 ];

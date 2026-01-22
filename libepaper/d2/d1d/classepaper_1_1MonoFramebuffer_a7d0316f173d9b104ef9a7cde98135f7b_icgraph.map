@@ -1,0 +1,5 @@
+<map id="epaper::MonoFramebuffer::mode" name="epaper::MonoFramebuffer::mode">
+<area shape="rect" id="Node000001" title="Get display mode represented by this framebuffer." alt="" coords="244,5,435,45"/>
+<area shape="rect" id="Node000002" href="$d2/d1d/classepaper_1_1MonoFramebuffer.html#ac4a2a24a88bc494fba32f714f9e4d3d9" title="Check if the mode is compatible with mono framebuffer." alt="" coords="5,5,196,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="230,28,196,28,196,23,230,23"/>
+</map>

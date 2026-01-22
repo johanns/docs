@@ -82,7 +82,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>Command for drawing a point.  
+<p>Command for drawing a point (pixel or multi-pixel dot).  
  <a href="../../dd/d7e/structepaper_1_1PointCommand.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="../../d2/d99/commands_8hpp_source.html">commands.hpp</a>&gt;</code></p>
@@ -91,33 +91,49 @@ Collaboration diagram for epaper::PointCommand:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d7/d69/structepaper_1_1PointCommand__coll__graph.png" border="0" usemap="#aepaper_1_1PointCommand_coll__map" alt="Collaboration graph"/></div>
 <map name="aepaper_1_1PointCommand_coll__map" id="aepaper_1_1PointCommand_coll__map">
-<area shape="rect" title="Command for drawing a point." alt="" coords="5,93,180,119"/>
-<area shape="rect" href="../../d7/d38/structepaper_1_1Point.html" title="A 2D point in display coordinate space." alt="" coords="39,5,147,31"/>
+<area shape="rect" title="Command for drawing a point (pixel or multi&#45;pixel dot)." alt="" coords="5,93,180,119"/>
+<area shape="rect" href="../../d7/d38/structepaper_1_1Point.html" title=" " alt="" coords="39,5,147,31"/>
 <area shape="poly" title=" " alt="" coords="95,45,95,93,90,93,90,45"/>
 </map>
 <center><span class="legend">[<a href="../../graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a9c6f76e33f2470661928c6947ae71265" id="r_a9c6f76e33f2470661928c6947ae71265"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/da4/namespaceepaper.html#ae87c16acc02a64356214d15caff24201">constexpr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d7e/structepaper_1_1PointCommand.html#a9c6f76e33f2470661928c6947ae71265">PointCommand</a> (<a class="el" href="../../d7/d38/structepaper_1_1Point.html">Point</a> <a class="el" href="../../db/da4/namespaceepaper.html#ae87c16acc02a64356214d15caff24201">pos</a>, <a class="el" href="../../db/da4/namespaceepaper.html#abbcfe3e537fe42c69ae050cbfb36fcc3">Color</a> <a class="el" href="../../db/da4/namespaceepaper.html#ae87c16acc02a64356214d15caff24201">c</a>=<a class="el" href="../../db/da4/namespaceepaper.html#abbcfe3e537fe42c69ae050cbfb36fcc3ae90dfb84e30edf611e326eeb04d680de">Color::Black</a>, <a class="el" href="../../db/da4/namespaceepaper.html#a779d7a78e43b75490d3cfdf61a9f7f43">DotPixel</a> <a class="el" href="../../db/da4/namespaceepaper.html#ae87c16acc02a64356214d15caff24201">s</a>=<a class="el" href="../../db/da4/namespaceepaper.html#a779d7a78e43b75490d3cfdf61a9f7f43aecf9dfa175b9f1e653b4f66fe64f6742">DotPixel::Pixel1x1</a>) <a class="el" href="../../db/da4/namespaceepaper.html#ae87c16acc02a64356214d15caff24201">noexcept</a></td></tr>
+<tr class="memitem:a9c6f76e33f2470661928c6947ae71265" id="r_a9c6f76e33f2470661928c6947ae71265"><td class="memItemLeft" align="right" valign="top">constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d7e/structepaper_1_1PointCommand.html#a9c6f76e33f2470661928c6947ae71265">PointCommand</a> (<a class="el" href="../../d7/d38/structepaper_1_1Point.html">Point</a> pos, <a class="el" href="../../db/da4/namespaceepaper.html#abbcfe3e537fe42c69ae050cbfb36fcc3">Color</a> c=<a class="el" href="../../db/da4/namespaceepaper.html#abbcfe3e537fe42c69ae050cbfb36fcc3ae90dfb84e30edf611e326eeb04d680de">Color::Black</a>, <a class="el" href="../../db/da4/namespaceepaper.html#a779d7a78e43b75490d3cfdf61a9f7f43">DotPixel</a> s=<a class="el" href="../../db/da4/namespaceepaper.html#a779d7a78e43b75490d3cfdf61a9f7f43aecf9dfa175b9f1e653b4f66fe64f6742">DotPixel::Pixel1x1</a>) noexcept</td></tr>
 <tr class="memdesc:a9c6f76e33f2470661928c6947ae71265"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a point command with specified parameters.  <br /></td></tr>
 <tr class="separator:a9c6f76e33f2470661928c6947ae71265"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a26b96ee8d80da2f4948d6d32f2b70f5b" id="r_a26b96ee8d80da2f4948d6d32f2b70f5b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d7/d38/structepaper_1_1Point.html">Point</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d7e/structepaper_1_1PointCommand.html#a26b96ee8d80da2f4948d6d32f2b70f5b">position</a></td></tr>
-<tr class="memdesc:a26b96ee8d80da2f4948d6d32f2b70f5b"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../d7/d38/structepaper_1_1Point.html" title="A 2D point in display coordinate space.">Point</a> position.  <br /></td></tr>
+<tr class="memdesc:a26b96ee8d80da2f4948d6d32f2b70f5b"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../d7/d38/structepaper_1_1Point.html">Point</a> position.  <br /></td></tr>
 <tr class="separator:a26b96ee8d80da2f4948d6d32f2b70f5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2555ad2cf460987fd10b3b78d95abfc0" id="r_a2555ad2cf460987fd10b3b78d95abfc0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/da4/namespaceepaper.html#abbcfe3e537fe42c69ae050cbfb36fcc3">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d7e/structepaper_1_1PointCommand.html#a2555ad2cf460987fd10b3b78d95abfc0">color</a></td></tr>
-<tr class="memdesc:a2555ad2cf460987fd10b3b78d95abfc0"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../d7/d38/structepaper_1_1Point.html" title="A 2D point in display coordinate space.">Point</a> color.  <br /></td></tr>
+<tr class="memdesc:a2555ad2cf460987fd10b3b78d95abfc0"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../d7/d38/structepaper_1_1Point.html">Point</a> color.  <br /></td></tr>
 <tr class="separator:a2555ad2cf460987fd10b3b78d95abfc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad252ca289a15830701ed3560c234e462" id="r_ad252ca289a15830701ed3560c234e462"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/da4/namespaceepaper.html#a779d7a78e43b75490d3cfdf61a9f7f43">DotPixel</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d7e/structepaper_1_1PointCommand.html#ad252ca289a15830701ed3560c234e462">pixel_size</a></td></tr>
-<tr class="memdesc:ad252ca289a15830701ed3560c234e462"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../d7/d38/structepaper_1_1Point.html" title="A 2D point in display coordinate space.">Point</a> size.  <br /></td></tr>
+<tr class="memdesc:ad252ca289a15830701ed3560c234e462"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../d7/d38/structepaper_1_1Point.html">Point</a> size.  <br /></td></tr>
 <tr class="separator:ad252ca289a15830701ed3560c234e462"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Command for drawing a point. </p>
-<p>Encapsulates all parameters needed to draw a point. Constructed via <a class="el" href="../../d2/d86/classepaper_1_1PointBuilder.html">PointBuilder</a>. </p>
+<div class="textblock"><p>Command for drawing a point (pixel or multi-pixel dot). </p>
+<p>Encapsulates all parameters needed to draw a point. Constructed via <a class="el" href="../../d2/d86/classepaper_1_1PointBuilder.html">PointBuilder</a>.</p>
+<p><b>Member Semantics:</b></p><ul>
+<li><code>position</code>: <a class="el" href="../../d7/d38/structepaper_1_1Point.html">Point</a> location in logical coordinates</li>
+<li><code>color</code>: Pixel color</li>
+<li><code>pixel_size</code>: <a class="el" href="../../d6/dc6/structepaper_1_1Size.html">Size</a> of the "dot" (Pixel1x1 to Pixel8x8)</li>
+</ul>
+<p><b>Pixel <a class="el" href="../../d6/dc6/structepaper_1_1Size.html">Size</a> Rendering:</b></p><ul>
+<li>Pixel1x1: Single pixel at <code>position</code></li>
+<li>Pixel2x2: 2x2 square centered at <code>position</code> (4 pixels total)</li>
+<li>Pixel3x3: 3x3 square centered at <code>position</code> (9 pixels total)</li>
+<li>... and so on up to Pixel8x8</li>
+</ul>
+<p><b>Centering Behavior:</b></p><ul>
+<li>For even sizes (2x2, 4x4, etc.), center is top-left of 2x2 center quad</li>
+<li>For odd sizes (1x1, 3x3, etc.), center is exact middle pixel</li>
+</ul>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="../../d2/d86/classepaper_1_1PointBuilder.html">PointBuilder</a>, <a class="el" href="../../db/da4/namespaceepaper.html#a779d7a78e43b75490d3cfdf61a9f7f43">DotPixel</a> </dd></dl>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a9c6f76e33f2470661928c6947ae71265" name="a9c6f76e33f2470661928c6947ae71265"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9c6f76e33f2470661928c6947ae71265">&#9670;&#160;</a></span>PointCommand()</h2>
@@ -129,7 +145,7 @@ Public Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../db/da4/namespaceepaper.html#ae87c16acc02a64356214d15caff24201">constexpr</a> epaper::PointCommand::PointCommand </td>
+          <td class="memname">constexpr epaper::PointCommand::PointCommand </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="../../d7/d38/structepaper_1_1Point.html">Point</a>&#160;</td>
           <td class="paramname"><em>pos</em>, </td>
@@ -162,9 +178,9 @@ Public Attributes</h2></td></tr>
 <p>Construct a point command with specified parameters. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">pos</td><td><a class="el" href="../../d7/d38/structepaper_1_1Point.html" title="A 2D point in display coordinate space.">Point</a> position </td></tr>
-    <tr><td class="paramname">c</td><td><a class="el" href="../../d7/d38/structepaper_1_1Point.html" title="A 2D point in display coordinate space.">Point</a> color (default: Black) </td></tr>
-    <tr><td class="paramname">s</td><td><a class="el" href="../../d7/d38/structepaper_1_1Point.html" title="A 2D point in display coordinate space.">Point</a> size (default: 1x1) </td></tr>
+    <tr><td class="paramname">pos</td><td><a class="el" href="../../d7/d38/structepaper_1_1Point.html">Point</a> position </td></tr>
+    <tr><td class="paramname">c</td><td><a class="el" href="../../d7/d38/structepaper_1_1Point.html">Point</a> color (default: Black) </td></tr>
+    <tr><td class="paramname">s</td><td><a class="el" href="../../d7/d38/structepaper_1_1Point.html">Point</a> size (default: 1x1) </td></tr>
   </table>
   </dd>
 </dl>
@@ -184,7 +200,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p><a class="el" href="../../d7/d38/structepaper_1_1Point.html" title="A 2D point in display coordinate space.">Point</a> color. </p>
+<p><a class="el" href="../../d7/d38/structepaper_1_1Point.html">Point</a> color. </p>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="../../dc/de3/_2mnt_2nas_2libepaper_2include_2epaper_2draw_2commands_8hpp-example.html#a24">/mnt/nas/libepaper/include/epaper/draw/commands.hpp</a>.</dd>
+</dl>
 
 </div>
 </div>
@@ -200,7 +218,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p><a class="el" href="../../d7/d38/structepaper_1_1Point.html" title="A 2D point in display coordinate space.">Point</a> size. </p>
+<p><a class="el" href="../../d7/d38/structepaper_1_1Point.html">Point</a> size. </p>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="../../dc/de3/_2mnt_2nas_2libepaper_2include_2epaper_2draw_2commands_8hpp-example.html#a25">/mnt/nas/libepaper/include/epaper/draw/commands.hpp</a>.</dd>
+</dl>
 
 </div>
 </div>
@@ -216,7 +236,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p><a class="el" href="../../d7/d38/structepaper_1_1Point.html" title="A 2D point in display coordinate space.">Point</a> position. </p>
+<p><a class="el" href="../../d7/d38/structepaper_1_1Point.html">Point</a> position. </p>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="../../dc/de3/_2mnt_2nas_2libepaper_2include_2epaper_2draw_2commands_8hpp-example.html#a23">/mnt/nas/libepaper/include/epaper/draw/commands.hpp</a>.</dd>
+</dl>
 
 </div>
 </div>

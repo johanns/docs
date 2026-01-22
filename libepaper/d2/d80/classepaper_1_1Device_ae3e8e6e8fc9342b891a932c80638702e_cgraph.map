@@ -1,6 +1,0 @@
-<map id="epaper::Device::Device" name="epaper::Device::Device">
-<area shape="rect" id="Node000001" title="Move constructor." alt="" coords="5,29,179,55"/>
-<area shape="rect" id="Node000002" href="$db/da4/namespaceepaper.html#ae87c16acc02a64356214d15caff24201" title=" " alt="" coords="227,29,397,55"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="179,39,213,39,213,45,179,45"/>
-<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="276,31,269,21,273,11,287,5,312,3,342,6,354,15,351,20,340,11,312,8,289,10,276,15,274,20,280,28"/>
-</map>

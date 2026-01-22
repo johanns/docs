@@ -81,6 +81,9 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p><a class="el" href="../../d7/d6c/classepaper_1_1Font.html">Font</a> dimension metrics.  
+ <a href="../../db/d57/structepaper_1_1FontMetrics.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="../../df/d50/font_8hpp_source.html">font.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
@@ -90,7 +93,21 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a0b65a66f5ace69cbc71f5c11a5ee06c2" id="r_a0b65a66f5ace69cbc71f5c11a5ee06c2"><td class="memItemLeft" align="right" valign="top">std::uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d57/structepaper_1_1FontMetrics.html#a0b65a66f5ace69cbc71f5c11a5ee06c2">height</a></td></tr>
 <tr class="separator:a0b65a66f5ace69cbc71f5c11a5ee06c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Data Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p><a class="el" href="../../d7/d6c/classepaper_1_1Font.html">Font</a> dimension metrics. </p>
+<p>Describes the bounding box dimensions for all characters in a font. Since fonts are fixed-width, all characters share these dimensions.</p>
+<p><b>Member Semantics:</b></p><ul>
+<li><code>width</code>: Character cell width in pixels (horizontal advance)</li>
+<li><code>height</code>: Character cell height in pixels (vertical extent)</li>
+</ul>
+<p><b>Usage:</b> </p><div class="fragment"><div class="line"><span class="keyword">const</span> <a class="code hl_class" href="../../d7/d6c/classepaper_1_1Font.html">Font</a>&amp; font = <a class="code hl_function" href="../../d7/d6c/classepaper_1_1Font.html#aaa42a2902f8005f40271620884bfccae">Font::font16</a>();</div>
+<div class="line"><span class="keyword">auto</span> metrics = font.<a class="code hl_function" href="../../d7/d6c/classepaper_1_1Font.html#adb5dee04d04bb588c2bb0d7671e600dc">metrics</a>();</div>
+<div class="line">std::size_t text_width = metrics.width * text.length();</div>
+<div class="line">std::size_t text_height = metrics.height;</div>
+<div class="ttc" id="aclassepaper_1_1Font_html"><div class="ttname"><a href="../../d7/d6c/classepaper_1_1Font.html">epaper::Font</a></div><div class="ttdef"><b>Definition</b> font.hpp:142</div></div>
+<div class="ttc" id="aclassepaper_1_1Font_html_aaa42a2902f8005f40271620884bfccae"><div class="ttname"><a href="../../d7/d6c/classepaper_1_1Font.html#aaa42a2902f8005f40271620884bfccae">epaper::Font::font16</a></div><div class="ttdeci">static auto font16() -&gt; const Font &amp;</div><div class="ttdoc">Get 16-pixel font.</div><div class="ttdef"><b>Definition</b> font.cpp:52</div></div>
+<div class="ttc" id="aclassepaper_1_1Font_html_adb5dee04d04bb588c2bb0d7671e600dc"><div class="ttname"><a href="../../d7/d6c/classepaper_1_1Font.html#adb5dee04d04bb588c2bb0d7671e600dc">epaper::Font::metrics</a></div><div class="ttdeci">constexpr auto metrics() const noexcept -&gt; FontMetrics</div><div class="ttdoc">Get font dimensions.</div><div class="ttdef"><b>Definition</b> font.hpp:182</div></div>
+</div><!-- fragment --> </div><h2 class="groupheader">Member Data Documentation</h2>
 <a id="a0b65a66f5ace69cbc71f5c11a5ee06c2" name="a0b65a66f5ace69cbc71f5c11a5ee06c2"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0b65a66f5ace69cbc71f5c11a5ee06c2">&#9670;&#160;</a></span>height</h2>
 
@@ -102,6 +119,8 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="../../d1/d61/_2mnt_2nas_2libepaper_2include_2epaper_2graphics_2font_8hpp-example.html#a1">/mnt/nas/libepaper/include/epaper/graphics/font.hpp</a>.</dd>
+</dl>
 
 </div>
 </div>
@@ -116,11 +135,13 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="../../d1/d61/_2mnt_2nas_2libepaper_2include_2epaper_2graphics_2font_8hpp-example.html#a0">/mnt/nas/libepaper/include/epaper/graphics/font.hpp</a>.</dd>
+</dl>
 
 </div>
 </div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
-<li>include/epaper/<a class="el" href="../../df/d50/font_8hpp_source.html">font.hpp</a></li>
+<li>include/epaper/graphics/<a class="el" href="../../df/d50/font_8hpp_source.html">font.hpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

@@ -1,21 +1,14 @@
-<map id="include/epaper/geometry.hpp" name="include/epaper/geometry.hpp">
-<area shape="rect" id="Node000001" title=" " alt="" coords="296,5,507,31"/>
-<area shape="rect" id="Node000002" href="$da/dc6/builders_8hpp.html" title=" " alt="" coords="139,79,293,119"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="363,38,262,81,260,76,361,33"/>
-<area shape="rect" id="Node000004" href="$d2/d99/commands_8hpp.html" title=" " alt="" coords="260,240,415,280"/>
-<area shape="poly" id="edge12_Node000001_Node000004" title=" " alt="" coords="397,45,345,240,340,239,392,44"/>
-<area shape="rect" id="Node000005" href="$db/d86/display_8cpp.html" title=" " alt="" coords="221,328,339,353"/>
-<area shape="poly" id="edge13_Node000001_Node000005" title=" " alt="" coords="416,43,434,90,450,152,453,186,451,219,444,252,429,282,411,301,389,316,340,334,338,329,386,311,408,297,425,278,439,250,446,219,448,186,444,153,429,92,411,45"/>
-<area shape="rect" id="Node000003" href="$d2/da4/display_8hpp.html" title=" " alt="" coords="119,167,313,192"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="210,132,212,166,207,166,205,133"/>
-<area shape="poly" id="edge11_Node000002_Node000005" title=" " alt="" coords="154,127,94,156,40,193,21,213,11,234,10,256,21,278,33,289,52,298,104,314,164,325,221,332,221,337,163,330,103,319,50,303,30,293,17,282,4,257,5,233,17,210,37,189,92,151,152,122"/>
-<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="222,153,221,119,227,119,227,153"/>
-<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="240,198,302,238,299,242,237,202"/>
-<area shape="poly" id="edge10_Node000003_Node000005" title=" " alt="" coords="225,205,251,279,275,327,271,329,246,281,220,206"/>
-<area shape="rect" id="Node000006" href="$d6/d6f/styles_8hpp.html" title=" " alt="" coords="31,240,185,280"/>
-<area shape="poly" id="edge8_Node000003_Node000006" title=" " alt="" coords="190,202,136,242,133,238,187,198"/>
-<area shape="poly" id="edge6_Node000004_Node000002" title=" " alt="" coords="337,226,334,196,323,168,297,141,265,121,268,117,300,137,328,165,339,195,343,226"/>
-<area shape="poly" id="edge5_Node000004_Node000003" title=" " alt="" coords="303,234,239,194,242,190,306,230"/>
-<area shape="poly" id="edge7_Node000004_Node000005" title=" " alt="" coords="318,293,291,329,287,326,313,290"/>
-<area shape="poly" id="edge9_Node000006_Node000002" title=" " alt="" coords="97,227,96,196,104,165,130,137,161,117,164,121,133,141,109,168,101,197,103,226"/>
+<map id="include/epaper/core/geometry.hpp" name="include/epaper/core/geometry.hpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="122,5,273,45"/>
+<area shape="rect" id="Node000002" href="$da/dc6/builders_8hpp.html" title="Fluent builder pattern for constructing drawing commands." alt="" coords="5,181,160,221"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="151,55,129,73,110,95,99,116,92,139,86,182,81,181,87,138,94,114,106,92,125,69,148,51"/>
+<area shape="rect" id="Node000004" href="$d2/d99/commands_8hpp.html" title="Immutable command structures for drawing operations." alt="" coords="120,93,275,133"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="200,59,200,93,195,93,195,59"/>
+<area shape="rect" id="Node000005" href="$d9/d31/graphics_8hpp.html" title=" " alt="" coords="235,181,413,221"/>
+<area shape="poly" id="edge6_Node000001_Node000005" title=" " alt="" coords="245,51,268,69,289,92,302,114,312,138,323,180,318,182,307,140,297,116,285,95,265,73,241,55"/>
+<area shape="rect" id="Node000003" href="$d2/da4/display_8hpp.html" title=" " alt="" coords="122,269,273,309"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="121,228,174,267,170,271,117,232"/>
+<area shape="poly" id="edge5_Node000004_Node000002" title=" " alt="" coords="163,144,110,183,106,179,159,140"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="200,147,200,269,195,269,195,147"/>
+<area shape="poly" id="edge7_Node000005_Node000003" title=" " alt="" coords="286,232,227,271,224,267,283,227"/>
 </map>

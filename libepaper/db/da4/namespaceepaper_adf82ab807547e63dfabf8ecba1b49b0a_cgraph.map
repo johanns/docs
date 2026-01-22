@@ -1,0 +1,20 @@
+<map id="epaper::get_pixel_from_buffer" name="epaper::get_pixel_from_buffer">
+<area shape="rect" id="Node000001" title="Read a pixel from a buffer based on display mode." alt="" coords="5,73,177,113"/>
+<area shape="rect" id="Node000002" href="$db/da4/namespaceepaper.html#a211f15e728528fdf212242393979b569" title="Read a pixel from a B/W mode buffer." alt="" coords="251,5,411,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="140,70,225,39,254,31,256,36,226,45,142,75"/>
+<area shape="rect" id="Node000004" href="$db/da4/namespaceepaper.html#af44b0b5418e498436b85b0be41d449ec" title="Read a pixel from a BWR or BWY mode buffer." alt="" coords="232,55,431,80"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="177,81,218,77,218,82,178,86"/>
+<area shape="rect" id="Node000005" href="$db/da4/namespaceepaper.html#ab767480178516376f4002d5f79b11529" title="Read a pixel from a Grayscale4 mode buffer." alt="" coords="225,104,437,129"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="178,99,212,102,211,107,177,104"/>
+<area shape="rect" id="Node000007" href="$db/da4/namespaceepaper.html#ab1608e1f90ccba81870d49551e7cf0df" title="Read a pixel from a Spectra6 mode buffer." alt="" coords="233,160,430,185"/>
+<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="147,110,226,138,275,153,273,159,224,143,145,115"/>
+<area shape="rect" id="Node000003" href="$db/da4/namespaceepaper.html#a6536b36adf490d1d8b837eeee10f6cb4" title="Calculate byte index and bit mask for B/W mode pixel." alt="" coords="504,11,664,51"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="412,20,491,24,490,29,411,25"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="420,52,489,42,490,47,421,57"/>
+<area shape="rect" id="Node000006" href="$db/da4/namespaceepaper.html#abafb91a7fff12d6ce6ce287bdedfc14b" title="Calculate byte index and pixel shift for Grayscale4 mode pixel." alt="" coords="499,89,669,129"/>
+<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="438,111,485,109,485,114,438,116"/>
+<area shape="rect" id="Node000008" href="$db/da4/namespaceepaper.html#ad5b50614af9eb4ad30b2bd73821d9569" title="Calculate byte index and bit offset for Spectra6 (3&#45;bit) mode pixel." alt="" coords="485,153,683,193"/>
+<area shape="poly" id="edge8_Node000007_Node000008" title=" " alt="" coords="430,170,471,170,471,175,430,175"/>
+<area shape="rect" id="Node000009" href="$db/da4/namespaceepaper.html#a217b54263ee640cb4908eb40f34336f3" title="Convert a 3&#45;bit Spectra6 value to Color." alt="" coords="497,217,671,257"/>
+<area shape="poly" id="edge9_Node000007_Node000009" title=" " alt="" coords="383,183,492,211,490,216,382,188"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="epaper::Graphics::draw_text" name="epaper::Graphics::draw_text">
+<area shape="rect" id="Node000001" title="Draw text string on the framebuffer." alt="" coords="216,5,421,31"/>
+<area shape="rect" id="Node000002" href="$d2/da8/classepaper_1_1Display.html#a4e0a5a6b56ef909a40cbb914bda85f96" title=" " alt="" coords="5,5,168,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="202,21,168,21,168,15,202,15"/>
+</map>

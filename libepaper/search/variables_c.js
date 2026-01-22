@@ -6,12 +6,15 @@ var searchData=
   ['phase1_3',['phase1',['../d4/db5/structepaper_1_1BoosterConfig.html#a11bc01774a2c40fa40e013f9add17091',1,'epaper::BoosterConfig']]],
   ['phase2_4',['phase2',['../d4/db5/structepaper_1_1BoosterConfig.html#a435855c5c3142e1fe0abb037b6211a13',1,'epaper::BoosterConfig']]],
   ['phase3_5',['phase3',['../d4/db5/structepaper_1_1BoosterConfig.html#a958ad6ce03884aeaab0a2cac9174055b',1,'epaper::BoosterConfig']]],
-  ['pin_5fconfigs_6',['pin_configs',['../d5/daf/structepaper_1_1DeviceImpl.html#a9dec6c56acab34de4dae42f5b55b6c84',1,'epaper::DeviceImpl']]],
-  ['pixel_5fmask_7',['PIXEL_MASK',['../d8/d10/namespaceepaper_1_1Grayscale.html#a7f165c31d49d52f293cc0d453207eec0',1,'epaper::Grayscale']]],
-  ['pixel_5fsize_8',['pixel_size',['../dd/d7e/structepaper_1_1PointCommand.html#ad252ca289a15830701ed3560c234e462',1,'epaper::PointCommand']]],
-  ['pll_5fsetting_5fbw_9',['PLL_SETTING_BW',['../d6/dd1/namespaceepaper_1_1PanelConfig.html#a748cd1c22e1ed4a1917d0d266f1e2748',1,'epaper::PanelConfig']]],
-  ['pll_5fsetting_5fgrayscale_10',['PLL_SETTING_GRAYSCALE',['../d6/dd1/namespaceepaper_1_1PanelConfig.html#aac4e720e21be781bfe4946fbf9c0260b',1,'epaper::PanelConfig']]],
-  ['position_11',['position',['../dd/d7e/structepaper_1_1PointCommand.html#a26b96ee8d80da2f4948d6d32f2b70f5b',1,'epaper::PointCommand::position'],['../d8/d5f/structepaper_1_1TextCommand.html#aa961954872bb125cf70e1050baf79997',1,'epaper::TextCommand::position']]],
-  ['power_5fconfig_5fbw_12',['POWER_CONFIG_BW',['../db/da4/namespaceepaper.html#a7a0291e7541ec37c84c355412532aa97',1,'epaper']]],
-  ['power_5fconfig_5fgrayscale_13',['POWER_CONFIG_GRAYSCALE',['../db/da4/namespaceepaper.html#a9d23f1ed008169b012dbc4f891ce8b5f',1,'epaper']]]
+  ['pixel_5fmask_6',['PIXEL_MASK',['../d8/d10/namespaceepaper_1_1Grayscale.html#a7f165c31d49d52f293cc0d453207eec0',1,'epaper::Grayscale']]],
+  ['pixel_5fsize_7',['pixel_size',['../dd/d7e/structepaper_1_1PointCommand.html#ad252ca289a15830701ed3560c234e462',1,'epaper::PointCommand']]],
+  ['plane_5fcount_5fone_8',['PLANE_COUNT_ONE',['../d8/d53/namespaceepaper_1_1internal.html#ad793108c581e0ece734606e5384ff2c2',1,'epaper::internal']]],
+  ['plane_5fcount_5fthree_9',['PLANE_COUNT_THREE',['../d8/d53/namespaceepaper_1_1internal.html#a03361a4745400a06e352847c9673ea20',1,'epaper::internal']]],
+  ['plane_5fcount_5ftwo_10',['PLANE_COUNT_TWO',['../d8/d53/namespaceepaper_1_1internal.html#a023b5b180084c46c6165d9a179dab636',1,'epaper::internal']]],
+  ['pll_5fsetting_5fbw_11',['PLL_SETTING_BW',['../d6/dd1/namespaceepaper_1_1PanelConfig.html#a748cd1c22e1ed4a1917d0d266f1e2748',1,'epaper::PanelConfig']]],
+  ['pll_5fsetting_5fgrayscale_12',['PLL_SETTING_GRAYSCALE',['../d6/dd1/namespaceepaper_1_1PanelConfig.html#aac4e720e21be781bfe4946fbf9c0260b',1,'epaper::PanelConfig']]],
+  ['position_13',['position',['../d8/d5f/structepaper_1_1TextCommand.html#aa961954872bb125cf70e1050baf79997',1,'epaper::TextCommand::position'],['../dd/d7e/structepaper_1_1PointCommand.html#a26b96ee8d80da2f4948d6d32f2b70f5b',1,'epaper::PointCommand::position']]],
+  ['power_5fconfig_5fbw_14',['POWER_CONFIG_BW',['../db/da4/namespaceepaper.html#a7a0291e7541ec37c84c355412532aa97',1,'epaper']]],
+  ['power_5fconfig_5fgrayscale_15',['POWER_CONFIG_GRAYSCALE',['../db/da4/namespaceepaper.html#a9d23f1ed008169b012dbc4f891ce8b5f',1,'epaper']]],
+  ['pwr_16',['pwr',['../d1/d76/structepaper_1_1EPD27PinConfig.html#a3edc6922ce08f042004212c18ec386c7',1,'epaper::EPD27PinConfig']]]
 ];

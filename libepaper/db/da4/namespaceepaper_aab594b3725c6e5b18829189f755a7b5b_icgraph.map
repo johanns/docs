@@ -1,0 +1,10 @@
+<map id="epaper::rgb_to_grayscale" name="epaper::rgb_to_grayscale">
+<area shape="rect" id="Node000001" title="Convert RGB values to grayscale using standard luminance formula." alt="" coords="437,35,624,60"/>
+<area shape="rect" id="Node000002" href="$db/da4/namespaceepaper.html#aa7acf7642313f81de55f7ddbdf8555b5" title="Convert RGB to Color for black/white mode." alt="" coords="208,5,389,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="423,36,389,32,390,27,423,31"/>
+<area shape="rect" id="Node000004" href="$db/da4/namespaceepaper.html#a9bf7f23e3118426198aa5922a36a9827" title="Convert RGB to Color for 4&#45;level grayscale mode." alt="" coords="221,55,376,95"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="424,63,376,69,376,63,423,58"/>
+<area shape="rect" id="Node000003" href="$db/da4/namespaceepaper.html#a2ef4e936d7c87a87ef7901e2028d44e2" title="Convert RGB to Color based on display mode." alt="" coords="5,35,160,60"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="194,35,161,39,160,34,194,30"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="207,66,160,60,161,55,208,61"/>
+</map>
