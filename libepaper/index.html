@@ -121,16 +121,16 @@ $(function() {
 <h1><a class="anchor" id="autotoc_md-features"></a>
 🎯 Features</h1>
 <ul>
-<li><b>Modern C++23</b>: <code>std::expected</code>, <code>std::span</code>, concepts, and ranges</li>
-<li><b>Transparent Sleep/Wake</b>: Auto-sleep prevents burn-in, auto-wake on refresh—no manual management</li>
-<li><b>Clean Architecture</b>: Modular design with RAII and composition over inheritance</li>
-<li><b>Full Drawing API</b>: Points, lines, rectangles, circles, text, bitmaps with PNG/JPEG support</li>
-<li><b>Automatic Color Conversion</b>: RGB images automatically converted to grayscale with intelligent quantization</li>
-<li><b>Multiple Display Modes</b>: Black/white (1-bit) and 4-level grayscale (2-bit)</li>
-<li><b>Display Orientation</b>: Rotate 0°, 90°, 180°, 270° with automatic coordinate transformation</li>
-<li><b>Extensible Drivers</b>: Abstract driver interface for easy support of new displays</li>
-<li><b>Type Safety</b>: Strong typing with <code>std::expected</code> error handling</li>
-<li><b>Zero-Cost Abstractions</b>: Modern C++ with no runtime overhead</li>
+<li><b>Multiple Display Modes</b>: Black/white, 4-level grayscale, and color displays (BWR, BWY, Spectra 6-color)</li>
+<li><b>Complete Drawing API</b>: Points, lines, rectangles, circles, text rendering with multiple font sizes</li>
+<li><b>Image Support</b>: Load and display PNG/JPEG images with automatic color conversion and dithering</li>
+<li><b>Flexible Orientation</b>: Rotate display 0°, 90°, 180°, 270° with automatic coordinate transformation</li>
+<li><b>Transparent Power Management</b>: Auto-sleep prevents burn-in, auto-wake on refresh—zero manual intervention</li>
+<li><b>Hardware Abstraction</b>: Compile-time driver selection with MockDriver for testing without physical hardware</li>
+<li><b>Multiple Framebuffer Types</b>: Single-plane (mono/grayscale) and multi-plane (color) with automatic color mapping</li>
+<li><b>Builder Pattern API</b>: Fluent, chainable drawing commands with sensible defaults</li>
+<li><b>Comprehensive Error Handling</b>: Type-safe error propagation with <code>std::expected</code> (no exceptions)</li>
+<li><b>Modern C++23</b>: Built with concepts, <code>std::span</code>, ranges, and zero-cost abstractions</li>
 </ul>
 <h1><a class="anchor" id="️-driver-selection"></a>
 �️ Driver Selection</h1>
