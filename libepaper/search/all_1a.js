@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['✨_20quick_20example_0',['✨ Quick Example',['../index.html#autotoc_md-quick-example',1,'']]]
+  ['⚙️_20build_20configuration_0',['⚙️ Build Configuration',['../index.html#️-build-configuration',1,'']]]
 ];

@@ -1,6 +1,24 @@
 var searchData=
 [
-  ['new_20display_20support_0',['🏗️ Adding New Display Support',['../index.html#️-adding-new-display-support',1,'']]],
-  ['num_5fplanes_1',['num_planes',['../db/da4/namespaceepaper.html#a178373f48ebb1e304875d769e7f3a2b0',1,'epaper']]],
-  ['number_2',['number',['../d8/d5f/structepaper_1_1TextCommand.html#a67b5baf3452b10ba9f117b974b6d708f',1,'epaper::TextCommand::number'],['../d5/d68/classepaper_1_1Pin.html#a345ec93c831e42a4771741974ff19c2e',1,'epaper::Pin::number()'],['../dd/d72/classepaper_1_1TextBuilder.html#a1d7b0dbd112e0cf5a32513cc93055cd6',1,'epaper::TextBuilder::number()'],['../db/da4/namespaceepaper.html#a2dc59c06f0407a252a87915d83a14570ab2ee912b91d69b435159c7c3f6df7f5f',1,'epaper::Number']]]
+  ['magenta_0',['Magenta',['../d4/d02/namespaceepaper_1_1colors.html#a79b9a9893951df325eeb06fdd67760a4',1,'epaper::colors']]],
+  ['make_5ferror_1',['make_error',['../db/da4/namespaceepaper.html#a6a79962455b262bf142f90831d469bab',1,'epaper']]],
+  ['max_5fheight_2',['max_height',['../d8/d02/structepaper_1_1driver__traits_3_01MockDriver_01_4.html#a126d5ce30cca70a3fda70df33dec95d6',1,'epaper::driver_traits&lt; MockDriver &gt;::max_height'],['../d7/dc5/structepaper_1_1driver__traits_3_01EPD27_01_4.html#ad64ca0bbef8e202c4f9eafc84ddb7794',1,'epaper::driver_traits&lt; EPD27 &gt;::max_height']]],
+  ['max_5fmode_3',['max_mode',['../d7/dc5/structepaper_1_1driver__traits_3_01EPD27_01_4.html#a00de1025c90be4efeb9a7bbe1a272073',1,'epaper::driver_traits&lt; EPD27 &gt;::max_mode'],['../d8/d02/structepaper_1_1driver__traits_3_01MockDriver_01_4.html#a914b8bc196bf33973e42ef407817bc9c',1,'epaper::driver_traits&lt; MockDriver &gt;::max_mode']]],
+  ['max_5fwidth_4',['max_width',['../d8/d02/structepaper_1_1driver__traits_3_01MockDriver_01_4.html#af71cc7e93b2da339a11d95a1b9c7c82b',1,'epaper::driver_traits&lt; MockDriver &gt;::max_width'],['../d7/dc5/structepaper_1_1driver__traits_3_01EPD27_01_4.html#a989becc7ce09f739ee5d2d44564a7b03',1,'epaper::driver_traits&lt; EPD27 &gt;::max_width']]],
+  ['message_5',['message',['../df/d40/structepaper_1_1Error.html#a35b1988b66586a355560125f3ce69c4b',1,'epaper::Error']]],
+  ['metrics_6',['metrics',['../d7/d6c/classepaper_1_1Font.html#adb5dee04d04bb588c2bb0d7671e600dc',1,'epaper::Font']]],
+  ['mock_5fdelay_2ehpp_7',['mock_delay.hpp',['../d0/de5/mock__delay_8hpp.html',1,'']]],
+  ['mock_5fdriver_2ehpp_8',['mock_driver.hpp',['../dc/da1/mock__driver_8hpp.html',1,'']]],
+  ['mock_5fpin_2ehpp_9',['mock_pin.hpp',['../d9/d58/mock__pin_8hpp.html',1,'']]],
+  ['mock_5fspi_2ehpp_10',['mock_spi.hpp',['../de/d7c/mock__spi_8hpp.html',1,'']]],
+  ['mockdelay_11',['MockDelay',['../da/d11/classepaper_1_1hal_1_1MockDelay.html',1,'epaper::hal']]],
+  ['mockdriver_12',['mockdriver',['../db/d32/classepaper_1_1MockDriver.html#ac227ca2d6cddcc8bd15aef8458673f9c',1,'epaper::MockDriver::MockDriver()'],['../db/d32/classepaper_1_1MockDriver.html',1,'epaper::MockDriver']]],
+  ['mockinputpin_13',['MockInputPin',['../d7/d19/classepaper_1_1hal_1_1MockInputPin.html',1,'epaper::hal']]],
+  ['mockoutputpin_14',['MockOutputPin',['../d5/d4f/classepaper_1_1hal_1_1MockOutputPin.html',1,'epaper::hal']]],
+  ['mockspibus_15',['MockSpiBus',['../d4/dee/classepaper_1_1hal_1_1MockSpiBus.html',1,'epaper::hal']]],
+  ['mode_16',['mode',['../d2/da8/classepaper_1_1Display.html#aea121670a99df8829b9e4a5af4cff045',1,'epaper::Display::mode()'],['../d2/d1d/classepaper_1_1MonoFramebuffer.html#a7d0316f173d9b104ef9a7cde98135f7b',1,'epaper::MonoFramebuffer::mode()'],['../d2/d17/classepaper_1_1MultiPlaneFramebuffer.html#ac4966f839980c1090b9cd21a674e02b8',1,'epaper::MultiPlaneFramebuffer::mode()'],['../d9/d12/classepaper_1_1EPD27.html#a0bc10082ed844da4381a040a9fda9daf',1,'epaper::EPD27::mode()'],['../db/d32/classepaper_1_1MockDriver.html#a958f6afc3aa417758404b21b3ef6d978',1,'epaper::MockDriver::mode()']]],
+  ['mono_5fframebuffer_2ecpp_17',['mono_framebuffer.cpp',['../de/d1d/mono__framebuffer_8cpp.html',1,'']]],
+  ['monoframebuffer_18',['monoframebuffer',['../d2/d1d/classepaper_1_1MonoFramebuffer.html#a0f5321351f439731d985b80d3f9888ec',1,'epaper::MonoFramebuffer::MonoFramebuffer()'],['../d2/d1d/classepaper_1_1MonoFramebuffer.html',1,'epaper::MonoFramebuffer']]],
+  ['multi_5fplane_5fframebuffer_2ecpp_19',['multi_plane_framebuffer.cpp',['../dd/d26/multi__plane__framebuffer_8cpp.html',1,'']]],
+  ['multiplaneframebuffer_20',['multiplaneframebuffer',['../d2/d17/classepaper_1_1MultiPlaneFramebuffer.html',1,'epaper::MultiPlaneFramebuffer&lt; PlaneCount &gt;'],['../d2/d17/classepaper_1_1MultiPlaneFramebuffer.html#a2250d196ae8da775aab8e0ba6a1d822f',1,'epaper::MultiPlaneFramebuffer::MultiPlaneFramebuffer()']]]
 ];

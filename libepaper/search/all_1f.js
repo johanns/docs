@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['📄_20license_0',['📄 License',['../index.html#autotoc_md-license',1,'']]]
+  ['💡_20quick_20reference_0',['💡 Quick Reference',['../index.html#autotoc_md-quick-reference',1,'']]]
 ];

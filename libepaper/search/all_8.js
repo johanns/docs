@@ -1,25 +1,9 @@
 var searchData=
 [
-  ['image_5fio_2ecpp_0',['image_io.cpp',['../d5/d3c/image__io_8cpp.html',1,'']]],
-  ['image_5fio_2ehpp_1',['image_io.hpp',['../dc/d2d/image__io_8hpp.html',1,'']]],
-  ['imageio_2',['ImageIO',['../dc/dd2/classepaper_1_1ImageIO.html',1,'epaper']]],
-  ['imageresult_3',['ImageResult',['../dd/dfd/structepaper_1_1ImageIO_1_1ImageResult.html',1,'epaper::ImageIO']]],
-  ['in_20your_20cmake_20project_4',['Use as a dependency in your CMake project',['../index.html#use-as-a-dependency-in-your-cmake-project',1,'']]],
-  ['init_5',['init',['../d2/d80/classepaper_1_1Device.html#ae0a60dbaca6d6c4e442982338748bcbb',1,'epaper::Device::init()'],['../d9/d12/classepaper_1_1EPD27.html#a3d06392f4376dfeacc0b9d5f5152e074',1,'epaper::EPD27::init()'],['../db/d32/classepaper_1_1MockDriver.html#a58f3b5f8b88141e12b60bce0d590947d',1,'epaper::MockDriver::init(DisplayMode mode) -&gt; std::expected&lt; void, Error &gt;']]],
-  ['init_5fcalled_6',['init_called',['../db/d32/classepaper_1_1MockDriver.html#a3bc65bb2b60099327998004d076b175c',1,'epaper::MockDriver']]],
-  ['init_5fcount_7',['init_count',['../db/d32/classepaper_1_1MockDriver.html#a0603b37fc8c4c43165c043ad8d7554df',1,'epaper::MockDriver']]],
-  ['initial_5fvalue_8',['initial_value',['../d3/d8d/structepaper_1_1PinConfig.html#aa489ad9c302c45cf16f8256d90a25822',1,'epaper::PinConfig']]],
-  ['installation_9',['Option B — System-wide installation',['../index.html#option-b--system-wide-installation',1,'']]],
-  ['integration_20options_10',['🧩 Alternative Integration Options',['../index.html#autotoc_md-alternative-integration-options',1,'']]],
-  ['internal_2ehpp_11',['internal.hpp',['../dd/d4e/internal_8hpp.html',1,'']]],
-  ['invaliddimensions_12',['InvalidDimensions',['../db/da4/namespaceepaper.html#a32f09eb88e223406e450214ecb4cd6caa38bf09f11b695b2c3ae5b36c4feeaba7',1,'epaper']]],
-  ['invalidformat_13',['InvalidFormat',['../db/da4/namespaceepaper.html#a32f09eb88e223406e450214ecb4cd6caade236a235b4e8ffc9141676624753b2d',1,'epaper']]],
-  ['invalidmode_14',['InvalidMode',['../db/da4/namespaceepaper.html#a32f09eb88e223406e450214ecb4cd6caa6593ba14ae200b59fd71ea6143223e06',1,'epaper']]],
-  ['invalidpin_15',['InvalidPin',['../db/da4/namespaceepaper.html#a32f09eb88e223406e450214ecb4cd6caa15e8ea99c1beb5d737b8685f4480c9e5',1,'epaper']]],
-  ['is_5fasleep_16',['is_asleep',['../db/d32/classepaper_1_1MockDriver.html#a0f9a49856930c8041800046acad3e888',1,'epaper::MockDriver']]],
-  ['is_5fcolor_17',['is_color',['../d2/da8/classepaper_1_1Display.html#a50f72faea1e4b72830594ab38a3d4f53',1,'epaper::Display']]],
-  ['is_5fcolor_5fmode_18',['is_color_mode',['../db/da4/namespaceepaper.html#a1ff77c9e043c0eb628f1aeb932f9f459',1,'epaper']]],
-  ['is_5finitialized_19',['is_initialized',['../d2/d80/classepaper_1_1Device.html#ab17f20316983ffcdb0b50bf730c9b3b6',1,'epaper::Device::is_initialized()'],['../db/d32/classepaper_1_1MockDriver.html#a241ab6846709ffcbd0d0d17c22af5e41',1,'epaper::MockDriver::is_initialized()']]],
-  ['is_5foutput_20',['is_output',['../d3/d8d/structepaper_1_1PinConfig.html#a2eff49c00430f9888fd15ba4ec39e292',1,'epaper::PinConfig']]],
-  ['is_5fwhite_21',['is_white',['../dd/d2b/structepaper_1_1DeviceColor_3_01DisplayMode_1_1BlackWhite_01_4.html#a7974a05412093cc8b8d679dd0eddd392',1,'epaper::DeviceColor&lt; DisplayMode::BlackWhite &gt;']]]
+  ['halinput_0',['halinput',['../de/d66/classepaper_1_1Device_1_1HalInput.html#ad367a687d4e4c97c21b3c321c154ed96',1,'epaper::Device::HalInput::HalInput()'],['../de/d66/classepaper_1_1Device_1_1HalInput.html',1,'epaper::Device::HalInput']]],
+  ['haloutput_1',['haloutput',['../d7/d10/classepaper_1_1Device_1_1HalOutput.html',1,'epaper::Device::HalOutput'],['../d7/d10/classepaper_1_1Device_1_1HalOutput.html#a48f6e54e7225c382c61b10ee46aa80a5',1,'epaper::Device::HalOutput::HalOutput()']]],
+  ['halspi_2',['halspi',['../d7/d10/classepaper_1_1Device_1_1HalSpi.html',1,'epaper::Device::HalSpi'],['../d7/d10/classepaper_1_1Device_1_1HalSpi.html#a4e9d9e5f6c463dd1c36aa14ce8fcbfcb',1,'epaper::Device::HalSpi::HalSpi()']]],
+  ['height_3',['height',['../dd/dfd/structepaper_1_1ImageIO_1_1ImageResult.html#a7d165773dc2ecbfb373460fabd1d072a',1,'epaper::ImageIO::ImageResult::height'],['../d7/d6c/classepaper_1_1Font.html#a159b944c0ea431938f0ffd22d81470c3',1,'epaper::Font::height()'],['../db/d32/classepaper_1_1MockDriver.html#a91d8935c279794aec3e71598bf372dde',1,'epaper::MockDriver::height()'],['../d9/d12/classepaper_1_1EPD27.html#a961fc4f6c5da3bbb8b9ed08d0c25528d',1,'epaper::EPD27::height()'],['../d2/d17/classepaper_1_1MultiPlaneFramebuffer.html#a5decaea99e64bc8d59e769a315bb9850',1,'epaper::MultiPlaneFramebuffer::height()'],['../d2/d1d/classepaper_1_1MonoFramebuffer.html#ac81096bcaa7b3411c7ca647b5d5c79aa',1,'epaper::MonoFramebuffer::height()'],['../d2/da8/classepaper_1_1Display.html#a94d17c18dab4d439b6c0bfe9c2113b8a',1,'epaper::Display::height()'],['../db/d57/structepaper_1_1FontMetrics.html#a0b65a66f5ace69cbc71f5c11a5ee06c2',1,'epaper::FontMetrics::height'],['../d6/dc6/structepaper_1_1Size.html#abc1a2c3212bac3244f63f69cc0ea64d0',1,'epaper::Size::height'],['../d9/d12/classepaper_1_1EPD27.html#a344bacbee268394753d66b71d182b5c1',1,'epaper::EPD27::HEIGHT']]],
+  ['height_5fhigh_4',['HEIGHT_HIGH',['../d3/d99/namespaceepaper_1_1Resolution.html#a28ecf40d2391375f91b945627c5e1426',1,'epaper::Resolution']]],
+  ['height_5flow_5',['HEIGHT_LOW',['../d3/d99/namespaceepaper_1_1Resolution.html#abd324a11fa1b3a25b3ef275411a7fa0c',1,'epaper::Resolution']]]
 ];
