@@ -2,7 +2,7 @@ var searchData=
 [
   ['save_5fframebuffer_5fto_5fpng_0',['save_framebuffer_to_png',['../d2/da8/classepaper_1_1Display.html#a82c884c14aa8b25cf8c43d0c9cf63c59',1,'epaper::Display']]],
   ['save_5fpng_1',['save_png',['../dc/dd2/classepaper_1_1ImageIO.html#ad84cdfa404c93c563c69ae7ba5542c53',1,'epaper::ImageIO']]],
-  ['selection_2',['�️ Driver Selection',['../index.html#️-driver-selection',1,'']]],
+  ['selection_2',['Driver Selection',['../index.html#driver-selection',1,'']]],
   ['sent_5fbytes_3',['sent_bytes',['../d4/dee/classepaper_1_1hal_1_1MockSpiBus.html#a0fefdbffa855d3882bcc302499a367aa',1,'epaper::hal::MockSpiBus']]],
   ['set_5fauto_5fsleep_4',['set_auto_sleep',['../d2/da8/classepaper_1_1Display.html#a0e963d2c657cf20a90011a2fd40e5590',1,'epaper::Display']]],
   ['set_5flevel_5',['set_level',['../d7/d19/classepaper_1_1hal_1_1MockInputPin.html#afeaed67b6c03cd7713bd4a45c99e3ed7',1,'epaper::hal::MockInputPin']]],
@@ -36,7 +36,7 @@ var searchData=
   ['spiconfigfailed_33',['SPIConfigFailed',['../db/da4/namespaceepaper.html#a32f09eb88e223406e450214ecb4cd6caabe47daab8190b6b3fc7f65cc3f9bcb90',1,'epaper']]],
   ['spideviceopenfailed_34',['SPIDeviceOpenFailed',['../db/da4/namespaceepaper.html#a32f09eb88e223406e450214ecb4cd6caacad00496a1e6b93fd458bfe8842489fa',1,'epaper']]],
   ['spiinitfailed_35',['SPIInitFailed',['../db/da4/namespaceepaper.html#a32f09eb88e223406e450214ecb4cd6caa1be35eda599d28eba0648dadb838ab8e',1,'epaper']]],
-  ['start_36',['�🚀 Quick Start',['../index.html#autotoc_md-quick-start',1,'']]],
+  ['start_36',['🚀 Quick Start',['../index.html#autotoc_md-quick-start',1,'']]],
   ['stb_5fimage_5fimplementation_37',['STB_IMAGE_IMPLEMENTATION',['../d5/d3c/image__io_8cpp.html#a18372412ad2fc3ce1e3240b3cf0efe78',1,'image_io.cpp']]],
   ['stb_5fimage_5fwrite_5fimplementation_38',['STB_IMAGE_WRITE_IMPLEMENTATION',['../d5/d3c/image__io_8cpp.html#aefe397a94e8feddc652f92ef40ce9597',1,'image_io.cpp']]],
   ['stbi_5fwrite_5fpng_39',['stbi_write_png',['../dc/da1/mock__driver_8hpp.html#a75da9be67f1e7938ebaf95cc0e316e90',1,'mock_driver.hpp']]],

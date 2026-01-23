@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['🔧_20development_0',['🔧 Development',['../index.html#autotoc_md-development',1,'']]]
+  ['🚀_20quick_20start_0',['🚀 Quick Start',['../index.html#autotoc_md-quick-start',1,'']]]
 ];

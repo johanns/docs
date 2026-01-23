@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['🏗️_20adding_20new_20display_20support_0',['🏗️ Adding New Display Support',['../index.html#️-adding-new-display-support',1,'']]]
+  ['💡_20quick_20reference_0',['💡 Quick Reference',['../index.html#autotoc_md-quick-reference',1,'']]]
 ];

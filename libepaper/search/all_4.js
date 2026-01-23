@@ -52,7 +52,7 @@ var searchData=
   ['draw_5ftext_49',['draw_text',['../d0/d9d/classepaper_1_1Graphics.html#adb2379244281b2cf976114c62628fd95',1,'epaper::Graphics']]],
   ['drawfill_50',['DrawFill',['../db/da4/namespaceepaper.html#a147a76dbb81599ca8053f8dd9271bc16',1,'epaper']]],
   ['driver_51',['driver',['../d2/da8/classepaper_1_1Display.html#af900f48f23b0f4b84569c374813b3a3c',1,'epaper::Display::driver() -&gt; DriverT &amp;'],['../d2/da8/classepaper_1_1Display.html#a952c590868f7b5459fcfccae1fca4adc',1,'epaper::Display::driver() const -&gt; const DriverT &amp;']]],
-  ['driver_20selection_52',['�️ Driver Selection',['../index.html#️-driver-selection',1,'']]],
+  ['driver_20selection_52',['Driver Selection',['../index.html#driver-selection',1,'']]],
   ['driver_2ehpp_53',['driver.hpp',['../d7/d7e/driver_8hpp.html',1,'']]],
   ['driver_5fconcepts_2ehpp_54',['driver_concepts.hpp',['../d8/d88/driver__concepts_8hpp.html',1,'']]],
   ['driver_5ftraits_55',['driver_traits',['../df/d53/structepaper_1_1driver__traits.html',1,'epaper']]],
